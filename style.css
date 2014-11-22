@@ -1,13 +1,16 @@
 @charset "UTF-8";
 /*
- Theme Name:   Zweig Child
- Description:  Child Theme of the Zweig Theme
- Author:       Paul Craig
- Author URI:   http://pcraig3.ca
- Template:     zweig
- Version:      1.0.0
- Text Domain:  zw-ch
-*/
+ Theme Name:   		Zweig Child
+ Description:  		Child Theme of the Zweig Theme
+ Author:       		Paul Craig
+ Author URI:   		http://pcraig3.ca
+ Template:     		zweig
+ Version:      		1.0.1
+ Text Domain:  		zw-ch
+ GitHub Theme URI: 	https://github.com/pcraig3/zweig-child
+ GitHub Branch:    	master
+ /*
+	
 /* If we want a namespace, do that here */
 /*!
  * inuitcss, by @csswizardry
