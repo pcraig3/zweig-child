@@ -1,0 +1,466 @@
+@mixin zw-lowercase($font-size: 1em) {
+
+	font-variant: normal;
+	text-transform: lowercase;
+	font-size: $font-size;
+}
+
+@mixin zw-site-container() {
+
+	width: 90%;
+	padding: 1em 0;
+	margin: auto;
+	border: 0;
+	max-width: none;
+}
+
+@mixin zw-transition($property, $timespan: .15s, $easing: ease-in) {
+
+  transition: $property $timespan $easing;
+}
+
+
+$color__grey--light: #f9f9f9;
+$color__gray--light: $color__grey--light;
+
+$color__grey--dark: #333;
+$color__gray--dark: $color__grey--dark;
+
+$color__red: #d43b1d;
+
+/* Overwrite top-level spacing */
+html {
+
+	font-size: $inuit-base-font-size;
+	line-height: $inuit-base-line-height;
+}
+
+.wrapper .post-title {
+
+	padding-bottom: $inuit-base-spacing-unit * .5;
+  	font-size: $inuit-base-font-size * 3;
+  	line-height: $inuit-base-line-height * 2;
+}
+
+.wrapper .post-date,
+.wrapper .post-meta p,
+.wrapper .wp-caption-text,
+.wrapper .gallery-caption {
+
+  	font-size: $inuit-base-font-size * .8;
+  	margin-bottom: $inuit-base-spacing-unit * 2;
+	color: $color__grey--dark !important;
+}
+
+
+/* Overwrite all the fonts */
+body {
+
+	@include Aller-Light;
+	color: $color__grey--dark;
+
+	em {
+		@include Aller-Light-Italic;
+	}
+	strong {
+		@include Aller-Bold;
+	}
+	q {
+		@include Aller-Light-Italic;
+	}
+
+	&.chrome * {
+
+		word-spacing: -0.1em !important;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	@include Pigiarniq-Light;
+}
+.wrapper .post-date,
+.wrapper .post-meta p,
+.wrapper .wp-caption-text,
+.wrapper .gallery-caption {
+	@include Pigiarniq-Regular;
+	word-spacing: -0.25em;
+}
+.wrapper .post-title { 
+	@include Pigiarniq-Light;
+	word-spacing: -0.1em;
+}
+.wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
+	@include Pigiarniq-Light;
+	word-spacing: -0.1em;
+}
+.wrapper blockquote {
+	@include Aller-Light-Italic;
+}
+.wrapper cite {
+	@include Aller-Light;
+	margin-left: $inuit-base-spacing-unit;
+}
+.wrapper table th {
+	@include Pigiarniq-Regular;
+}
+.wrapper dt {
+	@include Aller-Italic;
+}
+input[type=submit] {  	
+	@include Pigiarniq-Light;
+	@include zw-lowercase( $inuit-base-font-size * 1.2 );
+}
+.read-more {
+	@include Aller-Light;
+}
+#commentform label {
+	@include Pigiarniq-Italic;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=password] {
+	@include Aller-Light;
+}
+textarea {
+	@include Aller-Light;
+}
+#site-header h1 {
+	@include Baskerville-Regular;
+}
+#site-header h2 {
+	@include Pigiarniq-Bold;
+}
+.post-pages {
+	@include Aller-Bold;
+}
+.post-navigation {
+	@include Pigiarniq-Light;
+	word-spacing: -0.3em;
+}
+.author-name strong {
+	@include Baskerville-Italic;
+	@include zw-lowercase(  $inuit-base-font-size * 1.5 );
+}
+#comments h3 {
+	@include Aller-Light-Italic;
+	text-transform: uppercase;
+}
+#comments .vcard {
+	@include Baskerville-Italic;
+	@include zw-lowercase( $inuit-base-font-size * 1.1 );
+
+	b {
+		font-weight: 400;
+	}
+} 
+#comments .comment-meta {
+	@include Pigiarniq-Regular;
+	color: grey;
+}
+#comments .reply {
+	@include Pigiarniq-Light;
+	text-align: right;
+}
+.posts-nav {
+	@include Pigiarniq-Light;
+}
+.widget-area h2 {
+	@include Pigiarniq-Light;
+	/* @include Baskerville-Italic; Also looks good*/
+}
+/* Post Formats */
+article.format-quote {
+	@include Aller-Light-Italic;
+}
+
+/** Actually starting original styling */
+#site-header,
+.fp-section__header {
+
+	@include zw-site-container;
+
+	/* We're putting it in a column, not directly giving it a width */
+	.site-meta {
+		width: 100%;
+	}
+
+	h1, h2 {
+
+		display: inline;
+	}
+
+	h1 {
+
+		font-size: $inuit-base-font-size * 3.5;
+		position: fixed;
+	}
+
+	h2 {
+		@include Baskerville-Regular;
+		@include zw-lowercase( $inuit-base-font-size * 3 );
+	}
+
+
+	.fp-section__header__spacer {
+		@include Baskerville-Regular;
+		@include zw-lowercase( $inuit-base-font-size * 3.5 );
+		display: inline-block;
+		margin-top: -2px; /* This sucks, but it works :) */
+		visibility: hidden;
+	}
+}
+
+.wrapper {
+
+	@include zw-site-container;
+}
+
+.post-navigation {
+
+	word-break: break-word;
+}
+
+#comments .comment-body, #comments .comment {
+
+	margin-bottom: $inuit-base-spacing-unit * 2;
+}
+
+.form-submit {
+
+	text-align: right;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=password] {
+
+	background: transparent;
+}
+
+
+/** Inuit.css or my markup */
+
+	/* Might not work perfectly on mobile.  If not, try https://github.com/rodneyrehm/viewport-units-buggyfill */
+	.full-height {
+
+		min-height: 100vh;
+		height: auto !important;
+	}
+
+	.full-width {
+
+		width: 100% !important;
+	}
+
+	.hidden {
+
+		visibility: hidden !important;
+	}
+
+	.fade-to-solid {
+
+		@include zw-transition(opacity);
+
+		opacity: .65;
+
+		&:hover {
+
+			opacity: 1;
+		}
+	}
+
+	.solid-to-fade {
+
+		@include zw-transition(opacity);
+
+		opacity: 1;
+
+		&:hover {
+
+			opacity: .65;
+		}
+	}
+
+	.cursor-default {
+
+		cursor: default !important;
+	}
+
+
+	.intimate-details {
+
+		text-align: right;
+	}
+
+	.subtle-link {
+
+		color: 		$color__grey--dark;
+
+		&:hover {
+
+			color: 		$color__grey--dark;
+		}
+	}
+
+	.archive-title {
+
+	@include Baskerville-Italic;
+	text-transform: none;
+	font-variant: normal;
+	font-size: $inuit-base-font-size * 2;
+	margin-top: $inuit-base-spacing-unit * .25; 
+	}
+
+.frame {
+
+	&.frame--single {
+
+		background: $color__grey--light;
+	}
+
+	&.frame--archive {
+
+		article {
+
+			&:hover {
+
+				.post-date {
+
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
+			.post-title {
+
+				padding-bottom: $inuit-base-spacing-unit * .25;
+			  	font-size: $inuit-base-font-size * 1.8;
+			  	line-height: $inuit-base-line-height;
+			}
+
+			.post-date {
+
+				@include zw-transition(opacity, .10s);
+
+				visibility: hidden;
+				opacity: 0;
+				margin-bottom: $inuit-base-spacing-unit * 2;
+			}
+
+			a {
+
+				display: block;
+			}
+		}
+	}
+
+	/** @TODO: Fix this **/
+	.sticky {
+		border: none;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+}
+
+	/*  Comments  */
+	$padding-base: $inuit-base-spacing-unit / 4;
+
+	#comments .vcard .avatar {
+	    margin: $padding-base ($padding-base *2) $padding-base $padding-base;
+	}
+
+	#comments .comment-awaiting-moderation {
+
+		padding-left: $inuit-base-spacing-unit * 2.33;
+	}
+
+	input[type=submit] {
+
+		@include zw-transition(background-color, .1s);
+
+		padding:	($padding-base / 1.5) ($padding-base / .75) $padding-base ($padding-base / .75); 
+	}
+
+	input[type="text"]:active, 
+	input[type="text"]:focus, 
+	input[type="email"]:active, 
+	input[type="email"]:focus, 
+	input[type="url"]:active, 
+	input[type="url"]:focus, 
+	input[type="search"]:active, 
+	input[type="search"]:focus, 
+	input[type="password"]:active, 
+	input[type="password"]:focus {
+
+		border: none !important;
+		border-bottom: 1px solid $color__red !important;
+	}
+
+	textarea {
+
+		border: 1px solid $color__grey--light;
+		background: #FFF;
+	}
+
+
+	#commentform label {
+		padding-bottom: $padding-base;
+	}
+
+	.back-to-top {
+
+		$back_to_top_size: $inuit-base-spacing-unit * 2;
+
+		position: absolute;
+		top: 205vh; 
+		bottom: auto;
+		right: 0;
+		margin-right: 5%;
+
+		&.stuck {
+			
+			position: fixed;
+			top: auto;
+			bottom: $inuit-base-spacing-unit;
+		}
+
+			.back-to-top__link {
+
+			font-size: $back_to_top_size;
+			position: relative;
+			height: $back_to_top_size;
+			width: $back_to_top_size;
+			display: inline-block;
+			background: $color__red;
+			color: #FFF;
+
+			text-align: center;
+			line-height: $back_to_top_size;
+		}
+	}
+
+	#footer {
+
+		@include zw-site-container();
+		width: 100%;
+		border-bottom: $inuit-base-spacing-unit solid $color__grey--light;
+	}
+
+
+	.widget-area {
+
+		width: auto;
+		float: none;
+	}
+
+	.menu-footer-menu-container {
+
+		li {
+			display: inline-block;
+			padding-right: $inuit-base-spacing-unit * 2;
+		}
+	}
+

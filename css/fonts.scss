@@ -1,0 +1,155 @@
+/*  Mixin found here: codepen.io/javasteve99/pen/hDxpn */
+@mixin font-face($font-family, $file-path, $font-weight, $font-style, $file-path-prefix:"css/fonts/") {
+
+	$file-path: $file-path-prefix + $file-path;
+
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+        src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
+
+
+/// Baskerville Italic
+@include font-face(libre_baskervilleitalic, "librebaskerville-italic-webfont", 400, normal); 
+
+/// Baskerville Regular
+@include font-face(libre_baskervilleregular, "librebaskerville-regular-webfont", 400, normal); 
+
+/// Baskerville Bold
+@include font-face(libre_baskervillebold, "librebaskerville-bold-webfont", 400, normal); 
+
+/// Aller Regular
+@include font-face(allerregular, "aller_rg-webfont", 400, normal); 
+
+/// Aller Light Regular
+@include font-face(aller_lightregular, "aller_lt-webfont", 400, normal); 
+
+/// Aller Light Italic
+@include font-face(aller_lightitalic, "aller_ltit-webfont", 400, normal); 
+
+/// Aller Bold
+@include font-face(allerbold, "aller_bd-webfont", 400, normal); 
+
+/// Aller Italic
+@include font-face(alleritalic, "aller_it-webfont", 400, normal); 
+
+/// Aller Bold Italic
+@include font-face(allerbold_italic, "aller_bdit-webfont", 400, normal); 
+
+/// Pigiarniq Italic
+@include font-face(pigiarniqitalic, "pigiarniq_italic-webfont", 400, normal); 
+
+/// Pigiarniq Bold
+@include font-face(pigiarniqbold, "pigiarniq_bold-webfont", 400, normal); 
+
+/// Pigiarniq Regular
+@include font-face(pigiarniqregular, "pigiarniq_regular-webfont", 400, normal); 
+
+/// Pigiarniq Light
+@include font-face(pigiarniqlight, "pigiarniq_light-webfont", 400, normal); 
+
+/// Baskerville Italic
+@mixin Baskerville-Italic {
+  font-family: 'libre_baskervilleitalic', times, serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: 0em;
+}
+
+/// Baskerville Regular
+@mixin Baskerville-Regular {
+  font-family: 'libre_baskervilleregular', times, serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: 0em;
+}
+
+/// Baskerville Bold
+@mixin Baskerville-Bold {
+  font-family: 'libre_baskervillebold', times, serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: 0em;
+}
+
+/// Aller Regular
+@mixin Aller-Regular {
+  font-family: 'allerregular', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: 0em;
+}
+
+/// Aller Light Regular
+@mixin Aller-Light {
+  font-family: 'aller_lightregular', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: 0em;
+}
+
+/// Aller Light Italic
+@mixin Aller-Light-Italic {
+  font-family: 'aller_lightitalic', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: 0em;
+}
+
+/// Aller Bold
+@mixin Aller-Bold {
+  font-family: 'allerbold', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: 0em;
+}
+
+/// Aller Italic
+@mixin Aller-Italic {
+  font-family: 'alleritalic', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: 0em;
+}
+
+
+/// Aller Bold Italic
+@mixin Aller-Bold-Italic {
+  font-family: 'allerbold_italic', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: 0em;
+}
+
+/// Pigiarniq Italic
+@mixin Pigiarniq-Italic {
+  font-family: 'pigiarniqitalic', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: -.2em;
+}
+
+/// Pigiarniq Bold
+@mixin Pigiarniq-Bold {
+  font-family: 'pigiarniqbold', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: -.2em;
+}
+
+/// Pigiarniq Regular
+@mixin Pigiarniq-Regular {
+  font-family: 'pigiarniqregular', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: -.2em;
+}
+
+/// Pigiarniq Light
+@mixin Pigiarniq-Light {
+  font-family: 'pigiarniqlight', arial, sans-serif;
+  font-weight: 400; font-style: normal; 
+  word-spacing: -.2em;
+}

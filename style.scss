@@ -1,0 +1,57 @@
+/*
+ Theme Name:   Zweig Child
+ Description:  Child Theme of the Zweig Theme
+ Author:       Paul Craig
+ Author URI:   http://pcraig3.ca
+ Template:     zweig
+ Version:      1.0.0
+ Text Domain:  zw-ch
+*/
+	
+/* If we want a namespace, do that here */
+@import "css/bower_components/inuit-defaults/settings.defaults";
+/* Define our initial breakpoint aliases and conditions. */
+@import "css/bower_components/inuit-responsive-settings/settings.responsive";
+
+@import "css/bower_components/inuit-functions/tools.functions";
+@import "css/bower_components/inuit-mixins/tools.mixins";
+@import "css/bower_components/inuit-responsive-tools/tools.responsive";
+
+@import "css/bower_components/inuit-normalize/generic.normalize";
+@import "css/bower_components/inuit-box-sizing/generic.box-sizing";
+@import "css/bower_components/inuit-shared/generic.shared";
+
+/* inuitcss’ layout system is a powerful, flexible, highly advanced evolution of the traditional grid system. It is based on csswizardry-grids. */
+$inuit-enable-layout--right:    true !default;
+$inuit-enable-layout--flush:    true !default;
+@import "css/bower_components/inuit-layout/objects.layout";
+
+/* The list-block object simply creates blocky lists from ul or ol elements. */
+@import "css/bower_components/inuit-list-block/objects.list-block";
+
+$inuit-use-fractions:    false;
+@import "css/bower_components/inuit-widths/trumps.widths";
+/* If you are using inuitcss’ default breakpoints, you will be given classes like lap-and-up-1/4, or desk-one-half, etc. */
+@import "css/bower_components/inuit-widths-responsive/trumps.widths-responsive";
+
+/*  .-mt+ will give you a large (+) negative (-) margin (m) top (t). */
+$inuit-enable-paddings:                 true !default;
+$inuit-enable-paddings--tiny:           true !default;
+$inuit-enable-paddings--small:          true !default;
+$inuit-enable-paddings--large:          true !default;
+$inuit-enable-paddings--huge:           true !default;
+$inuit-enable-paddings--none:           true !default;
+
+$inuit-enable-margins:                 	true !default;
+$inuit-enable-margins--none:            true !default;
+@import "css/bower_components/inuit-spacing/trumps.spacing";
+@import "css/bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
+
+/* The inuitcss clearfix module is a minimal clearfix helper class. */
+@import "css/bower_components/inuit-clearfix/trumps.clearfix";
+
+@import "css/bower_components/inuit-page/base.page";
+
+@import "css/fonts.scss";
+@import "css/ui.scss";
+@import "css/dev.scss";
