@@ -16,9 +16,7 @@ function zw_ch_enqueue_scripts() {
 
   //vendor scripts
   wp_enqueue_script( 'scrollTo', get_stylesheet_directory_uri() . '/js/bower_components/jquery.scrollTo/jquery.scrollTo.min.js', array( 'jquery') );
-  wp_enqueue_script( 'localScroll', get_stylesheet_directory_uri() . '/js/bower_components/jquery.localScroll/jquery.localScroll.min.js', array( 'jquery', 'scrollTo' ) );
-
-   
+  wp_enqueue_script( 'localScroll', get_stylesheet_directory_uri() . '/js/bower_components/jquery.localScroll/jquery.localScroll.min.js', array( 'jquery', 'scrollTo' ) );   
   wp_enqueue_script( 'isonscreen', get_stylesheet_directory_uri() . '/js/vendor/jquery.isonscreen.js', array( 'jquery' ) );  
 
    //local scripts written by yours truely
@@ -26,6 +24,10 @@ function zw_ch_enqueue_scripts() {
   wp_enqueue_script( 'zw_ch_scrolljs', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'jquery', 'scrollTo', 'localScroll' ) );
 
   wp_enqueue_script( 'zw_ch_backtotopjs', get_stylesheet_directory_uri() . '/js/back_to_top.js', array( 'jquery', 'isonscreen' ) );
+
+  if( is_search() )
+      wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/search.js', array('jquery') );
+
 
 }
 
@@ -156,9 +158,11 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
         'layout_classes' => 'layout--flush full-height pb+',
         'section_header_classes' => 'full-width',
         'section_name' => '',
-        'back_to_top' => false,
         'section_header_link' => '',
-        'post_type'   => ''
+        'post_type'   => '',
+        'back_to_top' => false,
+        'search' => false,
+
     ), $atts );
 
     //if there is a post type
@@ -192,8 +196,14 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
     $section_header_classes = esc_attr( $atts['section_header_classes'] );
     $section_name = esc_attr( $atts['section_name'] );
     $back_to_top = ( $atts['back_to_top'] === '1' || $atts['back_to_top'] === 'true' );
+    $search = ( $atts['search'] === '1' || $atts['search'] === 'true' );
+
     if( ! $no_link )
       $section_header_link = esc_url( $atts['section_header_link'] );
+
+    if ( $search ) 
+      $section_name = search_in_title( $section_name );
+    
 
     /* Build the HTML string */
 
@@ -233,6 +243,18 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
     return ob_get_clean();
 }
 add_shortcode( 'section_skeleton', 'zw_ch_section_skeleton' );
+
+function search_in_title( $s ) {
+
+  ob_start();
+  ?>search.("<form role="search" method="get" class="search-form search-form__title" action="http://pcraig3.dev/">
+        <label>
+          <span class="screen-reader-text not-displayed">Search for:</span>
+          <input class="search-field" placeholder="search…" value="<?php echo $s; ?>" name="s" type="search">
+        </label><span class="placeholder" style="display:none;"><?php echo $s; ?></span>")<input class="search-submit" value="Search" type="submit">
+      </form><?php 
+  return ob_get_clean();
+}
 
 function zw_ch_if_post_type_archive( $post_type ) {
 

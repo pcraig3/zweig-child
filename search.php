@@ -35,8 +35,8 @@ $found_posts_string .= ( intval( $found_posts ) === 1 ) ? ' result' : ' results'
 $html_string = ob_get_clean();
 
 $search_query = $wp_query->query_vars['s'];
-$page_title = 'search("' . $search_query . '")';
+//$page_title = 'search("' . $search_query . '")';
 
-echo do_shortcode( "[section_skeleton section_name='" . $page_title . "' section_header_classes='full-width' back_to_top='true'] " . $html_string . '[/section_skeleton]');
+echo do_shortcode( "[section_skeleton section_name='" . $search_query . "' section_header_classes='full-width' back_to_top='true' search='true'] " . $html_string . '[/section_skeleton]');
 
  get_footer(); ?>

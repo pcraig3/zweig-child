@@ -2071,6 +2071,9 @@ input[type=password] {
 .hidden {
   visibility: hidden !important; }
 
+.not-displayed {
+  display: none !important; }
+
 .fade-to-solid {
   transition: opacity 0.15s ease-in;
   opacity: .65; }
@@ -2179,6 +2182,23 @@ textarea {
     color: #FFF;
     text-align: center;
     line-height: 48px; }
+
+.search-form.search-form__title {
+  display: inline; }
+  .search-form.search-form__title .search-field,
+  .search-form.search-form__title .placeholder {
+    font-family: 'libre_baskervilleregular', times, serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em;
+    font-variant: normal;
+    text-transform: lowercase;
+    font-size: 48px; }
+  .search-form.search-form__title .search-field {
+    /* sort of arbitrary */
+    width: 300px; }
+  .search-form.search-form__title .placeholder {
+    white-space: pre; }
 
 #footer {
   width: 90%;
