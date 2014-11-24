@@ -38,6 +38,9 @@
 $color__grey--light: #f9f9f9;
 $color__gray--light: $color__grey--light;
 
+$color__grey--still-pretty-light: #f3f3f3;
+$color__gray--still-pretty-light: $color__grey--still-pretty-light;
+
 $color__grey: #CBCBCB;
 $color__gray: $color__grey;
 
@@ -57,6 +60,11 @@ html {
 	font-size: $inuit-base-font-size;
 	line-height: $inuit-base-line-height;
 }
+
+/*body {
+
+	border-bottom: $inuit-base-spacing-unit solid $color__grey--light;
+}*/
 
 .wrapper .post-title {
 
@@ -481,6 +489,42 @@ input[type=password] {
 		}
 	}
 
+	#footer .search-form {
+
+		display: block;
+		background: none repeat scroll 0% 0% #F9F9F9;
+
+			.search-field {
+
+			@include Baskerville-Regular;
+			@include zw-lowercase( $inuit-base-font-size * 2 );
+
+			line-height: $inuit-base-line-height * 2;
+
+			width: 90%;
+			margin-left: 5%;
+			border-bottom: 1px solid #F9F9F9;
+			padding: 0;
+
+			&:active, &:focus {
+
+				border-bottom: #B4B4B4 1px solid !important;
+			}
+		}
+
+		.screen-reader-text {
+
+			display: none;
+		}
+
+		/* let's just hide it */
+		.search-submit {
+
+			display: none;
+		}
+	}
+
+
 	.search-form.search-form__title {
 
 		display: inline;
@@ -510,13 +554,18 @@ input[type=password] {
 			margin-right: 0;
 		}
 
+		.screen-reader-text {
+
+			display: none;
+		}
 	}
 
 	#footer {
 
 		@include zw-site-container();
 		width: 100%;
-		border-bottom: $inuit-base-spacing-unit solid $color__grey--light;
+		border-bottom: $inuit-base-spacing-unit solid #F3F3F3;
+
 	}
 
 
@@ -527,6 +576,12 @@ input[type=password] {
 	}
 
 	.menu-footer-menu-container {
+
+		ul[class*="menu"] {
+
+			margin: 0 5%;
+			padding: $inuit-base-spacing-unit 0;
+		}
 
 		li {
 			display: inline-block;

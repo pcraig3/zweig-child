@@ -5,7 +5,7 @@
  Author:       		Paul Craig
  Author URI:   		http://pcraig3.ca
  Template:     		zweig
- Version:      		1.0.2
+ Version:      		1.0.3
  Text Domain:  		zw-ch
  GitHub Theme URI: 	https://github.com/pcraig3/zweig-child
  GitHub Branch:    	master
@@ -1777,6 +1777,10 @@ html {
   font-size: 16px;
   line-height: 24px; }
 
+/*body {
+
+	border-bottom: $inuit-base-spacing-unit solid $color__grey--light;
+}*/
 .wrapper .post-title {
   padding-bottom: 12px;
   font-size: 48px;
@@ -2192,6 +2196,30 @@ textarea {
     text-align: center;
     line-height: 48px; }
 
+#footer .search-form {
+  display: block;
+  background: none repeat scroll 0% 0% #F9F9F9;
+  /* let's just hide it */ }
+  #footer .search-form .search-field {
+    font-family: 'libre_baskervilleregular', times, serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em;
+    font-variant: normal;
+    text-transform: lowercase;
+    font-size: 32px;
+    line-height: 48px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1px solid #F9F9F9;
+    padding: 0; }
+    #footer .search-form .search-field:active, #footer .search-form .search-field:focus {
+      border-bottom: #B4B4B4 1px solid !important; }
+  #footer .search-form .screen-reader-text {
+    display: none; }
+  #footer .search-form .search-submit {
+    display: none; }
+
 .search-form.search-form__title {
   display: inline; }
   .search-form.search-form__title .search-field,
@@ -2223,6 +2251,8 @@ textarea {
     right: 0;
     margin: 19.2px;
     margin-right: 0; }
+  .search-form.search-form__title .screen-reader-text {
+    display: none; }
 
 #footer {
   width: 90%;
@@ -2231,12 +2261,15 @@ textarea {
   border: 0;
   max-width: none;
   width: 100%;
-  border-bottom: 24px solid #f9f9f9; }
+  border-bottom: 24px solid #F3F3F3; }
 
 .widget-area {
   width: auto;
   float: none; }
 
+.menu-footer-menu-container ul[class*="menu"] {
+  margin: 0 5%;
+  padding: 24px 0; }
 .menu-footer-menu-container li {
   display: inline-block;
   padding-right: 48px; }
