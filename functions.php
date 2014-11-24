@@ -230,7 +230,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
                   echo 'href="' . $section_header_link . '" ';
 
                 ?>
-                >::<?php echo $section_name; ?></a></h2><div class="fp-section__header__spacer">h4ck</div>
+                >::<?php echo $section_name; ?></a></h2><div class="fp-section__header__spacer">i</div>
           </div><!-- end of .fp-section__header-->
 
           <?php echo do_shortcode( $content ); ?>
@@ -250,8 +250,8 @@ function search_in_title( $s ) {
   ?>search.("<form role="search" method="get" class="search-form search-form__title" action="http://pcraig3.dev/">
         <label>
           <span class="screen-reader-text not-displayed">Search for:</span>
-          <input class="search-field" placeholder="search…" value="<?php echo $s; ?>" name="s" type="search">
-        </label><span class="placeholder" style="display:none;"><?php echo $s; ?></span>")<input class="search-submit" value="Search" type="submit">
+          <input class="search-field" placeholder="search…" value="<?php echo $s; ?>" name="s" type="search" style="min-width:200px;width:200px;">
+        </label><pre class="placeholder" style="display:none;"><?php echo $s; ?></pre>")<button type="submit" class="search-submit solid-to-fade"><i class="icon-search"></i></button>
       </form><?php 
   return ob_get_clean();
 }

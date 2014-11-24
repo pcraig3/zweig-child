@@ -1,62 +1,72 @@
 jQuery(function( $ ){
 
-/*var Search = (function () {
+	var Search = (function () {
 
-	$form = ('.search-form__title').first();
-	$input = $form.find('.search-field');
+		var min_width = 200;
 
+		var $form = $('.search-form__title').first();
+		var $input = $form.find('.search-field');
+		var $placeholder = $form.find('.placeholder');
 
-	var get_the_size_of_the_search_value = function () {
+		/**
+		 * function does more or less what it's called, so...
+		 */
+		var _set_input_field_width_based_on_value = function () {
 
-		$input.width();
-	}
+			//set the text in the hidden placeholder to the search term
+			//(this is because we can't measure the length of the string in the input)
+			$placeholder.text( $input.val() );
+			$input.css( 'width', $placeholder.width() + ( min_width / 7.5 ) );
+		};
 
-  	/**
-  	 * Callback function will be called on every target.  Targets are acquired with 
-  	 * querySelectorAll
-  	 * 
-  	 * @param  string targets   	argument for querySelectorAll
-  	 * @param  function _function 	callback function accepting a DOM obj as a parameter
-  	 *
-  	var apply_callback_function_on_queried_elements = function ( targets, _function ) {
+		/**
+		 * sort of complicated-looking, but not really that bad.
+		 * function calculates a max-width so that our header search bar doesn't push the magnifying glass down a line.
+		 */
+		var _calculate_input_field_max_width_based_on_search_bar = function () {
 
-  	};
+			var left_offset_of_button = $form.find('.search-submit').offset().left;
+			var left_offset_of_form = $form.offset().left;
 
-  	return {
+			var current_width_of_form = $form.width();
+			var current_width_of_input = $input.width();
 
-  		get_the_size_of_the_search_value: get_the_size_of_the_search_value,
-  	};
+			return ( left_offset_of_button - left_offset_of_form )
+			 - (2 * ( current_width_of_form - current_width_of_input ) );
+		};
 
-})();
-*/
+		/**
+		 * function sets up the search bar in the title on page load.
+		 * This means setting the width for the first time and 
+		 * attaching our method to an event handler
+		 */
+		var search_init = function () {
 
+			$input.on( 'keyup', _set_input_field_width_based_on_value );
+			$input.css( 'min-width', min_width );
+			$input.css( 'max-width', _calculate_input_field_max_width_based_on_search_bar() );
 
-//@TODO: set a min-width-y type variable and also get it to work on pageload.
-$( document ).ready( function() {
+			var init_width = _set_input_field_width_based_on_value();
 
-	var $form = $('.search-form__title').first();
-	var $input = $form.find('.search-field');
-	var $placeholder = $form.find('.placeholder');
+			//the first time this method runs, it can't do long queries properly.  This helps.
+			//(but it's still a hack, fundamentally.)
+			setTimeout( function(){	
+				if ( $placeholder.width() !== init_width )
 
-	function set_input_field_width_based_on_value() {
+					_set_input_field_width_based_on_value();
+			}, 100);
+		};
 
-		$placeholder.text( $input.val() );
+	  	return {
 
-		$input.css( 'width', $placeholder.width() + 30 );
-	}
+			search_init: search_init 
+	  	};
 
-	$input.on('keyup keydown', function() {
+	})();
 
-		if( $input.val() === "" )
-			$input.css( 'width', '300px' );
-		else
-			set_input_field_width_based_on_value();
+	$( document ).ready( function() {
 
-	})
-
-	set_input_field_width_based_on_value();
-
-});
-
+		Search.search_init();
+	});
 
 });

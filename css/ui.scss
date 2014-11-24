@@ -19,6 +19,21 @@
   transition: $property $timespan $easing;
 }
 
+@mixin zw-button($base-spacing, $font-size-proportion: 1) {
+
+	font-size: $base-spacing * $font-size-proportion;
+	position: relative;
+	height: $base-spacing;
+	width: $base-spacing;
+	display: inline-block;
+	background: $color__red;
+	color: #FFF;
+	border: 0;
+
+	text-align: center;
+	line-height: $base-spacing;
+}
+
 
 $color__grey--light: #f9f9f9;
 $color__gray--light: $color__grey--light;
@@ -273,6 +288,11 @@ input[type=password] {
 		display: none !important;
 	}
 
+	.relative {
+
+		position: relative !important;
+	}
+
 	.fade-to-solid {
 
 		@include zw-transition(opacity);
@@ -443,16 +463,7 @@ input[type=password] {
 
 			.back-to-top__link {
 
-			font-size: $back_to_top_size;
-			position: relative;
-			height: $back_to_top_size;
-			width: $back_to_top_size;
-			display: inline-block;
-			background: $color__red;
-			color: #FFF;
-
-			text-align: center;
-			line-height: $back_to_top_size;
+			@include zw-button( $inuit-base-spacing-unit * 2 );
 		}
 	}
 
@@ -470,13 +481,21 @@ input[type=password] {
 		.search-field {
 
 			/* sort of arbitrary */
-			width: 300px;
+			width: 200px;
+			min-width: 200px;
+			position: relative;
 		}
 
-		.placeholder {
+		.search-submit {
 
-			white-space: pre;
+			@include zw-button( $inuit-base-spacing-unit * 2, .5 );
+
+			position: absolute;
+			right: 0;
+			margin: $inuit-base-spacing-unit * .8;
+			margin-right: 0;
 		}
+
 	}
 
 	#footer {
