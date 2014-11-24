@@ -278,7 +278,9 @@ article.format-quote {
 
 	/* We're putting it in a column, not directly giving it a width */
 	.site-meta {
-		width: 100%;
+		width: auto;
+		position: fixed;
+		z-index: 9999;
 	}
 
 	h1, h2 {
@@ -289,7 +291,6 @@ article.format-quote {
 	h1 {
 
 		font-size: $inuit-base-font-size * 3.5;
-		position: fixed;
 	}
 
 	h2 {
@@ -327,6 +328,12 @@ article.format-quote {
 
 		background: $color__grey--light;
 	}
+
+	&.frame--splash {
+
+		@include Baskerville-Regular;
+	}
+
 
 	&.frame--archive {
 
@@ -599,5 +606,31 @@ $padding-base: $inuit-base-spacing-unit / 4;
 		display: none;
 	}
 }
+
+.frame--splash .search-form {
+
+	display: inline;
+
+	.search-field {
+
+		@include Baskerville-Regular;
+		font-size: $inuit-base-font-size;
+		width: 400px;
+
+		border-bottom: #FFFFFF 1px solid !important;
+
+		&:active, &:focus {
+
+			border-bottom: #FFFFFF 1px solid !important;
+		}
+	}
+
+	/* let's just hide it */
+	.search-submit {
+
+		display: none;
+	}
+}
+
 
 /* Media Queries */

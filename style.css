@@ -2045,15 +2045,16 @@ article.format-quote {
   /* We're putting it in a column, not directly giving it a width */ }
   #site-header .site-meta,
   .fp-section__header .site-meta {
-    width: 100%; }
+    width: auto;
+    position: fixed;
+    z-index: 9999; }
   #site-header h1, #site-header h2,
   .fp-section__header h1,
   .fp-section__header h2 {
     display: inline; }
   #site-header h1,
   .fp-section__header h1 {
-    font-size: 56px;
-    position: fixed; }
+    font-size: 56px; }
   #site-header h2,
   .fp-section__header h2 {
     font-family: 'libre_baskervilleregular', times, serif;
@@ -2099,6 +2100,11 @@ article.format-quote {
   /** @TODO: Fix this **/ }
   .frame.frame--single {
     background: #f9f9f9; }
+  .frame.frame--splash {
+    font-family: 'libre_baskervilleregular', times, serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em; }
   .frame.frame--archive article:hover .post-date {
     visibility: visible;
     opacity: 1; }
@@ -2270,6 +2276,22 @@ textarea {
     #footer .search-form .search-field:active, #footer .search-form .search-field:focus {
       border-bottom: #B4B4B4 1px solid !important; }
   #footer .search-form .search-submit {
+    display: none; }
+
+.frame--splash .search-form {
+  display: inline;
+  /* let's just hide it */ }
+  .frame--splash .search-form .search-field {
+    font-family: 'libre_baskervilleregular', times, serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em;
+    font-size: 16px;
+    width: 400px;
+    border-bottom: #FFFFFF 1px solid !important; }
+    .frame--splash .search-form .search-field:active, .frame--splash .search-form .search-field:focus {
+      border-bottom: #FFFFFF 1px solid !important; }
+  .frame--splash .search-form .search-submit {
     display: none; }
 
 /* Media Queries */
