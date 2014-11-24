@@ -75,7 +75,7 @@ ob_start();
 	<div class="layout__item one-third">
 		
 	<?php if( ! empty( $title ) ) ?>
-		<div class="frame__title pv--"><h3 class="archive-title"><?php echo $title; ?></h3></div>
+		<div class="frame__title pv--"><h3 class="subhead"><?php echo $title; ?></h3></div>
 
 	</div><!--end of .layout__item.one-third
 

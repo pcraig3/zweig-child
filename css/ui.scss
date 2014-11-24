@@ -23,10 +23,18 @@
 $color__grey--light: #f9f9f9;
 $color__gray--light: $color__grey--light;
 
+$color__grey: #CBCBCB;
+$color__gray: $color__grey;
+
 $color__grey--dark: #333;
 $color__gray--dark: $color__grey--dark;
 
 $color__red: #d43b1d;
+$color__yellow: #fcd700;
+
+	/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+	::-moz-selection{background: $color__yellow; color: #fff; text-shadow: none;}
+	::selection {background: $color__yellow; color: #fff; text-shadow: none;} 
 
 /* Overwrite top-level spacing */
 html {
@@ -156,7 +164,7 @@ textarea {
 } 
 #comments .comment-meta {
 	@include Pigiarniq-Regular;
-	color: grey;
+	color: $color__grey;
 }
 #comments .reply {
 	@include Pigiarniq-Light;
@@ -305,9 +313,10 @@ input[type=password] {
 		}
 	}
 
-	.archive-title {
+	.frame__title .subhead {
 
 	@include Baskerville-Italic;
+	color: $color__grey;
 	text-transform: none;
 	font-variant: normal;
 	font-size: $inuit-base-font-size * 2;
@@ -463,4 +472,3 @@ input[type=password] {
 			padding-right: $inuit-base-spacing-unit * 2;
 		}
 	}
-
