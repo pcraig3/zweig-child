@@ -1,5 +1,13 @@
 ## Changelog
 
+### 1.0.4
+
+* Search widget in footer works great.
+* Menu widget in footer also works great. 
+* Refactored CSS, but who cares.
+* Squashed bug on search page (logo was unclickable)
+* Front page text + search bar actually look pretty reasonable.
+
 ### 1.0.3
 
 * New 404 page.  Whatup.
