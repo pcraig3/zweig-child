@@ -4,9 +4,12 @@
 
 global $wp_query;
 
-$title = '';
+$subhead = '';
+$archive_type = '';
 
 if( is_date() ) {
+
+	$archive_type = 'date';
 
 	$year = $month = '';
 
@@ -29,7 +32,8 @@ if( is_date() ) {
 
 		if( ! empty( $month ) ) {
 			$dateObj   = DateTime::createFromFormat('!m', $month);
-			$month = substr( $dateObj->format('F'), 0, 3); 
+			//$month = substr( $dateObj->format('F'), 0, 3); 
+			$month = $dateObj->format('F'); 
 		}
 
 		$title = $month . ' ' . $year;
@@ -49,18 +53,29 @@ if( is_date() ) {
 	}
 }
 
-if( is_author() ) 
-	$title = 'author: ' . $wp_query->query_vars['author'];
-
-if( is_category() )  {
-	$title = 'category: ' . get_cat_name( $wp_query->query_vars['cat'] );
+if( is_author() ) {
+	$title = get_the_author();
+	$archive_type = 'author';
 }
 
-if( is_tag() )
-	$title = 'tag: ' . $wp_query->query_vars['tag'];
+if( is_category() )  {
+	$title = get_cat_name( $wp_query->query_vars['cat'] );
+	$archive_type = 'category';
+}
 
-if( is_tax() )
-	$title = 'taxonomy: ' . $wp_query->query_vars['tax'];
+if( is_tag() ) {
+	$title = single_tag_title( '', false );
+	$archive_type = 'tag';
+}
+
+if( is_tax() ) {
+	$title = $wp_query->query_vars['tax'];
+	$archive_type = 'taxonomy';
+}
+
+if( is_post_type_archive() ) {
+	$title = $wp_query->query_vars['post_type'];
+}
 
 /** End method **/
 
@@ -75,7 +90,7 @@ ob_start();
 	<div class="layout__item one-third">
 		
 	<?php if( ! empty( $title ) ) ?>
-		<div class="frame__title pv--"><h3 class="subhead"><?php echo $title; ?></h3></div>
+		<div class="frame__title pv--"><h3 class="subhead"><?php echo $archive_type; ?></h3></div>
 
 	</div><!--end of .layout__item.one-third
 
@@ -95,6 +110,12 @@ ob_start();
 
 $html_string = ob_get_clean();
 
-echo do_shortcode( "[section_skeleton section_name='archive' section_header_classes='full-width' back_to_top='true'] " . $html_string . '[/section_skeleton]');
+if( is_post_type_archive() ) 
+	$section_attribute = "post_type='" . $title . "'";
+
+else 
+	$section_attribute = "section_name='" . $title . "'";
+
+echo do_shortcode( "[section_skeleton section_header_classes='full-width' back_to_top='true' " . $section_attribute . "] " . $html_string . '[/section_skeleton]');
 
  get_footer(); ?>

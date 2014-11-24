@@ -212,7 +212,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
 
     <section class="fp-section <?php echo $section_classes; ?>">
         <div class="layout <?php echo $layout_classes; ?>">
-          <div class="fp-section__header <?php echo $section_header_classes; ?>" id="<?php
+          <div class="fp-section__header pb+ <?php echo $section_header_classes; ?>" id="<?php
 
                 if( $back_to_top )
                   echo "back_to_top";
