@@ -366,6 +366,7 @@ article.format-quote {
 
 	/** @TODO: Fix this **/
 	.sticky {
+
 		border: none;
 		padding-bottom: 0;
 		margin-bottom: 0;
@@ -484,6 +485,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 	}
 
 	li {
+		
 		display: inline-block;
 		padding-right: $inuit-base-spacing-unit * 2;
 	}
