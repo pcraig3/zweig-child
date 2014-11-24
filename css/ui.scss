@@ -234,6 +234,20 @@ article.format-quote {
 	}
 }
 
+//hide the header and the back_to_top button on 404s
+.error404  {
+
+	#site-header h1 {
+
+		position: absolute;
+	}
+
+	.back-to-top {
+	
+	visibility: hidden;
+	}
+}
+
 .wrapper {
 
 	@include zw-site-container;

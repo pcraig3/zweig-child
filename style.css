@@ -5,7 +5,7 @@
  Author:       		Paul Craig
  Author URI:   		http://pcraig3.ca
  Template:     		zweig
- Version:      		1.0.1
+ Version:      		1.0.2
  Text Domain:  		zw-ch
  GitHub Theme URI: 	https://github.com/pcraig3/zweig-child
  GitHub Branch:    	master
@@ -2035,6 +2035,11 @@ article.format-quote {
     margin-top: -2px;
     /* This sucks, but it works :) */
     visibility: hidden; }
+
+.error404 #site-header h1 {
+  position: absolute; }
+.error404 .back-to-top {
+  visibility: hidden; }
 
 .wrapper {
   width: 90%;
