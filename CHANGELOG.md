@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.0.3
+
+* New 404 page.  Whatup.
+* Archive titles *much* better.  Not perfect, but who is?
+
 ### 1.0.2
 
 * Experimental search bar is super cool

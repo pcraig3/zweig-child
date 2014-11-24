@@ -68,6 +68,7 @@ if( is_tag() ) {
 	$archive_type = 'tag';
 }
 
+//@TODO: this one is still not working that well.
 if( is_tax() ) {
 	$title = $wp_query->query_vars['tax'];
 	$archive_type = 'taxonomy';
