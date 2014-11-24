@@ -1761,6 +1761,8 @@ html {
   @font-face {
     font-family: pigiarniqlight;
     src: url("css/fonts/pigiarniq_light-webfont.svg#pigiarniqlight") format("svg"); } }
+/* Mixins */
+/* Colours */
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection {
   background: #fcd700;
@@ -1777,10 +1779,6 @@ html {
   font-size: 16px;
   line-height: 24px; }
 
-/*body {
-
-	border-bottom: $inuit-base-spacing-unit solid $color__grey--light;
-}*/
 .wrapper .post-title {
   padding-bottom: 12px;
   font-size: 48px;
@@ -1998,6 +1996,45 @@ article.format-quote {
   word-spacing: 0em; }
 
 /** Actually starting original styling */
+/* Utility Classes */
+.full-height {
+  /* Might not work perfectly on mobile.  If not, try https://github.com/rodneyrehm/viewport-units-buggyfill */
+  min-height: 100vh;
+  height: auto !important; }
+
+.full-width {
+  width: 100% !important; }
+
+.hidden {
+  visibility: hidden !important; }
+
+.not-displayed {
+  display: none !important; }
+
+.relative {
+  position: relative !important; }
+
+.fade-to-solid {
+  transition: opacity 0.15s ease-in;
+  opacity: .65; }
+  .fade-to-solid:hover {
+    opacity: 1; }
+
+.solid-to-fade {
+  transition: opacity 0.15s ease-in;
+  opacity: 1; }
+  .solid-to-fade:hover {
+    opacity: .65; }
+
+.cursor-default {
+  cursor: default !important; }
+
+.subtle-link {
+  color: #333; }
+  .subtle-link:hover {
+    color: #333; }
+
+/* Elements */
 #site-header,
 .fp-section__header {
   width: 90%;
@@ -2040,74 +2077,12 @@ article.format-quote {
     /* This sucks, but it works :) */
     visibility: hidden; }
 
-.error404 #site-header h1 {
-  position: absolute; }
-.error404 .back-to-top {
-  visibility: hidden; }
-
 .wrapper {
   width: 90%;
   padding: 1em 0;
   margin: auto;
   border: 0;
   max-width: none; }
-
-.post-navigation {
-  word-break: break-word; }
-
-#comments .comment-body, #comments .comment {
-  margin-bottom: 48px; }
-
-.form-submit {
-  text-align: right; }
-
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=search],
-input[type=password] {
-  background: transparent; }
-
-/** Inuit.css or my markup */
-/* Might not work perfectly on mobile.  If not, try https://github.com/rodneyrehm/viewport-units-buggyfill */
-.full-height {
-  min-height: 100vh;
-  height: auto !important; }
-
-.full-width {
-  width: 100% !important; }
-
-.hidden {
-  visibility: hidden !important; }
-
-.not-displayed {
-  display: none !important; }
-
-.relative {
-  position: relative !important; }
-
-.fade-to-solid {
-  transition: opacity 0.15s ease-in;
-  opacity: .65; }
-  .fade-to-solid:hover {
-    opacity: 1; }
-
-.solid-to-fade {
-  transition: opacity 0.15s ease-in;
-  opacity: 1; }
-  .solid-to-fade:hover {
-    opacity: .65; }
-
-.cursor-default {
-  cursor: default !important; }
-
-.intimate-details {
-  text-align: right; }
-
-.subtle-link {
-  color: #333; }
-  .subtle-link:hover {
-    color: #333; }
 
 .frame__title .subhead {
   font-family: 'libre_baskervilleitalic', times, serif;
@@ -2143,16 +2118,15 @@ input[type=password] {
     padding-bottom: 0;
     margin-bottom: 0; }
 
-/*  Comments  */
-#comments .vcard .avatar {
-  margin: 6px 12px 6px 6px; }
+.form-submit {
+  text-align: right; }
 
-#comments .comment-awaiting-moderation {
-  padding-left: 55.92px; }
-
-input[type=submit] {
-  transition: background-color 0.1s ease-in;
-  padding: 4px 8px 6px 8px; }
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=password] {
+  background: transparent; }
 
 input[type="text"]:active,
 input[type="text"]:focus,
@@ -2171,9 +2145,58 @@ textarea {
   border: 1px solid #f9f9f9;
   background: #FFF; }
 
-#commentform label {
-  padding-bottom: 6px; }
+/* Header */
+.intimate-details {
+  text-align: right; }
 
+/* Single */
+/* Post metas */
+/* Post navigation */
+.post-navigation {
+  word-break: break-word; }
+
+/* Author Box */
+/* Comments */
+#comments .comment-body, #comments .comment {
+  margin-bottom: 48px; }
+#comments .vcard .avatar {
+  margin: 6px 12px 6px 6px; }
+#comments .comment-awaiting-moderation {
+  padding-left: 55.92px; }
+#comments #commentform label {
+  padding-bottom: 6px; }
+#comments input[type=submit] {
+  transition: background-color 0.1s ease-in;
+  padding: 4px 8px 6px 8px; }
+
+/* Footer */
+#footer {
+  width: 90%;
+  padding: 1em 0;
+  margin: auto;
+  border: 0;
+  max-width: none;
+  width: 100%;
+  border-bottom: 24px solid #F3F3F3; }
+
+.widget-area {
+  width: auto;
+  float: none; }
+
+.menu-footer-menu-container ul[class*="menu"] {
+  margin: 0 5%;
+  padding: 24px 0; }
+.menu-footer-menu-container li {
+  display: inline-block;
+  padding-right: 48px; }
+
+/* Post / Page Formats */
+.error404 #site-header h1 {
+  position: absolute; }
+.error404 .back-to-top {
+  visibility: hidden; }
+
+/* Back to top button */
 .back-to-top {
   position: absolute;
   top: 220vh;
@@ -2196,47 +2219,26 @@ textarea {
     text-align: center;
     line-height: 48px; }
 
-#footer .search-form {
-  display: block;
-  background: none repeat scroll 0% 0% #F9F9F9;
-  /* let's just hide it */ }
-  #footer .search-form .search-field {
-    font-family: 'libre_baskervilleregular', times, serif;
-    font-weight: 400;
-    font-style: normal;
-    word-spacing: 0em;
-    font-variant: normal;
-    text-transform: lowercase;
-    font-size: 32px;
-    line-height: 48px;
-    width: 90%;
-    margin-left: 5%;
-    border-bottom: 1px solid #F9F9F9;
-    padding: 0; }
-    #footer .search-form .search-field:active, #footer .search-form .search-field:focus {
-      border-bottom: #B4B4B4 1px solid !important; }
-  #footer .search-form .screen-reader-text {
-    display: none; }
-  #footer .search-form .search-submit {
-    display: none; }
+/* Search bars */
+.search-form .search-field, .search-form .placeholder {
+  font-family: 'libre_baskervilleregular', times, serif;
+  font-weight: 400;
+  font-style: normal;
+  word-spacing: 0em;
+  font-variant: normal;
+  text-transform: lowercase;
+  font-size: 48px; }
+.search-form .screen-reader-text {
+  display: none; }
 
-.search-form.search-form__title {
+.fp-section__header .search-form {
   display: inline; }
-  .search-form.search-form__title .search-field,
-  .search-form.search-form__title .placeholder {
-    font-family: 'libre_baskervilleregular', times, serif;
-    font-weight: 400;
-    font-style: normal;
-    word-spacing: 0em;
-    font-variant: normal;
-    text-transform: lowercase;
-    font-size: 48px; }
-  .search-form.search-form__title .search-field {
+  .fp-section__header .search-form .search-field {
     /* sort of arbitrary */
     width: 200px;
     min-width: 200px;
     position: relative; }
-  .search-form.search-form__title .search-submit {
+  .fp-section__header .search-form .search-submit {
     font-size: 24px;
     position: relative;
     height: 48px;
@@ -2251,29 +2253,26 @@ textarea {
     right: 0;
     margin: 19.2px;
     margin-right: 0; }
-  .search-form.search-form__title .screen-reader-text {
+
+#footer .search-form {
+  display: block;
+  background: none repeat scroll 0% 0% #F9F9F9;
+  /* let's just hide it */ }
+  #footer .search-form .search-field {
+    font-variant: normal;
+    text-transform: lowercase;
+    font-size: 32px;
+    line-height: 48px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1px solid #F9F9F9;
+    padding: 0; }
+    #footer .search-form .search-field:active, #footer .search-form .search-field:focus {
+      border-bottom: #B4B4B4 1px solid !important; }
+  #footer .search-form .search-submit {
     display: none; }
 
-#footer {
-  width: 90%;
-  padding: 1em 0;
-  margin: auto;
-  border: 0;
-  max-width: none;
-  width: 100%;
-  border-bottom: 24px solid #F3F3F3; }
-
-.widget-area {
-  width: auto;
-  float: none; }
-
-.menu-footer-menu-container ul[class*="menu"] {
-  margin: 0 5%;
-  padding: 24px 0; }
-.menu-footer-menu-container li {
-  display: inline-block;
-  padding-right: 48px; }
-
+/* Media Queries */
 .sandbox {
   border: 1px yellow solid; }
   .sandbox * {

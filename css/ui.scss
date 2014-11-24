@@ -1,3 +1,4 @@
+/* Mixins */
 @mixin zw-lowercase($font-size: 1em) {
 
 	font-variant: normal;
@@ -16,7 +17,7 @@
 
 @mixin zw-transition($property, $timespan: .15s, $easing: ease-in) {
 
-  transition: $property $timespan $easing;
+	transition: $property $timespan $easing;
 }
 
 @mixin zw-button($base-spacing, $font-size-proportion: 1) {
@@ -34,7 +35,7 @@
 	line-height: $base-spacing;
 }
 
-
+/* Colours */
 $color__grey--light: #f9f9f9;
 $color__gray--light: $color__grey--light;
 
@@ -50,9 +51,9 @@ $color__gray--dark: $color__grey--dark;
 $color__red: #d43b1d;
 $color__yellow: #fcd700;
 
-	/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-	::-moz-selection{background: $color__yellow; color: #fff; text-shadow: none;}
-	::selection {background: $color__yellow; color: #fff; text-shadow: none;} 
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: $color__yellow; color: #fff; text-shadow: none;}
+::selection {background: $color__yellow; color: #fff; text-shadow: none;} 
 
 /* Overwrite top-level spacing */
 html {
@@ -61,16 +62,11 @@ html {
 	line-height: $inuit-base-line-height;
 }
 
-/*body {
-
-	border-bottom: $inuit-base-spacing-unit solid $color__grey--light;
-}*/
-
 .wrapper .post-title {
 
 	padding-bottom: $inuit-base-spacing-unit * .5;
-  	font-size: $inuit-base-font-size * 3;
-  	line-height: $inuit-base-line-height * 2;
+	font-size: $inuit-base-font-size * 3;
+	line-height: $inuit-base-line-height * 2;
 }
 
 .wrapper .post-date,
@@ -78,8 +74,8 @@ html {
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
 
-  	font-size: $inuit-base-font-size * .8;
-  	margin-bottom: $inuit-base-spacing-unit * 2;
+	font-size: $inuit-base-font-size * .8;
+	margin-bottom: $inuit-base-spacing-unit * 2;
 	color: $color__grey--dark !important;
 }
 
@@ -206,6 +202,75 @@ article.format-quote {
 }
 
 /** Actually starting original styling */
+/* Utility Classes */
+
+.full-height {
+
+	/* Might not work perfectly on mobile.  If not, try https://github.com/rodneyrehm/viewport-units-buggyfill */
+	min-height: 100vh;
+	height: auto !important;
+}
+
+.full-width {
+
+	width: 100% !important;
+}
+
+.hidden {
+
+	visibility: hidden !important;
+}
+
+.not-displayed {
+
+	display: none !important;
+}
+
+.relative {
+
+	position: relative !important;
+}
+
+.fade-to-solid {
+
+	@include zw-transition(opacity);
+
+	opacity: .65;
+
+	&:hover {
+
+		opacity: 1;
+	}
+}
+
+.solid-to-fade {
+
+	@include zw-transition(opacity);
+
+	opacity: 1;
+
+	&:hover {
+
+		opacity: .65;
+	}
+}
+
+.cursor-default {
+
+	cursor: default !important;
+}
+
+.subtle-link {
+
+	color: 		$color__grey--dark;
+
+	&:hover {
+
+		color: 		$color__grey--dark;
+	}
+} 
+
+/* Elements */
 #site-header,
 .fp-section__header {
 
@@ -232,26 +297,11 @@ article.format-quote {
 		@include zw-lowercase( $inuit-base-font-size * 3 );
 	}
 
-
 	.fp-section__header__spacer {
 		@include Baskerville-Regular;
 		@include zw-lowercase( $inuit-base-font-size * 3.5 );
 		display: inline-block;
 		margin-top: -2px; /* This sucks, but it works :) */
-		visibility: hidden;
-	}
-}
-
-//hide the header and the back_to_top button on 404s
-.error404  {
-
-	#site-header h1 {
-
-		position: absolute;
-	}
-
-	.back-to-top {
-	
 	visibility: hidden;
 	}
 }
@@ -261,106 +311,7 @@ article.format-quote {
 	@include zw-site-container;
 }
 
-.post-navigation {
-
-	word-break: break-word;
-}
-
-#comments .comment-body, #comments .comment {
-
-	margin-bottom: $inuit-base-spacing-unit * 2;
-}
-
-.form-submit {
-
-	text-align: right;
-}
-
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=search],
-input[type=password] {
-
-	background: transparent;
-}
-
-
-/** Inuit.css or my markup */
-
-	/* Might not work perfectly on mobile.  If not, try https://github.com/rodneyrehm/viewport-units-buggyfill */
-	.full-height {
-
-		min-height: 100vh;
-		height: auto !important;
-	}
-
-	.full-width {
-
-		width: 100% !important;
-	}
-
-	.hidden {
-
-		visibility: hidden !important;
-	}
-
-	.not-displayed {
-
-		display: none !important;
-	}
-
-	.relative {
-
-		position: relative !important;
-	}
-
-	.fade-to-solid {
-
-		@include zw-transition(opacity);
-
-		opacity: .65;
-
-		&:hover {
-
-			opacity: 1;
-		}
-	}
-
-	.solid-to-fade {
-
-		@include zw-transition(opacity);
-
-		opacity: 1;
-
-		&:hover {
-
-			opacity: .65;
-		}
-	}
-
-	.cursor-default {
-
-		cursor: default !important;
-	}
-
-
-	.intimate-details {
-
-		text-align: right;
-	}
-
-	.subtle-link {
-
-		color: 		$color__grey--dark;
-
-		&:hover {
-
-			color: 		$color__grey--dark;
-		}
-	}
-
-	.frame__title .subhead {
+.frame__title .subhead {
 
 	@include Baskerville-Italic;
 	color: $color__grey;
@@ -368,7 +319,7 @@ input[type=password] {
 	font-variant: normal;
 	font-size: $inuit-base-font-size * 2;
 	margin-top: $inuit-base-spacing-unit * .25; 
-	}
+}
 
 .frame {
 
@@ -393,8 +344,8 @@ input[type=password] {
 			.post-title {
 
 				padding-bottom: $inuit-base-spacing-unit * .25;
-			  	font-size: $inuit-base-font-size * 1.8;
-			  	line-height: $inuit-base-line-height;
+				font-size: $inuit-base-font-size * 1.8;
+				line-height: $inuit-base-line-height;
 			}
 
 			.post-date {
@@ -421,16 +372,85 @@ input[type=password] {
 	}
 }
 
-	/*  Comments  */
-	$padding-base: $inuit-base-spacing-unit / 4;
+.form-submit {
 
-	#comments .vcard .avatar {
-	    margin: $padding-base ($padding-base *2) $padding-base $padding-base;
+	text-align: right;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=password] {
+
+	background: transparent;
+}
+
+input[type="text"]:active, 
+input[type="text"]:focus, 
+input[type="email"]:active, 
+input[type="email"]:focus, 
+input[type="url"]:active, 
+input[type="url"]:focus, 
+input[type="search"]:active, 
+input[type="search"]:focus, 
+input[type="password"]:active, 
+input[type="password"]:focus {
+
+	border: none !important;
+	border-bottom: 1px solid $color__red !important;
+}
+
+textarea {
+
+	border: 1px solid $color__grey--light;
+	background: #FFF;
+}
+
+
+/* Header */
+.intimate-details {
+
+	text-align: right;
+}
+
+/* Single */
+//.sticky {
+
+
+/* Post metas */
+
+
+/* Post navigation */
+.post-navigation {
+
+	word-break: break-word;
+} 
+
+/* Author Box */
+
+/* Comments */
+$padding-base: $inuit-base-spacing-unit / 4;
+
+#comments  {
+
+	.comment-body, .comment {
+
+		margin-bottom: $inuit-base-spacing-unit * 2;
+	}  
+
+	.vcard .avatar {
+		margin: $padding-base ($padding-base *2) $padding-base $padding-base;
 	}
 
-	#comments .comment-awaiting-moderation {
+	.comment-awaiting-moderation {
 
 		padding-left: $inuit-base-spacing-unit * 2.33;
+	}
+
+
+	#commentform label {
+		padding-bottom: $padding-base;
 	}
 
 	input[type=submit] {
@@ -439,152 +459,143 @@ input[type=password] {
 
 		padding:	($padding-base / 1.5) ($padding-base / .75) $padding-base ($padding-base / .75); 
 	}
+}
 
-	input[type="text"]:active, 
-	input[type="text"]:focus, 
-	input[type="email"]:active, 
-	input[type="email"]:focus, 
-	input[type="url"]:active, 
-	input[type="url"]:focus, 
-	input[type="search"]:active, 
-	input[type="search"]:focus, 
-	input[type="password"]:active, 
-	input[type="password"]:focus {
+/* Footer */
+#footer {
 
-		border: none !important;
-		border-bottom: 1px solid $color__red !important;
+	@include zw-site-container();
+	width: 100%;
+	border-bottom: $inuit-base-spacing-unit solid #F3F3F3;
+}
+
+.widget-area {
+
+	width: auto;
+	float: none;
+}
+
+.menu-footer-menu-container {
+
+	ul[class*="menu"] {
+
+		margin: 0 5%;
+		padding: $inuit-base-spacing-unit 0;
 	}
 
-	textarea {
-
-		border: 1px solid $color__grey--light;
-		background: #FFF;
+	li {
+		display: inline-block;
+		padding-right: $inuit-base-spacing-unit * 2;
 	}
+}
 
 
-	#commentform label {
-		padding-bottom: $padding-base;
+/* Post / Page Formats */
+//hide the header and the back_to_top button on 404s
+.error404  {
+
+	#site-header h1 {
+
+		position: absolute;
 	}
 
 	.back-to-top {
 
-		$back_to_top_size: $inuit-base-spacing-unit * 2;
+		visibility: hidden;
+	}
+}
+
+/* Back to top button */
+.back-to-top {
+
+	$back_to_top_size: $inuit-base-spacing-unit * 2;
+
+	position: absolute;
+	top: 220vh; 
+	bottom: auto;
+	right: 0;
+	margin-right: 5%;
+
+	&.stuck {
+
+		position: fixed;
+		top: auto;
+		bottom: $inuit-base-spacing-unit;
+	}
+
+	.back-to-top__link {
+
+		@include zw-button( $inuit-base-spacing-unit * 2 );
+	}
+}
+
+/* Search bars */
+.search-form {
+	
+	.search-field, .placeholder {
+
+		@include Baskerville-Regular;
+		@include zw-lowercase( $inuit-base-font-size * 3 );
+	}
+
+	.screen-reader-text {
+
+		display: none;
+	}
+}
+
+//search bar in the title on the search page
+.fp-section__header .search-form {
+
+	display: inline;
+
+	.search-field {
+
+		/* sort of arbitrary */
+		width: 200px;
+		min-width: 200px;
+		position: relative;
+	}
+
+	.search-submit {
+
+		@include zw-button( $inuit-base-spacing-unit * 2, .5 );
 
 		position: absolute;
-		top: 220vh; 
-		bottom: auto;
 		right: 0;
-		margin-right: 5%;
+		margin: $inuit-base-spacing-unit * .8;
+		margin-right: 0;
+	}		
+}
 
-		&.stuck {
-			
-			position: fixed;
-			top: auto;
-			bottom: $inuit-base-spacing-unit;
-		}
+//search bar in the footer
+#footer .search-form {
 
-			.back-to-top__link {
+	display: block;
+	background: none repeat scroll 0% 0% #F9F9F9;
 
-			@include zw-button( $inuit-base-spacing-unit * 2 );
-		}
-	}
+	.search-field {
 
-	#footer .search-form {
+		@include zw-lowercase( $inuit-base-font-size * 2 );
 
-		display: block;
-		background: none repeat scroll 0% 0% #F9F9F9;
+		line-height: $inuit-base-line-height * 2;
 
-			.search-field {
+		width: 90%;
+		margin-left: 5%;
+		border-bottom: 1px solid #F9F9F9;
+		padding: 0;
 
-			@include Baskerville-Regular;
-			@include zw-lowercase( $inuit-base-font-size * 2 );
+		&:active, &:focus {
 
-			line-height: $inuit-base-line-height * 2;
-
-			width: 90%;
-			margin-left: 5%;
-			border-bottom: 1px solid #F9F9F9;
-			padding: 0;
-
-			&:active, &:focus {
-
-				border-bottom: #B4B4B4 1px solid !important;
-			}
-		}
-
-		.screen-reader-text {
-
-			display: none;
-		}
-
-		/* let's just hide it */
-		.search-submit {
-
-			display: none;
+			border-bottom: #B4B4B4 1px solid !important;
 		}
 	}
 
+	/* let's just hide it */
+	.search-submit {
 
-	.search-form.search-form__title {
-
-		display: inline;
-
-		.search-field, 
-		.placeholder {
-
-			@include Baskerville-Regular;
-			@include zw-lowercase( $inuit-base-font-size * 3 );
-		}
-
-		.search-field {
-
-			/* sort of arbitrary */
-			width: 200px;
-			min-width: 200px;
-			position: relative;
-		}
-
-		.search-submit {
-
-			@include zw-button( $inuit-base-spacing-unit * 2, .5 );
-
-			position: absolute;
-			right: 0;
-			margin: $inuit-base-spacing-unit * .8;
-			margin-right: 0;
-		}
-
-		.screen-reader-text {
-
-			display: none;
-		}
+		display: none;
 	}
+}
 
-	#footer {
-
-		@include zw-site-container();
-		width: 100%;
-		border-bottom: $inuit-base-spacing-unit solid #F3F3F3;
-
-	}
-
-
-	.widget-area {
-
-		width: auto;
-		float: none;
-	}
-
-	.menu-footer-menu-container {
-
-		ul[class*="menu"] {
-
-			margin: 0 5%;
-			padding: $inuit-base-spacing-unit 0;
-		}
-
-		li {
-			display: inline-block;
-			padding-right: $inuit-base-spacing-unit * 2;
-		}
-	}
+/* Media Queries */
