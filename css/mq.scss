@@ -13,7 +13,8 @@
 		&.frame--splash {}
 		*/
 
-		&.frame--archive {
+		&.frame--archive,
+		&.frame--404 {
 
 			padding-left: $inuit-base-spacing-unit * 2;
 		}

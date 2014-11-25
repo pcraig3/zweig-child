@@ -3153,10 +3153,10 @@ textarea {
   padding-right: 48px; }
 
 /* Post / Page Formats */
-.error404 #site-header h1 {
+.error404 #site-header .site-meta {
   position: absolute; }
 .error404 .back-to-top {
-  visibility: hidden; }
+  display: none; }
 
 /* Back to top button */
 .back-to-top {
@@ -3270,7 +3270,7 @@ textarea {
     
     		&.frame--splash {}
     		*/ }
-    .frame.frame--archive {
+    .frame.frame--archive, .frame.frame--404 {
       padding-left: 48px; }
 
   ul, ol, dd {

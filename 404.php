@@ -5,10 +5,10 @@ ob_start();
 //@TODO: remove the logo?
 ?>
 	
-	<div class="layout__item one-third"></div><!--end of .layout__item.one-third
+	<div class="layout__item one-third palm-one-whole"></div><!--end of .layout__item.one-third
 
-	--><div class="layout__item two-thirds">
-		<div class="frame frame--archive">
+	--><div class="layout__item two-thirds palm-one-whole">
+		<div class="frame frame--404">
 
 			<p>Whoops, looks like there's even more nothing here than usual.</p>
 			<p> Maybe try <a href="<?php echo get_site_url(); ?>">the home page</a>?</p>

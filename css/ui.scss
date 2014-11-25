@@ -512,14 +512,14 @@ $padding-base: $inuit-base-spacing-unit / 4;
 //hide the header and the back_to_top button on 404s
 .error404  {
 
-	#site-header h1 {
+	#site-header .site-meta {
 
 		position: absolute;
 	}
 
 	.back-to-top {
 
-		visibility: hidden;
+		display: none;
 	}
 }
 
