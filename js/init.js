@@ -2,7 +2,7 @@
 var Init = (function () {
 
     //feels like this is bad practice :/
-    var mobile_breakpoint = 719; 
+    var mobile_breakpoint = 619; 
 
     var is_mobile = function () {
 

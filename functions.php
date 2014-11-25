@@ -155,7 +155,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
 
     $atts = shortcode_atts( array(
         'section_classes' => '',
-        'layout_classes' => 'layout--flush full-height pb+',
+        'layout_classes' => 'layout--flush full-height pb+ palm-pb',
         'section_header_classes' => 'full-width',
         'section_name' => '',
         'section_header_link' => '',
@@ -212,7 +212,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
 
     <section class="fp-section <?php echo $section_classes; ?>">
         <div class="layout <?php echo $layout_classes; ?>">
-          <div class="fp-section__header clearfix pb+ <?php echo $section_header_classes; ?>" id="<?php
+          <div class="fp-section__header clearfix pb+ palm-pb0 <?php echo $section_header_classes; ?>" id="<?php
 
                 if( $back_to_top )
                   echo "back_to_top";

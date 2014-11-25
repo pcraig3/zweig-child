@@ -280,7 +280,7 @@ article.format-quote {
 	.site-meta {
 		width: auto;
 		position: fixed;
-		z-index: 9999;
+		z-index: 99;
 	}
 
 	h1, h2 {
@@ -527,6 +527,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 	bottom: auto;
 	right: 0;
 	margin-right: 5%;
+	z-index: 101;
 
 	&.stuck {
 

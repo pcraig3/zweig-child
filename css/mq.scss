@@ -1,28 +1,62 @@
 @media screen and (max-width: 1023px) {
 }
 
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
 
 	ul, ol, dd {
 
 		margin-left: 1rem;
 	}
 
+	.wrapper {
+
+		position: relative;
+		z-index: 100;
+	}	
+
 	.back-to-top {
 
 		top: 280vh; 
 	}
 
+	#site-header,
 	.fp-section__header {
 
 		h2 {
-			margin: 0;
-			float: right;
 
+			margin: 0;
+			float: left;
+			padding-left: $inuit-base-spacing-unit * 1.5;
 		}
 
 		.fp-section__header__spacer {
+
 			display: block;
 		}
 	}
+
+	.author-box {
+		
+		padding-top: $inuit-base-spacing-unit;
+		margin-top: $inuit-base-spacing-unit * 2;
+	}
+
+	.menu-footer-menu-container li {
+
+		padding-right: $inuit-base-spacing-unit * 1.5;
+	}
+	#footer .search-form .search-field {
+
+		width: 75%;  /* so we don't overlap the 'top' button */
+	}
 }
+
+/* eyeroll */
+@media screen and (max-width: 42em) {
+	
+	.entry {
+
+		font-size: 1em;
+	}
+}
+

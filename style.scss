@@ -14,6 +14,15 @@
 @import "css/bower_components/inuit-defaults/settings.defaults";
 /* Define our initial breakpoint aliases and conditions. */
 @import "css/bower_components/inuit-responsive-settings/settings.responsive";
+$breakpoints: (
+    "palm"          "screen and (max-width: 619px)",
+    "lap"           "screen and (min-width: 620px) and (max-width: 1023px)",
+    "lap-and-up"    "screen and (min-width: 720px)",
+    "portable"      "screen and (max-width: 1023px)",
+    "desk"          "screen and (min-width: 1024px)",
+    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+) !default;
+
 
 @import "css/bower_components/inuit-functions/tools.functions";
 @import "css/bower_components/inuit-mixins/tools.mixins";
@@ -47,6 +56,17 @@ $inuit-enable-paddings--none:           true !default;
 $inuit-enable-margins:                 	true !default;
 $inuit-enable-margins--none:            true !default;
 @import "css/bower_components/inuit-spacing/trumps.spacing";
+
+$inuit-enable-responsive-margins:                   true !default;
+$inuit-enable-responsive-margins--none:             true !default;
+
+$inuit-enable-responsive-paddings:                  true !default;
+$inuit-enable-responsive-paddings--tiny:            true !default;
+$inuit-enable-responsive-paddings--small:           true !default;
+$inuit-enable-responsive-paddings--large:           true !default;
+$inuit-enable-responsive-paddings--huge:            true !default;
+
+$inuit-enable-responsive-paddings--none:            true !default;
 @import "css/bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
 
 /* The inuitcss clearfix module is a minimal clearfix helper class. */
