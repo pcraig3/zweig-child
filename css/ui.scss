@@ -327,6 +327,8 @@ article.format-quote {
 
 .frame {
 
+	padding: ( $inuit-base-spacing-unit * .25 ) $inuit-base-spacing-unit;
+
 	&.frame--single {
 
 		background: $color__grey--light;
@@ -335,10 +337,12 @@ article.format-quote {
 	&.frame--splash {
 
 		@include Baskerville-Regular;
+		padding-left: 0;
 	}
 
-
 	&.frame--archive {
+
+		background: #FFFFFF;
 
 		article {
 

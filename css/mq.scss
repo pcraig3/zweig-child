@@ -3,6 +3,23 @@
 
 @media screen and (max-width: 619px) {
 
+	.frame {
+
+		padding-bottom: $inuit-base-spacing-unit * .5;
+
+		/*
+		&.frame--single {}
+
+		&.frame--splash {}
+		*/
+
+		&.frame--archive {
+
+			padding-left: $inuit-base-spacing-unit * 2;
+		}
+		
+	}
+
 	ul, ol, dd {
 
 		margin-left: 1rem;
@@ -24,7 +41,7 @@
 
 		h2 {
 
-			margin: 0;
+			margin: -($inuit-base-spacing-unit * .75) 0;
 			float: left;
 			padding-left: $inuit-base-spacing-unit * 1.5;
 		}
@@ -47,7 +64,12 @@
 	}
 	#footer .search-form .search-field {
 
-		width: 75%;  /* so we don't overlap the 'top' button */
+		width: 80%;  /* so we don't overlap the 'top' button */
+	
+		/* 24 is the $inuit-base-spacing-unit, but I couldn't get that to work in the function */
+		width: -webkit-calc(90% - 48px);
+		width: -moz-calc(90% - 48px);
+		width: calc(90% - 48px);
 	}
 }
 

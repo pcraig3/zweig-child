@@ -12,17 +12,17 @@
 	
 /* If we want a namespace, do that here */
 @import "css/bower_components/inuit-defaults/settings.defaults";
-/* Define our initial breakpoint aliases and conditions. */
-@import "css/bower_components/inuit-responsive-settings/settings.responsive";
+
 $breakpoints: (
     "palm"          "screen and (max-width: 619px)",
     "lap"           "screen and (min-width: 620px) and (max-width: 1023px)",
-    "lap-and-up"    "screen and (min-width: 720px)",
+    "lap-and-up"    "screen and (min-width: 620px)",
     "portable"      "screen and (max-width: 1023px)",
     "desk"          "screen and (min-width: 1024px)",
     "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
 ) !default;
-
+/* Define our initial breakpoint aliases and conditions. */
+@import "css/bower_components/inuit-responsive-settings/settings.responsive";
 
 @import "css/bower_components/inuit-functions/tools.functions";
 @import "css/bower_components/inuit-mixins/tools.mixins";

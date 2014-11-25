@@ -8,7 +8,7 @@ ob_start();
 	<div class="layout__item one-third"></div><!--end of .layout__item.one-third
 
 	--><div class="layout__item two-thirds">
-		<div class="frame frame--archive ph pv--">
+		<div class="frame frame--archive">
 
 			<p>Whoops, looks like there's even more nothing here than usual.</p>
 			<p> Maybe try <a href="<?php echo get_site_url(); ?>">the home page</a>?</p>

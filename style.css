@@ -643,7 +643,7 @@ ul, ol, dd {
 /**
  * Responsive width classes based on your responsive settings.
  */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
   /**
    * Whole.
    */
@@ -784,7 +784,7 @@ ul, ol, dd {
 
   .palm-eleven-twelfths {
     width: 91.6666666% !important; } }
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 620px) and (max-width: 1023px) {
   /**
    * Whole.
    */
@@ -925,7 +925,7 @@ ul, ol, dd {
 
   .lap-eleven-twelfths {
     width: 91.6666666% !important; } }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   /**
    * Whole.
    */
@@ -1584,7 +1584,7 @@ ul, ol, dd {
  *
  * Add margins.
  */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
   .palm-m {
     margin: 24px !important; }
 
@@ -1607,7 +1607,7 @@ ul, ol, dd {
   .palm-mv {
     margin-top: 24px !important;
     margin-bottom: 24px !important; } }
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 620px) and (max-width: 1023px) {
   .lap-m {
     margin: 24px !important; }
 
@@ -1630,7 +1630,7 @@ ul, ol, dd {
   .lap-mv {
     margin-top: 24px !important;
     margin-bottom: 24px !important; } }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   .lap-and-up-m {
     margin: 24px !important; }
 
@@ -1702,7 +1702,7 @@ ul, ol, dd {
 /**
  * Remove margins.
  */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
   .palm-m0 {
     margin: 0 !important; }
 
@@ -1725,7 +1725,7 @@ ul, ol, dd {
   .palm-mv0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important; } }
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 620px) and (max-width: 1023px) {
   .lap-m0 {
     margin: 0 !important; }
 
@@ -1748,7 +1748,7 @@ ul, ol, dd {
   .lap-mv0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important; } }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   .lap-and-up-m0 {
     margin: 0 !important; }
 
@@ -1822,7 +1822,7 @@ ul, ol, dd {
  *
  * Add paddings.
  */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
   .palm-p {
     padding: 24px !important; }
 
@@ -1845,7 +1845,7 @@ ul, ol, dd {
   .palm-pv {
     padding-top: 24px !important;
     padding-bottom: 24px !important; } }
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 620px) and (max-width: 1023px) {
   .lap-p {
     padding: 24px !important; }
 
@@ -1868,7 +1868,7 @@ ul, ol, dd {
   .lap-pv {
     padding-top: 24px !important;
     padding-bottom: 24px !important; } }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   .lap-and-up-p {
     padding: 24px !important; }
 
@@ -1940,7 +1940,7 @@ ul, ol, dd {
 /**
  * Add tiny paddings.
  */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
   .palm-p-- {
     padding: 6px !important; }
 
@@ -1963,7 +1963,7 @@ ul, ol, dd {
   .palm-pv-- {
     padding-top: 6px !important;
     padding-bottom: 6px !important; } }
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 620px) and (max-width: 1023px) {
   .lap-p-- {
     padding: 6px !important; }
 
@@ -1986,7 +1986,7 @@ ul, ol, dd {
   .lap-pv-- {
     padding-top: 6px !important;
     padding-bottom: 6px !important; } }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   .lap-and-up-p-- {
     padding: 6px !important; }
 
@@ -2058,7 +2058,7 @@ ul, ol, dd {
 /**
  * Add small paddings.
  */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
   .palm-p- {
     padding: 12px !important; }
 
@@ -2081,7 +2081,7 @@ ul, ol, dd {
   .palm-pv- {
     padding-top: 12px !important;
     padding-bottom: 12px !important; } }
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 620px) and (max-width: 1023px) {
   .lap-p- {
     padding: 12px !important; }
 
@@ -2104,7 +2104,7 @@ ul, ol, dd {
   .lap-pv- {
     padding-top: 12px !important;
     padding-bottom: 12px !important; } }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   .lap-and-up-p- {
     padding: 12px !important; }
 
@@ -2176,7 +2176,7 @@ ul, ol, dd {
 /**
  * Add large paddings.
  */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
   .palm-p\+ {
     padding: 48px !important; }
 
@@ -2199,7 +2199,7 @@ ul, ol, dd {
   .palm-pv\+ {
     padding-top: 48px !important;
     padding-bottom: 48px !important; } }
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 620px) and (max-width: 1023px) {
   .lap-p\+ {
     padding: 48px !important; }
 
@@ -2222,7 +2222,7 @@ ul, ol, dd {
   .lap-pv\+ {
     padding-top: 48px !important;
     padding-bottom: 48px !important; } }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   .lap-and-up-p\+ {
     padding: 48px !important; }
 
@@ -2294,7 +2294,7 @@ ul, ol, dd {
 /**
  * Add huge paddings.
  */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
   .palm-p\+\+ {
     padding: 96px !important; }
 
@@ -2317,7 +2317,7 @@ ul, ol, dd {
   .palm-pv\+\+ {
     padding-top: 96px !important;
     padding-bottom: 96px !important; } }
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 620px) and (max-width: 1023px) {
   .lap-p\+\+ {
     padding: 96px !important; }
 
@@ -2340,7 +2340,7 @@ ul, ol, dd {
   .lap-pv\+\+ {
     padding-top: 96px !important;
     padding-bottom: 96px !important; } }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   .lap-and-up-p\+\+ {
     padding: 96px !important; }
 
@@ -2412,7 +2412,7 @@ ul, ol, dd {
 /**
  * Remove paddings.
  */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 619px) {
   .palm-p0 {
     padding: 0 !important; }
 
@@ -2435,7 +2435,7 @@ ul, ol, dd {
   .palm-pv0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important; } }
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 620px) and (max-width: 1023px) {
   .lap-p0 {
     padding: 0 !important; }
 
@@ -2458,7 +2458,7 @@ ul, ol, dd {
   .lap-pv0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important; } }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   .lap-and-up-p0 {
     padding: 0 !important; }
 
@@ -3049,6 +3049,7 @@ article.format-quote {
   margin-top: 6px; }
 
 .frame {
+  padding: 6px 24px;
   /** @TODO: Fix this **/ }
   .frame.frame--single {
     background: #f9f9f9; }
@@ -3056,21 +3057,24 @@ article.format-quote {
     font-family: 'libre_baskervilleregular', times, serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em; }
-  .frame.frame--archive article:hover .post-date {
-    visibility: visible;
-    opacity: 1; }
-  .frame.frame--archive article .post-title {
-    padding-bottom: 6px;
-    font-size: 28.8px;
-    line-height: 24px; }
-  .frame.frame--archive article .post-date {
-    transition: opacity 0.1s ease-in;
-    visibility: hidden;
-    opacity: 0;
-    margin-bottom: 48px; }
-  .frame.frame--archive article a {
-    display: block; }
+    word-spacing: 0em;
+    padding-left: 0; }
+  .frame.frame--archive {
+    background: #FFFFFF; }
+    .frame.frame--archive article:hover .post-date {
+      visibility: visible;
+      opacity: 1; }
+    .frame.frame--archive article .post-title {
+      padding-bottom: 6px;
+      font-size: 28.8px;
+      line-height: 24px; }
+    .frame.frame--archive article .post-date {
+      transition: opacity 0.1s ease-in;
+      visibility: hidden;
+      opacity: 0;
+      margin-bottom: 48px; }
+    .frame.frame--archive article a {
+      display: block; }
   .frame .sticky {
     border: none;
     padding-bottom: 0;
@@ -3259,6 +3263,16 @@ textarea {
     background: #DDD; }
 
 @media screen and (max-width: 619px) {
+  .frame {
+    padding-bottom: 12px;
+    		/*
+    		&.frame--single {}
+    
+    		&.frame--splash {}
+    		*/ }
+    .frame.frame--archive {
+      padding-left: 48px; }
+
   ul, ol, dd {
     margin-left: 1rem; }
 
@@ -3271,7 +3285,7 @@ textarea {
 
   #site-header h2,
   .fp-section__header h2 {
-    margin: 0;
+    margin: -18px 0;
     float: left;
     padding-left: 36px; }
   #site-header .fp-section__header__spacer,
@@ -3286,8 +3300,12 @@ textarea {
     padding-right: 36px; }
 
   #footer .search-form .search-field {
-    width: 75%;
-    /* so we don't overlap the 'top' button */ } }
+    width: 80%;
+    /* so we don't overlap the 'top' button */
+    /* 24 is the $inuit-base-spacing-unit, but I couldn't get that to work in the function */
+    width: -webkit-calc(90% - 48px);
+    width: -moz-calc(90% - 48px);
+    width: calc(90% - 48px); } }
 /* eyeroll */
 @media screen and (max-width: 42em) {
   .entry {

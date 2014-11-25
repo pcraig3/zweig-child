@@ -9,7 +9,7 @@ ob_start();
 	<div class="layout__item one-third palm-one-whole"><!--empty column--></div><!--end of .layout__item.one-third 
 
 	--><div class="layout__item two-thirds palm-one-whole">
-		<div class="frame frame--archive frame--index ph pv-- palm-pb-">
+		<div class="frame frame--archive frame--index">
 
 			<?php get_template_part('loop','excerpt'); ?>
 

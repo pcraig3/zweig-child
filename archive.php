@@ -96,7 +96,7 @@ ob_start();
 	</div><!--end of .layout__item.one-third
 
 	--><div class="layout__item two-thirds">
-		<div class="frame frame--archive ph pv--">
+		<div class="frame frame--archive">
 
 			<?php get_template_part('loop','excerpt'); ?>
 
