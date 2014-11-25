@@ -1,5 +1,15 @@
 ## Changelog
 
+### 1.0.5
+
+* Responsive posts/pages (singles)
+* Got that hacky title thing working more or less.
+* Responsive archives
+* Responsive front page
+* Responsive 404
+* JS updated: listens to resize for a couple things.
+* Search is gonna be a nightmare. 
+
 ### 1.0.4
 
 * Search widget in footer works great.
