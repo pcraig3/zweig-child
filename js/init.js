@@ -1,9 +1,13 @@
 //pure javascript, runs on load, gets the offset of the spacer and the length of the logo.
-
-
-
 var Init = (function () {
 
+    //feels like this is bad practice :/
+    var mobile_breakpoint = 719; 
+
+    var is_mobile = function () {
+
+      return window.innerWidth <= mobile_breakpoint;
+    };
 
   	/**
   	 * function finds the x and y offset of an element relative to the top of the body element
@@ -75,7 +79,7 @@ var Init = (function () {
   	 */
 	var add_marginLeft_based_on_site_logo = function ( obj ) {
 
-		var logo_dimensions = _find_dimensions( document.getElementById("site-logo") );
+    var logo_dimensions = _find_dimensions( document.getElementById("site-logo") );
 
 		obj.style.marginLeft = logo_dimensions.width + "px";
 	};
@@ -117,6 +121,8 @@ var Init = (function () {
 
   		add_marginLeft_based_on_site_logo: add_marginLeft_based_on_site_logo,
 
+      is_mobile: is_mobile,
+
   	};
 
 })();
@@ -154,5 +160,6 @@ zw_ch_load_event(function(){
     	Init.scroll_to_bottom_of_header, 1);
 
     // add a left margin equal to the width of site logo to section header elements
-    Init.apply_callback_function_on_queried_elements( ".fp-section__header h2", Init.add_marginLeft_based_on_site_logo );
+    if( ! Init.is_mobile() )
+      Init.apply_callback_function_on_queried_elements( ".fp-section__header h2", Init.add_marginLeft_based_on_site_logo );
 });

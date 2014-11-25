@@ -1,0 +1,28 @@
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 719px) {
+
+	ul, ol, dd {
+
+		margin-left: 1rem;
+	}
+
+	.back-to-top {
+
+		top: 280vh; 
+	}
+
+	.fp-section__header {
+
+		h2 {
+			margin: 0;
+			float: right;
+
+		}
+
+		.fp-section__header__spacer {
+			display: block;
+		}
+	}
+}

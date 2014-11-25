@@ -212,7 +212,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
 
     <section class="fp-section <?php echo $section_classes; ?>">
         <div class="layout <?php echo $layout_classes; ?>">
-          <div class="fp-section__header pb+ <?php echo $section_header_classes; ?>" id="<?php
+          <div class="fp-section__header clearfix pb+ <?php echo $section_header_classes; ?>" id="<?php
 
                 if( $back_to_top )
                   echo "back_to_top";
@@ -220,7 +220,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
                   echo $section_name; 
 
                 ?>">
-                <h2><a <?php 
+                <div class="fp-section__header__spacer">h4ck</div><h2><a <?php 
 
                 echo 'class="subtle-link ';
 
@@ -230,7 +230,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
                   echo 'href="' . $section_header_link . '" ';
 
                 ?>
-                >::<?php echo $section_name; ?></a></h2><div class="fp-section__header__spacer">i</div>
+                >::<?php echo $section_name; ?></a></h2>
           </div><!-- end of .fp-section__header-->
 
           <?php echo do_shortcode( $content ); ?>

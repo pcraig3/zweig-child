@@ -296,6 +296,8 @@ article.format-quote {
 	h2 {
 		@include Baskerville-Regular;
 		@include zw-lowercase( $inuit-base-font-size * 3 );
+
+		margin-left: 213px;  /* this value will be overwritten */
 	}
 
 	.fp-section__header__spacer {
@@ -303,7 +305,8 @@ article.format-quote {
 		@include zw-lowercase( $inuit-base-font-size * 3.5 );
 		display: inline-block;
 		margin-top: -2px; /* This sucks, but it works :) */
-	visibility: hidden;
+		visibility: hidden;
+		width: 0px; /* can't believe it took me so long to think of this. */
 	}
 }
 
