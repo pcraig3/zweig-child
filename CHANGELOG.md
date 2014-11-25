@@ -1,14 +1,19 @@
 ## Changelog
 
+### 1.1.0
+* Front page search bar tweak
+* Search page responsive (phew)
+* Note: Keeping the header where it is seems like a risky move at this point. Might have to change this down the road.
+
 ### 1.0.5
 
 * Responsive posts/pages (singles)
-* Got that hacky title thing working more or less.
+* Got that hacky title thing working more or less
 * Responsive archives
 * Responsive front page
 * Responsive 404
-* JS updated: listens to resize for a couple things.
-* Search is gonna be a nightmare. 
+* JS updated: listens to resize for a couple things
+* Search is gonna be a nightmare
 
 ### 1.0.4
 
