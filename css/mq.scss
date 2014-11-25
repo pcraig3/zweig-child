@@ -6,6 +6,8 @@
 	.frame {
 
 		padding-bottom: $inuit-base-spacing-unit * .5;
+		position: relative;
+		z-index: 100;
 
 		/*
 		&.frame--single {}
@@ -24,17 +26,11 @@
 	ul, ol, dd {
 
 		margin-left: 1rem;
-	}
-
-	.wrapper {
-
-		position: relative;
-		z-index: 100;
 	}	
 
 	.back-to-top {
 
-		top: 280vh; 
+		top: 240vh; 
 	}
 
 	#site-header,
@@ -53,6 +49,27 @@
 		}
 	}
 
+	.frame__title {
+
+		padding-top: $inuit-base-spacing-unit;
+
+		.subhead {
+		
+			font-size: $inuit-base-font-size * 1.5;
+			padding-left: $inuit-base-spacing-unit * 1.5;
+		}
+
+		.subhead__search_results {
+		
+			display: inline;
+		}
+
+		.subhead__search_again {
+		
+			display: block;
+		}
+	}
+
 	.author-box {
 		
 		padding-top: $inuit-base-spacing-unit;
@@ -62,6 +79,13 @@
 	.menu-footer-menu-container li {
 
 		padding-right: $inuit-base-spacing-unit * 1.5;
+	}
+
+	.fp-section__header .search__container {
+
+			display: none;
+
+
 	}
 	#footer .search-form .search-field {
 

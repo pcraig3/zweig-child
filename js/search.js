@@ -8,6 +8,8 @@ jQuery(function( $ ){
 		var $input = $form.find('.search-field');
 		var $placeholder = $form.find('.placeholder');
 
+		var $search_again_link = $('.subhead__search_again a');
+
 		/**
 		 * function does more or less what it's called, so...
 		 */
@@ -57,9 +59,23 @@ jQuery(function( $ ){
 			}, 100);
 		};
 
+		/**
+		 * When the 'search again' link is clicked, clear the bottom search value 
+		 * and set the focus on it.  
+		 * Bit of a workaround becuase we hid the search bar in the header.
+		 */
+		var search_again_clear_focus_footer_search = function () {
+
+			$search_again_link.on("click", function() {
+
+				$('#footer').find('.search-field').val("").focus();
+			});
+		};
+
 	  	return {
 
-			search_init: search_init 
+			search_init: search_init,
+			search_again_clear_focus_footer_search: search_again_clear_focus_footer_search
 	  	};
 
 	})();
@@ -67,6 +83,7 @@ jQuery(function( $ ){
 	$( document ).ready( function() {
 
 		Search.search_init();
+		Search.search_again_clear_focus_footer_search();
 	});
 
 });

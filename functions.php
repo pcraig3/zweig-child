@@ -247,12 +247,12 @@ add_shortcode( 'section_skeleton', 'zw_ch_section_skeleton' );
 function search_in_title( $s ) {
 
   ob_start();
-  ?>search.("<form role="search" method="get" class="search-form search-form__title" action="http://pcraig3.dev/">
+  ?>search<span class="search__container">.("<form role="search" method="get" class="search-form search-form__title" action="http://pcraig3.dev/">
         <label>
           <span class="screen-reader-text">Search for:</span>
           <input class="search-field" placeholder="search…" value="<?php echo $s; ?>" name="s" type="search" style="min-width:200px;width:200px;">
         </label><pre class="placeholder" style="display:none;"><?php echo $s; ?></pre>")<button type="submit" class="search-submit solid-to-fade"><i class="icon-search"></i></button>
-      </form><?php 
+      </form></span><?php 
   return ob_get_clean();
 }
 

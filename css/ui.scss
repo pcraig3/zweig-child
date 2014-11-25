@@ -317,14 +317,24 @@ article.format-quote {
 	@include zw-site-container;
 }
 
-.frame__title .subhead {
+.frame__title  {
 
-	@include Baskerville-Italic;
-	color: $color__grey;
-	text-transform: none;
-	font-variant: normal;
-	font-size: $inuit-base-font-size * 2;
-	margin-top: $inuit-base-spacing-unit * .25; 
+	padding: ($inuit-base-spacing-unit * .25 ) 0;
+
+	.subhead {
+
+		@include Baskerville-Italic;
+		color: $color__grey;
+		text-transform: none;
+		font-variant: normal;
+		font-size: $inuit-base-font-size * 2;
+		margin-top: $inuit-base-spacing-unit * .25; 
+	}
+
+	.subhead__search_results, .subhead__search_again {
+
+		display: none;
+	}
 }
 
 .frame {
