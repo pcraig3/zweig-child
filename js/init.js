@@ -84,6 +84,16 @@ var Init = (function () {
 		obj.style.marginLeft = logo_dimensions.width + "px";
 	};
 
+    /**
+     * Remove (inline) left margins on an input element
+     * 
+     * @param  DOM obj    An element from the DOM
+     */
+    var remove_marginLeft = function ( obj ) {
+
+      obj.style.marginLeft = "";
+    };
+
   	/**
   	 * Callback function will be called on every target.  Targets are acquired with 
   	 * querySelectorAll
@@ -120,6 +130,7 @@ var Init = (function () {
   			apply_callback_function_on_queried_elements,
 
   		add_marginLeft_based_on_site_logo: add_marginLeft_based_on_site_logo,
+      remove_marginLeft: remove_marginLeft,
 
       is_mobile: is_mobile,
 

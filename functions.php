@@ -21,9 +21,9 @@ function zw_ch_enqueue_scripts() {
 
    //local scripts written by yours truely
   wp_enqueue_script( 'zw_ch_initjs', get_stylesheet_directory_uri() . '/js/init.js', array() );
-  wp_enqueue_script( 'zw_ch_scrolljs', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'jquery', 'scrollTo', 'localScroll' ) );
-
   wp_enqueue_script( 'zw_ch_backtotopjs', get_stylesheet_directory_uri() . '/js/back_to_top.js', array( 'jquery', 'isonscreen' ) );
+
+  wp_enqueue_script( 'zw_ch_scrolljs', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'jquery', 'scrollTo', 'localScroll' ) );
 
   if( is_search() )
       wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/search.js', array('jquery') );

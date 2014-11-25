@@ -88,14 +88,49 @@ jQuery(function( $ ){
 			};
 		};
 
-		var myEfficientFn = debounce(function() {
+		var slightlyMoreEfficientFunction = debounce(function() {
 
 			stick_button();
 		}, 8 );
 
 		if( ! visible_on_page_load )
-			window.addEventListener('scroll', myEfficientFn);
+			window.addEventListener('scroll', slightlyMoreEfficientFunction);
+
+	
+	/** 
+	 * This is bad and I know it, but I'm sure I'll get to this, haha.
+	 * @TODO: Better solution
+	 */
+	var is_mobile = Init.is_mobile();
+
+	//check for if we've resized the window.  if so, inline margin gone on headers.
+	
+	function check_for_resizing() {
+
+		if( is_mobile !== Init.is_mobile() ) {
+
+			if( Init.is_mobile() ) {
+				//then remove the margin
+				Init.apply_callback_function_on_queried_elements( ".fp-section__header h2", Init.remove_marginLeft );
+			}
+			else {
+				//then calculate the margins again
+				Init.apply_callback_function_on_queried_elements( ".fp-section__header h2", Init.add_marginLeft_based_on_site_logo );
+			}
+
+			is_mobile = Init.is_mobile();
+		}
+	}
+
+		var slightlyMoreEfficientFunctionTwo = debounce(function() {
+
+			check_for_resizing();
+		}, 16 );
+
+		window.addEventListener('resize', slightlyMoreEfficientFunctionTwo);
 
 	});
+
+
 });
 
