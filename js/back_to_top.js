@@ -103,8 +103,7 @@ jQuery(function( $ ){
 	 */
 	var is_mobile = Init.is_mobile();
 
-	//check for if we've resized the window.  if so, inline margin gone on headers.
-	
+	//check for if we've resized the window.  if so, inline margin gone on headers
 	function check_for_resizing() {
 
 		if( is_mobile !== Init.is_mobile() ) {

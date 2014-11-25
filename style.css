@@ -2714,12 +2714,12 @@ html {
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection {
   background: #fcd700;
-  color: #fff;
+  color: #FFFFFF;
   text-shadow: none; }
 
 ::selection {
   background: #fcd700;
-  color: #fff;
+  color: #FFFFFF;
   text-shadow: none; }
 
 /* Overwrite top-level spacing */
@@ -3105,7 +3105,7 @@ input[type="password"]:focus {
 
 textarea {
   border: 1px solid #f9f9f9;
-  background: #FFF; }
+  background: #FFFFFF; }
 
 /* Header */
 .intimate-details {
@@ -3177,7 +3177,7 @@ textarea {
     width: 48px;
     display: inline-block;
     background: #d43b1d;
-    color: #FFF;
+    color: #FFFFFF;
     border: 0;
     text-align: center;
     line-height: 48px; }
@@ -3208,7 +3208,7 @@ textarea {
     width: 48px;
     display: inline-block;
     background: #d43b1d;
-    color: #FFF;
+    color: #FFFFFF;
     border: 0;
     text-align: center;
     line-height: 48px;
@@ -3245,7 +3245,7 @@ textarea {
     word-spacing: 0em;
     font-size: 16px;
     width: 400px;
-    border-bottom: #FFFFFF 1px solid !important; }
+    border-bottom: transparent 1px solid !important; }
     .frame--splash .search-form .search-field:active, .frame--splash .search-form .search-field:focus {
       border-bottom: #FFFFFF 1px solid !important; }
   .frame--splash .search-form .search-submit {
