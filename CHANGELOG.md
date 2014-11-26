@@ -1,5 +1,13 @@
 ## Changelog
 
+### 1.1.1
+* Search bar front page ugh.
+* Archive pages mobile wasn't working; is now.
+* Home page links now working properly
+* Changed functions.php to not crash my server
+* Added updated header file
+* Note: next we replace the scrollTo plugin.
+
 ### 1.1.0
 * Front page search bar tweak
 * Search page responsive (phew)
