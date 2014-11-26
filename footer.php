@@ -58,13 +58,6 @@
 
 
     </div><!--end of .layout -->
-     <!--form role="search" method="get" class="search-form" action="<?php echo get_site_url(); ?>">
-        <label>
-          <span class="screen-reader-text">Search for:</span>
-          <input class="search-field" placeholder="search..." value="<?php echo get_query_var( 's' ); ?>" name="s" title="Search for:" type="search">
-        </label>
-        <input class="search-submit" value="Search" type="submit">
-    </form-->
 
 		<div class="clearer"></div>
 

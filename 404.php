@@ -11,7 +11,7 @@ ob_start();
 		<div class="frame frame--404">
 
 			<p>Whoops, looks like there's even more nothing here than usual.</p>
-			<p> Maybe try <a href="<?php echo get_site_url(); ?>">the home page</a>?</p>
+			<p> Maybe try <a href="<?php echo esc_url( home_url( '/' ) ); ?>">the home page</a>?</p>
 
 		</div><!-- end of frame -->
 	</div><!-- end of .layout__item.two-thirds -->

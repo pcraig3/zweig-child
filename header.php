@@ -21,7 +21,7 @@
 	<header id="site-header" class="full-height">
 
 			<div class="site-meta">
-			 <h1 id="site-logo"><a href="<?php echo get_site_url(); ?>"><?php echo $blog_title = get_bloginfo('name'); ?></a></h1>
+			 <h1 id="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo $blog_title = get_bloginfo('name'); ?></a></h1>
 			 <!--h2 id="site-description"><?php //echo $blog_title = get_bloginfo('description'); ?></h2-->
 
 			</div>
