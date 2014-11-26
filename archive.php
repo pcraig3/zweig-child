@@ -88,14 +88,14 @@ ob_start();
 
 ?>
 
-	<div class="layout__item one-third">
+	<div class="layout__item one-third palm-one-whole">
 		
 	<?php if( ! empty( $title ) ) ?>
 		<div class="frame__title"><h3 class="subhead"><?php echo $archive_type; ?></h3></div>
 
 	</div><!--end of .layout__item.one-third
 
-	--><div class="layout__item two-thirds">
+	--><div class="layout__item two-thirds palm-one-whole">
 		<div class="frame frame--archive">
 
 			<?php get_template_part('loop','excerpt'); ?>

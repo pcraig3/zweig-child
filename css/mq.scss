@@ -11,9 +11,14 @@
 
 		/*
 		&.frame--single {}
-
-		&.frame--splash {}
 		*/
+		&.frame--splash {
+
+			.search-form .search-field {
+
+				width: 100%;
+			}
+		}
 
 		&.frame--archive,
 		&.frame--404 {
