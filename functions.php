@@ -62,35 +62,35 @@ add_action( 'widgets_init', 'zw_ch_unregister_sidebars', 11 );
 /**
  * shortcode function generates columns based on the inuitcss framework
  * 
- * @param  array $atts 		attributes included with this shortcode
- * @param  string $content 	any content in the middle of the shortcode
- * @return array          	return some generated HTML columns for inuit css
+ * @param  array $atts    attributes included with this shortcode
+ * @param  string $content  any content in the middle of the shortcode
+ * @return array            return some generated HTML columns for inuit css
  */
 function zw_ch_inuitcss_column( $atts, $content = null ) {
 
-	$fraction = $additional_classes = '';
+  $fraction = $additional_classes = '';
 
-   	$atts = shortcode_atts( array(
+    $atts = shortcode_atts( array(
         'fraction' => 'one-whole',
         'additional_classes' => '',
     ), $atts );
 
-   	//If ever we wanted to add some checking.
+    //If ever we wanted to add some checking.
     if( false )
-    	return '<p>Sorry, but your fraction is invalid.  Column could not be generated.  Please seach for the  \'#WIDTHS\' heading in the css file in the page source for acceptable fractions.</p>';
+      return '<p>Sorry, but your fraction is invalid.  Column could not be generated.  Please seach for the  \'#WIDTHS\' heading in the css file in the page source for acceptable fractions.</p>';
 
-    $no_content = ( empty( trim( $content ) ) );
+    $no_content = return_if_empty( $content );
 
     $classnames = esc_attr( trim( $atts['fraction'] ) . ' ' 
-    	. trim( $atts['additional_classes'] ) );
+      . trim( $atts['additional_classes'] ) );
 
     /* Build the HTML string */
     $html_string = '<div class="layout__item ' . $classnames . '">';
 
     if( $no_content )
-    	$html_string .= '<!-- empty column -->';
+      $html_string .= '<!-- empty column -->';
     else
-    	$html_string .= do_shortcode($content);
+      $html_string .= do_shortcode($content);
 
     $html_string .= '</div><!--end of .layout__item.' . $fraction . ' -->';
 
@@ -100,6 +100,16 @@ function zw_ch_inuitcss_column( $atts, $content = null ) {
 }
 add_shortcode( 'inuitcss_column', 'zw_ch_inuitcss_column' );
 
+function return_if_empty( $string ) {
+
+  $trimmed_string = trim( $string );
+
+  if( empty( $string ) ) 
+    return true;
+
+  return false;
+}
+
 
 /**
  * shortcode function that returns a list of posts and then calls the excerpt 
@@ -107,16 +117,16 @@ add_shortcode( 'inuitcss_column', 'zw_ch_inuitcss_column' );
  * Needs to be refactored because we knowingly override the global wp_query variable in 
  * order to reuse the template's code.
  * 
- * @param  array $atts 		attributes included with this shortcode
- * @param  string $content 	any content in the middle of the shortcode
- * @return array          	return just what you get, for now.
+ * @param  array $atts    attributes included with this shortcode
+ * @param  string $content  any content in the middle of the shortcode
+ * @return array            return just what you get, for now.
  */
 function zw_ch_bad_practice_post_listing( $atts, $content = null ) {
 
-	$fraction = $additional_classes = '';
+  $fraction = $additional_classes = '';
 
-   	$atts = shortcode_atts( array(
-   		//get the default numbe of posts per page for the blog.  Overwrite them if you want though
+    $atts = shortcode_atts( array(
+      //get the default numbe of posts per page for the blog.  Overwrite them if you want though
         'posts_per_page' => get_option( 'posts_per_page', 10 ),
         'post_type' => 'post',
     ), $atts );
@@ -134,13 +144,13 @@ function zw_ch_bad_practice_post_listing( $atts, $content = null ) {
     $wp_query = new WP_Query( $args );
 
     ob_start();
-	get_template_part('loop', 'excerpt');  
-	$post_listing = ob_get_clean();
+  get_template_part('loop', 'excerpt');  
+  $post_listing = ob_get_clean();
 
-	$wp_query = $this_is_bad;
-	wp_reset_query();
+  $wp_query = $this_is_bad;
+  wp_reset_query();
 
-	return $post_listing;
+  return $post_listing;
 }
 add_shortcode( 'post_listing', 'zw_ch_bad_practice_post_listing' );
 
@@ -188,8 +198,8 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
     }
     
 
-    $no_content = ( empty( trim( $content ) ) );
-    $no_link = ( empty( trim( $atts['section_header_link'] ) ) );
+    $no_content = return_if_empty( $content );
+    $no_link = return_if_empty( $atts['section_header_link'] );
 
     $section_classes = esc_attr( $atts['section_classes'] );
     $layout_classes = esc_attr( $atts['layout_classes'] );
