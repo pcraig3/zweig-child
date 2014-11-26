@@ -15,15 +15,14 @@ add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_scripts' );
 function zw_ch_enqueue_scripts() {
 
   //vendor scripts
-  wp_enqueue_script( 'scrollTo', get_stylesheet_directory_uri() . '/js/bower_components/jquery.scrollTo/jquery.scrollTo.min.js', array( 'jquery') );
-  wp_enqueue_script( 'localScroll', get_stylesheet_directory_uri() . '/js/bower_components/jquery.localScroll/jquery.localScroll.min.js', array( 'jquery', 'scrollTo' ) );   
   wp_enqueue_script( 'isonscreen', get_stylesheet_directory_uri() . '/js/vendor/jquery.isonscreen.js', array( 'jquery' ) );  
+  wp_enqueue_script( 'scroll2id', get_stylesheet_directory_uri() . '/js/bower_components/page-scroll-to-id/jquery.malihu.PageScroll2id.js', array( 'jquery' ) );  
 
    //local scripts written by yours truely
   wp_enqueue_script( 'zw_ch_initjs', get_stylesheet_directory_uri() . '/js/init.js', array() );
   wp_enqueue_script( 'zw_ch_backtotopjs', get_stylesheet_directory_uri() . '/js/back_to_top.js', array( 'jquery', 'isonscreen' ) );
 
-  wp_enqueue_script( 'zw_ch_scrolljs', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'jquery', 'scrollTo', 'localScroll' ) );
+  wp_enqueue_script( 'zw_ch_scrolljs', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'jquery', 'scrollTo', 'localScroll', 'scroll2id' ) );
 
   if( is_search() )
       wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/search.js', array('jquery') );
