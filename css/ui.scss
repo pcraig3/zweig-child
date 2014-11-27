@@ -8,8 +8,8 @@
 
 @mixin zw-site-container() {
 
-	width: 90%;
-	padding: 1em 0;
+	width: 100%;
+	padding: $inuit-base-spacing-unit ($inuit-base-spacing-unit * 2) 0 ($inuit-base-spacing-unit * 2);
 	margin: auto;
 	border: 0;
 	max-width: none;
@@ -272,11 +272,18 @@ article.format-quote {
 	}
 } 
 
-/* Elements */
-#site-header,
-.fp-section__header {
+.wrapper {
 
 	@include zw-site-container;
+	padding-top: 0;
+}
+
+/* Elements */
+#site-header {
+
+	@include zw-site-container;
+
+	background: $color__grey--light;
 
 	/* We're putting it in a column, not directly giving it a width */
 	.site-meta {
@@ -301,6 +308,15 @@ article.format-quote {
 
 		margin-left: 213px;  /* this value will be overwritten */
 	}
+}
+
+
+.fp-section__header {
+
+	@extend #site-header;
+
+	padding: $inuit-base-spacing-unit 0 0 0;
+	background: transparent;
 
 	.fp-section__header__spacer {
 		@include Baskerville-Regular;
@@ -310,11 +326,6 @@ article.format-quote {
 		visibility: hidden;
 		width: 0px; /* can't believe it took me so long to think of this. */
 	}
-}
-
-.wrapper {
-
-	@include zw-site-container;
 }
 
 .frame__title  {
@@ -491,8 +502,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 /* Footer */
 #footer {
 
-	@include zw-site-container();
-	width: 100%;
+	@include zw-site-container;
 	border-bottom: $inuit-base-spacing-unit solid #F3F3F3;
 }
 

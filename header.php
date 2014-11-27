@@ -29,11 +29,8 @@
 	<?php
 	ob_start();
 	?>
-
-	<div class="layout layout--flush">
-
+	
 		<div class="layout__item one-third">
-
 
 
 		</div><!--end of .layout__item.one-third 
@@ -60,18 +57,16 @@
 
 		</div><!--end of .layout__item.two-thirds -->
 
-	</div><!--end of .layout -->
-
 	<?php
 
 
 $html_string = ob_get_clean();
 
-echo do_shortcode( "[section_skeleton section_header_classes='full-width pt0' section_name='about'] " . $html_string . '[/section_skeleton]');
+echo do_shortcode( "[section_skeleton section_header_classes='full-width pt0' layout_classes='layout--flush full-height pb+ palm-pb' section_name='about'] " . $html_string . '[/section_skeleton]');
 ?>
 
 	<div class="clearer"></div>
 
 	</header>
 
-	<div class="wrapper p0">
+	<div class="wrapper">

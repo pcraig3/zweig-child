@@ -2857,13 +2857,13 @@ textarea {
   font-style: normal;
   word-spacing: 0em; }
 
-#site-header h1 {
+#site-header h1, .fp-section__header h1 {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0em; }
 
-#site-header h2 {
+#site-header h2, .fp-section__header h2 {
   font-family: 'pigiarniqbold', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2982,29 +2982,32 @@ article.format-quote {
   .subtle-link:hover {
     color: #333; }
 
-/* Elements */
-#site-header,
-.fp-section__header {
-  width: 90%;
-  padding: 1em 0;
+.wrapper {
+  width: 100%;
+  padding: 24px 48px 0 48px;
   margin: auto;
   border: 0;
   max-width: none;
+  padding-top: 0; }
+
+/* Elements */
+#site-header, .fp-section__header {
+  width: 100%;
+  padding: 24px 48px 0 48px;
+  margin: auto;
+  border: 0;
+  max-width: none;
+  background: #f9f9f9;
   /* We're putting it in a column, not directly giving it a width */ }
-  #site-header .site-meta,
-  .fp-section__header .site-meta {
+  #site-header .site-meta, .fp-section__header .site-meta {
     width: auto;
     position: fixed;
     z-index: 99; }
-  #site-header h1, #site-header h2,
-  .fp-section__header h1,
-  .fp-section__header h2 {
+  #site-header h1, .fp-section__header h1, #site-header h2, .fp-section__header h2 {
     display: inline; }
-  #site-header h1,
-  .fp-section__header h1 {
+  #site-header h1, .fp-section__header h1 {
     font-size: 56px; }
-  #site-header h2,
-  .fp-section__header h2 {
+  #site-header h2, .fp-section__header h2 {
     font-family: 'libre_baskervilleregular', times, serif;
     font-weight: 400;
     font-style: normal;
@@ -3014,7 +3017,10 @@ article.format-quote {
     font-size: 48px;
     margin-left: 213px;
     /* this value will be overwritten */ }
-  #site-header .fp-section__header__spacer,
+
+.fp-section__header {
+  padding: 24px 0 0 0;
+  background: transparent; }
   .fp-section__header .fp-section__header__spacer {
     font-family: 'libre_baskervilleregular', times, serif;
     font-weight: 400;
@@ -3029,13 +3035,6 @@ article.format-quote {
     visibility: hidden;
     width: 0px;
     /* can't believe it took me so long to think of this. */ }
-
-.wrapper {
-  width: 90%;
-  padding: 1em 0;
-  margin: auto;
-  border: 0;
-  max-width: none; }
 
 .frame__title {
   padding: 6px 0; }
@@ -3137,12 +3136,11 @@ textarea {
 
 /* Footer */
 #footer {
-  width: 90%;
-  padding: 1em 0;
+  width: 100%;
+  padding: 24px 48px 0 48px;
   margin: auto;
   border: 0;
   max-width: none;
-  width: 100%;
   border-bottom: 24px solid #F3F3F3; }
 
 .widget-area {
@@ -3157,7 +3155,7 @@ textarea {
   padding-right: 48px; }
 
 /* Post / Page Formats */
-.error404 #site-header .site-meta {
+.error404 #site-header .site-meta, .error404 .fp-section__header .site-meta {
   position: absolute; }
 .error404 .back-to-top {
   display: none; }
@@ -3285,12 +3283,12 @@ textarea {
   .back-to-top {
     top: 240vh; }
 
-  #site-header h2,
+  #site-header h2, .fp-section__header h2,
   .fp-section__header h2 {
     margin: -18px 0;
     float: left;
     padding-left: 36px; }
-  #site-header .fp-section__header__spacer,
+  #site-header .fp-section__header__spacer, .fp-section__header .fp-section__header__spacer,
   .fp-section__header .fp-section__header__spacer {
     display: block; }
 
