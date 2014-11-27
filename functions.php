@@ -21,8 +21,7 @@ function zw_ch_enqueue_scripts() {
    //local scripts written by yours truely
   wp_enqueue_script( 'zw_ch_initjs', get_stylesheet_directory_uri() . '/js/init.js', array() );
   wp_enqueue_script( 'zw_ch_backtotopjs', get_stylesheet_directory_uri() . '/js/back_to_top.js', array( 'jquery', 'isonscreen' ) );
-
-  wp_enqueue_script( 'zw_ch_scrolljs', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'jquery', 'scrollTo', 'localScroll', 'scroll2id' ) );
+  wp_enqueue_script( 'zw_ch_scrolljs', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'jquery', 'scroll2id' ) );
 
   if( is_search() )
       wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/search.js', array('jquery') );
@@ -78,7 +77,7 @@ function zw_ch_inuitcss_column( $atts, $content = null ) {
     if( false )
       return '<p>Sorry, but your fraction is invalid.  Column could not be generated.  Please seach for the  \'#WIDTHS\' heading in the css file in the page source for acceptable fractions.</p>';
 
-    $no_content = return_if_empty( $content );
+    $no_content = zw_ch_return_if_empty( $content );
 
     $classnames = esc_attr( trim( $atts['fraction'] ) . ' ' 
       . trim( $atts['additional_classes'] ) );
@@ -99,7 +98,14 @@ function zw_ch_inuitcss_column( $atts, $content = null ) {
 }
 add_shortcode( 'inuitcss_column', 'zw_ch_inuitcss_column' );
 
-function return_if_empty( $string ) {
+/**
+ * simply utility function accepts a string, trims it, 
+ * and then returns whether the result is empty or not.
+ * 
+ * @param  string $string   an input string to test for content
+ * @return boolean          true if trimmed string is empty, false otherwise
+ */
+function zw_ch_return_if_empty( $string ) {
 
   $trimmed_string = trim( $string );
 
@@ -197,8 +203,8 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
     }
     
 
-    $no_content = return_if_empty( $content );
-    $no_link = return_if_empty( $atts['section_header_link'] );
+    $no_content = zw_ch_return_if_empty( $content );
+    $no_link = zw_ch_return_if_empty( $atts['section_header_link'] );
 
     $section_classes = esc_attr( $atts['section_classes'] );
     $layout_classes = esc_attr( $atts['layout_classes'] );
@@ -211,7 +217,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
       $section_header_link = esc_url( $atts['section_header_link'] );
 
     if ( $search ) 
-      $section_name = search_in_title( $section_name );
+      $section_name = zw_ch_search_in_title( $section_name );
     
 
     /* Build the HTML string */
@@ -253,7 +259,14 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
 }
 add_shortcode( 'section_skeleton', 'zw_ch_section_skeleton' );
 
-function search_in_title( $s ) {
+/**
+ * Function that creates a search bar in the title if called upon.
+ * (i.e., this happens on the 'Search' page in desktop mode)
+ * 
+ * @param  string $s  the last search query
+ * @return string     the HTML code to generate the header search title
+ */
+function zw_ch_search_in_title( $s ) {
 
   ob_start();
   ?>search<span class="search__container">.("<form role="search" method="get" class="search-form search-form__title" action="http://pcraig3.dev/">
@@ -265,6 +278,13 @@ function search_in_title( $s ) {
   return ob_get_clean();
 }
 
+/**
+ * function takes a string and returns its post type archive, if possible.
+ * 'Posts' don't have an archive page as such, so we return the 'page_for_posts' page
+ * in that specific case 
+ * @param  string $post_type  a string, hopefully a post_type
+ * @return string             url of the input post_type's archive, else an empty string
+ */
 function zw_ch_if_post_type_archive( $post_type ) {
 
   //@TODO: make sure this still works if the main page is the home page.
