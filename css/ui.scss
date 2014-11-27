@@ -66,9 +66,9 @@ html {
 
 .wrapper .post-title {
 
-	padding-bottom: $inuit-base-spacing-unit * .5;
-	font-size: $inuit-base-font-size * 3;
-	line-height: $inuit-base-line-height * 2;
+	padding-bottom: $inuit-base-spacing-unit * .4;
+	font-size: $inuit-base-font-size * 2.5;
+	line-height: $inuit-base-line-height * 1.5;
 }
 
 .wrapper .post-date,
@@ -76,7 +76,7 @@ html {
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
 
-	font-size: $inuit-base-font-size * .8;
+	font-size: $inuit-base-font-size * .85;
 	margin-bottom: $inuit-base-spacing-unit * 2;
 	color: $color__grey--dark !important;
 }
@@ -97,29 +97,25 @@ body {
 	q {
 		@include Aller-Light-Italic;
 	}
-
-	&.chrome * {
-
-		word-spacing: -0.1em !important;
-	}
 }
 h1, h2, h3, h4, h5, h6 {
-	@include Pigiarniq-Light;
+	@include Baskerville-Regular;
+}
+.wrapper .post-meta p,
+.wrapper .post-meta p strong {
+	@include Baskerville-Italic;
 }
 .wrapper .post-date,
-.wrapper .post-meta p,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
-	@include Pigiarniq-Regular;
-	word-spacing: -0.25em;
+	@include Aller-Light;
 }
 .wrapper .post-title { 
-	@include Pigiarniq-Light;
-	word-spacing: -0.1em;
+	@include Baskerville-Regular;
 }
 .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
-	@include Pigiarniq-Light;
-	word-spacing: -0.1em;
+	@include Aller-Light;
+	text-transform: uppercase;
 }
 .wrapper blockquote {
 	@include Aller-Light-Italic;
@@ -128,21 +124,25 @@ h1, h2, h3, h4, h5, h6 {
 	@include Aller-Light;
 	margin-left: $inuit-base-spacing-unit;
 }
+.wrapper table thead th {
+	@include Aller-Light-Italic;
+	text-align: left;
+}
 .wrapper table th {
-	@include Pigiarniq-Regular;
+	@include Aller-Light;
 }
 .wrapper dt {
-	@include Aller-Italic;
+	@include Aller-Light-Italic;
 }
 input[type=submit] {  	
-	@include Pigiarniq-Light;
+	@include Aller-Light;
 	@include zw-lowercase( $inuit-base-font-size * 1.2 );
 }
 .read-more {
 	@include Aller-Light;
 }
 #commentform label {
-	@include Pigiarniq-Italic;
+	@include Aller-Light-Italic;
 }
 input[type=text],
 input[type=email],
@@ -158,14 +158,13 @@ textarea {
 	@include Baskerville-Regular;
 }
 #site-header h2 {
-	@include Pigiarniq-Bold;
+	@include Baskerville-Regular;
 }
 .post-pages {
 	@include Aller-Bold;
 }
 .post-navigation {
-	@include Pigiarniq-Light;
-	word-spacing: -0.3em;
+	@include Baskerville-Italic;
 }
 .author-name strong {
 	@include Baskerville-Italic;
@@ -184,19 +183,18 @@ textarea {
 	}
 } 
 #comments .comment-meta {
-	@include Pigiarniq-Regular;
+	@include Aller-Regular;
 	color: $color__grey;
 }
 #comments .reply {
-	@include Pigiarniq-Light;
+	@include Aller-Light;
 	text-align: right;
 }
 .posts-nav {
-	@include Pigiarniq-Light;
+	@include Aller-Light;
 }
 .widget-area h2 {
-	@include Pigiarniq-Light;
-	/* @include Baskerville-Italic; Also looks good*/
+	@include Baskerville-Italic;
 }
 /* Post Formats */
 article.format-quote {
@@ -271,11 +269,17 @@ article.format-quote {
 		color: 		$color__grey--dark;
 	}
 } 
-
 .wrapper {
 
 	@include zw-site-container;
 	padding-top: 0;
+
+	.post-meta p,
+	.post-meta p strong {
+		text-transform: lowercase;
+		font-variant: normal;
+		font-size: $inuit-base-font-size;
+	}
 }
 
 /* Elements */
@@ -373,8 +377,7 @@ article.format-quote {
 
 				.post-date {
 
-					visibility: visible;
-					opacity: 1;
+					color: $color__grey--still-pretty-light !important;
 				}
 			}
 
@@ -387,10 +390,9 @@ article.format-quote {
 
 			.post-date {
 
-				@include zw-transition(opacity, .10s);
+				@include zw-transition(color);
 
-				visibility: hidden;
-				opacity: 0;
+				color: $color__grey !important;
 				margin-bottom: $inuit-base-spacing-unit * 2;
 			}
 
@@ -462,6 +464,7 @@ textarea {
 /* Post navigation */
 .post-navigation {
 
+	font-size: $inuit-base-font-size * 1.25;
 	word-break: break-word;
 } 
 

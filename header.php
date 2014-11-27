@@ -18,7 +18,7 @@
 
 <body <?php body_class();?> >
 
-	<header id="site-header" class="full-height">
+	<header id="site-header">
 
 			<div class="site-meta">
 			 <h1 id="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo $blog_title = get_bloginfo('name'); ?></a></h1>
@@ -62,7 +62,7 @@
 
 $html_string = ob_get_clean();
 
-echo do_shortcode( "[section_skeleton section_header_classes='full-width pt0' layout_classes='layout--flush full-height pb+ palm-pb' section_name='about'] " . $html_string . '[/section_skeleton]');
+echo do_shortcode( "[section_skeleton section_header_classes='full-width pt0' layout_classes='layout--flush pb+ palm-pb' section_name='about'] " . $html_string . '[/section_skeleton]');
 ?>
 
 	<div class="clearer"></div>

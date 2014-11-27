@@ -2728,15 +2728,15 @@ html {
   line-height: 24px; }
 
 .wrapper .post-title {
-  padding-bottom: 12px;
-  font-size: 48px;
-  line-height: 48px; }
+  padding-bottom: 9.6px;
+  font-size: 40px;
+  line-height: 36px; }
 
 .wrapper .post-date,
 .wrapper .post-meta p,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
-  font-size: 12.8px;
+  font-size: 13.6px;
   margin-bottom: 48px;
   color: #333 !important; }
 
@@ -2762,38 +2762,40 @@ body {
     font-weight: 400;
     font-style: normal;
     word-spacing: 0em; }
-  body.chrome * {
-    word-spacing: -0.1em !important; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'pigiarniqlight', arial, sans-serif;
+  font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em; }
+  word-spacing: 0em; }
+
+.wrapper .post-meta p,
+.wrapper .post-meta p strong {
+  font-family: 'libre_baskervilleitalic', times, serif;
+  font-weight: 400;
+  font-style: normal;
+  word-spacing: 0em; }
 
 .wrapper .post-date,
-.wrapper .post-meta p,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
-  font-family: 'pigiarniqregular', arial, sans-serif;
+  font-family: 'aller_lightregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em;
-  word-spacing: -0.25em; }
+  word-spacing: 0em; }
 
 .wrapper .post-title {
-  font-family: 'pigiarniqlight', arial, sans-serif;
+  font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em;
-  word-spacing: -0.1em; }
+  word-spacing: 0em; }
 
 .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
-  font-family: 'pigiarniqlight', arial, sans-serif;
+  font-family: 'aller_lightregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em;
-  word-spacing: -0.1em; }
+  word-spacing: 0em;
+  text-transform: uppercase; }
 
 .wrapper blockquote {
   font-family: 'aller_lightitalic', arial, sans-serif;
@@ -2808,23 +2810,30 @@ h1, h2, h3, h4, h5, h6 {
   word-spacing: 0em;
   margin-left: 24px; }
 
-.wrapper table th {
-  font-family: 'pigiarniqregular', arial, sans-serif;
+.wrapper table thead th {
+  font-family: 'aller_lightitalic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em; }
+  word-spacing: 0em;
+  text-align: left; }
+
+.wrapper table th {
+  font-family: 'aller_lightregular', arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  word-spacing: 0em; }
 
 .wrapper dt {
-  font-family: 'alleritalic', arial, sans-serif;
+  font-family: 'aller_lightitalic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0em; }
 
 input[type=submit] {
-  font-family: 'pigiarniqlight', arial, sans-serif;
+  font-family: 'aller_lightregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em;
+  word-spacing: 0em;
   font-variant: normal;
   text-transform: lowercase;
   font-size: 19.2px; }
@@ -2836,10 +2845,10 @@ input[type=submit] {
   word-spacing: 0em; }
 
 #commentform label {
-  font-family: 'pigiarniqitalic', arial, sans-serif;
+  font-family: 'aller_lightitalic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em; }
+  word-spacing: 0em; }
 
 input[type=text],
 input[type=email],
@@ -2864,10 +2873,10 @@ textarea {
   word-spacing: 0em; }
 
 #site-header h2, .fp-section__header h2 {
-  font-family: 'pigiarniqbold', arial, sans-serif;
+  font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em; }
+  word-spacing: 0em; }
 
 .post-pages {
   font-family: 'allerbold', arial, sans-serif;
@@ -2876,11 +2885,10 @@ textarea {
   word-spacing: 0em; }
 
 .post-navigation {
-  font-family: 'pigiarniqlight', arial, sans-serif;
+  font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em;
-  word-spacing: -0.3em; }
+  word-spacing: 0em; }
 
 .author-name strong {
   font-family: 'libre_baskervilleitalic', times, serif;
@@ -2910,31 +2918,30 @@ textarea {
     font-weight: 400; }
 
 #comments .comment-meta {
-  font-family: 'pigiarniqregular', arial, sans-serif;
+  font-family: 'allerregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em;
+  word-spacing: 0em;
   color: #CBCBCB; }
 
 #comments .reply {
-  font-family: 'pigiarniqlight', arial, sans-serif;
+  font-family: 'aller_lightregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em;
+  word-spacing: 0em;
   text-align: right; }
 
 .posts-nav {
-  font-family: 'pigiarniqlight', arial, sans-serif;
+  font-family: 'aller_lightregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em; }
+  word-spacing: 0em; }
 
 .widget-area h2 {
-  font-family: 'pigiarniqlight', arial, sans-serif;
+  font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: -.2em;
-  /* @include Baskerville-Italic; Also looks good*/ }
+  word-spacing: 0em; }
 
 /* Post Formats */
 article.format-quote {
@@ -2989,6 +2996,11 @@ article.format-quote {
   border: 0;
   max-width: none;
   padding-top: 0; }
+  .wrapper .post-meta p,
+  .wrapper .post-meta p strong {
+    text-transform: lowercase;
+    font-variant: normal;
+    font-size: 16px; }
 
 /* Elements */
 #site-header, .fp-section__header {
@@ -3065,16 +3077,14 @@ article.format-quote {
   .frame.frame--archive {
     background: #FFFFFF; }
     .frame.frame--archive article:hover .post-date {
-      visibility: visible;
-      opacity: 1; }
+      color: #f3f3f3 !important; }
     .frame.frame--archive article .post-title {
       padding-bottom: 6px;
       font-size: 28.8px;
       line-height: 24px; }
     .frame.frame--archive article .post-date {
-      transition: opacity 0.1s ease-in;
-      visibility: hidden;
-      opacity: 0;
+      transition: color 0.15s ease-in;
+      color: #CBCBCB !important;
       margin-bottom: 48px; }
     .frame.frame--archive article a {
       display: block; }
@@ -3118,6 +3128,7 @@ textarea {
 /* Post metas */
 /* Post navigation */
 .post-navigation {
+  font-size: 20px;
   word-break: break-word; }
 
 /* Author Box */

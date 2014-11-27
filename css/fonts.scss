@@ -130,26 +130,22 @@
 @mixin Pigiarniq-Italic {
   font-family: 'pigiarniqitalic', arial, sans-serif;
   font-weight: 400; font-style: normal; 
-  word-spacing: -.2em;
 }
 
 /// Pigiarniq Bold
 @mixin Pigiarniq-Bold {
   font-family: 'pigiarniqbold', arial, sans-serif;
   font-weight: 400; font-style: normal; 
-  word-spacing: -.2em;
 }
 
 /// Pigiarniq Regular
 @mixin Pigiarniq-Regular {
   font-family: 'pigiarniqregular', arial, sans-serif;
   font-weight: 400; font-style: normal; 
-  word-spacing: -.2em;
 }
 
 /// Pigiarniq Light
 @mixin Pigiarniq-Light {
   font-family: 'pigiarniqlight', arial, sans-serif;
   font-weight: 400; font-style: normal; 
-  word-spacing: -.2em;
 }
