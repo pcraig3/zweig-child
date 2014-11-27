@@ -3334,5 +3334,63 @@ textarea {
 @media screen and (max-width: 42em) {
   .entry {
     font-size: 1em; } }
+.cv__wrapper {
+  max-width: 1024px;
+  padding: 0 5%;
+  margin: 0 auto; }
+  .cv__wrapper code {
+    font-family: monospace; }
+  .cv__wrapper p {
+    font-size: 13px;
+    margin: 0; }
+  .cv__wrapper .color__red {
+    color: #D43B1D; }
+  .cv__wrapper .cv__header {
+    padding: 26px 0 130px 0; }
+    .cv__wrapper .cv__header * {
+      margin: 0;
+      line-height: 39px;
+      font-size: 26px; }
+    .cv__wrapper .cv__header .cv__name {
+      font-size: 45.5px; }
+  .cv__wrapper .section__title {
+    font-family: 'libre_baskervilleitalic', times, serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em;
+    font-size: 26px;
+    margin: 0; }
+  .cv__wrapper .cell {
+    padding: 5px 0 21px 0; }
+    .cv__wrapper .cell.cell--col_2 {
+      border-top: 1px solid grey;
+      border-left: 1px solid grey; }
+      .cv__wrapper .cell.cell--col_2:first-of-type {
+        border-top: 0; }
+      .cv__wrapper .cell.cell--col_2 .job_description .layout__item * {
+        padding-left: 5px; }
+  .cv__wrapper .job_description {
+    padding-top: 14.95px; }
+    .cv__wrapper .job_description * {
+      font-family: 'aller_lightregular', arial, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      word-spacing: 0em;
+      margin: 0;
+      font-size: 13px; }
+    .cv__wrapper .job_description .job_description__title, .cv__wrapper .job_description .job_description__year {
+      font-size: 14.95px;
+      padding-bottom: 2px; }
+    .cv__wrapper .job_description .job_description__title, .cv__wrapper .job_description .job_description__employer {
+      font-family: 'allerregular', arial, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      word-spacing: 0em;
+      padding-bottom: 2px; }
+  .cv__wrapper .contact--body {
+    font-size: 14.95px;
+    padding-bottom: 2px; }
+  .cv__wrapper .cv__footer {
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

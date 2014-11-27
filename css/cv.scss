@@ -1,0 +1,112 @@
+$cv-base-font-size: 13px;
+$color__red: #D43B1D;
+
+.cv__wrapper {
+
+	max-width: 1024px;
+	padding: 0 5%;
+	margin: 0 auto;
+
+	code {
+
+		font-family: monospace;
+	}
+
+	p {
+
+		font-size: $cv-base-font-size;
+		margin: 0;
+	}
+
+	.color__red {
+
+		color: $color__red;
+	}
+
+	.cv__header {
+
+		padding: ( $cv-base-font-size * 2 ) 0 ( $cv-base-font-size * 10 ) 0;
+
+		* {
+
+			margin: 0;
+			line-height: $cv-base-font-size * 3;
+			font-size: $cv-base-font-size * 2;
+		}
+
+		.cv__name {
+
+			font-size: $cv-base-font-size * 3.5;
+		}
+	}
+
+	.section__title {
+
+		@include Baskerville-Italic;
+		font-size: $cv-base-font-size * 2;
+		margin: 0;
+	}
+
+	.cell {
+
+		padding: 5px 0 21px 0;
+
+		&.cell--col_2 {
+
+			border-top: 1px solid grey;
+			border-left: 1px solid grey;
+
+			&:first-of-type {
+
+				border-top: 0;
+			}
+
+			.job_description .layout__item * {
+
+				padding-left: 5px;
+			}
+		}
+	}
+
+	.job_description {
+
+		padding-top: $cv-base-font-size * 1.15;
+
+		* {
+			@include Aller-Light;
+			margin: 0;
+			font-size: $cv-base-font-size;
+		}
+
+		.job_description__title, .job_description__year { 
+			font-size: $cv-base-font-size * 1.15;
+			padding-bottom: 2px;
+		}
+
+		.job_description__title, .job_description__employer {
+			@include Aller-Regular;
+			padding-bottom: 2px;
+		}
+
+		.job_description__employer {
+		}
+	
+		.job_description__body {
+
+		}
+
+	}
+
+	.contact--body {
+
+		font-size: $cv-base-font-size * 1.15;
+		padding-bottom: 2px;
+	}
+
+	.cv__footer {
+
+		text-align: center;
+	}
+
+}
+

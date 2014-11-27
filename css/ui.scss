@@ -28,7 +28,7 @@
 	width: $base-spacing;
 	display: inline-block;
 	background: $color__red;
-	color: $color--white;
+	color: $color__white;
 	border: 0;
 
 	text-align: center;
@@ -36,7 +36,7 @@
 }
 
 /* Colours */
-$color--white: #FFFFFF;
+$color__white: #FFFFFF;
 
 $color__grey--light: #f9f9f9;
 $color__gray--light: $color__grey--light;
@@ -54,8 +54,8 @@ $color__red: #d43b1d;
 $color__yellow: #fcd700;
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-::-moz-selection{background: $color__yellow; color: $color--white; text-shadow: none;}
-::selection {background: $color__yellow; color: $color--white; text-shadow: none;} 
+::-moz-selection{background: $color__yellow; color: $color__white; text-shadow: none;}
+::selection {background: $color__yellow; color: $color__white; text-shadow: none;} 
 
 /* Overwrite top-level spacing */
 html {
@@ -269,6 +269,7 @@ article.format-quote {
 		color: 		$color__grey--dark;
 	}
 } 
+
 .wrapper {
 
 	@include zw-site-container;
@@ -369,7 +370,7 @@ article.format-quote {
 
 	&.frame--archive {
 
-		background: $color--white;
+		background: $color__white;
 
 		article {
 
@@ -444,7 +445,7 @@ input[type="password"]:focus {
 textarea {
 
 	border: 1px solid $color__grey--light;
-	background: $color--white;
+	background: $color__white;
 }
 
 
@@ -654,7 +655,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 		&:active, &:focus {
 
-			border-bottom: $color--white 1px solid !important;
+			border-bottom: $color__white 1px solid !important;
 		}
 	}
 
