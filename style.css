@@ -3081,7 +3081,7 @@ article.format-quote {
     .frame.frame--archive article .post-title {
       padding-bottom: 6px;
       font-size: 28.8px;
-      line-height: 24px; }
+      line-height: 30px; }
     .frame.frame--archive article .post-date {
       transition: color 0.15s ease-in;
       color: #CBCBCB !important;
@@ -3311,6 +3311,7 @@ textarea {
     .frame__title .subhead__search_results {
       display: inline; }
     .frame__title .subhead__search_again {
+      padding-top: 12px;
       display: block; }
 
   .author-box {
@@ -3337,7 +3338,14 @@ textarea {
 .cv__wrapper {
   max-width: 1024px;
   padding: 0 5%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  color: #333; }
+  .cv__wrapper a {
+    color: #333;
+    font-size: inherit; }
+    .cv__wrapper a.pseudo_href:after {
+      content: " - " attr(href) " ";
+      opacity: .65; }
   .cv__wrapper code {
     font-family: monospace; }
   .cv__wrapper p {
@@ -3351,7 +3359,7 @@ textarea {
       margin: 0;
       line-height: 39px;
       font-size: 26px; }
-    .cv__wrapper .cv__header .cv__name {
+    .cv__wrapper .cv__header .cv__name * {
       font-size: 45.5px; }
   .cv__wrapper .section__title {
     font-family: 'libre_baskervilleitalic', times, serif;
@@ -3363,33 +3371,35 @@ textarea {
   .cv__wrapper .cell {
     padding: 5px 0 21px 0; }
     .cv__wrapper .cell.cell--col_2 {
-      border-top: 1px solid grey;
-      border-left: 1px solid grey; }
+      border-top: 1px solid #F3F3F3;
+      border-left: 1px solid #F3F3F3; }
       .cv__wrapper .cell.cell--col_2:first-of-type {
         border-top: 0; }
       .cv__wrapper .cell.cell--col_2 .job_description .layout__item * {
         padding-left: 5px; }
   .cv__wrapper .job_description {
-    padding-top: 14.95px; }
+    padding-top: 14.95px;
+    font-family: 'aller_lightregular', arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em; }
     .cv__wrapper .job_description * {
-      font-family: 'aller_lightregular', arial, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      word-spacing: 0em;
-      margin: 0;
+      margin: 0; }
+    .cv__wrapper .job_description .job_description__employer, .cv__wrapper .job_description .job_description__body {
       font-size: 13px; }
     .cv__wrapper .job_description .job_description__title, .cv__wrapper .job_description .job_description__year {
       font-size: 14.95px;
       padding-bottom: 2px; }
     .cv__wrapper .job_description .job_description__title, .cv__wrapper .job_description .job_description__employer {
+      padding-bottom: 2px;
       font-family: 'allerregular', arial, sans-serif;
       font-weight: 400;
       font-style: normal;
-      word-spacing: 0em;
-      padding-bottom: 2px; }
+      word-spacing: 0em; }
   .cv__wrapper .contact--body {
     font-size: 14.95px;
-    padding-bottom: 2px; }
+    padding-bottom: 2px;
+    display: block; }
   .cv__wrapper .cv__footer {
     text-align: center; }
 
