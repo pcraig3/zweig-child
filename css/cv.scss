@@ -1,11 +1,33 @@
+
+
 $cv-base-font-size: 13px;
+
 $color__red: #D43B1D;
+
+$color__grey--dark: #333;
+$color__gray--dark: $color__grey--dark;
+
+$color__grey--light: #F3F3F3;
+$color__gray--light: $color__grey--light;
+
 
 .cv__wrapper {
 
 	max-width: 1024px;
 	padding: 0 5%;
 	margin: 0 auto;
+
+	color: $color__grey--dark;
+
+	a {
+		color:	$color__grey--dark;
+		font-size: inherit;
+
+		&.pseudo_href:after {
+		    content: " - " attr(href) " ";
+		    opacity: .65;
+		  }
+	}
 
 	code {
 
@@ -34,7 +56,7 @@ $color__red: #D43B1D;
 			font-size: $cv-base-font-size * 2;
 		}
 
-		.cv__name {
+		.cv__name * {
 
 			font-size: $cv-base-font-size * 3.5;
 		}
@@ -53,8 +75,8 @@ $color__red: #D43B1D;
 
 		&.cell--col_2 {
 
-			border-top: 1px solid grey;
-			border-left: 1px solid grey;
+			border-top: 1px solid $color__grey--light;
+			border-left: 1px solid $color__grey--light;
 
 			&:first-of-type {
 
@@ -72,9 +94,13 @@ $color__red: #D43B1D;
 
 		padding-top: $cv-base-font-size * 1.15;
 
+		@include Aller-Light;
+
 		* {
-			@include Aller-Light;
 			margin: 0;
+		}
+
+		.job_description__employer, .job_description__body {
 			font-size: $cv-base-font-size;
 		}
 
@@ -84,15 +110,8 @@ $color__red: #D43B1D;
 		}
 
 		.job_description__title, .job_description__employer {
-			@include Aller-Regular;
 			padding-bottom: 2px;
-		}
-
-		.job_description__employer {
-		}
-	
-		.job_description__body {
-
+			@include Aller-Regular;
 		}
 
 	}
@@ -101,6 +120,7 @@ $color__red: #D43B1D;
 
 		font-size: $cv-base-font-size * 1.15;
 		padding-bottom: 2px;
+		display: block;
 	}
 
 	.cv__footer {
