@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.1.2
+* Swapped out scrollTo plugin for page-scroll-to-id
+* Introduced and then solved scrolling problem on mobile search page
+* Background colour header
+
 ### 1.1.1
 * Search bar front page ugh.
 * Archive pages mobile wasn't working; is now.
