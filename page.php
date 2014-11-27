@@ -1,8 +1,7 @@
 <?php get_header(); 
 
-
 /* conditional switch based on whether or not this page is a multi-section page */
-if ( get_field('acf_num', get_the_ID() ) !== false )
+if ( get_field( 'acf_checkboxes', get_the_ID() ) !== false )
 	get_template_part('loop','sections'); 
 
 else {
