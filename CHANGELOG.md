@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.1.3
+* Swapped out all instances of Pigiarniq font face.
+* Created CV page
+* Adjusted styling in other minor ways.
+
 ### 1.1.2
 * Swapped out scrollTo plugin for page-scroll-to-id
 * Introduced and then solved scrolling problem on mobile search page
