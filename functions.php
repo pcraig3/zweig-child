@@ -269,7 +269,7 @@ add_shortcode( 'section_skeleton', 'zw_ch_section_skeleton' );
 function zw_ch_search_in_title( $s ) {
 
   ob_start();
-  ?>search<span class="search__container">.("<form role="search" method="get" class="search-form search-form__title" action="http://pcraig3.dev/">
+  ?>search<span class="search__container">.("<form role="search" method="get" class="search-form search-form__title" action="">
         <label>
           <span class="screen-reader-text">Search for:</span>
           <input class="search-field" placeholder="search…" value="<?php echo $s; ?>" name="s" type="search" style="min-width:200px;width:200px;">
