@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.1.4
+* Adjusted logic for front page sections: easier to skip sections
+* Fixed problems with footer paddings
+* Note: Small update -- reason is so that we can sync all sites with each other
+
 ### 1.1.3
 * Swapped out all instances of Pigiarniq font face.
 * Created CV page
