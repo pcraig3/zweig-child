@@ -2990,12 +2990,16 @@ article.format-quote {
   .subtle-link:hover {
     color: #333; }
 
+.whisper {
+  font-size: .95em;
+  opacity: .33; }
+
 .fancy-pants, .fancy-pants .search-form .search-field {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0em;
-  font-size: 17.6px; }
+  font-size: 16.8px; }
   .fancy-pants em, .fancy-pants .search-form .search-field em {
     font-family: 'libre_baskervilleitalic', times, serif;
     font-weight: 400;
@@ -3006,9 +3010,6 @@ article.format-quote {
     font-weight: 400;
     font-style: normal;
     word-spacing: 0em; }
-  .fancy-pants .whisper, .fancy-pants .search-form .search-field .whisper {
-    font-size: 16px;
-    opacity: .33; }
 
 .wrapper {
   width: 100%;
@@ -3024,6 +3025,9 @@ article.format-quote {
     font-size: 16px; }
 
 /* Elements */
+html.js #site-header .fp-section, html.js .fp-section__header .fp-section {
+  visibility: hidden; }
+
 #site-header, .fp-section__header {
   width: 100%;
   padding: 24px 48px 0 48px;
@@ -3286,6 +3290,9 @@ textarea {
     border: none;
     background: #DDD; }
 
+@media screen and (max-width: 619px) and (orientation: landscape) {
+  .back-to-top {
+    top: 300vh; } }
 @media screen and (max-width: 619px) {
   .not_on_mobile {
     display: none; }
@@ -3310,9 +3317,10 @@ textarea {
   ul, ol, dd {
     margin-left: 1rem; }
 
-  .back-to-top {
-    top: 200vh; }
-
+  	/*.back-to-top {
+  
+  		top: 200vh; 
+  	}*/
   #site-header h2, .fp-section__header h2,
   .fp-section__header h2 {
     margin: -18px 0;
@@ -3349,10 +3357,14 @@ textarea {
 @media screen and (max-width: 42em) {
   .entry {
     font-size: 1em; } }
+body.page-template-page-cv-php {
+  background: #F3F3F3; }
+
 .cv__wrapper {
   max-width: 1024px;
   padding: 0 5%;
   margin: 0 auto;
+  background: #FFFFFF;
   color: #333; }
   .cv__wrapper a {
     color: #333;

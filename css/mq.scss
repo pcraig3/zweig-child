@@ -1,6 +1,15 @@
 @media screen and (max-width: 1023px) {
 }
 
+@media screen and (max-width: 619px) 
+	and (orientation : landscape) {
+
+	.back-to-top {
+
+		top: 300vh; 
+	}
+}
+
 @media screen and (max-width: 619px) {
 
 	.not_on_mobile {
@@ -48,10 +57,10 @@
 		margin-left: 1rem;
 	}	
 
-	.back-to-top {
+	/*.back-to-top {
 
 		top: 200vh; 
-	}
+	}*/
 
 	#site-header,
 	.fp-section__header {

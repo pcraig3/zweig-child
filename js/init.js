@@ -94,6 +94,16 @@ var Init = (function () {
       obj.style.marginLeft = "";
     };
 
+    /**
+     * Add the visibility: visible rule to input elements
+     * 
+     * @param  DOM obj    An element from the DOM
+     */
+    var add_visibility = function ( obj ) {
+
+      obj.style.visibility = "visible";
+    };
+
   	/**
   	 * Callback function will be called on every target.  Targets are acquired with 
   	 * querySelectorAll
@@ -131,6 +141,7 @@ var Init = (function () {
 
   		add_marginLeft_based_on_site_logo: add_marginLeft_based_on_site_logo,
       remove_marginLeft: remove_marginLeft,
+      add_visibility: add_visibility,
 
       is_mobile: is_mobile,
 
@@ -173,4 +184,8 @@ zw_ch_load_event(function(){
     // add a left margin equal to the width of site logo to section header elements
     if( ! Init.is_mobile() )
       Init.apply_callback_function_on_queried_elements( ".fp-section__header h2", Init.add_marginLeft_based_on_site_logo );
+
+    //initially we're hiding the top section because it loads too quickly.
+    //*if* we have javascript, then it will be hidden, and in that case it will also be un-hidden
+    Init.apply_callback_function_on_queried_elements( ".js #site-header .fp-section", Init.add_visibility )
 });

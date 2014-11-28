@@ -275,6 +275,12 @@ article.format-quote {
 	}
 } 
 
+.whisper {
+
+		font-size: .95em;
+		opacity: .33;
+}
+
 .fancy-pants {
 
 	@include Baskerville-Regular;
@@ -288,11 +294,6 @@ article.format-quote {
 		@include Baskerville-Bold;
 	}
 
-	.whisper {
-
-		font-size: $inuit-base-font-size;
-		opacity: .33;
-	}
 }
 
 .wrapper {
@@ -309,6 +310,14 @@ article.format-quote {
 }
 
 /* Elements */
+html.js { 
+
+	#site-header .fp-section  {
+
+		visibility: hidden;
+	}
+}
+
 #site-header {
 
 	@include zw-site-container;
