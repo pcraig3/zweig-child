@@ -50,7 +50,7 @@
 
 	.back-to-top {
 
-		top: 240vh; 
+		top: 160vh; 
 	}
 
 	#site-header,
@@ -66,6 +66,11 @@
 		.fp-section__header__spacer {
 
 			display: block;
+		}
+
+		.intimate-details {
+
+			padding-top: $inuit-base-spacing-unit;
 		}
 	}
 

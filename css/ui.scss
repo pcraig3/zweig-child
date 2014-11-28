@@ -476,7 +476,6 @@ textarea {
 /* Header */
 .intimate-details {
 
-	text-align: right;
 }
 
 /* Single */
@@ -577,7 +576,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 	$back_to_top_size: $default-padding-horizontal;
 
 	position: absolute;
-	top: 220vh; 
+	top: 150vh; 
 	bottom: auto;
 	right: 0;
 	margin-right: $back_to_top_size;

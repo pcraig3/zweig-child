@@ -3138,9 +3138,6 @@ textarea {
   background: #FFFFFF; }
 
 /* Header */
-.intimate-details {
-  text-align: right; }
-
 /* Single */
 /* Post metas */
 /* Post navigation */
@@ -3191,7 +3188,7 @@ textarea {
 /* Back to top button */
 .back-to-top {
   position: absolute;
-  top: 220vh;
+  top: 150vh;
   bottom: auto;
   right: 0;
   margin-right: 48px;
@@ -3314,7 +3311,7 @@ textarea {
     margin-left: 1rem; }
 
   .back-to-top {
-    top: 240vh; }
+    top: 160vh; }
 
   #site-header h2, .fp-section__header h2,
   .fp-section__header h2 {
@@ -3324,6 +3321,9 @@ textarea {
   #site-header .fp-section__header__spacer, .fp-section__header .fp-section__header__spacer,
   .fp-section__header .fp-section__header__spacer {
     display: block; }
+  #site-header .intimate-details, .fp-section__header .intimate-details,
+  .fp-section__header .intimate-details {
+    padding-top: 24px; }
 
   .frame__title {
     padding-top: 24px; }
