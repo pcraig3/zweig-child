@@ -6,10 +6,13 @@
 	font-size: $font-size;
 }
 
+/* horizontal padding */
+$default-padding-horizontal: $inuit-base-spacing-unit * 2;
+
 @mixin zw-site-container() {
 
 	width: 100%;
-	padding: $inuit-base-spacing-unit ($inuit-base-spacing-unit * 2) 0 ($inuit-base-spacing-unit * 2);
+	padding: $inuit-base-spacing-unit $default-padding-horizontal 0 $default-padding-horizontal;
 	margin: auto;
 	border: 0;
 	max-width: none;
@@ -520,14 +523,14 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 	ul[class*="menu"] {
 
-		margin: 0 5%;
-		padding: $inuit-base-spacing-unit 0;
+		margin: 0;
+		padding: $inuit-base-spacing-unit $default-padding-horizontal;
 	}
 
 	li {
 		
 		display: inline-block;
-		padding-right: $inuit-base-spacing-unit * 2;
+		padding-right: $default-padding-horizontal;
 	}
 }
 
@@ -550,13 +553,13 @@ $padding-base: $inuit-base-spacing-unit / 4;
 /* Back to top button */
 .back-to-top {
 
-	$back_to_top_size: $inuit-base-spacing-unit * 2;
+	$back_to_top_size: $default-padding-horizontal;
 
 	position: absolute;
 	top: 220vh; 
 	bottom: auto;
 	right: 0;
-	margin-right: 5%;
+	margin-right: $back_to_top_size;
 	z-index: 101;
 
 	&.stuck {
@@ -568,7 +571,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 	.back-to-top__link {
 
-		@include zw-button( $inuit-base-spacing-unit * 2 );
+		@include zw-button( $back_to_top_size );
 	}
 }
 
@@ -602,7 +605,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 	.search-submit {
 
-		@include zw-button( $inuit-base-spacing-unit * 2, .5 );
+		@include zw-button( $default-padding-horizontal, .5 );
 
 		position: absolute;
 		right: 0;
@@ -616,6 +619,8 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 	display: block;
 	background: none repeat scroll 0% 0% #F9F9F9;
+	padding-left: $default-padding-horizontal;
+	padding-right: $default-padding-horizontal * 2; /* don't overlap the button */
 
 	.search-field {
 
@@ -623,8 +628,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 		line-height: $inuit-base-line-height * 2;
 
-		width: 90%;
-		margin-left: 5%;
+		width: 100%;
 		border-bottom: 1px solid #F9F9F9;
 		padding: 0;
 

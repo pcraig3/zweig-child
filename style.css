@@ -2710,6 +2710,7 @@ html {
     font-family: pigiarniqlight;
     src: url("css/fonts/pigiarniq_light-webfont.svg#pigiarniqlight") format("svg"); } }
 /* Mixins */
+/* horizontal padding */
 /* Colours */
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection {
@@ -3159,8 +3160,8 @@ textarea {
   float: none; }
 
 .menu-footer-menu-container ul[class*="menu"] {
-  margin: 0 5%;
-  padding: 24px 0; }
+  margin: 0;
+  padding: 24px 48px; }
 .menu-footer-menu-container li {
   display: inline-block;
   padding-right: 48px; }
@@ -3177,7 +3178,7 @@ textarea {
   top: 220vh;
   bottom: auto;
   right: 0;
-  margin-right: 5%;
+  margin-right: 48px;
   z-index: 101; }
   .back-to-top.stuck {
     position: fixed;
@@ -3233,14 +3234,16 @@ textarea {
 #footer .search-form {
   display: block;
   background: none repeat scroll 0% 0% #F9F9F9;
+  padding-left: 48px;
+  padding-right: 96px;
+  /* don't overlap the button */
   /* let's just hide it */ }
   #footer .search-form .search-field {
     font-variant: normal;
     text-transform: lowercase;
     font-size: 32px;
     line-height: 48px;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     border-bottom: 1px solid #F9F9F9;
     padding: 0; }
     #footer .search-form .search-field:active, #footer .search-form .search-field:focus {
@@ -3322,15 +3325,7 @@ textarea {
     padding-right: 36px; }
 
   .fp-section__header .search__container {
-    display: none; }
-
-  #footer .search-form .search-field {
-    width: 80%;
-    /* so we don't overlap the 'top' button */
-    /* 24 is the $inuit-base-spacing-unit, but I couldn't get that to work in the function */
-    width: -webkit-calc(90% - 48px);
-    width: -moz-calc(90% - 48px);
-    width: calc(90% - 48px); } }
+    display: none; } }
 /* eyeroll */
 @media screen and (max-width: 42em) {
   .entry {
