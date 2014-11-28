@@ -1,5 +1,12 @@
 ## Changelog
 
+### 1.1.5
+* Added CV _temporarily_
+* Removed /shame folder :)
+* Adjusted CSS for landing page
+* Scrolling offset works when logged in
+* Added contact information it the header.
+
 ### 1.1.4
 * Adjusted logic for front page sections: easier to skip sections
 * Fixed problems with footer paddings
