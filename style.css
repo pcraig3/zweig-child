@@ -2996,7 +2996,7 @@ article.format-quote {
   font-style: normal;
   word-spacing: 0em;
   font-size: 17.6px; }
-  .fancy-pants em, .fancy-pants .search-form .search-field em, .fancy-pants i, .fancy-pants .search-form .search-field i {
+  .fancy-pants em, .fancy-pants .search-form .search-field em {
     font-family: 'libre_baskervilleitalic', times, serif;
     font-weight: 400;
     font-style: normal;
@@ -3188,7 +3188,7 @@ textarea {
 /* Back to top button */
 .back-to-top {
   position: absolute;
-  top: 150vh;
+  top: 190vh;
   bottom: auto;
   right: 0;
   margin-right: 48px;
@@ -3311,7 +3311,7 @@ textarea {
     margin-left: 1rem; }
 
   .back-to-top {
-    top: 160vh; }
+    top: 200vh; }
 
   #site-header h2, .fp-section__header h2,
   .fp-section__header h2 {

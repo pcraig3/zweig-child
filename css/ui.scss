@@ -280,7 +280,7 @@ article.format-quote {
 	@include Baskerville-Regular;
 	font-size: $inuit-base-font-size * 1.1;
 
-	em, i {
+	em {
 		@include Baskerville-Italic;
 	}
 
@@ -576,7 +576,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 	$back_to_top_size: $default-padding-horizontal;
 
 	position: absolute;
-	top: 150vh; 
+	top: 190vh; 
 	bottom: auto;
 	right: 0;
 	margin-right: $back_to_top_size;

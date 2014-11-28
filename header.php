@@ -36,7 +36,7 @@
 
 				<p><span class="not_on_mobile">There are a number of ways to get in touch, so here are the obvious ones: </span>I'm on <a href="https://www.facebook.com/PaulMCraig" target="_blank">the F-Book</a>, <a href="https://twitter.com/pcraig3" target="_blank">the Twitter</a>, <a href="https://github.com/pcraig3" target="_blank">the 'Hub</a> <span class="whisper">(as all the cool kids say)</span>, the <a href="mailto:paul@pcraig3.ca?subject=Hello%20Paul!">email</a>, and if you want my phone number, it's in my CV.</p>
 				<span class="not_on_mobile"><p>I've even got a <a href="http://bookmooch.com/" target="_blank">BookMooch</a> profile, but I'm not going to give you that one.</p></span>
-				<p>Oh, almost forgot!  I also have <a href="#back_to_top">my own website</a>.</p>
+				<p>Oh, almost forgot!  I also have <a href="#back_to_top">my own website [<i class="icon-double-angle-down"></i>]</a>.</p>
 			
 				 <!--nav> HA! Take that, conventions!
 						<?php /* wp_nav_menu( 
