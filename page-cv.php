@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: CV
-Description: A Page Template which empulates my resume.
+Description: A Page Template which emulates my resume.
 */
 ?>
 <!DOCTYPE html>
@@ -58,8 +58,8 @@ Description: A Page Template which empulates my resume.
 
 					<h5 class="job_description__title">Web Developer</h5>
 					<h6 class="job_description__employer"><a class="pseudo_href" href="http://westernusc.ca">Western University Students’ Council</a></h6>
-					<p class="job_description__body">Comadeered a revitalization of the student government’s web presence</p>
-					<p class="job_description__body">Guided by priorities obtained through several forms of stakeholder research</p>
+					<p class="job_description__body">Commandeered a revitalization of the student government’s web presence</p>
+					<p class="job_description__body">Prioritized the findings of user-centred research</p>
 					<p class="job_description__body">Implemented, open-sourced, and extensively documented solutions</p>
 					<p class="job_description__body">Incorporated several third-party APIs supplemented with clever data caching</p>
 				
@@ -75,8 +75,8 @@ Description: A Page Template which empulates my resume.
 
 					<h5 class="job_description__title">Technical Infrastructure Intern</h5>
 					<h6 class="job_description__employer"><a class="pseudo_href" href="http://westernusc.ca">Western University Students’ Council</a></h6>
-					<p class="job_description__body">Designed and implemented an array of web-based software projects</p>
-					<p class="job_description__body">Split time between both front-end and back-end problems</p>
+					<p class="job_description__body">Designed and implemented various web-based software projects</p>
+					<p class="job_description__body">Split time between front-end and back-end problems</p>
 					<p class="job_description__body">Frequent Basecamp contributor, <code>git commit</code>-er</p>
 					<p class="job_description__body">Worked always for the benefit of students at Western University</p>
 			</div>
@@ -112,7 +112,7 @@ Description: A Page Template which empulates my resume.
 
 					<h5 class="job_description__title"><a href="http://www.csd.uwo.ca">Computer Science</a></h5>
 					<p class="job_description__body">Studied foundational data structures and algorithms</p>
-					<p class="job_description__body">Worked on team-based semester-long projects</p>
+					<p class="job_description__body">Worked frequently on team-based semester-long projects</p>
 					</div><!--
 
 			--></article><article class="job_description"><!--
@@ -209,8 +209,9 @@ Description: A Page Template which empulates my resume.
 
 			<p class="job_description__body">construct / defend arguments</p>
 			<p class="job_description__body">construct / maintain software</p>
+			<p class="job_description__body">deliver presentations on either</p>
 			<p class="job_description__body">work as part of a team</p>
-			<p class="job_description__body">identify problems both technical and political</p>
+			<p class="job_description__body">identify problems: technical or political</p>
 			<p class="job_description__body">articulate myself perspicuously</p>
 
 			</div><!--

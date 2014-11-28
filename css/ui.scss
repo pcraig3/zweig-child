@@ -278,7 +278,7 @@ article.format-quote {
 .fancy-pants {
 
 	@include Baskerville-Regular;
-	font-size: $inuit-base-font-size * 1.1;
+	font-size: $inuit-base-font-size * 1.05;
 
 	em {
 		@include Baskerville-Italic;
