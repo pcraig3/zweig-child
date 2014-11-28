@@ -226,7 +226,7 @@ Description: A Page Template which empulates my resume.
 	</div><!-- end of .cv -->
 
 	<footer class="cv__footer">
-		<span class="cv__references">References available, duh</span>
+		<span class="cv__references">References available on request</span>
 		<div class="clearer"></div>
 
 	</footer><!-- end of .cv__footer -->

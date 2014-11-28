@@ -3415,6 +3415,17 @@ textarea {
     padding-bottom: 2px;
     display: block; }
   .cv__wrapper .cv__footer {
-    text-align: center; }
+    text-align: center;
+    padding-top: 52px;
+    padding-bottom: 26px;
+    font-size: 13px;
+    color: #333;
+    opacity: .65; }
+
+@media screen and (max-width: 619px) {
+  .cv__wrapper .cell {
+    padding: 5px 0 21px 0; }
+    .cv__wrapper .cell.cell--col_2 {
+      border-color: transparent; } }
 
 /*# sourceMappingURL=style.css.map */
