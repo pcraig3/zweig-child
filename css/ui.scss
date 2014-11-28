@@ -56,6 +56,8 @@ $color__gray--dark: $color__grey--dark;
 $color__red: #d43b1d;
 $color__yellow: #fcd700;
 
+$color__placeholder: #B4B4B4;
+
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: $color__yellow; color: $color__white; text-shadow: none;}
 ::selection {background: $color__yellow; color: $color__white; text-shadow: none;} 
@@ -273,6 +275,26 @@ article.format-quote {
 	}
 } 
 
+.fancy-pants {
+
+	@include Baskerville-Regular;
+	font-size: $inuit-base-font-size * 1.1;
+
+	em, i {
+		@include Baskerville-Italic;
+	}
+
+	strong, b {
+		@include Baskerville-Bold;
+	}
+
+	.whisper {
+
+		font-size: $inuit-base-font-size;
+		opacity: .33;
+	}
+}
+
 .wrapper {
 
 	@include zw-site-container;
@@ -367,7 +389,6 @@ article.format-quote {
 
 	&.frame--splash {
 
-		@include Baskerville-Regular;
 		padding-left: 0;
 	}
 
@@ -645,14 +666,13 @@ $padding-base: $inuit-base-spacing-unit / 4;
 	}
 }
 
-.frame--splash .search-form {
+.fancy-pants .search-form {
 
 	display: inline;
 
 	.search-field {
 
-		@include Baskerville-Regular;
-		font-size: $inuit-base-font-size;
+		@extend .fancy-pants;
 		width: 50%;
 
 		border-bottom: transparent 1px solid !important;

@@ -3,6 +3,21 @@
 
 @media screen and (max-width: 619px) {
 
+	.not_on_mobile {
+
+		display: none;
+	}
+
+	.fancy-pants {
+
+	font-size: $inuit-base-font-size;
+
+		.whisper {
+
+			font-size: $inuit-base-font-size * .9;
+		}
+	}
+
 	.frame {
 
 		padding-bottom: $inuit-base-spacing-unit * .5;

@@ -2990,6 +2990,26 @@ article.format-quote {
   .subtle-link:hover {
     color: #333; }
 
+.fancy-pants, .fancy-pants .search-form .search-field {
+  font-family: 'libre_baskervilleregular', times, serif;
+  font-weight: 400;
+  font-style: normal;
+  word-spacing: 0em;
+  font-size: 17.6px; }
+  .fancy-pants em, .fancy-pants .search-form .search-field em, .fancy-pants i, .fancy-pants .search-form .search-field i {
+    font-family: 'libre_baskervilleitalic', times, serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em; }
+  .fancy-pants strong, .fancy-pants .search-form .search-field strong, .fancy-pants b, .fancy-pants .search-form .search-field b {
+    font-family: 'libre_baskervillebold', times, serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em; }
+  .fancy-pants .whisper, .fancy-pants .search-form .search-field .whisper {
+    font-size: 16px;
+    opacity: .33; }
+
 .wrapper {
   width: 100%;
   padding: 24px 48px 0 48px;
@@ -3070,10 +3090,6 @@ article.format-quote {
   .frame.frame--single {
     background: #f9f9f9; }
   .frame.frame--splash {
-    font-family: 'libre_baskervilleregular', times, serif;
-    font-weight: 400;
-    font-style: normal;
-    word-spacing: 0em;
     padding-left: 0; }
   .frame.frame--archive {
     background: #FFFFFF; }
@@ -3251,20 +3267,15 @@ textarea {
   #footer .search-form .search-submit {
     display: none; }
 
-.frame--splash .search-form {
+.fancy-pants .search-form, .fancy-pants .search-form .search-field .search-form {
   display: inline;
   /* let's just hide it */ }
-  .frame--splash .search-form .search-field {
-    font-family: 'libre_baskervilleregular', times, serif;
-    font-weight: 400;
-    font-style: normal;
-    word-spacing: 0em;
-    font-size: 16px;
+  .fancy-pants .search-form .search-field {
     width: 50%;
     border-bottom: transparent 1px solid !important; }
-    .frame--splash .search-form .search-field:active, .frame--splash .search-form .search-field:focus {
+    .fancy-pants .search-form .search-field:active, .fancy-pants .search-form .search-field:focus {
       border-bottom: #FFFFFF 1px solid !important; }
-  .frame--splash .search-form .search-submit {
+  .fancy-pants .search-form .search-submit {
     display: none; }
 
 /* Media Queries */
@@ -3279,6 +3290,14 @@ textarea {
     background: #DDD; }
 
 @media screen and (max-width: 619px) {
+  .not_on_mobile {
+    display: none; }
+
+  .fancy-pants, .fancy-pants .search-form .search-field {
+    font-size: 16px; }
+    .fancy-pants .whisper, .fancy-pants .search-form .search-field .whisper {
+      font-size: 14.4px; }
+
   .frame {
     padding-bottom: 12px;
     position: relative;

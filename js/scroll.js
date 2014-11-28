@@ -1,6 +1,13 @@
 jQuery(function( $ ){
 
 	$(document).ready(function() {
+
+		var offset = 0;
+
+		var $admin_bar = $('#wpadminbar');
+
+		if ( $admin_bar )
+			offset = $admin_bar.height();
 			
 		/**
 		 * using mahlihu's scroll-to-id plugin
@@ -11,6 +18,7 @@ jQuery(function( $ ){
     		scrollSpeed: 300,
     		scrollEasing: "easeInOutQuad",
     		pageEndSmoothScroll: true,
+    		offset: offset,
     		
     		onComplete:function(){
 

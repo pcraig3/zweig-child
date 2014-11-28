@@ -30,12 +30,7 @@
 	ob_start();
 	?>
 	
-		<div class="layout__item one-third">
-
-
-		</div><!--end of .layout__item.one-third 
-
-		--><div class="layout__item two-thirds">
+		<div class="layout__item one-whole">
 
 				<div class="intimate-details">
 
@@ -62,7 +57,7 @@
 
 $html_string = ob_get_clean();
 
-echo do_shortcode( "[section_skeleton section_header_classes='full-width pt0' layout_classes='layout--flush pb+ palm-pb' section_name='about'] " . $html_string . '[/section_skeleton]');
+echo do_shortcode( "[section_skeleton section_header_classes='full-width pt0' layout_classes='layout--flush pb+ palm-pb' section_name='contact'] " . $html_string . '[/section_skeleton]');
 ?>
 
 	<div class="clearer"></div>
