@@ -187,5 +187,6 @@ zw_ch_load_event(function(){
 
     //initially we're hiding the top section because it loads too quickly.
     //*if* we have javascript, then it will be hidden, and in that case it will also be un-hidden
-    Init.apply_callback_function_on_queried_elements( ".js #site-header .fp-section", Init.add_visibility )
+    Init.apply_callback_function_on_queried_elements( ".js #site-header .fp-section", Init.add_visibility );    
+
 });

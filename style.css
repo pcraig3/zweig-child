@@ -24,6 +24,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(css/old_style.css);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -3011,6 +3012,19 @@ article.format-quote {
     font-style: normal;
     word-spacing: 0em; }
 
+.fancy-button {
+  color: #FFFFFF;
+  background: #d43b1d;
+  padding: 6px;
+  font-size: 20px;
+  cursor: pointer; }
+  .fancy-button.fancy-button--offsite:after, .fancy-button.fancy-button--download:after {
+    padding-left: 8px;
+    font-family: FontAwesome;
+    content: "\f101"; }
+  .fancy-button.fancy-button--download:after {
+    content: "\f019"; }
+
 .wrapper {
   width: 100%;
   padding: 24px 48px 0 48px;
@@ -3090,7 +3104,21 @@ html.js #site-header .fp-section, html.js .fp-section__header .fp-section {
 
 .frame {
   padding: 6px 24px;
+  /* Make it so that image captions hover to the left on large screens */
   /** @TODO: Fix this **/ }
+  .frame div[id^="attachment"].wp-caption {
+    position: relative; }
+    .frame div[id^="attachment"].wp-caption .wp-caption-text {
+      font-family: 'aller_lightitalic', arial, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      word-spacing: 0em;
+      position: absolute;
+      top: 0;
+      left: -192px;
+      width: 156px;
+      text-transform: none;
+      font-variant: normal; }
   .frame.frame--single {
     background: #f9f9f9; }
   .frame.frame--splash {

@@ -26,7 +26,7 @@ Description: A Page Template which emulates my resume.
 
 	<div class="cv__wrapper">
 		<header class="cv__header">
-			<h1 class="cv__name cv__title"><a href="http://pcraig3.ca">Paul Craig</a></h1>
+			<h1 class="cv__name cv__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Paul Craig</a></h1>
 			<h2 class="cv__description color__red">would be thrilled to code on a somewhat professional basis</h2>
 			<div class="clearer"></div>
 

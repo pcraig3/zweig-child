@@ -1,13 +1,13 @@
 <?php 
 
-/**
+/*
  * @see : http://codex.wordpress.org/Child_Themes#How_to_Create_a_Child_Theme
- */
+ *
 add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_parent_theme_style' );
 function zw_ch_enqueue_parent_theme_style() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
 }
-
+*/
 /**
  * Proper way to enqueue scripts and styles
  */
@@ -25,7 +25,6 @@ function zw_ch_enqueue_scripts() {
 
   if( is_search() )
       wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/search.js', array('jquery') );
-
 
 }
 
@@ -65,8 +64,6 @@ add_action( 'widgets_init', 'zw_ch_unregister_sidebars', 11 );
  * @return array            return some generated HTML columns for inuit css
  */
 function zw_ch_inuitcss_column( $atts, $content = null ) {
-
-  $fraction = $additional_classes = '';
 
     $atts = shortcode_atts( array(
         'fraction' => 'one-whole',
@@ -109,7 +106,7 @@ function zw_ch_return_if_empty( $string ) {
 
   $trimmed_string = trim( $string );
 
-  if( empty( $string ) ) 
+  if( empty( $trimmed_string  ) ) 
     return true;
 
   return false;
@@ -127,8 +124,6 @@ function zw_ch_return_if_empty( $string ) {
  * @return array            return just what you get, for now.
  */
 function zw_ch_bad_practice_post_listing( $atts, $content = null ) {
-
-  $fraction = $additional_classes = '';
 
     $atts = shortcode_atts( array(
       //get the default numbe of posts per page for the blog.  Overwrite them if you want though
@@ -293,3 +288,31 @@ function zw_ch_if_post_type_archive( $post_type ) {
 
   return get_post_type_archive_link( $post_type );
 }
+
+
+function zw_ch_caption_without_image( $atts, $content = null ) {
+
+    /*
+    $atts = shortcode_atts( array(
+
+        'strip_tags' => 'default value',
+    ), $atts );
+    */
+  
+   $content = strip_tags ( $content );
+
+  if( zw_ch_return_if_empty( $content ) )
+    return false;
+
+  ob_start();
+  ?>
+
+  <div id="attachment__<?php echo rand( 10000 , 20000 ); ?>" style="width: 0" class="wp-caption"><p class="wp-caption-text">
+  <?php echo esc_html( trim( $content ) ); ?>
+  </p></div>
+  <?php
+
+  return ob_get_clean();
+}
+
+add_shortcode( 'caption_without_image', 'zw_ch_caption_without_image' );

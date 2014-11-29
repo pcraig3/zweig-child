@@ -296,6 +296,36 @@ article.format-quote {
 
 }
 
+.fancy-button {
+
+	color: $color__white;
+	background: $color__red;
+	padding: $inuit-base-spacing-unit / 4;
+	font-size: $inuit-base-font-size * 1.25;
+	cursor: pointer;
+
+	&.fancy-button--offsite {
+
+		&:after {
+
+			padding-left: $inuit-base-spacing-unit / 3;
+			font-family: FontAwesome;
+			content: "\f101";
+		}
+	}
+
+	&.fancy-button--download {
+
+		@extend .fancy-button--offsite;
+
+		&:after {
+
+			content: "\f019";
+		}
+	}
+
+}
+
 .wrapper {
 
 	@include zw-site-container;
@@ -390,6 +420,24 @@ html.js {
 .frame {
 
 	padding: ( $inuit-base-spacing-unit * .25 ) $inuit-base-spacing-unit;
+
+	/* Make it so that image captions hover to the left on large screens */
+	div[id^="attachment"].wp-caption {
+
+		position: relative;
+
+		.wp-caption-text {
+
+			@include Aller-Light-Italic;
+
+			position: absolute;
+			top: 0;
+			left: - ( $default-padding-horizontal * 4 );
+			width: $default-padding-horizontal * 3.25;
+			text-transform: none;
+			font-variant: normal;
+		}
+	}
 
 	&.frame--single {
 
