@@ -87,7 +87,7 @@ function zw_ch_inuitcss_column( $atts, $content = null ) {
     else
       $html_string .= do_shortcode($content);
 
-    $html_string .= '</div><!--end of .layout__item.' . $fraction . ' -->';
+    $html_string .= '</div><!--end of .layout__item.' . $atts['fraction'] . ' -->';
 
     return $html_string;
 
