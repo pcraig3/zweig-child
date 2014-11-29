@@ -2,7 +2,13 @@
 
 	<article itemtype="http://schema.org/BlogPosting"  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		 <h1 itemprop="headline" class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Link to','zweig'); ?> <?php the_title_attribute(); ?>" itemprop="url"><?php the_title(); ?></a></h1>
+		 <h1 itemprop="headline" class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Link to','zweig'); ?> <?php the_title_attribute(); ?>" itemprop="url"><?php 
+
+		the_title();
+
+		/*if( has_excerpt( get_the_id() ) )
+			echo ": " . get_the_excerpt();*/
+		?></a></h1>
 
 		 <h2 class="post-date">
 		 	<?php the_time('jS F, Y'); ?>
