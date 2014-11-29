@@ -34,12 +34,12 @@
 
 				<div class="intimate-details fancy-pants">
 
-				<p><span class="not_on_mobile">There are a number of ways to get in touch, so here are the obvious ones: </span>I'm on <a href="https://www.facebook.com/PaulMCraig" target="_blank">the F-Book</a>, <a href="https://twitter.com/pcraig3" target="_blank">the Twitter</a>, <a href="https://github.com/pcraig3" target="_blank">the 'Hub</a> <span class="whisper">(as the cool kids say)</span>, the <a href="mailto:paul@pcraig3.ca?subject=Hello%20Paul!">email</a>, and if you want to phone me on my Windows Phone, you'll find my number in my CV.</p>
+				<p><span class="not_on_mobile">There are a number of ways to get in touch, so here are the obvious ones: </span>I'm on <a href="https://www.facebook.com/PaulMCraig" target="_blank">the F-Book</a>, <a href="https://twitter.com/pcraig3" target="_blank">the Twitter</a>, <a href="https://github.com/pcraig3" target="_blank">the 'Hub</a> <span class="whisper">(as the cool kids say)</span>, the <a href="mailto:paul@pcraig3.ca?subject=Hello%20Paul!">email</a>, and if you want to phone me on my Windows Phone, you'll find my number in my <a href="<?php echo trailingslashit( esc_url( home_url( '/' ) ) ) . "cv/"; ?>">CV</a> (which you can also <a href="<?php echo trailingslashit( esc_url( home_url( '/' ) ) ) . "wp/wp-content/uploads/2014/11/PaulCraig_CV4.1.pdf"; ?>">download</a>).</p>
 				<span class="not_on_mobile"><p>I've even got a <a href="http://bookmooch.com/" target="_blank">BookMooch</a> profile, but I'm not going to give you that one.</p></span>
 				<p>Oh, almost forgot!  I also have <a href="#back_to_top">my own website [<i class="icon-double-angle-down"></i>]</a>.</p>
-			
+
 				 <!--nav> HA! Take that, conventions!
-						<?php /* wp_nav_menu( 
+						<?php /* wp_nav_menu( http://pcraig3.local
 						array( 
 							'theme_location' => 'header', 
 							'menu_class' => 'nav-menu',
