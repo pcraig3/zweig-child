@@ -1,5 +1,14 @@
 ## Changelog
 
+### 1.1.6
+* Again with the vheight on the back_to_top button
+* Synced HTML resume with PDF resume.  Grey background.
+* fancy-pants front page lettering smaller a smidge.
+* Conditionally hide contact area: reveal it with JS.
+* Added the Zwieg CSS file to overwrite ONE RULE.
+* Button class
+* Added a caption_without_image shortcode.  Guess what it does.
+
 ### 1.1.5
 * Added CV _temporarily_
 * Removed /shame folder :)
