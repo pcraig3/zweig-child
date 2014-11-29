@@ -122,6 +122,19 @@ h1, h2, h3, h4, h5, h6 {
 	@include Aller-Light;
 	text-transform: uppercase;
 }
+.single-zw_ch_project {
+	.wrapper .entry {
+
+		h1, h2, h3 {
+
+		
+		@include Baskerville-Italic;
+		@include zw-lowercase( $inuit-base-font-size * 1.75 );
+	}
+
+	}
+}
+
 .wrapper blockquote {
 	@include Aller-Light-Italic;
 }
@@ -324,6 +337,16 @@ article.format-quote {
 		}
 	}
 
+	&.fancy-button--github {
+
+		@extend .fancy-button--offsite;
+
+		&:after { 
+
+			content: "\f092";
+		}
+	}
+
 }
 
 .wrapper {
@@ -421,23 +444,26 @@ html.js {
 
 	padding: ( $inuit-base-spacing-unit * .25 ) $inuit-base-spacing-unit;
 
-	/* Make it so that image captions hover to the left on large screens */
 	div[id^="attachment"].wp-caption {
 
-		position: relative;
+			.wp-caption-text {
 
-		.wp-caption-text {
+				@include Aller-Light-Italic;
 
-			@include Aller-Light-Italic;
-
-			position: absolute;
-			top: 0;
-			left: - ( $default-padding-horizontal * 4 );
-			width: $default-padding-horizontal * 3.25;
-			text-transform: none;
-			font-variant: normal;
+				position: relative;
+				text-transform: none;
+				font-variant: normal;
+			}
 		}
-	}
+
+		div[id^="attachment"].wp-caption--shortcode {
+
+			.wp-caption-text--shortcode {
+
+				margin-bottom: $inuit-base-spacing-unit;
+				margin-top: $inuit-base-spacing-unit * 2;
+			}
+		}
 
 	&.frame--single {
 

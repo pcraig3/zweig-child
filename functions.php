@@ -307,7 +307,7 @@ function zw_ch_caption_without_image( $atts, $content = null ) {
   ob_start();
   ?>
 
-  <div id="attachment__<?php echo rand( 10000 , 20000 ); ?>" style="width: 0" class="wp-caption"><p class="wp-caption-text">
+  <div id="attachment__<?php echo rand( 10000 , 20000 ); ?>" style="width: auto" class="wp-caption wp-caption--shortcode"><p class="wp-caption-text wp-caption-text--shortcode">
   <?php echo esc_html( trim( $content ) ); ?>
   </p></div>
   <?php

@@ -2799,6 +2799,15 @@ h1, h2, h3, h4, h5, h6 {
   word-spacing: 0em;
   text-transform: uppercase; }
 
+.single-zw_ch_project .wrapper .entry h1, .single-zw_ch_project .wrapper .entry h2, .single-zw_ch_project .wrapper .entry h3 {
+  font-family: 'libre_baskervilleitalic', times, serif;
+  font-weight: 400;
+  font-style: normal;
+  word-spacing: 0em;
+  font-variant: normal;
+  text-transform: lowercase;
+  font-size: 28px; }
+
 .wrapper blockquote {
   font-family: 'aller_lightitalic', arial, sans-serif;
   font-weight: 400;
@@ -3018,12 +3027,14 @@ article.format-quote {
   padding: 6px;
   font-size: 20px;
   cursor: pointer; }
-  .fancy-button.fancy-button--offsite:after, .fancy-button.fancy-button--download:after {
+  .fancy-button.fancy-button--offsite:after, .fancy-button.fancy-button--download:after, .fancy-button.fancy-button--github:after {
     padding-left: 8px;
     font-family: FontAwesome;
     content: "\f101"; }
   .fancy-button.fancy-button--download:after {
     content: "\f019"; }
+  .fancy-button.fancy-button--github:after {
+    content: "\f092"; }
 
 .wrapper {
   width: 100%;
@@ -3104,21 +3115,18 @@ html.js #site-header .fp-section, html.js .fp-section__header .fp-section {
 
 .frame {
   padding: 6px 24px;
-  /* Make it so that image captions hover to the left on large screens */
   /** @TODO: Fix this **/ }
-  .frame div[id^="attachment"].wp-caption {
-    position: relative; }
-    .frame div[id^="attachment"].wp-caption .wp-caption-text {
-      font-family: 'aller_lightitalic', arial, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      word-spacing: 0em;
-      position: absolute;
-      top: 0;
-      left: -192px;
-      width: 156px;
-      text-transform: none;
-      font-variant: normal; }
+  .frame div[id^="attachment"].wp-caption .wp-caption-text {
+    font-family: 'aller_lightitalic', arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em;
+    position: relative;
+    text-transform: none;
+    font-variant: normal; }
+  .frame div[id^="attachment"].wp-caption--shortcode .wp-caption-text--shortcode {
+    margin-bottom: 24px;
+    margin-top: 48px; }
   .frame.frame--single {
     background: #f9f9f9; }
   .frame.frame--splash {
@@ -3318,6 +3326,22 @@ textarea {
     border: none;
     background: #DDD; }
 
+@media screen and (min-width: 620px) {
+  .frame {
+    /* Make it so that image captions hover to the left on large screens */ }
+    .frame div[id^="attachment"].wp-caption--shortcode {
+      position: relative; }
+      .frame div[id^="attachment"].wp-caption--shortcode .wp-caption-text--shortcode {
+        font-family: 'aller_lightitalic', arial, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        word-spacing: 0em;
+        position: absolute;
+        top: 0;
+        left: -192px;
+        width: 156px;
+        text-transform: none;
+        font-variant: normal; } }
 @media screen and (max-width: 619px) and (orientation: landscape) {
   .back-to-top {
     top: 300vh; } }
