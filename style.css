@@ -5,7 +5,7 @@
  Author:       		Paul Craig
  Author URI:   		http://pcraig3.ca
  Template:     		zweig
- Version:      		1.1.7
+ Version:      		1.1.8
  Text Domain:  		zw-ch
  GitHub Theme URI: 	https://github.com/pcraig3/zweig-child
  GitHub Branch:    	master
@@ -2799,7 +2799,7 @@ h1, h2, h3, h4, h5, h6 {
   word-spacing: 0em;
   text-transform: uppercase; }
 
-.single-zw_ch_project .wrapper .entry h1, .single-zw_ch_project .wrapper .entry h2, .single-zw_ch_project .wrapper .entry h3 {
+.single .wrapper .entry h1, .single .wrapper .entry h2, .single .wrapper .entry h3 {
   font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
@@ -3038,11 +3038,22 @@ article.format-quote {
 
 .wrapper {
   width: 100%;
-  padding: 24px 48px 0 48px;
+  padding-top: 24px;
+  padding-bottom: 0;
   margin: auto;
   border: 0;
   max-width: none;
+  padding-left: 48px;
+  padding-right: 48px;
   padding-top: 0; }
+  @media screen and (max-width: 619px) {
+    .wrapper {
+      padding-left: 24px;
+      padding-right: 24px; } }
+  @media screen and (max-width: 419px) {
+    .wrapper {
+      padding-left: 15.84px;
+      padding-right: 15.84px; } }
   .wrapper .post-meta p,
   .wrapper .post-meta p strong {
     text-transform: lowercase;
@@ -3055,12 +3066,23 @@ html.js #site-header .fp-section, html.js .fp-section__header .fp-section {
 
 #site-header, .fp-section__header {
   width: 100%;
-  padding: 24px 48px 0 48px;
+  padding-top: 24px;
+  padding-bottom: 0;
   margin: auto;
   border: 0;
   max-width: none;
+  padding-left: 48px;
+  padding-right: 48px;
   background: #f9f9f9;
   /* We're putting it in a column, not directly giving it a width */ }
+  @media screen and (max-width: 619px) {
+    #site-header, .fp-section__header {
+      padding-left: 24px;
+      padding-right: 24px; } }
+  @media screen and (max-width: 419px) {
+    #site-header, .fp-section__header {
+      padding-left: 15.84px;
+      padding-right: 15.84px; } }
   #site-header .site-meta, .fp-section__header .site-meta {
     width: auto;
     position: fixed;
@@ -3129,6 +3151,8 @@ html.js #site-header .fp-section, html.js .fp-section__header .fp-section {
     margin-top: 48px; }
   .frame.frame--single {
     background: #f9f9f9; }
+    .frame.frame--single article ol li, .frame.frame--single article ul li {
+      padding-bottom: 12px; }
   .frame.frame--splash {
     padding-left: 0; }
   .frame.frame--archive {
@@ -3202,11 +3226,22 @@ textarea {
 /* Footer */
 #footer {
   width: 100%;
-  padding: 24px 48px 0 48px;
+  padding-top: 24px;
+  padding-bottom: 0;
   margin: auto;
   border: 0;
   max-width: none;
+  padding-left: 48px;
+  padding-right: 48px;
   border-bottom: 24px solid #F3F3F3; }
+  @media screen and (max-width: 619px) {
+    #footer {
+      padding-left: 24px;
+      padding-right: 24px; } }
+  @media screen and (max-width: 419px) {
+    #footer {
+      padding-left: 15.84px;
+      padding-right: 15.84px; } }
 
 .widget-area {
   width: auto;
@@ -3214,10 +3249,29 @@ textarea {
 
 .menu-footer-menu-container ul[class*="menu"] {
   margin: 0;
-  padding: 24px 48px; }
+  padding: 24px;
+  padding-left: 48px;
+  padding-right: 48px; }
+  @media screen and (max-width: 619px) {
+    .menu-footer-menu-container ul[class*="menu"] {
+      padding-left: 24px;
+      padding-right: 24px; } }
+  @media screen and (max-width: 419px) {
+    .menu-footer-menu-container ul[class*="menu"] {
+      padding-left: 15.84px;
+      padding-right: 15.84px; } }
 .menu-footer-menu-container li {
   display: inline-block;
+  padding-left: 0px;
   padding-right: 48px; }
+  @media screen and (max-width: 619px) {
+    .menu-footer-menu-container li {
+      padding-left: 0px;
+      padding-right: 24px; } }
+  @media screen and (max-width: 419px) {
+    .menu-footer-menu-container li {
+      padding-left: 0px;
+      padding-right: 15.84px; } }
 
 /* Post / Page Formats */
 .error404 #site-header .site-meta, .error404 .fp-section__header .site-meta {
@@ -3289,8 +3343,17 @@ textarea {
   background: none repeat scroll 0% 0% #F9F9F9;
   padding-left: 48px;
   padding-right: 96px;
-  /* don't overlap the button */
+  /*padding-left: $default-padding-horizontal;
+  padding-right: $default-padding-horizontal * 2; /* don't overlap the button */
   /* let's just hide it */ }
+  @media screen and (max-width: 619px) {
+    #footer .search-form {
+      padding-left: 24px;
+      padding-right: 48px; } }
+  @media screen and (max-width: 419px) {
+    #footer .search-form {
+      padding-left: 15.84px;
+      padding-right: 31.68px; } }
   #footer .search-form .search-field {
     font-variant: normal;
     text-transform: lowercase;
@@ -3364,15 +3427,25 @@ textarea {
     .frame.frame--splash .search-form .search-field {
       width: 100%; }
     .frame.frame--archive, .frame.frame--404 {
-      padding-left: 48px; }
+      padding-left: 48px;
+      padding-right: 0px;
+      /*padding-left: $default-padding-horizontal;*/ } }
+    @media screen and (max-width: 619px) and (max-width: 619px) {
+      .frame.frame--archive, .frame.frame--404 {
+        padding-left: 24px;
+        padding-right: 0px; } }
+    @media screen and (max-width: 619px) and (max-width: 419px) {
+      .frame.frame--archive, .frame.frame--404 {
+        padding-left: 15.84px;
+        padding-right: 0px; } }
 
+@media screen and (max-width: 619px) {
   ul, ol, dd {
     margin-left: 1rem; }
 
-  	/*.back-to-top {
-  
-  		top: 200vh; 
-  	}*/
+  .back-to-top {
+    margin-right: 24px; }
+
   #site-header h2, .fp-section__header h2,
   .fp-section__header h2 {
     margin: -18px 0;
@@ -3408,7 +3481,26 @@ textarea {
 /* eyeroll */
 @media screen and (max-width: 42em) {
   .entry {
-    font-size: 1em; } }
+    font-size: 1em; }
+
+  .post-title {
+    font-size: 2em !important; } }
+@media screen and (max-width: 419px) {
+  .post-title {
+    font-size: 1.7em !important; }
+
+  .back-to-top {
+    margin-right: 15.84px; }
+
+  .single .wrapper .entry h1, .single .wrapper .entry h2, .single .wrapper .entry h3 {
+    font-family: 'libre_baskervilleitalic', times, serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em;
+    font-variant: normal;
+    text-transform: lowercase;
+    font-size: 22.4px;
+    margin-bottom: 12px; } }
 body.page-template-page-cv-php {
   background: #F3F3F3; }
 

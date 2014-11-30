@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.1.8
+* Small update: Padding widths accomodate for mobile screens now.
+
 ### 1.1.7
 * Captions styled and workng better on mobile
 * Added (and then removed) excerpts.  Probably going to add them back.
