@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.1.7
+* Captions styled and workng better on mobile
+* Added (and then removed) excerpts.  Probably going to add them back.
+* Added links to CV to header.
+
 ### 1.1.6
 * Again with the vheight on the back_to_top button
 * Synced HTML resume with PDF resume.  Grey background.
