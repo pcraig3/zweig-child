@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.1.9
+* Removed 'Pigiarniq fonts'
+* Removed 'CV' template
+* Updated screenshot
+* Back_to_top button tweak
+
 ### 1.1.8
 * Small update: Padding widths accomodate for mobile screens now.
 
