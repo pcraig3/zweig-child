@@ -2670,46 +2670,6 @@ html {
   @font-face {
     font-family: allerbold_italic;
     src: url("css/fonts/aller_bdit-webfont.svg#allerbold_italic") format("svg"); } }
-@font-face {
-  font-family: pigiarniqitalic;
-  src: url("css/fonts/pigiarniq_italic-webfont.eot");
-  src: url("css/fonts/pigiarniq_italic-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/pigiarniq_italic-webfont.woff") format("woff"), url("css/fonts/pigiarniq_italic-webfont.ttf") format("truetype"), url("css/fonts/pigiarniq_italic-webfont.svg#pigiarniqitalic") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: pigiarniqitalic;
-    src: url("css/fonts/pigiarniq_italic-webfont.svg#pigiarniqitalic") format("svg"); } }
-@font-face {
-  font-family: pigiarniqbold;
-  src: url("css/fonts/pigiarniq_bold-webfont.eot");
-  src: url("css/fonts/pigiarniq_bold-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/pigiarniq_bold-webfont.woff") format("woff"), url("css/fonts/pigiarniq_bold-webfont.ttf") format("truetype"), url("css/fonts/pigiarniq_bold-webfont.svg#pigiarniqbold") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: pigiarniqbold;
-    src: url("css/fonts/pigiarniq_bold-webfont.svg#pigiarniqbold") format("svg"); } }
-@font-face {
-  font-family: pigiarniqregular;
-  src: url("css/fonts/pigiarniq_regular-webfont.eot");
-  src: url("css/fonts/pigiarniq_regular-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/pigiarniq_regular-webfont.woff") format("woff"), url("css/fonts/pigiarniq_regular-webfont.ttf") format("truetype"), url("css/fonts/pigiarniq_regular-webfont.svg#pigiarniqregular") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: pigiarniqregular;
-    src: url("css/fonts/pigiarniq_regular-webfont.svg#pigiarniqregular") format("svg"); } }
-@font-face {
-  font-family: pigiarniqlight;
-  src: url("css/fonts/pigiarniq_light-webfont.eot");
-  src: url("css/fonts/pigiarniq_light-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/pigiarniq_light-webfont.woff") format("woff"), url("css/fonts/pigiarniq_light-webfont.ttf") format("truetype"), url("css/fonts/pigiarniq_light-webfont.svg#pigiarniqlight") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: pigiarniqlight;
-    src: url("css/fonts/pigiarniq_light-webfont.svg#pigiarniqlight") format("svg"); } }
 /* Mixins */
 /* horizontal padding */
 /* Colours */
@@ -3444,6 +3404,7 @@ textarea {
     margin-left: 1rem; }
 
   .back-to-top {
+    top: 205vh;
     margin-right: 24px; }
 
   #site-header h2, .fp-section__header h2,
@@ -3501,87 +3462,5 @@ textarea {
     text-transform: lowercase;
     font-size: 22.4px;
     margin-bottom: 12px; } }
-body.page-template-page-cv-php {
-  background: #F3F3F3; }
-
-.cv__wrapper {
-  max-width: 1024px;
-  padding: 0 5%;
-  margin: 0 auto;
-  background: #FFFFFF;
-  color: #333; }
-  .cv__wrapper a {
-    color: #333;
-    font-size: inherit; }
-    .cv__wrapper a.pseudo_href:after {
-      content: " - " attr(href) " ";
-      opacity: .65; }
-  .cv__wrapper code {
-    font-family: monospace; }
-  .cv__wrapper p {
-    font-size: 13px;
-    margin: 0; }
-  .cv__wrapper .color__red {
-    color: #D43B1D; }
-  .cv__wrapper .cv__header {
-    padding: 26px 0 130px 0; }
-    .cv__wrapper .cv__header * {
-      margin: 0;
-      line-height: 39px;
-      font-size: 26px; }
-    .cv__wrapper .cv__header .cv__name * {
-      font-size: 45.5px; }
-  .cv__wrapper .section__title {
-    font-family: 'libre_baskervilleitalic', times, serif;
-    font-weight: 400;
-    font-style: normal;
-    word-spacing: 0em;
-    font-size: 26px;
-    margin: 0; }
-  .cv__wrapper .cell {
-    padding: 5px 0 21px 0; }
-    .cv__wrapper .cell.cell--col_2 {
-      border-top: 1px solid #F3F3F3;
-      border-left: 1px solid #F3F3F3; }
-      .cv__wrapper .cell.cell--col_2:first-of-type {
-        border-top: 0; }
-      .cv__wrapper .cell.cell--col_2 .job_description .layout__item * {
-        padding-left: 5px; }
-  .cv__wrapper .job_description {
-    padding-top: 14.95px;
-    font-family: 'aller_lightregular', arial, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    word-spacing: 0em; }
-    .cv__wrapper .job_description * {
-      margin: 0; }
-    .cv__wrapper .job_description .job_description__employer, .cv__wrapper .job_description .job_description__body {
-      font-size: 13px; }
-    .cv__wrapper .job_description .job_description__title, .cv__wrapper .job_description .job_description__year {
-      font-size: 14.95px;
-      padding-bottom: 2px; }
-    .cv__wrapper .job_description .job_description__title, .cv__wrapper .job_description .job_description__employer {
-      padding-bottom: 2px;
-      font-family: 'allerregular', arial, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      word-spacing: 0em; }
-  .cv__wrapper .contact--body {
-    font-size: 14.95px;
-    padding-bottom: 2px;
-    display: block; }
-  .cv__wrapper .cv__footer {
-    text-align: center;
-    padding-top: 52px;
-    padding-bottom: 26px;
-    font-size: 13px;
-    color: #333;
-    opacity: .65; }
-
-@media screen and (max-width: 619px) {
-  .cv__wrapper .cell {
-    padding: 5px 0 21px 0; }
-    .cv__wrapper .cell.cell--col_2 {
-      border-color: transparent; } }
 
 /*# sourceMappingURL=style.css.map */

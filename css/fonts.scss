@@ -50,18 +50,6 @@
 /// Aller Bold Italic
 @include font-face(allerbold_italic, "aller_bdit-webfont", 400, normal); 
 
-/// Pigiarniq Italic
-@include font-face(pigiarniqitalic, "pigiarniq_italic-webfont", 400, normal); 
-
-/// Pigiarniq Bold
-@include font-face(pigiarniqbold, "pigiarniq_bold-webfont", 400, normal); 
-
-/// Pigiarniq Regular
-@include font-face(pigiarniqregular, "pigiarniq_regular-webfont", 400, normal); 
-
-/// Pigiarniq Light
-@include font-face(pigiarniqlight, "pigiarniq_light-webfont", 400, normal); 
-
 /// Baskerville Italic
 @mixin Baskerville-Italic {
   font-family: 'libre_baskervilleitalic', times, serif;
@@ -124,28 +112,4 @@
   font-family: 'allerbold_italic', arial, sans-serif;
   font-weight: 400; font-style: normal; 
   word-spacing: 0em;
-}
-
-/// Pigiarniq Italic
-@mixin Pigiarniq-Italic {
-  font-family: 'pigiarniqitalic', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
-}
-
-/// Pigiarniq Bold
-@mixin Pigiarniq-Bold {
-  font-family: 'pigiarniqbold', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
-}
-
-/// Pigiarniq Regular
-@mixin Pigiarniq-Regular {
-  font-family: 'pigiarniqregular', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
-}
-
-/// Pigiarniq Light
-@mixin Pigiarniq-Light {
-  font-family: 'pigiarniqlight', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
 }
