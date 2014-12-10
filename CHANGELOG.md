@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.2.0
+* Added Grunt: got it concatenating and uglifying my JavaScript.
+* Layout updated for bigger screens.
+* Media queries using SASS variables
+* Link to CV changed.  (Not a good system.)
+
 ### 1.1.9
 * Removed 'Pigiarniq fonts'
 * Removed 'CV' template
