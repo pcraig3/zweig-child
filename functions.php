@@ -11,21 +11,17 @@ function zw_ch_enqueue_parent_theme_style() {
 /**
  * Proper way to enqueue scripts and styles
  */
-add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_scripts' );
-function zw_ch_enqueue_scripts() {
+add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_grunt_scripts' );
+function zw_ch_enqueue_grunt_scripts() {
 
-  //vendor scripts
-  wp_enqueue_script( 'isonscreen', get_stylesheet_directory_uri() . '/js/vendor/jquery.isonscreen.js', array( 'jquery' ) );  
-  wp_enqueue_script( 'scroll2id', get_stylesheet_directory_uri() . '/js/bower_components/page-scroll-to-id/jquery.malihu.PageScroll2id.js', array( 'jquery' ) );  
+  //pure javascript
+  wp_enqueue_script( 'zw_ch_initjs', get_stylesheet_directory_uri() . '/js/build/init.min.js', array() ); 
 
-   //local scripts written by yours truely
-  wp_enqueue_script( 'zw_ch_initjs', get_stylesheet_directory_uri() . '/js/init.js', array() );
-  wp_enqueue_script( 'zw_ch_backtotopjs', get_stylesheet_directory_uri() . '/js/back_to_top.js', array( 'jquery', 'isonscreen' ) );
-  wp_enqueue_script( 'zw_ch_scrolljs', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'jquery', 'scroll2id' ) );
+  //vendor scripts and my scripts concatenated by grunt
+  wp_enqueue_script( 'zw_ch_prodjs', get_stylesheet_directory_uri() . '/js/build/prod.min.js', array('jquery') );
 
   if( is_search() )
-      wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/search.js', array('jquery') );
-
+      wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/build/search.min.js', array('jquery') );
 }
 
 
