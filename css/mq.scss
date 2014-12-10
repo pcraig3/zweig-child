@@ -1,8 +1,6 @@
-@media screen and (max-width: 1023px) {
-}
 
-	
-@media screen and (min-width: 620px) {
+@include media-query("lap-and-up") {
+//@media screen and (min-width: 620px) {
 
 	.frame {
 		/* Make it so that image captions hover to the left on large screens */
@@ -25,8 +23,7 @@
 	}
 }
 
-@media screen and (max-width: 619px) 
-	and (orientation : landscape) {
+@include media-query("palm--landscape") {
 
 	.back-to-top {
 
@@ -34,7 +31,8 @@
 	}
 }
 
-@media screen and (max-width: 619px) {
+@include media-query("palm") {
+//@media screen and (max-width: 619px) {
 
 	.not_on_mobile {
 
@@ -168,7 +166,7 @@
 	}
 }
 
-@media screen and (max-width: 419px) {
+@include media-query("lumia520") {
 
 	.post-title {
     font-size: 1.7em !important; 

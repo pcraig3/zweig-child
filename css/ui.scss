@@ -8,22 +8,38 @@
 
 /* horizontal padding */
 $default-padding-horizontal: $inuit-base-spacing-unit * 2;
+$big-desk-padding: 15%;
+$big-ass-desk-padding: 25%;
 
 @mixin zw-padding-horizontal ($multiple-left: 1, $multiple-right: 1) {
 
 	padding-left: $default-padding-horizontal * $multiple-left;
 	padding-right: $default-padding-horizontal * $multiple-right;
 
-	@media screen and (max-width: 619px) {
+	@include media-query("lumia520") {
+
+		padding-left: ( $default-padding-horizontal * $multiple-left ) * .33;
+		padding-right: ( $default-padding-horizontal * $multiple-right ) * .33;
+	}
+
+	@include media-query("palm") {
 
 		padding-left: ( $default-padding-horizontal * $multiple-left ) * .5;
 		padding-right: ( $default-padding-horizontal * $multiple-right ) * .5;
 	}
 
-	@media screen and (max-width: 419px) {
+	/* Desktops and laptops ----------- */
+	@include media-query("big-desk") {
 
-		padding-left: ( $default-padding-horizontal * $multiple-left ) * .33;
-		padding-right: ( $default-padding-horizontal * $multiple-right ) * .33;
+		padding-left: $big-desk-padding;
+		padding-right: $big-desk-padding;
+	}
+
+	/* Large screens ----------- */
+	@include media-query("big-ass-desk") {
+
+		padding-left: $big-ass-desk-padding;
+		padding-right: $big-ass-desk-padding;
 	}
 }
 
@@ -483,7 +499,7 @@ html.js {
 			.wp-caption-text--shortcode {
 
 				margin-bottom: $inuit-base-spacing-unit;
-				margin-top: $inuit-base-spacing-unit * 2;
+				/*margin-top: $inuit-base-spacing-unit * 2;*/
 			}
 		}
 
@@ -709,6 +725,15 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 		@include zw-button( $back_to_top_size );
 	}
+
+	@include media-query("big-desk") {
+
+		margin-right: $big-desk-padding;
+	}
+
+	@include media-query("big-ass-desk") {
+		margin-right: $big-ass-desk-padding;
+	}
 }
 
 /* Search bars */
@@ -756,9 +781,6 @@ $padding-base: $inuit-base-spacing-unit / 4;
 	display: block;
 	background: none repeat scroll 0% 0% #F9F9F9;
 	@include zw-padding-horizontal(1, 2);
-
-	/*padding-left: $default-padding-horizontal;
-	padding-right: $default-padding-horizontal * 2; /* don't overlap the button */
 
 	.search-field {
 

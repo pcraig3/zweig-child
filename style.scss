@@ -14,12 +14,16 @@
 @import "css/bower_components/inuit-defaults/settings.defaults";
 
 $breakpoints: (
-    "palm"          "screen and (max-width: 619px)",
-    "lap"           "screen and (min-width: 620px) and (max-width: 1023px)",
-    "lap-and-up"    "screen and (min-width: 620px)",
-    "portable"      "screen and (max-width: 1023px)",
-    "desk"          "screen and (min-width: 1024px)",
-    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+    "lumia520"          "screen and (max-width: 419px)",
+    "palm"          	"screen and (max-width: 619px)",
+    "palm--landscape"   "screen and (max-width: 619px) and (orientation: landscape)",
+    "lap"           	"screen and (min-width: 620px) and (max-width: 1023px)",
+    "lap-and-up"    	"screen and (min-width: 620px)",
+    "portable"      	"screen and (max-width: 1023px)",
+    "desk"          	"screen and (min-width: 1024px)",
+    "big-desk"      	"screen and (min-width: 1399px)",
+    "big-ass-desk"  	"screen and (min-width: 1824px)",
+    "retina"        	"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
 ) !default;
 /* Define our initial breakpoint aliases and conditions. */
 @import "css/bower_components/inuit-responsive-settings/settings.responsive";
