@@ -99,9 +99,9 @@ var Init = (function () {
      * 
      * @param  DOM obj    An element from the DOM
      */
-    var add_visibility = function ( obj ) {
+    var display_initial = function ( obj ) {
 
-      obj.style.visibility = "visible";
+      obj.style.display = "initial";
     };
 
   	/**
@@ -141,7 +141,7 @@ var Init = (function () {
 
   		add_marginLeft_based_on_site_logo: add_marginLeft_based_on_site_logo,
       remove_marginLeft: remove_marginLeft,
-      add_visibility: add_visibility,
+      display_initial: display_initial,
 
       is_mobile: is_mobile,
 
@@ -187,6 +187,8 @@ zw_ch_load_event(function(){
 
     //initially we're hiding the top section because it loads too quickly.
     //*if* we have javascript, then it will be hidden, and in that case it will also be un-hidden
-    Init.apply_callback_function_on_queried_elements( ".js #site-header .fp-section", Init.add_visibility );    
+    Init.apply_callback_function_on_queried_elements( ".js #site-header .fp-section", Init.display_initial );    
+
+    console.log('testig');
 
 });

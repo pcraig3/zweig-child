@@ -1,5 +1,11 @@
 ## Changelog
 
+@TODO: Remove header: it's not working, and, en tout cas, header content should be isolated.
+@TODO: Grunt compile SASS.
+
+### 1.2.1
+* Hacky CSS and JS to accomodate for the always-at-the-top header.
+
 ### 1.2.0
 * Added Grunt: got it concatenating and uglifying my JavaScript.
 * Layout updated for bigger screens.

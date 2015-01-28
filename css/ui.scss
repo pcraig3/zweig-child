@@ -403,9 +403,10 @@ article.format-quote {
 /* Elements */
 html.js { 
 
+	/* @TODO: REMOVE THIS IT'S AWFUL */
 	#site-header .fp-section  {
 
-		visibility: hidden;
+		display: none;
 	}
 }
 
