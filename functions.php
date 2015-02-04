@@ -24,6 +24,15 @@ function zw_ch_enqueue_grunt_scripts() {
       wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/build/search.min.js', array('jquery') );
 }
 
+/**
+ * function makes sure our theme supports post-type thumbnails (featured images)
+ * as well as 'post-formats'
+ */
+function zw_ch_theme_setup() {
+    add_theme_support( 'post-formats', array( 'quote', 'status', 'video' ) );
+    add_theme_support( 'post-thumbnails' );
+}
+add_action( 'after_setup_theme', 'zw_ch_theme_setup' );
 
 /**
  * [zw_ch_register_menus description]
