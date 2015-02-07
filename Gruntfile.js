@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 		            'js/bower_components/page-scroll-to-id/*.js',  // This specific file
 		            'js/back_to_top.js',
 		            'js/scroll.js',
+		            'js/init.js',
 		        ],
 		        dest: 'js/build/prod.js',
 		    }
@@ -22,7 +23,6 @@ module.exports = function(grunt) {
 		    	  files: {
         			'js/build/prod.min.js': ['js/build/prod.js'],
         			'js/build/search.min.js': ['js/search.js'],
-        			'js/build/init.min.js': ['js/init.js'],
       			}
 		    }
 		},

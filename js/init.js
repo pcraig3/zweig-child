@@ -173,13 +173,13 @@ function zw_ch_load_event( func ) {
     }
 }
 
+jQuery(function( $ ){
 
-// pass the function you want to call at 'window.onload', in the function defined above
-zw_ch_load_event(function(){
-    
+  $(document).ready(function() {
+
     // set the browser window under the header on page load
     Init.run_function_without_parameters_after_timeount( 
-    	Init.scroll_to_bottom_of_header, 1);
+      Init.scroll_to_bottom_of_header, 1);
 
     // add a left margin equal to the width of site logo to section header elements
     if( ! Init.is_mobile() )
@@ -188,4 +188,7 @@ zw_ch_load_event(function(){
     //initially we're hiding the top section because it loads too quickly.
     //*if* we have javascript, then it will be hidden, and in that case it will also be un-hidden
     Init.apply_callback_function_on_queried_elements( ".js #site-header .fp-section", Init.display_initial );    
+
+  });
+
 });
