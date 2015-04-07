@@ -993,7 +993,7 @@ jQuery(function( $ ){
 	});
 });
 
-//pure javascript, runs on load, gets the offset of the spacer and the length of the logo.
+//(mostly) pure javascript, runs on load, gets the offset of the spacer and the length of the logo.
 var Init = (function () {
 
     //feels like this is bad practice :/
@@ -1025,20 +1025,6 @@ var Init = (function () {
   		return undefined;
   	};
 
-
-  	/**
-  	 * pretty basic function gets the position of the #site-header__spacer element 
-  	 * (relative) to the top of the body element, and then scrolls the browser window there.
-  	 * 
-  	 */
-  	var scroll_to_bottom_of_header = function () {
-
-      var header = document.getElementById("site-header");
-  		var header_offset = _findPos( header );
-      var header_dimensions = _find_dimensions( header );
-
-  		window.scrollTo( 0, header_offset.y + header_dimensions.height );
-  	};
 
   	/**
   	 * function that runs a given function (obviously, without parameters) after 
@@ -1089,16 +1075,6 @@ var Init = (function () {
       obj.style.marginLeft = "";
     };
 
-    /**
-     * Add the visibility: visible rule to input elements
-     * 
-     * @param  DOM obj    An element from the DOM
-     */
-    var display_initial = function ( obj ) {
-
-      obj.style.display = "initial";
-    };
-
   	/**
   	 * Callback function will be called on every target.  Targets are acquired with 
   	 * querySelectorAll
@@ -1127,8 +1103,6 @@ var Init = (function () {
 
   	return {
 
-  		scroll_to_bottom_of_header: scroll_to_bottom_of_header,
-
   		run_function_without_parameters_after_timeount: run_function_without_parameters_after_timeount,
 
   		apply_callback_function_on_queried_elements:
@@ -1136,9 +1110,8 @@ var Init = (function () {
 
   		add_marginLeft_based_on_site_logo: add_marginLeft_based_on_site_logo,
       remove_marginLeft: remove_marginLeft,
-      display_initial: display_initial,
 
-      is_mobile: is_mobile,
+      is_mobile: is_mobile
 
   	};
 
@@ -1172,17 +1145,9 @@ jQuery(function( $ ){
 
   $(document).ready(function() {
 
-    // set the browser window under the header on page load
-    Init.run_function_without_parameters_after_timeount( 
-      Init.scroll_to_bottom_of_header, 1);
-
     // add a left margin equal to the width of site logo to section header elements
     if( ! Init.is_mobile() )
       Init.apply_callback_function_on_queried_elements( ".fp-section__header h2", Init.add_marginLeft_based_on_site_logo );
-
-    //initially we're hiding the top section because it loads too quickly.
-    //*if* we have javascript, then it will be hidden, and in that case it will also be un-hidden
-    Init.apply_callback_function_on_queried_elements( ".js #site-header .fp-section", Init.display_initial );    
 
   });
 
