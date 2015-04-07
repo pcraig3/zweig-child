@@ -1,6 +1,6 @@
 {
   "name": "inuit-responsive-settings",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "homepage": "https://github.com/inuitcss/settings.responsive",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
@@ -13,11 +13,11 @@
     "inuitcss"
   ],
   "license": "Apache",
-  "_release": "0.1.3",
+  "_release": "0.1.5",
   "_resolution": {
     "type": "version",
-    "tag": "0.1.3",
-    "commit": "6cac05b32433b3bc1d0121d3c8865a6e48671eac"
+    "tag": "0.1.5",
+    "commit": "6fc74dae3cea39906d9d68f27a0f835758ef51c6"
   },
   "_source": "git://github.com/inuitcss/settings.responsive.git",
   "_target": "~0.1.0",
