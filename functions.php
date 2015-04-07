@@ -33,7 +33,6 @@ add_action( 'after_setup_theme', 'zw_ch_theme_setup' );
 
 /**
  * [zw_ch_register_menus description]
- * @return [type] [description]
  *
  * @see  http://codex.wordpress.org/Navigation_Menus
  */
@@ -49,7 +48,6 @@ add_action( 'init', 'zw_ch_register_menus' );
 
 /**
  * [zw_ch_unregister_sidebars description]
- * @return [type] [description]
  */
 function zw_ch_unregister_sidebars(){
 
