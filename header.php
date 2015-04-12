@@ -21,7 +21,13 @@
 <header id="site-header">
 
     <div class="site-meta">
-        <h1 id="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo $blog_title = get_bloginfo('name'); ?></a></h1>
+        <h1 id="site-logo">
+            <a
+                data-intro="An awesome 18th-century painter, who found beauty in everyday, common things." data-position="right"
+                href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <?php echo $blog_title = get_bloginfo('name'); ?>
+            </a>
+        </h1>
         <!--h2 id="site-description"><?php //echo $blog_title = get_bloginfo('description'); ?></h2-->
 
     </div><!-- end of .site-meta -->

@@ -4062,12 +4062,12 @@ html {
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection {
   background: #fcd700;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: none; }
 
 ::selection {
   background: #fcd700;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: none; }
 
 /* Overwrite top-level spacing */
@@ -4368,7 +4368,7 @@ article.format-quote {
     word-spacing: 0em; }
 
 .fancy-button {
-  color: #FFFFFF;
+  color: #ffffff;
   background: #d43b1d;
   padding: 6px;
   font-size: 20px;
@@ -4417,11 +4417,6 @@ article.format-quote {
     font-size: 16px; }
 
 /* Elements */
-html.js {
-  /* @TODO: REMOVE THIS IT'S AWFUL */ }
-  html.js #site-header .fp-section, html.js .fp-section__header .fp-section {
-    display: none; }
-
 #site-header, .fp-section__header {
   width: 100%;
   padding-top: 24px;
@@ -4485,7 +4480,7 @@ html.js {
     margin-top: -2px;
     /* This sucks, but it works :) */
     visibility: hidden;
-    width: 0px;
+    width: 0;
     /* can't believe it took me so long to think of this. */ }
 
 .frame__title {
@@ -4524,7 +4519,7 @@ html.js {
   .frame.frame--splash {
     padding-left: 0; }
   .frame.frame--archive {
-    background: #FFFFFF; }
+    background: #ffffff; }
     .frame.frame--archive article:hover .post-date {
       color: #f3f3f3 !important; }
     .frame.frame--archive article .post-title {
@@ -4567,7 +4562,7 @@ input[type="password"]:focus {
 
 textarea {
   border: 1px solid #f9f9f9;
-  background: #FFFFFF; }
+  background: #ffffff; }
 
 /* Header */
 /* Single */
@@ -4696,7 +4691,7 @@ textarea {
     width: 48px;
     display: inline-block;
     background: #d43b1d;
-    color: #FFFFFF;
+    color: #ffffff;
     border: 0;
     text-align: center;
     line-height: 48px; }
@@ -4733,7 +4728,7 @@ textarea {
     width: 48px;
     display: inline-block;
     background: #d43b1d;
-    color: #FFFFFF;
+    color: #ffffff;
     border: 0;
     text-align: center;
     line-height: 48px;
@@ -4744,7 +4739,7 @@ textarea {
 
 #footer .search-form {
   display: block;
-  background: none repeat scroll 0% 0% #F9F9F9;
+  background: none repeat scroll 0 0% #F9F9F9;
   padding-left: 48px;
   padding-right: 96px;
   /* Desktops and laptops ----------- */
@@ -4786,7 +4781,7 @@ textarea {
     width: 50%;
     border-bottom: transparent 1px solid !important; }
     .fancy-pants .search-form .search-field:active, .fancy-pants .search-form .search-field:focus {
-      border-bottom: #FFFFFF 1px solid !important; }
+      border-bottom: #ffffff 1px solid !important; }
   .fancy-pants .search-form .search-submit {
     display: none; }
 

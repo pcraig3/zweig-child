@@ -92,6 +92,7 @@ $color__grey--dark: #333;
 $color__gray--dark: $color__grey--dark;
 
 $color__red: #d43b1d;
+$color__white: #ffffff;
 $color__yellow: #fcd700;
 
 $color__placeholder: #B4B4B4;
@@ -401,15 +402,6 @@ article.format-quote {
 }
 
 /* Elements */
-html.js { 
-
-	/* @TODO: REMOVE THIS IT'S AWFUL */
-	#site-header .fp-section  {
-
-		display: none;
-	}
-}
-
 #site-header {
 
 	@include zw-site-container;
@@ -455,7 +447,7 @@ html.js {
 		display: inline-block;
 		margin-top: -2px; /* This sucks, but it works :) */
 		visibility: hidden;
-		width: 0px; /* can't believe it took me so long to think of this. */
+		width: 0; /* can't believe it took me so long to think of this. */
 	}
 }
 
@@ -780,7 +772,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 #footer .search-form {
 
 	display: block;
-	background: none repeat scroll 0% 0% #F9F9F9;
+	background: none repeat scroll 0 0 #F9F9F9;
 	@include zw-padding-horizontal(1, 2);
 
 	.search-field {
