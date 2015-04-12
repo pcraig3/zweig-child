@@ -2,12 +2,12 @@
 
 /*
  * @see : http://codex.wordpress.org/Child_Themes#How_to_Create_a_Child_Theme
- *
+ */
 add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_parent_theme_style' );
 function zw_ch_enqueue_parent_theme_style() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
 }
-*/
+
 /**
  * Proper way to enqueue scripts and styles
  */
