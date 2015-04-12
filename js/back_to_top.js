@@ -1,6 +1,78 @@
 jQuery(function( $ ){
 
-	$(document).ready(function() {
+    //feels like this is bad practice :/
+    var mobile_breakpoint = 619;
+
+    var is_mobile = function () {
+
+        return window.innerWidth <= mobile_breakpoint;
+    };
+
+    /**
+     * return the height and width of an input object
+     *
+     * @param  DOM obj 		An element from the DOM
+     * @return obj     		An object containing the height and width in pixels
+     */
+    var _find_dimensions = function ( obj ) {
+
+        return { width: obj.offsetWidth, height: obj.offsetHeight };
+    };
+
+    /**
+     * Add a left margin to section headers that's the same width as the site logo.
+     *
+     * @param  DOM obj 		An element from the DOM
+     */
+    var add_marginLeft_based_on_site_logo = function ( obj ) {
+
+        var logo_dimensions = _find_dimensions( document.getElementById("site-logo") );
+
+        console.log(document.getElementById("site-logo"));
+        console.log(jQuery("#site-logo").width());
+        console.log(logo_dimensions.width);
+        console.log(logo_dimensions.height);
+
+        obj.style.marginLeft = logo_dimensions.width + "px";
+    };
+
+    /**
+     * Remove (inline) left margins on an input element
+     *
+     * @param  DOM obj    An element from the DOM
+     */
+    var remove_marginLeft = function ( obj ) {
+
+        obj.style.marginLeft = "";
+    };
+
+    /**
+     * Callback function will be called on every target.  Targets are acquired with
+     * querySelectorAll
+     *
+     * @param  string targets   	argument for querySelectorAll
+     * @param  function _function 	callback function accepting a DOM obj as a parameter
+     */
+    var apply_callback_function_on_queried_elements = function ( targets, _function ) {
+
+        //check if querySelectorAll exists
+        if( document.querySelectorAll ) {
+
+            var objs = document.querySelectorAll( targets );
+
+            if ( objs ) {
+
+                for (var i=0, max=objs.length; i < max; i++) {
+
+                    _function( objs[i] );
+                }
+
+            }
+        }
+        //if not, then nothing happens. haha.
+    };
+
+    $(document).ready(function() {
 
 		var stickpoint = -1;
 		var stuck = false;
@@ -101,23 +173,23 @@ jQuery(function( $ ){
 	 * This is bad and I know it, but I'm sure I'll get to this, haha.
 	 * @TODO: Better solution
 	 */
-	var is_mobile = Init.is_mobile();
+	var currently_mobile = is_mobile();
 
 	//check for if we've resized the window.  if so, inline margin gone on headers
 	function check_for_resizing() {
 
-		if( is_mobile !== Init.is_mobile() ) {
+		if( currently_mobile !== is_mobile() ) {
 
-			if( Init.is_mobile() ) {
+			if( is_mobile() ) {
 				//then remove the margin
-				Init.apply_callback_function_on_queried_elements( ".fp-section__header h2", Init.remove_marginLeft );
+				apply_callback_function_on_queried_elements( ".fp-section__header h2", remove_marginLeft );
 			}
 			else {
 				//then calculate the margins again
-				Init.apply_callback_function_on_queried_elements( ".fp-section__header h2", Init.add_marginLeft_based_on_site_logo );
+				apply_callback_function_on_queried_elements( ".fp-section__header h2", add_marginLeft_based_on_site_logo );
 			}
 
-			is_mobile = Init.is_mobile();
+            currently_mobile = is_mobile();
 		}
 	}
 
