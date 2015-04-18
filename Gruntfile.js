@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 		            'js/vendor/*.js', // All JS in the vendor folder
 		            'js/bower_components/jquery-waypoints/*.min.js', // All JS in the libs folder
                     'js/bower_components/page-scroll-to-id/*.js',  // This specific file
-                    'js/bower_components/chardin.js/chardinjs.min.js',  // This specific file
+                    'js/bower_components/chardin.js/chardinjs.js',  // This specific file
 		            'js/back_to_top.js',
 		            'js/scroll.js',
                     'js/chardin.js'

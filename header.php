@@ -20,10 +20,15 @@
 
 <header id="site-header">
 
-    <div class="site-meta">
+    <div class="site-meta" data-chardinjs-label="just-watch-me"
+         data-intro="Paul Craig is a person on the internet."
+         data-position="right"
+        >
         <h1 id="site-logo">
             <a
-                data-intro="An awesome 18th-century painter, who found beauty in everyday, common things." data-position="right"
+                class="logo-link"
+                data-intro="An awesome 18th-century painter, who found beauty in everyday, common things."
+                data-position="bottom"
                 href="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <?php echo $blog_title = get_bloginfo('name'); ?>
             </a>

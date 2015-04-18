@@ -4739,7 +4739,7 @@ textarea {
 
 #footer .search-form {
   display: block;
-  background: none repeat scroll 0 0% #F9F9F9;
+  background: none repeat scroll 0 0 #F9F9F9;
   padding-left: 48px;
   padding-right: 96px;
   /* Desktops and laptops ----------- */
