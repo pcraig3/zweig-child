@@ -1326,9 +1326,60 @@ jQuery(function( $ ){
             _get_label : function(element) {
 
                 return element.getAttribute('data-chardinjs-label') ?
-                            ' '.concat(element.getAttribute('data-chardinjs-label')) :
+                    ' '.concat(element.getAttribute('data-chardinjs-label')) :
                     element.getAttribute('class') ?
                         ' '.concat(element.getAttribute('class')).replace(/ /g, ' chardinjs-') : '';
+            },
+
+            //ie, attributes: "style,left:4px;style:font-size=24em"
+            _set_tooltip_style : function(tooltip, attributes) {
+
+                if(!attributes)
+                    return;
+
+                attributes = attributes.split(';');
+                var old_attributes = tooltip.getAttribute('style').split(';');
+
+                for (var i = 0; i < attributes.length; i++) {
+
+                    var attr = attributes[i].split(':');
+                    if( attr.length === 2 ) {
+
+                        for (var j = 0; j < old_attributes.length; j++) {
+
+                            var old_attr = old_attributes[j].split(':');
+                            if( old_attr.length === 2 ) {
+
+                                if (old_attr[0].trim() === attr[0].trim()) {
+
+                                    old_attributes[j] = attr.join(':');
+                                    attributes.splice(i, 1);
+
+                                    j = old_attributes.length;
+                                    i--;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                tooltip.setAttribute(
+                    'style',
+                    this._format_style_string(old_attributes.join(';') + ';' + attributes.join(';'))
+                );
+
+            },
+
+            _format_style_string : function(str) {
+
+                //remove all whitespace
+                str = str.replace(/\s/g, '');
+                //remove duplicate semicolons
+                str = str.replace(/;;/g, ';');
+                //add whitespace
+                str = str.replace(/;/g, '; ');
+
+                return str.trim();
             },
 
             /**
@@ -1342,7 +1393,7 @@ jQuery(function( $ ){
                 var current_element_position, element_position, helper_layer, tooltip_layer;
 
                 element_position = this._get_offset(element);
-                
+
                 helper_layer = document.createElement("div");
                 tooltip_layer = document.createElement("div");
                 $(element).data('helper_layer', helper_layer).data('tooltip_layer', tooltip_layer);
@@ -1366,6 +1417,9 @@ jQuery(function( $ ){
                     }
                 }
                 current_element_position = current_element_position.toLowerCase();
+
+                this._set_tooltip_style(tooltip_layer, element.getAttribute('data-chardinjs-tooltip-style'));
+
                 if (current_element_position !== "absolute" && current_element_position !== "relative") {
                     return element.className += " chardinjs-relative-position";
                 }

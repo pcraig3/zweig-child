@@ -4056,18 +4056,18 @@ html {
   @font-face {
     font-family: allerbold_italic;
     src: url("css/fonts/aller_bdit-webfont.svg#allerbold_italic") format("svg"); } }
+/* Colours */
 /* Mixins */
 /* horizontal padding */
-/* Colours */
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection {
   background: #fcd700;
-  color: #ffffff;
+  color: #FFFFFF;
   text-shadow: none; }
 
 ::selection {
   background: #fcd700;
-  color: #ffffff;
+  color: #FFFFFF;
   text-shadow: none; }
 
 /* Overwrite top-level spacing */
@@ -4323,13 +4323,16 @@ article.format-quote {
 .not-displayed {
   display: none !important; }
 
+.not-height {
+  height: 0 !important; }
+
 .relative {
   position: relative !important; }
 
-.fade-to-solid {
+.fade-to-solid, .fancy-pants .chardinjs-tooltiptext a, .fancy-pants .search-form .search-field .chardinjs-tooltiptext a {
   transition: opacity 0.15s ease-in;
   opacity: .65; }
-  .fade-to-solid:hover {
+  .fade-to-solid:hover, .fancy-pants .chardinjs-tooltiptext a:hover {
     opacity: 1; }
 
 .solid-to-fade {
@@ -4368,7 +4371,7 @@ article.format-quote {
     word-spacing: 0em; }
 
 .fancy-button {
-  color: #ffffff;
+  color: #FFFFFF;
   background: #d43b1d;
   padding: 6px;
   font-size: 20px;
@@ -4449,7 +4452,7 @@ article.format-quote {
   #site-header .site-meta, .fp-section__header .site-meta {
     width: auto;
     position: fixed;
-    z-index: 99; }
+    z-index: 101; }
   #site-header h1, .fp-section__header h1, #site-header h2, .fp-section__header h2 {
     display: inline; }
   #site-header h1, .fp-section__header h1 {
@@ -4465,6 +4468,42 @@ article.format-quote {
     margin-left: 213px;
     /* this value will be overwritten */ }
 
+.chardinjs-overlay {
+  z-index: 99; }
+
+.fancy-pants .chardinjs-tooltiptext a, .fancy-pants .search-form .search-field .chardinjs-tooltiptext a {
+  color: #FFFFFF; }
+
+.chardinjs-helper-layer.chardinjs-bottom, .chardinjs-helper-layer.chardinjs-top,
+.chardinjs-helper-layer.chardinjs-left, .chardinjs-helper-layer.chardinjs-right {
+  position: fixed;
+  border: none;
+  z-index: 99; }
+  .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip,
+  .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip {
+    max-width: none;
+    padding: 0; }
+    .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-top:after, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-top:after,
+    .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-right:before,
+    .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-left:after,
+    .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-bottom:before,
+    .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-top:after, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-top:after {
+      content: none; }
+  .chardinjs-helper-layer.chardinjs-bottom.chardinjs-site-meta, .chardinjs-helper-layer.chardinjs-top.chardinjs-site-meta,
+  .chardinjs-helper-layer.chardinjs-left.chardinjs-site-meta, .chardinjs-helper-layer.chardinjs-right.chardinjs-site-meta {
+    font-family: 'libre_baskervilleregular', times, serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0em;
+    font-variant: normal;
+    text-transform: lowercase;
+    font-size: 48px;
+    margin-top: -2px;
+    /* This sucks, but it works :) */ }
+    .chardinjs-helper-layer.chardinjs-bottom.chardinjs-site-meta .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top.chardinjs-site-meta .chardinjs-tooltip,
+    .chardinjs-helper-layer.chardinjs-left.chardinjs-site-meta .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right.chardinjs-site-meta .chardinjs-tooltip {
+      left: 100%; }
+
 .fp-section__header {
   padding: 24px 0 0 0;
   background: transparent; }
@@ -4475,7 +4514,7 @@ article.format-quote {
     word-spacing: 0em;
     font-variant: normal;
     text-transform: lowercase;
-    font-size: 56px;
+    font-size: 48px;
     display: inline-block;
     margin-top: -2px;
     /* This sucks, but it works :) */
@@ -4519,7 +4558,7 @@ article.format-quote {
   .frame.frame--splash {
     padding-left: 0; }
   .frame.frame--archive {
-    background: #ffffff; }
+    background: #FFFFFF; }
     .frame.frame--archive article:hover .post-date {
       color: #f3f3f3 !important; }
     .frame.frame--archive article .post-title {
@@ -4562,7 +4601,7 @@ input[type="password"]:focus {
 
 textarea {
   border: 1px solid #f9f9f9;
-  background: #ffffff; }
+  background: #FFFFFF; }
 
 /* Header */
 /* Single */
@@ -4691,7 +4730,7 @@ textarea {
     width: 48px;
     display: inline-block;
     background: #d43b1d;
-    color: #ffffff;
+    color: #FFFFFF;
     border: 0;
     text-align: center;
     line-height: 48px; }
@@ -4728,7 +4767,7 @@ textarea {
     width: 48px;
     display: inline-block;
     background: #d43b1d;
-    color: #ffffff;
+    color: #FFFFFF;
     border: 0;
     text-align: center;
     line-height: 48px;
@@ -4781,7 +4820,7 @@ textarea {
     width: 50%;
     border-bottom: transparent 1px solid !important; }
     .fancy-pants .search-form .search-field:active, .fancy-pants .search-form .search-field:focus {
-      border-bottom: #ffffff 1px solid !important; }
+      border-bottom: #FFFFFF 1px solid !important; }
   .fancy-pants .search-form .search-submit {
     display: none; }
 
@@ -4827,7 +4866,7 @@ textarea {
   .frame {
     padding-bottom: 12px;
     position: relative;
-    z-index: 100;
+    /* z-index: 100;*/
     /*
     &.frame--single {}
     */ }

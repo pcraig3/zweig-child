@@ -1,81 +1,3 @@
-/* Mixins */
-@mixin zw-lowercase($font-size: 1em) {
-
-	font-variant: normal;
-	text-transform: lowercase;
-	font-size: $font-size;
-}
-
-/* horizontal padding */
-$default-padding-horizontal: $inuit-base-spacing-unit * 2;
-$big-desk-padding: 15%;
-$big-ass-desk-padding: 25%;
-
-@mixin zw-padding-horizontal ($multiple-left: 1, $multiple-right: 1) {
-
-	padding-left: $default-padding-horizontal * $multiple-left;
-	padding-right: $default-padding-horizontal * $multiple-right;
-
-	@include media-query("lumia520") {
-
-		padding-left: ( $default-padding-horizontal * $multiple-left ) * .33;
-		padding-right: ( $default-padding-horizontal * $multiple-right ) * .33;
-	}
-
-	@include media-query("palm") {
-
-		padding-left: ( $default-padding-horizontal * $multiple-left ) * .5;
-		padding-right: ( $default-padding-horizontal * $multiple-right ) * .5;
-	}
-
-	/* Desktops and laptops ----------- */
-	@include media-query("big-desk") {
-
-		padding-left: $big-desk-padding;
-		padding-right: $big-desk-padding;
-	}
-
-	/* Large screens ----------- */
-	@include media-query("big-ass-desk") {
-
-		padding-left: $big-ass-desk-padding;
-		padding-right: $big-ass-desk-padding;
-	}
-}
-
-
-@mixin zw-site-container() {
-
-	width: 100%;
-	padding-top: $inuit-base-spacing-unit;
-	padding-bottom: 0;
-	margin: auto;
-	border: 0;
-	max-width: none;
-
-	@include zw-padding-horizontal();
-}
-
-@mixin zw-transition($property, $timespan: .15s, $easing: ease-in) {
-
-	transition: $property $timespan $easing;
-}
-
-@mixin zw-button($base-spacing, $font-size-proportion: 1) {
-
-	font-size: $base-spacing * $font-size-proportion;
-	position: relative;
-	height: $base-spacing;
-	width: $base-spacing;
-	display: inline-block;
-	background: $color__red;
-	color: $color__white;
-	border: 0;
-
-	text-align: center;
-	line-height: $base-spacing;
-}
-
 /* Colours */
 $color__white: #FFFFFF;
 
@@ -92,27 +14,103 @@ $color__grey--dark: #333;
 $color__gray--dark: $color__grey--dark;
 
 $color__red: #d43b1d;
-$color__white: #ffffff;
 $color__yellow: #fcd700;
 
 $color__placeholder: #B4B4B4;
 
+/* Mixins */
+@mixin zw-lowercase($font-size: 1em) {
+
+  font-variant: normal;
+  text-transform: lowercase;
+  font-size: $font-size;
+}
+
+/* horizontal padding */
+$default-padding-horizontal: $inuit-base-spacing-unit * 2;
+$big-desk-padding: 15%;
+$big-ass-desk-padding: 25%;
+
+@mixin zw-padding-horizontal ($multiple-left: 1, $multiple-right: 1) {
+
+  padding-left: $default-padding-horizontal * $multiple-left;
+  padding-right: $default-padding-horizontal * $multiple-right;
+
+  @include media-query("lumia520") {
+
+    padding-left: ( $default-padding-horizontal * $multiple-left ) * .33;
+    padding-right: ( $default-padding-horizontal * $multiple-right ) * .33;
+  }
+
+  @include media-query("palm") {
+
+    padding-left: ( $default-padding-horizontal * $multiple-left ) * .5;
+    padding-right: ( $default-padding-horizontal * $multiple-right ) * .5;
+  }
+
+  /* Desktops and laptops ----------- */
+  @include media-query("big-desk") {
+
+    padding-left: $big-desk-padding;
+    padding-right: $big-desk-padding;
+  }
+
+  /* Large screens ----------- */
+  @include media-query("big-ass-desk") {
+
+    padding-left: $big-ass-desk-padding;
+    padding-right: $big-ass-desk-padding;
+  }
+}
+
+@mixin zw-site-container() {
+
+  width: 100%;
+  padding-top: $inuit-base-spacing-unit;
+  padding-bottom: 0;
+  margin: auto;
+  border: 0;
+  max-width: none;
+
+  @include zw-padding-horizontal();
+}
+
+@mixin zw-transition($property, $timespan: .15s, $easing: ease-in) {
+
+  transition: $property $timespan $easing;
+}
+
+@mixin zw-button($base-spacing, $font-size-proportion: 1) {
+
+  font-size: $base-spacing * $font-size-proportion;
+  position: relative;
+  height: $base-spacing;
+  width: $base-spacing;
+  display: inline-block;
+  background: $color__red;
+  color: $color__white;
+  border: 0;
+
+  text-align: center;
+  line-height: $base-spacing;
+}
+
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: $color__yellow; color: $color__white; text-shadow: none;}
-::selection {background: $color__yellow; color: $color__white; text-shadow: none;} 
+::selection {background: $color__yellow; color: $color__white; text-shadow: none;}
 
 /* Overwrite top-level spacing */
 html {
 
-	font-size: $inuit-base-font-size;
-	line-height: $inuit-base-line-height;
+  font-size: $inuit-base-font-size;
+  line-height: $inuit-base-line-height;
 }
 
 .wrapper .post-title {
 
-	padding-bottom: $inuit-base-spacing-unit * .4;
-	font-size: $inuit-base-font-size * 2.5;
-	line-height: $inuit-base-line-height * 1.5;
+  padding-bottom: $inuit-base-spacing-unit * .4;
+  font-size: $inuit-base-font-size * 2.5;
+  line-height: $inuit-base-line-height * 1.5;
 }
 
 .wrapper .post-date,
@@ -120,142 +118,142 @@ html {
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
 
-	font-size: $inuit-base-font-size * .85;
-	margin-bottom: $inuit-base-spacing-unit * 2;
-	color: $color__grey--dark !important;
+  font-size: $inuit-base-font-size * .85;
+  margin-bottom: $inuit-base-spacing-unit * 2;
+  color: $color__grey--dark !important;
 }
 
 
 /* Overwrite all the fonts */
 body {
 
-	@include Aller-Light;
-	color: $color__grey--dark;
+  @include Aller-Light;
+  color: $color__grey--dark;
 
-	em {
-		@include Aller-Light-Italic;
-	}
-	strong {
-		@include Aller-Bold;
-	}
-	q {
-		@include Aller-Light-Italic;
-	}
+  em {
+    @include Aller-Light-Italic;
+  }
+  strong {
+    @include Aller-Bold;
+  }
+  q {
+    @include Aller-Light-Italic;
+  }
 }
 h1, h2, h3, h4, h5, h6 {
-	@include Baskerville-Regular;
+  @include Baskerville-Regular;
 }
 .wrapper .post-meta p,
 .wrapper .post-meta p strong {
-	@include Baskerville-Italic;
+  @include Baskerville-Italic;
 }
 .wrapper .post-date,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
-	@include Aller-Light;
+  @include Aller-Light;
 }
-.wrapper .post-title { 
-	@include Baskerville-Regular;
+.wrapper .post-title {
+  @include Baskerville-Regular;
 }
 .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
-	@include Aller-Light;
-	text-transform: uppercase;
+  @include Aller-Light;
+  text-transform: uppercase;
 }
 .single {
-	.wrapper .entry {
+  .wrapper .entry {
 
-		h1, h2, h3 {
+    h1, h2, h3 {
 
-		
-		@include Baskerville-Italic;
-		@include zw-lowercase( $inuit-base-font-size * 1.75 );
-	}
 
-	}
+      @include Baskerville-Italic;
+      @include zw-lowercase( $inuit-base-font-size * 1.75 );
+    }
+
+  }
 }
 
 .wrapper blockquote {
-	@include Aller-Light-Italic;
+  @include Aller-Light-Italic;
 }
 .wrapper cite {
-	@include Aller-Light;
-	margin-left: $inuit-base-spacing-unit;
+  @include Aller-Light;
+  margin-left: $inuit-base-spacing-unit;
 }
 .wrapper table thead th {
-	@include Aller-Light-Italic;
-	text-align: left;
+  @include Aller-Light-Italic;
+  text-align: left;
 }
 .wrapper table th {
-	@include Aller-Light;
+  @include Aller-Light;
 }
 .wrapper dt {
-	@include Aller-Light-Italic;
+  @include Aller-Light-Italic;
 }
-input[type=submit] {  	
-	@include Aller-Light;
-	@include zw-lowercase( $inuit-base-font-size * 1.2 );
+input[type=submit] {
+  @include Aller-Light;
+  @include zw-lowercase( $inuit-base-font-size * 1.2 );
 }
 .read-more {
-	@include Aller-Light;
+  @include Aller-Light;
 }
 #commentform label {
-	@include Aller-Light-Italic;
+  @include Aller-Light-Italic;
 }
 input[type=text],
 input[type=email],
 input[type=url],
 input[type=search],
 input[type=password] {
-	@include Aller-Light;
+  @include Aller-Light;
 }
 textarea {
-	@include Aller-Light;
+  @include Aller-Light;
 }
 #site-header h1 {
-	@include Baskerville-Regular;
+  @include Baskerville-Regular;
 }
 #site-header h2 {
-	@include Baskerville-Regular;
+  @include Baskerville-Regular;
 }
 .post-pages {
-	@include Aller-Bold;
+  @include Aller-Bold;
 }
 .post-navigation {
-	@include Baskerville-Italic;
+  @include Baskerville-Italic;
 }
 .author-name strong {
-	@include Baskerville-Italic;
-	@include zw-lowercase(  $inuit-base-font-size * 1.5 );
+  @include Baskerville-Italic;
+  @include zw-lowercase(  $inuit-base-font-size * 1.5 );
 }
 #comments h3 {
-	@include Aller-Light-Italic;
-	text-transform: uppercase;
+  @include Aller-Light-Italic;
+  text-transform: uppercase;
 }
 #comments .vcard {
-	@include Baskerville-Italic;
-	@include zw-lowercase( $inuit-base-font-size * 1.1 );
+  @include Baskerville-Italic;
+  @include zw-lowercase( $inuit-base-font-size * 1.1 );
 
-	b {
-		font-weight: 400;
-	}
-} 
+  b {
+    font-weight: 400;
+  }
+}
 #comments .comment-meta {
-	@include Aller-Regular;
-	color: $color__grey;
+  @include Aller-Regular;
+  color: $color__grey;
 }
 #comments .reply {
-	@include Aller-Light;
-	text-align: right;
+  @include Aller-Light;
+  text-align: right;
 }
 .posts-nav {
-	@include Aller-Light;
+  @include Aller-Light;
 }
 .widget-area h2 {
-	@include Baskerville-Italic;
+  @include Baskerville-Italic;
 }
 /* Post Formats */
 article.format-quote {
-	@include Aller-Light-Italic;
+  @include Aller-Light-Italic;
 }
 
 /** Actually starting original styling */
@@ -263,307 +261,360 @@ article.format-quote {
 
 .full-height {
 
-	/* Might not work perfectly on mobile.  If not, try https://github.com/rodneyrehm/viewport-units-buggyfill */
-	min-height: 100vh;
-	height: auto !important;
+  /* Might not work perfectly on mobile.  If not, try https://github.com/rodneyrehm/viewport-units-buggyfill */
+  min-height: 100vh;
+  height: auto !important;
 }
 
 .full-width {
 
-	width: 100% !important;
+  width: 100% !important;
 }
 
 .hidden {
 
-	visibility: hidden !important;
+  visibility: hidden !important;
 }
 
 .not-displayed {
 
-	display: none !important;
+  display: none !important;
+}
+
+.not-height {
+
+  height: 0 !important;
 }
 
 .relative {
 
-	position: relative !important;
+  position: relative !important;
 }
 
 .fade-to-solid {
 
-	@include zw-transition(opacity);
+  @include zw-transition(opacity);
 
-	opacity: .65;
+  opacity: .65;
 
-	&:hover {
+  &:hover {
 
-		opacity: 1;
-	}
+    opacity: 1;
+  }
 }
 
 .solid-to-fade {
 
-	@include zw-transition(opacity);
+  @include zw-transition(opacity);
 
-	opacity: 1;
+  opacity: 1;
 
-	&:hover {
+  &:hover {
 
-		opacity: .65;
-	}
+    opacity: .65;
+  }
 }
 
 .cursor-default {
 
-	cursor: default !important;
+  cursor: default !important;
 }
 
 .subtle-link {
 
-	color: 		$color__grey--dark;
+  color: 		$color__grey--dark;
 
-	&:hover {
+  &:hover {
 
-		color: 		$color__grey--dark;
-	}
-} 
+    color: 		$color__grey--dark;
+  }
+}
 
 .whisper {
 
-		font-size: .95em;
-		opacity: .33;
+  font-size: .95em;
+  opacity: .33;
 }
 
 .fancy-pants {
 
-	@include Baskerville-Regular;
-	font-size: $inuit-base-font-size * 1.05;
+  @include Baskerville-Regular;
+  font-size: $inuit-base-font-size * 1.05;
 
-	em {
-		@include Baskerville-Italic;
-	}
+  em {
+    @include Baskerville-Italic;
+  }
 
-	strong, b {
-		@include Baskerville-Bold;
-	}
+  strong, b {
+    @include Baskerville-Bold;
+  }
 
 }
 
 .fancy-button {
 
-	color: $color__white;
-	background: $color__red;
-	padding: $inuit-base-spacing-unit / 4;
-	font-size: $inuit-base-font-size * 1.25;
-	cursor: pointer;
+  color: $color__white;
+  background: $color__red;
+  padding: $inuit-base-spacing-unit / 4;
+  font-size: $inuit-base-font-size * 1.25;
+  cursor: pointer;
 
-	&.fancy-button--offsite {
+  &.fancy-button--offsite {
 
-		&:after {
+    &:after {
 
-			padding-left: $inuit-base-spacing-unit / 3;
-			font-family: FontAwesome;
-			content: "\f101";
-		}
-	}
+      padding-left: $inuit-base-spacing-unit / 3;
+      font-family: FontAwesome;
+      content: "\f101";
+    }
+  }
 
-	&.fancy-button--download {
+  &.fancy-button--download {
 
-		@extend .fancy-button--offsite;
+    @extend .fancy-button--offsite;
 
-		&:after {
+    &:after {
 
-			content: "\f019";
-		}
-	}
+      content: "\f019";
+    }
+  }
 
-	&.fancy-button--github {
+  &.fancy-button--github {
 
-		@extend .fancy-button--offsite;
+    @extend .fancy-button--offsite;
 
-		&:after { 
+    &:after {
 
-			content: "\f092";
-		}
-	}
+      content: "\f092";
+    }
+  }
 
 }
 
 .wrapper {
 
-	@include zw-site-container;
-	padding-top: 0;
+  @include zw-site-container;
+  padding-top: 0;
 
-	.post-meta p,
-	.post-meta p strong {
-		text-transform: lowercase;
-		font-variant: normal;
-		font-size: $inuit-base-font-size;
-	}
+  .post-meta p,
+  .post-meta p strong {
+    text-transform: lowercase;
+    font-variant: normal;
+    font-size: $inuit-base-font-size;
+  }
 }
 
 /* Elements */
 #site-header {
 
-	@include zw-site-container;
+  @include zw-site-container;
 
-	background: $color__grey--light;
+  background: $color__grey--light;
 
-	/* We're putting it in a column, not directly giving it a width */
-	.site-meta {
-		width: auto;
-		position: fixed;
-		z-index: 99;
-	}
+  /* We're putting it in a column, not directly giving it a width */
+  .site-meta {
+    width: auto;
+    position: fixed;
+    z-index: 101;
+  }
 
-	h1, h2 {
+  h1, h2 {
 
-		display: inline;
-	}
+    display: inline;
+  }
 
-	h1 {
+  h1 {
 
-		font-size: $inuit-base-font-size * 3.5;
-	}
+    font-size: $inuit-base-font-size * 3.5;
+  }
 
-	h2 {
-		@include Baskerville-Regular;
-		@include zw-lowercase( $inuit-base-font-size * 3 );
+  h2 {
+    @include Baskerville-Regular;
+    @include zw-lowercase( $inuit-base-font-size * 3 );
 
-		margin-left: 213px;  /* this value will be overwritten */
-	}
+    margin-left: 213px;  /* this value will be overwritten */
+  }
+}
+
+.chardinjs-overlay {
+
+  z-index: 99;
+}
+
+.fancy-pants .chardinjs-tooltiptext {
+
+  a {
+
+    @extend .fade-to-solid;
+
+    color: $color__white;
+  }
+}
+
+
+.chardinjs-helper-layer.chardinjs-bottom, .chardinjs-helper-layer.chardinjs-top,
+.chardinjs-helper-layer.chardinjs-left, .chardinjs-helper-layer.chardinjs-right {
+
+  position: fixed;
+  border:   none;
+  z-index: 99;
+
+  .chardinjs-tooltip {
+
+    max-width: none;
+    padding: 0;
+
+    &.chardinjs-right:before,
+    &.chardinjs-left:after,
+    &.chardinjs-bottom:before,
+    &.chardinjs-top:after {
+      content: none;
+    }
+  }
+
+  &.chardinjs-site-meta {
+
+    @include Baskerville-Regular;
+    @include zw-lowercase( $inuit-base-font-size * 3 );
+    margin-top: -2px; /* This sucks, but it works :) */
+
+    .chardinjs-tooltip {
+      left: 100%;
+    }
+  }
 }
 
 
 .fp-section__header {
 
-	@extend #site-header;
+  @extend #site-header;
 
-	padding: $inuit-base-spacing-unit 0 0 0;
-	background: transparent;
+  padding: $inuit-base-spacing-unit 0 0 0;
+  background: transparent;
 
-	.fp-section__header__spacer {
-		@include Baskerville-Regular;
-		@include zw-lowercase( $inuit-base-font-size * 3.5 );
-		display: inline-block;
-		margin-top: -2px; /* This sucks, but it works :) */
-		visibility: hidden;
-		width: 0; /* can't believe it took me so long to think of this. */
-	}
+  .fp-section__header__spacer {
+    @include Baskerville-Regular;
+    @include zw-lowercase( $inuit-base-font-size * 3 );
+    display: inline-block;
+    margin-top: -2px; /* This sucks, but it works :) */
+    visibility: hidden;
+    width: 0; /* can't believe it took me so long to think of this. */
+  }
 }
 
 .frame__title  {
 
-	padding: ($inuit-base-spacing-unit * .25 ) 0;
+  padding: ($inuit-base-spacing-unit * .25 ) 0;
 
-	.subhead {
+  .subhead {
 
-		@include Baskerville-Italic;
-		color: $color__grey;
-		text-transform: none;
-		font-variant: normal;
-		font-size: $inuit-base-font-size * 2;
-		margin-top: $inuit-base-spacing-unit * .25; 
-	}
+    @include Baskerville-Italic;
+    color: $color__grey;
+    text-transform: none;
+    font-variant: normal;
+    font-size: $inuit-base-font-size * 2;
+    margin-top: $inuit-base-spacing-unit * .25;
+  }
 
-	.subhead__search_results, .subhead__search_again {
+  .subhead__search_results, .subhead__search_again {
 
-		display: none;
-	}
+    display: none;
+  }
 }
 
 .frame {
 
-	padding: ( $inuit-base-spacing-unit * .25 ) $inuit-base-spacing-unit;
+  padding: ( $inuit-base-spacing-unit * .25 ) $inuit-base-spacing-unit;
 
-	div[id^="attachment"].wp-caption {
+  div[id^="attachment"].wp-caption {
 
-			.wp-caption-text {
+    .wp-caption-text {
 
-				@include Aller-Light-Italic;
+      @include Aller-Light-Italic;
 
-				position: relative;
-				text-transform: none;
-				font-variant: normal;
-			}
-		}
+      position: relative;
+      text-transform: none;
+      font-variant: normal;
+    }
+  }
 
-		div[id^="attachment"].wp-caption--shortcode {
+  div[id^="attachment"].wp-caption--shortcode {
 
-			.wp-caption-text--shortcode {
+    .wp-caption-text--shortcode {
 
-				margin-bottom: $inuit-base-spacing-unit;
-				/*margin-top: $inuit-base-spacing-unit * 2;*/
-			}
-		}
+      margin-bottom: $inuit-base-spacing-unit;
+      /*margin-top: $inuit-base-spacing-unit * 2;*/
+    }
+  }
 
-	&.frame--single {
+  &.frame--single {
 
-		background: $color__grey--light;
+    background: $color__grey--light;
 
-		article {
+    article {
 
-			ol, ul {
-				li {
+      ol, ul {
+        li {
 
-					padding-bottom: $inuit-base-spacing-unit * .5;
-				}
-			}
-		}
-	}
+          padding-bottom: $inuit-base-spacing-unit * .5;
+        }
+      }
+    }
+  }
 
-	&.frame--splash {
+  &.frame--splash {
 
-		padding-left: 0;
-	}
+    padding-left: 0;
+  }
 
-	&.frame--archive {
+  &.frame--archive {
 
-		background: $color__white;
+    background: $color__white;
 
-		article {
+    article {
 
-			&:hover {
+      &:hover {
 
-				.post-date {
+        .post-date {
 
-					color: $color__grey--still-pretty-light !important;
-				}
-			}
+          color: $color__grey--still-pretty-light !important;
+        }
+      }
 
-			.post-title {
+      .post-title {
 
-				padding-bottom: $inuit-base-spacing-unit * .25;
-				font-size: $inuit-base-font-size * 1.8;
-				line-height: $inuit-base-line-height * 1.25;
-			}
+        padding-bottom: $inuit-base-spacing-unit * .25;
+        font-size: $inuit-base-font-size * 1.8;
+        line-height: $inuit-base-line-height * 1.25;
+      }
 
-			.post-date {
+      .post-date {
 
-				@include zw-transition(color);
+        @include zw-transition(color);
 
-				color: $color__grey !important;
-				margin-bottom: $inuit-base-spacing-unit * 2;
-			}
+        color: $color__grey !important;
+        margin-bottom: $inuit-base-spacing-unit * 2;
+      }
 
-			a {
+      a {
 
-				display: block;
-			}
-		}
-	}
+        display: block;
+      }
+    }
+  }
 
-	/** @TODO: Fix this **/
-	.sticky {
+  /** @TODO: Fix this **/
+  .sticky {
 
-		border: none;
-		padding-bottom: 0;
-		margin-bottom: 0;
-	}
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 .form-submit {
 
-	text-align: right;
+  text-align: right;
 }
 
 input[type=text],
@@ -572,28 +623,28 @@ input[type=url],
 input[type=search],
 input[type=password] {
 
-	background: transparent;
+  background: transparent;
 }
 
-input[type="text"]:active, 
-input[type="text"]:focus, 
-input[type="email"]:active, 
-input[type="email"]:focus, 
-input[type="url"]:active, 
-input[type="url"]:focus, 
-input[type="search"]:active, 
-input[type="search"]:focus, 
-input[type="password"]:active, 
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="email"]:active,
+input[type="email"]:focus,
+input[type="url"]:active,
+input[type="url"]:focus,
+input[type="search"]:active,
+input[type="search"]:focus,
+input[type="password"]:active,
 input[type="password"]:focus {
 
-	border: none !important;
-	border-bottom: 1px solid $color__red !important;
+  border: none !important;
+  border-bottom: 1px solid $color__red !important;
 }
 
 textarea {
 
-	border: 1px solid $color__grey--light;
-	background: $color__white;
+  border: 1px solid $color__grey--light;
+  background: $color__white;
 }
 
 
@@ -612,9 +663,9 @@ textarea {
 /* Post navigation */
 .post-navigation {
 
-	font-size: $inuit-base-font-size * 1.25;
-	word-break: break-word;
-} 
+  font-size: $inuit-base-font-size * 1.25;
+  word-break: break-word;
+}
 
 /* Author Box */
 
@@ -623,60 +674,60 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 #comments  {
 
-	.comment-body, .comment {
+  .comment-body, .comment {
 
-		margin-bottom: $inuit-base-spacing-unit * 2;
-	}  
+    margin-bottom: $inuit-base-spacing-unit * 2;
+  }
 
-	.vcard .avatar {
-		margin: $padding-base ($padding-base *2) $padding-base $padding-base;
-	}
+  .vcard .avatar {
+    margin: $padding-base ($padding-base *2) $padding-base $padding-base;
+  }
 
-	.comment-awaiting-moderation {
+  .comment-awaiting-moderation {
 
-		padding-left: $inuit-base-spacing-unit * 2.33;
-	}
+    padding-left: $inuit-base-spacing-unit * 2.33;
+  }
 
 
-	#commentform label {
-		padding-bottom: $padding-base;
-	}
+  #commentform label {
+    padding-bottom: $padding-base;
+  }
 
-	input[type=submit] {
+  input[type=submit] {
 
-		@include zw-transition(background-color, .1s);
+    @include zw-transition(background-color, .1s);
 
-		padding:	($padding-base / 1.5) ($padding-base / .75) $padding-base ($padding-base / .75); 
-	}
+    padding:	($padding-base / 1.5) ($padding-base / .75) $padding-base ($padding-base / .75);
+  }
 }
 
 /* Footer */
 #footer {
 
-	@include zw-site-container;
-	border-bottom: $inuit-base-spacing-unit solid #F3F3F3;
+  @include zw-site-container;
+  border-bottom: $inuit-base-spacing-unit solid #F3F3F3;
 }
 
 .widget-area {
 
-	width: auto;
-	float: none;
+  width: auto;
+  float: none;
 }
 
 .menu-footer-menu-container {
 
-	ul[class*="menu"] {
+  ul[class*="menu"] {
 
-		margin: 0;
-		padding: $inuit-base-spacing-unit;
-		@include zw-padding-horizontal();
-	}
+    margin: 0;
+    padding: $inuit-base-spacing-unit;
+    @include zw-padding-horizontal();
+  }
 
-	li {
-		
-		display: inline-block;
-		@include zw-padding-horizontal(0, 1);
-	}
+  li {
+
+    display: inline-block;
+    @include zw-padding-horizontal(0, 1);
+  }
 }
 
 
@@ -684,142 +735,142 @@ $padding-base: $inuit-base-spacing-unit / 4;
 //hide the header and the back_to_top button on 404s
 .error404  {
 
-	#site-header .site-meta {
+  #site-header .site-meta {
 
-		position: absolute;
-	}
+    position: absolute;
+  }
 
-	.back-to-top {
+  .back-to-top {
 
-		display: none;
-	}
+    display: none;
+  }
 }
 
 /* Back to top button */
 .back-to-top {
 
-	$back_to_top_size: $default-padding-horizontal;
+  $back_to_top_size: $default-padding-horizontal;
 
-	position: absolute;
-	top: 190vh; 
-	bottom: auto;
-	right: 0;
-	margin-right: $back_to_top_size;
-	z-index: 101;
+  position: absolute;
+  top: 190vh;
+  bottom: auto;
+  right: 0;
+  margin-right: $back_to_top_size;
+  z-index: 101;
 
-	&.stuck {
+  &.stuck {
 
-		position: fixed;
-		top: auto;
-		bottom: $inuit-base-spacing-unit;
-	}
+    position: fixed;
+    top: auto;
+    bottom: $inuit-base-spacing-unit;
+  }
 
-	.back-to-top__link {
+  .back-to-top__link {
 
-		@include zw-button( $back_to_top_size );
-	}
+    @include zw-button( $back_to_top_size );
+  }
 
-	@include media-query("big-desk") {
+  @include media-query("big-desk") {
 
-		margin-right: $big-desk-padding;
-	}
+    margin-right: $big-desk-padding;
+  }
 
-	@include media-query("big-ass-desk") {
-		margin-right: $big-ass-desk-padding;
-	}
+  @include media-query("big-ass-desk") {
+    margin-right: $big-ass-desk-padding;
+  }
 }
 
 /* Search bars */
 .search-form {
-	
-	.search-field, .placeholder {
 
-		@include Baskerville-Regular;
-		@include zw-lowercase( $inuit-base-font-size * 3 );
-	}
+  .search-field, .placeholder {
 
-	.screen-reader-text {
+    @include Baskerville-Regular;
+    @include zw-lowercase( $inuit-base-font-size * 3 );
+  }
 
-		display: none;
-	}
+  .screen-reader-text {
+
+    display: none;
+  }
 }
 
 //search bar in the title on the search page
 .fp-section__header .search-form {
 
-	display: inline;
+  display: inline;
 
-	.search-field {
+  .search-field {
 
-		/* sort of arbitrary */
-		width: 200px;
-		min-width: 200px;
-		position: relative;
-	}
+    /* sort of arbitrary */
+    width: 200px;
+    min-width: 200px;
+    position: relative;
+  }
 
-	.search-submit {
+  .search-submit {
 
-		@include zw-button( $default-padding-horizontal, .5 );
+    @include zw-button( $default-padding-horizontal, .5 );
 
-		position: absolute;
-		right: 0;
-		margin: $inuit-base-spacing-unit * .8;
-		margin-right: 0;
-	}		
+    position: absolute;
+    right: 0;
+    margin: $inuit-base-spacing-unit * .8;
+    margin-right: 0;
+  }
 }
 
 //search bar in the footer
 #footer .search-form {
 
-	display: block;
-	background: none repeat scroll 0 0 #F9F9F9;
-	@include zw-padding-horizontal(1, 2);
+  display: block;
+  background: none repeat scroll 0 0 #F9F9F9;
+  @include zw-padding-horizontal(1, 2);
 
-	.search-field {
+  .search-field {
 
-		@include zw-lowercase( $inuit-base-font-size * 2 );
+    @include zw-lowercase( $inuit-base-font-size * 2 );
 
-		line-height: $inuit-base-line-height * 2;
+    line-height: $inuit-base-line-height * 2;
 
-		width: 100%;
-		border-bottom: 1px solid #F9F9F9;
-		padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #F9F9F9;
+    padding: 0;
 
-		&:active, &:focus {
+    &:active, &:focus {
 
-			border-bottom: #B4B4B4 1px solid !important;
-		}
-	}
+      border-bottom: #B4B4B4 1px solid !important;
+    }
+  }
 
-	/* let's just hide it */
-	.search-submit {
+  /* let's just hide it */
+  .search-submit {
 
-		display: none;
-	}
+    display: none;
+  }
 }
 
 .fancy-pants .search-form {
 
-	display: inline;
+  display: inline;
 
-	.search-field {
+  .search-field {
 
-		@extend .fancy-pants;
-		width: 50%;
+    @extend .fancy-pants;
+    width: 50%;
 
-		border-bottom: transparent 1px solid !important;
+    border-bottom: transparent 1px solid !important;
 
-		&:active, &:focus {
+    &:active, &:focus {
 
-			border-bottom: $color__white 1px solid !important;
-		}
-	}
+      border-bottom: $color__white 1px solid !important;
+    }
+  }
 
-	/* let's just hide it */
-	.search-submit {
+  /* let's just hide it */
+  .search-submit {
 
-		display: none;
-	}
+    display: none;
+  }
 }
 
 

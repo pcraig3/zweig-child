@@ -20,15 +20,12 @@
 
 <header id="site-header">
 
-    <div class="site-meta" data-chardinjs-label="just-watch-me"
-         data-intro="Paul Craig is a person on the internet."
+    <div class="site-meta"
+         data-intro="::contact"
          data-position="right"
         >
         <h1 id="site-logo">
             <a
-                class="logo-link"
-                data-intro="An awesome 18th-century painter, who found beauty in everyday, common things."
-                data-position="bottom"
                 href="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <?php echo $blog_title = get_bloginfo('name'); ?>
             </a>
@@ -36,6 +33,31 @@
         <!--h2 id="site-description"><?php //echo $blog_title = get_bloginfo('description'); ?></h2-->
 
     </div><!-- end of .site-meta -->
+
+    <?php
+    ob_start();
+    ?>
+
+    <div class="layout__item one-whole"
+         data-chardinjs-label="site-logo-description fancy-pants intimate-details"
+         data-chardinjs-tooltip-style-bottom="left:0;top:132px;bottom:auto;"
+         data-chardinjs-tooltip-style="left:0;top:132px;bottom:auto;"
+
+        data-intro="Get @ me, yo.
+        <br><br>I'm
+        <a href='/contact'>mailable</a>,
+        <a href='/contact'>tweetable</a>,
+        <a href='/contact'>forkable</a>, and
+        <a href='/contact'>facebookable</a>.
+        <br>There're a few others as well, but let's not get ahead of ourselves."
+         data-position="bottom">
+
+    </div><!--end of .layout__item.one-whole -->
+
+    <?php
+    $html_string = ob_get_clean();
+    echo do_shortcode( "[section_skeleton section_header_classes='full-width not-displayed' layout_classes='layout--flush p0 palm-pb not-height'] " . $html_string . '[/section_skeleton]');
+    ?>
 
     <div class="clearer"></div>
 
