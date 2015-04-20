@@ -4714,16 +4714,12 @@ textarea {
 
 /* Back to top button */
 .back-to-top {
-  position: absolute;
-  top: 105vh;
-  bottom: auto;
+  position: fixed;
+  top: auto;
+  bottom: 24px;
   right: 0;
   margin-right: 48px;
   z-index: 101; }
-  .back-to-top.stuck {
-    position: fixed;
-    top: auto;
-    bottom: 24px; }
   .back-to-top .back-to-top__link {
     font-size: 48px;
     position: relative;
@@ -4898,7 +4894,6 @@ textarea {
     margin-left: 1rem; }
 
   .back-to-top {
-    top: 205vh;
     margin-right: 24px; }
 
   #site-header h2, .fp-section__header h2,
@@ -4943,9 +4938,6 @@ textarea {
 @media screen and (max-width: 419px) {
   .post-title {
     font-size: 1.7em !important; }
-
-  .back-to-top {
-    margin-right: 15.84px; }
 
   .single .wrapper .entry h1, .single .wrapper .entry h2, .single .wrapper .entry h3 {
     font-family: 'libre_baskervilleitalic', times, serif;

@@ -754,19 +754,12 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
   $back_to_top_size: $default-padding-horizontal;
 
-  position: absolute;
-  top: 105vh;
-  bottom: auto;
+  position: fixed;
+  top: auto;
+  bottom: $inuit-base-spacing-unit;
   right: 0;
   margin-right: $back_to_top_size;
   z-index: 101;
-
-  &.stuck {
-
-    position: fixed;
-    top: auto;
-    bottom: $inuit-base-spacing-unit;
-  }
 
   .back-to-top__link {
 
