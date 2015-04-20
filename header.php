@@ -27,7 +27,7 @@
         <h1 id="site-logo">
             <a
                 href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <?php echo $blog_title = get_bloginfo('name'); ?>
+                <?php echo $blog_title = get_bloginfo('name'); ?>
             </a>
         </h1>
         <!--h2 id="site-description"><?php //echo $blog_title = get_bloginfo('description'); ?></h2-->
@@ -40,17 +40,16 @@
 
     <div class="layout__item one-whole"
          data-chardinjs-label="site-logo-description fancy-pants intimate-details"
-         data-chardinjs-tooltip-style-bottom="left:0;top:132px;bottom:auto;"
-         data-chardinjs-tooltip-style="left:0;top:132px;bottom:auto;"
 
-        data-intro="Get @ me, yo.
+         data-intro="Get @ me, yo.
         <br><br>I'm
         <a href='/contact'>mailable</a>,
         <a href='/contact'>tweetable</a>,
         <a href='/contact'>forkable</a>, and
         <a href='/contact'>facebookable</a>.
         <br>There're a few others as well, but let's not get ahead of ourselves."
-         data-position="bottom">
+         data-position="bottom"
+        >
 
     </div><!--end of .layout__item.one-whole -->
 

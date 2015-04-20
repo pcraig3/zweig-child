@@ -15,7 +15,8 @@ add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_grunt_scripts' );
 function zw_ch_enqueue_grunt_scripts() {
 
   //vendor scripts and my scripts concatenated by grunt
-  wp_enqueue_script( 'zw_ch_prodjs', get_stylesheet_directory_uri() . '/js/build/prod.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'zw_ch_utilsjs', get_stylesheet_directory_uri() . '/js/utils.js', array( 'jquery' ) );
+    wp_enqueue_script( 'zw_ch_prodjs', get_stylesheet_directory_uri() . '/js/build/prod.min.js', array( 'zw_ch_utilsjs', 'jquery' ) );
 
   if( is_search() )
       wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/build/search.min.js', array( 'jquery' ) );

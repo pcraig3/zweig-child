@@ -1,12 +1,6 @@
 jQuery(function( $ ){
 
-    //feels like this is bad practice :/
-    var mobile_breakpoint = 619;
-
-    var is_mobile = function () {
-
-        return window.innerWidth <= mobile_breakpoint;
-    };
+    var utils = $.Utils();
 
     /**
      * return the height and width of an input object
@@ -27,11 +21,6 @@ jQuery(function( $ ){
     var add_marginLeft_based_on_site_logo = function ( obj ) {
 
         var logo_dimensions = _find_dimensions( document.getElementById("site-logo") );
-
-        console.log(document.getElementById("site-logo"));
-        console.log(jQuery("#site-logo").width());
-        console.log(logo_dimensions.width);
-        console.log(logo_dimensions.height);
 
         obj.style.marginLeft = logo_dimensions.width + "px";
     };
@@ -173,14 +162,14 @@ jQuery(function( $ ){
 	 * This is bad and I know it, but I'm sure I'll get to this, haha.
 	 * @TODO: Better solution
 	 */
-	var currently_mobile = is_mobile();
+	var currently_mobile = utils.is_mobile();
 
 	//check for if we've resized the window.  if so, inline margin gone on headers
 	function check_for_resizing() {
 
-		if( currently_mobile !== is_mobile() ) {
+		if( currently_mobile !== utils.is_mobile() ) {
 
-			if( is_mobile() ) {
+			if( utils.is_mobile() ) {
 				//then remove the margin
 				apply_callback_function_on_queried_elements( ".fp-section__header h2", remove_marginLeft );
 			}
@@ -189,7 +178,7 @@ jQuery(function( $ ){
 				apply_callback_function_on_queried_elements( ".fp-section__header h2", add_marginLeft_based_on_site_logo );
 			}
 
-            currently_mobile = is_mobile();
+            currently_mobile = utils.is_mobile();
 		}
 	}
 

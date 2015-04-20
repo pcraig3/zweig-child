@@ -409,10 +409,12 @@ article.format-quote {
 
   @include zw-site-container;
 
+  padding-top: 0;
   background: $color__grey--light;
 
   /* We're putting it in a column, not directly giving it a width */
   .site-meta {
+    margin-top: $inuit-base-spacing-unit * .75;
     width: auto;
     position: fixed;
     z-index: 101;
@@ -477,10 +479,6 @@ article.format-quote {
     @include Baskerville-Regular;
     @include zw-lowercase( $inuit-base-font-size * 3 );
     margin-top: -2px; /* This sucks, but it works :) */
-
-    .chardinjs-tooltip {
-      left: 100%;
-    }
   }
 }
 
@@ -737,7 +735,12 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
   #site-header .site-meta {
 
-    position: absolute;
+    visibility: hidden;
+
+    .chardinjs-show-element {
+
+      visibility: visible;
+    }
   }
 
   .back-to-top {

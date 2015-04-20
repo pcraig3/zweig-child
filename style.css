@@ -4500,9 +4500,6 @@ article.format-quote {
     font-size: 48px;
     margin-top: -2px;
     /* This sucks, but it works :) */ }
-    .chardinjs-helper-layer.chardinjs-bottom.chardinjs-site-meta .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top.chardinjs-site-meta .chardinjs-tooltip,
-    .chardinjs-helper-layer.chardinjs-left.chardinjs-site-meta .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right.chardinjs-site-meta .chardinjs-tooltip {
-      left: 100%; }
 
 .fp-section__header {
   padding: 24px 0 0 0;
