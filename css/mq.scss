@@ -23,14 +23,6 @@
 	}
 }
 
-@include media-query("palm--landscape") {
-
-	.back-to-top {
-
-		top: 300vh; 
-	}
-}
-
 @include media-query("palm") {
 //@media screen and (max-width: 619px) {
 

@@ -1231,7 +1231,7 @@ jQuery(function( $ ){
 		var slightlyMoreEfficientFunctionTwo = debounce(function() {
 
 			check_for_resizing();
-		}, 16 );
+		}, 5 );
 
 		window.addEventListener('resize', slightlyMoreEfficientFunctionTwo);
 

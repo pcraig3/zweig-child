@@ -4715,7 +4715,7 @@ textarea {
 /* Back to top button */
 .back-to-top {
   position: absolute;
-  top: 190vh;
+  top: 105vh;
   bottom: auto;
   right: 0;
   margin-right: 48px;
@@ -4852,9 +4852,6 @@ textarea {
         width: 156px;
         text-transform: none;
         font-variant: normal; } }
-@media screen and (max-width: 619px) and (orientation: landscape) {
-  .back-to-top {
-    top: 300vh; } }
 @media screen and (max-width: 619px) {
   .not_on_mobile {
     display: none; }

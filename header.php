@@ -43,10 +43,10 @@
 
          data-intro="Get @ me, yo.
         <br><br>I'm
-        <a href='/contact'>mailable</a>,
-        <a href='/contact'>tweetable</a>,
-        <a href='/contact'>forkable</a>, and
-        <a href='/contact'>facebookable</a>.
+        <a target='_blank' href='mailto:paul@pcraig3.ca'>mailable</a>,
+        <a target='_blank' href='https://twitter.com/pcraig3'>tweetable</a>,
+        <a target='_blank' href='https://github.com/pcraig3'>forkable</a>, and
+        <a target='_blank' href='https://www.facebook.com/PaulMCraig'>facebookable</a>.
         <br>There're a few others as well, but let's not get ahead of ourselves."
          data-position="bottom"
         >
