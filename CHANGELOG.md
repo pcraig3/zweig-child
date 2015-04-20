@@ -2,6 +2,13 @@
 
 @TODO: Grunt compile SASS.
 
+### 1.2.3
+* Revamped `.back-to-top` button.
+ * Removed janky JS calculating fixed positions
+ * Removed super-finicky `vh` CSS settings  
+ * Using jQuery animations instead.
+* Added links to header (oops.) 
+
 ### 1.2.2
 * Always-at-the-top header removed
  * It wasn't working, though I didn't manage to isolate the header content.
