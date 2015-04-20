@@ -1,10 +1,15 @@
 ## Changelog
 
-@TODO: Remove header: it's not working, and, en tout cas, header content should be isolated.
 @TODO: Grunt compile SASS.
 
+### 1.2.2
+* Always-at-the-top header removed
+ * It wasn't working, though I didn't manage to isolate the header content.
+ * New dependency: [chardin.js](https://github.com/heelhook/chardin.js) for a dead-easy full-screen overlay.
+ * After that, it was only ~269 lines to make it do what I wanted. 
+ 
 ### 1.2.1
-* Hacky CSS and JS to accomodate for the always-at-the-top header.
+* Hacky CSS and JS to accommodate for the always-at-the-top header.
 
 ### 1.2.0
 * Added Grunt: got it concatenating and uglifying my JavaScript.

@@ -5,7 +5,7 @@
  Author:       		Paul Craig
  Author URI:   		http://pcraig3.ca
  Template:     		zweig
- Version:      		1.2.1
+ Version:      		1.2.2
  Text Domain:  		zw-ch
  GitHub Theme URI: 	https://github.com/pcraig3/zweig-child
  GitHub Branch:    	master
@@ -4431,6 +4431,7 @@ article.format-quote {
   padding-right: 48px;
   /* Desktops and laptops ----------- */
   /* Large screens ----------- */
+  padding-top: 0;
   background: #f9f9f9;
   /* We're putting it in a column, not directly giving it a width */ }
   @media screen and (max-width: 419px) {
@@ -4450,6 +4451,7 @@ article.format-quote {
       padding-left: 25%;
       padding-right: 25%; } }
   #site-header .site-meta, .fp-section__header .site-meta {
+    margin-top: 18px;
     width: auto;
     position: fixed;
     z-index: 101; }
@@ -4704,7 +4706,9 @@ textarea {
 
 /* Post / Page Formats */
 .error404 #site-header .site-meta, .error404 .fp-section__header .site-meta {
-  position: absolute; }
+  visibility: hidden; }
+  .error404 #site-header .site-meta .chardinjs-show-element, .error404 .fp-section__header .site-meta .chardinjs-show-element {
+    visibility: visible; }
 .error404 .back-to-top {
   display: none; }
 
