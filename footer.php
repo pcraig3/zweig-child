@@ -5,8 +5,7 @@
   <footer id="footer" class="p0">
 
     <!-- back_to_top button is kept here in the footer -->
-    <span class="back-to-top" style="display:none;"><a class="back-to-top__link fade-to-solid" href="#back_to_top"><i class="icon-double-angle-up"></i></a></span>
-
+    <span class="back-to-top invisible"><a class="back-to-top__link fade-to-solid" href="#back_to_top"><i class="icon-double-angle-up"></i></a></span>
    
     <div class="layout layout--flush">
 

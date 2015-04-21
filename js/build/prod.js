@@ -1110,20 +1110,19 @@ jQuery(function( $ ){
     $(document).ready(function() {
 
         var offset = 200;
-        var duration = 90;
         var $back_to_top = $(document).find(".back-to-top");
 
         $(window).scroll(function(){
             //if we have scrolled past the offset || if the browser hits the bottom of the page
             ( $(this).scrollTop() > offset ||
             $(window).scrollTop() + $(window).height() === $(document).height() ) ?
-                $back_to_top.slideDown(duration) :
-                $back_to_top.slideUp(duration);
+                $back_to_top.removeClass('invisible') :
+                $back_to_top.addClass('invisible');
         });
 
+
         /**
-         * This is bad and I know it, but I'm sure I'll get to this, haha.
-         * @TODO: Better solution
+         * if we start in a mobile window
          */
         var currently_mobile = utils.is_mobile();
 
@@ -1146,10 +1145,7 @@ jQuery(function( $ ){
         }
 
         window.addEventListener('resize', check_for_resizing());
-
     });
-
-
 });
 
 

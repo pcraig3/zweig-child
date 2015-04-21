@@ -759,7 +759,17 @@ $padding-base: $inuit-base-spacing-unit / 4;
   bottom: $inuit-base-spacing-unit;
   right: 0;
   margin-right: $back_to_top_size;
-  z-index: 101;
+  z-index: 99;
+
+  /* um. */
+  &.invisible {
+
+    a {
+
+      cursor: default;
+      opacity: 0;
+    }
+  }
 
   .back-to-top__link {
 
