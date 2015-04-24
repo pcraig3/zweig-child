@@ -1213,8 +1213,8 @@ jQuery(function( $ ){
         var header_desc = {
 
             class: "site-logo-description",
-            style__desk: [ "left:0", "top:200px", "bottom:auto" ],
-            style__mobile: [ "left:0", "top:246px", "bottom:auto" ],
+            style__desk: [ "left:0", "top:166px", "bottom:auto" ],
+            style__mobile: [ "left:0", "top:200px", "bottom:auto" ],
             style: function() {
 
                 return utils.is_mobile() ? this.style__mobile : this.style__desk;
