@@ -97,7 +97,7 @@ body.page-template-page-cv-php {
 
 		padding-top: $cv-base-font-size * 1.15;
 
-		@include Aller-Light;
+		@include Verb-Light;
 
 		* {
 			margin: 0;
@@ -114,7 +114,7 @@ body.page-template-page-cv-php {
 
 		.job_description__title, .job_description__employer {
 			padding-bottom: 2px;
-			@include Aller-Regular;
+			@include Verb-Condensed;
 		}
 
 	}

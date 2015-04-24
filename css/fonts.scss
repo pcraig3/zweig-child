@@ -30,86 +30,66 @@
 @include font-face(libre_baskervilleregular, "librebaskerville-regular-webfont", 400, normal); 
 
 /// Baskerville Bold
-@include font-face(libre_baskervillebold, "librebaskerville-bold-webfont", 400, normal); 
+@include font-face(libre_baskervillebold, "librebaskerville-bold-webfont", 400, normal);
 
-/// Aller Regular
-@include font-face(allerregular, "aller_rg-webfont", 400, normal); 
+/// Verb Light
+@include font-face(verblight, "verblight-webfont", 400, normal);
 
-/// Aller Light Regular
-@include font-face(aller_lightregular, "aller_lt-webfont", 400, normal); 
+/// Verb Light Italic
+@include font-face(verblight_italic, "verblight-italic-webfont", 400, normal);
 
-/// Aller Light Italic
-@include font-face(aller_lightitalic, "aller_ltit-webfont", 400, normal); 
+/// Verb Condensed
+@include font-face(verbcondregular, "verbcondregular-webfont", 400, normal);
 
-/// Aller Bold
-@include font-face(allerbold, "aller_bd-webfont", 400, normal); 
+/// Verb Condensed Italic
+@include font-face(verbcondregular_italic, "verbcondregular-italic-webfont", 400, normal);
 
-/// Aller Italic
-@include font-face(alleritalic, "aller_it-webfont", 400, normal); 
-
-/// Aller Bold Italic
-@include font-face(allerbold_italic, "aller_bdit-webfont", 400, normal); 
 
 /// Baskerville Italic
 @mixin Baskerville-Italic {
   font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400; font-style: normal; 
-  word-spacing: 0em;
+  word-spacing: 0;
 }
 
 /// Baskerville Regular
 @mixin Baskerville-Regular {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400; font-style: normal; 
-  word-spacing: 0em;
+  word-spacing: 0;
 }
 
 /// Baskerville Bold
 @mixin Baskerville-Bold {
   font-family: 'libre_baskervillebold', times, serif;
   font-weight: 400; font-style: normal; 
-  word-spacing: 0em;
+  word-spacing: 0;
 }
 
-/// Aller Regular
-@mixin Aller-Regular {
-  font-family: 'allerregular', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
-  word-spacing: 0em;
+/// Verb Light
+@mixin Verb-Light {
+  font-family: 'verblight', arial, sans-serif;
+  font-weight: 400; font-style: normal;
+  word-spacing: 0;
 }
 
-/// Aller Light Regular
-@mixin Aller-Light {
-  font-family: 'aller_lightregular', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
-  word-spacing: 0em;
+/// Verb Light Italic
+@mixin Verb-Light-Italic {
+  font-family: 'verblight_italic', arial, sans-serif;
+  font-weight: 400; font-style: normal;
+  word-spacing: 0;
 }
 
-/// Aller Light Italic
-@mixin Aller-Light-Italic {
-  font-family: 'aller_lightitalic', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
-  word-spacing: 0em;
+/// Verb Condensed
+@mixin Verb-Condensed {
+  font-family: 'verbcondregular', arial, sans-serif;
+  font-weight: 400; font-style: normal;
+  word-spacing: 0;
 }
 
-/// Aller Bold
-@mixin Aller-Bold {
-  font-family: 'allerbold', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
-  word-spacing: 0em;
-}
-
-/// Aller Italic
-@mixin Aller-Italic {
-  font-family: 'alleritalic', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
-  word-spacing: 0em;
-}
-
-
-/// Aller Bold Italic
-@mixin Aller-Bold-Italic {
-  font-family: 'allerbold_italic', arial, sans-serif;
-  font-weight: 400; font-style: normal; 
-  word-spacing: 0em;
+/// Verb Condensed Italic
+@mixin Verb-Condensed-Italic {
+  font-family: 'verbcondregular_italic', arial, sans-serif;
+  font-weight: 400; font-style: normal;
+  word-spacing: 0;
 }

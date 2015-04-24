@@ -102,7 +102,7 @@ $big-ass-desk-padding: 25%;
 /* Overwrite top-level spacing */
 html {
 
-  font-size: $inuit-base-font-size;
+  font-size: $inuit-base-font-size * 1.1;
   line-height: $inuit-base-line-height;
 }
 
@@ -125,19 +125,20 @@ html {
 
 
 /* Overwrite all the fonts */
+/* http://www.a2swhk.co.uk/ */
 body {
 
-  @include Aller-Light;
+  @include Verb-Light;
   color: $color__grey--dark;
 
   em {
-    @include Aller-Light-Italic;
+    @include Verb-Light-Italic;
   }
   strong {
-    @include Aller-Bold;
+    @include Verb-Condensed-Italic;
   }
   q {
-    @include Aller-Light-Italic;
+    @include Verb-Light-Italic;
   }
 }
 h1, h2, h3, h4, h5, h6 {
@@ -150,13 +151,13 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .post-date,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
-  @include Aller-Light;
+  @include Verb-Light;
 }
 .wrapper .post-title {
   @include Baskerville-Regular;
 }
 .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
-  @include Aller-Light;
+  @include Verb-Light-Italic;
   text-transform: uppercase;
 }
 .single {
@@ -164,50 +165,65 @@ h1, h2, h3, h4, h5, h6 {
 
     h1, h2, h3 {
 
-
-      @include Baskerville-Italic;
-      @include zw-lowercase( $inuit-base-font-size * 1.75 );
+      @include Baskerville-Regular;
     }
 
+    h1 {
+
+      @include zw-lowercase( $inuit-base-font-size * 1.9 );
+    }
+
+    h2 {
+
+      @include zw-lowercase( $inuit-base-font-size * 1.8 );
+    }
+
+    h3 {
+
+      @include zw-lowercase( $inuit-base-font-size * 1.5 );
+    }
   }
 }
 
 .wrapper blockquote {
-  @include Aller-Light-Italic;
+  @include Verb-Light-Italic;
 }
 .wrapper cite {
-  @include Aller-Light;
+  @include Verb-Light;
   margin-left: $inuit-base-spacing-unit;
 }
+.wrapper table {
+  font-size: $inuit-base-font-size;
+}
 .wrapper table thead th {
-  @include Aller-Light-Italic;
+  @include Verb-Condensed;
   text-align: left;
 }
 .wrapper table th {
-  @include Aller-Light;
+  @include Verb-Condensed;
 }
 .wrapper dt {
-  @include Aller-Light-Italic;
+  @include Verb-Condensed-Italic;
 }
 input[type=submit] {
-  @include Aller-Light;
+  @include Verb-Light;
   @include zw-lowercase( $inuit-base-font-size * 1.2 );
 }
 .read-more {
-  @include Aller-Light;
+  @include Verb-Light;
 }
 #commentform label {
-  @include Aller-Light-Italic;
+  @include Verb-Light-Italic;
 }
 input[type=text],
 input[type=email],
 input[type=url],
 input[type=search],
 input[type=password] {
-  @include Aller-Light;
+  @include Verb-Light;
 }
 textarea {
-  @include Aller-Light;
+  @include Verb-Light;
 }
 #site-header h1 {
   @include Baskerville-Regular;
@@ -216,7 +232,7 @@ textarea {
   @include Baskerville-Regular;
 }
 .post-pages {
-  @include Aller-Bold;
+  @include Verb-Condensed;
 }
 .post-navigation {
   @include Baskerville-Italic;
@@ -226,7 +242,7 @@ textarea {
   @include zw-lowercase(  $inuit-base-font-size * 1.5 );
 }
 #comments h3 {
-  @include Aller-Light-Italic;
+  @include Verb-Light-Italic;
   text-transform: uppercase;
 }
 #comments .vcard {
@@ -238,22 +254,22 @@ textarea {
   }
 }
 #comments .comment-meta {
-  @include Aller-Regular;
+  @include Verb-Condensed;
   color: $color__grey;
 }
 #comments .reply {
-  @include Aller-Light;
+  @include Verb-Light;
   text-align: right;
 }
 .posts-nav {
-  @include Aller-Light;
+  @include Verb-Light-Italic;
 }
 .widget-area h2 {
   @include Baskerville-Italic;
 }
 /* Post Formats */
 article.format-quote {
-  @include Aller-Light-Italic;
+  @include Verb-Light-Italic;
 }
 
 /** Actually starting original styling */
@@ -339,7 +355,7 @@ article.format-quote {
 .fancy-pants {
 
   @include Baskerville-Regular;
-  font-size: $inuit-base-font-size * 1.05;
+  font-size: $inuit-base-font-size * 1.15;
 
   em {
     @include Baskerville-Italic;
@@ -528,7 +544,7 @@ article.format-quote {
 
     .wp-caption-text {
 
-      @include Aller-Light-Italic;
+      @include Verb-Condensed-Italic;
 
       position: relative;
       text-transform: none;
@@ -550,6 +566,9 @@ article.format-quote {
     background: $color__grey--light;
 
     article {
+
+      border-bottom: $color__grey 1px dotted;
+      margin-bottom: $inuit-base-spacing-unit;
 
       ol, ul {
         li {
@@ -663,9 +682,23 @@ textarea {
 
   font-size: $inuit-base-font-size * 1.25;
   word-break: break-word;
+
+  .alignleft {
+
+    padding-bottom: $inuit-base-spacing-unit;
+  }
+
+  .alignright {
+
+    @extend .alignleft;
+    text-align: right;
+  }
 }
 
 /* Author Box */
+.author-box {
+  display: none;
+}
 
 /* Comments */
 $padding-base: $inuit-base-spacing-unit / 4;

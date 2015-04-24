@@ -10,7 +10,7 @@
 
 			.wp-caption-text--shortcode {
 
-				@include Aller-Light-Italic;
+				@include Verb-Light-Italic;
 
 				position: absolute;
 				top: 0;
@@ -33,11 +33,11 @@
 
 	.fancy-pants {
 
-	font-size: $inuit-base-font-size;
+	font-size: $inuit-base-font-size * 1.1;
 
 		.whisper {
 
-			font-size: $inuit-base-font-size * .9;
+			font-size: $inuit-base-font-size;
 		}
 	}
 
@@ -167,9 +167,7 @@
 	.wrapper .entry {
 
 		h1, h2, h3 {
-
 		
-		@include Baskerville-Italic;
 		@include zw-lowercase( $inuit-base-font-size * 1.4 );
 		margin-bottom: 12px;
 	}

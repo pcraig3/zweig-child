@@ -3997,65 +3997,45 @@ html {
     font-family: libre_baskervillebold;
     src: url("css/fonts/librebaskerville-bold-webfont.svg#libre_baskervillebold") format("svg"); } }
 @font-face {
-  font-family: allerregular;
-  src: url("css/fonts/aller_rg-webfont.eot");
-  src: url("css/fonts/aller_rg-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/aller_rg-webfont.woff") format("woff"), url("css/fonts/aller_rg-webfont.ttf") format("truetype"), url("css/fonts/aller_rg-webfont.svg#allerregular") format("svg");
+  font-family: verblight;
+  src: url("css/fonts/verblight-webfont.eot");
+  src: url("css/fonts/verblight-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/verblight-webfont.woff") format("woff"), url("css/fonts/verblight-webfont.ttf") format("truetype"), url("css/fonts/verblight-webfont.svg#verblight") format("svg");
   font-weight: 400;
   font-style: normal; }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: allerregular;
-    src: url("css/fonts/aller_rg-webfont.svg#allerregular") format("svg"); } }
+    font-family: verblight;
+    src: url("css/fonts/verblight-webfont.svg#verblight") format("svg"); } }
 @font-face {
-  font-family: aller_lightregular;
-  src: url("css/fonts/aller_lt-webfont.eot");
-  src: url("css/fonts/aller_lt-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/aller_lt-webfont.woff") format("woff"), url("css/fonts/aller_lt-webfont.ttf") format("truetype"), url("css/fonts/aller_lt-webfont.svg#aller_lightregular") format("svg");
+  font-family: verblight_italic;
+  src: url("css/fonts/verblight-italic-webfont.eot");
+  src: url("css/fonts/verblight-italic-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/verblight-italic-webfont.woff") format("woff"), url("css/fonts/verblight-italic-webfont.ttf") format("truetype"), url("css/fonts/verblight-italic-webfont.svg#verblight_italic") format("svg");
   font-weight: 400;
   font-style: normal; }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: aller_lightregular;
-    src: url("css/fonts/aller_lt-webfont.svg#aller_lightregular") format("svg"); } }
+    font-family: verblight_italic;
+    src: url("css/fonts/verblight-italic-webfont.svg#verblight_italic") format("svg"); } }
 @font-face {
-  font-family: aller_lightitalic;
-  src: url("css/fonts/aller_ltit-webfont.eot");
-  src: url("css/fonts/aller_ltit-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/aller_ltit-webfont.woff") format("woff"), url("css/fonts/aller_ltit-webfont.ttf") format("truetype"), url("css/fonts/aller_ltit-webfont.svg#aller_lightitalic") format("svg");
+  font-family: verbcondregular;
+  src: url("css/fonts/verbcondregular-webfont.eot");
+  src: url("css/fonts/verbcondregular-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/verbcondregular-webfont.woff") format("woff"), url("css/fonts/verbcondregular-webfont.ttf") format("truetype"), url("css/fonts/verbcondregular-webfont.svg#verbcondregular") format("svg");
   font-weight: 400;
   font-style: normal; }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: aller_lightitalic;
-    src: url("css/fonts/aller_ltit-webfont.svg#aller_lightitalic") format("svg"); } }
+    font-family: verbcondregular;
+    src: url("css/fonts/verbcondregular-webfont.svg#verbcondregular") format("svg"); } }
 @font-face {
-  font-family: allerbold;
-  src: url("css/fonts/aller_bd-webfont.eot");
-  src: url("css/fonts/aller_bd-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/aller_bd-webfont.woff") format("woff"), url("css/fonts/aller_bd-webfont.ttf") format("truetype"), url("css/fonts/aller_bd-webfont.svg#allerbold") format("svg");
+  font-family: verbcondregular_italic;
+  src: url("css/fonts/verbcondregular-italic-webfont.eot");
+  src: url("css/fonts/verbcondregular-italic-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/verbcondregular-italic-webfont.woff") format("woff"), url("css/fonts/verbcondregular-italic-webfont.ttf") format("truetype"), url("css/fonts/verbcondregular-italic-webfont.svg#verbcondregular_italic") format("svg");
   font-weight: 400;
   font-style: normal; }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: allerbold;
-    src: url("css/fonts/aller_bd-webfont.svg#allerbold") format("svg"); } }
-@font-face {
-  font-family: alleritalic;
-  src: url("css/fonts/aller_it-webfont.eot");
-  src: url("css/fonts/aller_it-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/aller_it-webfont.woff") format("woff"), url("css/fonts/aller_it-webfont.ttf") format("truetype"), url("css/fonts/aller_it-webfont.svg#alleritalic") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: alleritalic;
-    src: url("css/fonts/aller_it-webfont.svg#alleritalic") format("svg"); } }
-@font-face {
-  font-family: allerbold_italic;
-  src: url("css/fonts/aller_bdit-webfont.eot");
-  src: url("css/fonts/aller_bdit-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/aller_bdit-webfont.woff") format("woff"), url("css/fonts/aller_bdit-webfont.ttf") format("truetype"), url("css/fonts/aller_bdit-webfont.svg#allerbold_italic") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: allerbold_italic;
-    src: url("css/fonts/aller_bdit-webfont.svg#allerbold_italic") format("svg"); } }
+    font-family: verbcondregular_italic;
+    src: url("css/fonts/verbcondregular-italic-webfont.svg#verbcondregular_italic") format("svg"); } }
 /* Colours */
 /* Mixins */
 /* horizontal padding */
@@ -4072,7 +4052,7 @@ html {
 
 /* Overwrite top-level spacing */
 html {
-  font-size: 16px;
+  font-size: 17.6px;
   line-height: 24px; }
 
 .wrapper .post-title {
@@ -4089,185 +4069,198 @@ html {
   color: #333 !important; }
 
 /* Overwrite all the fonts */
+/* http://www.a2swhk.co.uk/ */
 body {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   color: #333; }
   body em {
-    font-family: 'aller_lightitalic', arial, sans-serif;
+    font-family: 'verblight_italic', arial, sans-serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em; }
+    word-spacing: 0; }
   body strong {
-    font-family: 'allerbold', arial, sans-serif;
+    font-family: 'verbcondregular_italic', arial, sans-serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em; }
+    word-spacing: 0; }
   body q {
-    font-family: 'aller_lightitalic', arial, sans-serif;
+    font-family: 'verblight_italic', arial, sans-serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em; }
+    word-spacing: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .wrapper .post-meta p,
 .wrapper .post-meta p strong {
   font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .wrapper .post-date,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .wrapper .post-title {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight_italic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   text-transform: uppercase; }
 
 .single .wrapper .entry h1, .single .wrapper .entry h2, .single .wrapper .entry h3 {
-  font-family: 'libre_baskervilleitalic', times, serif;
+  font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0; }
+.single .wrapper .entry h1 {
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 28px; }
+  font-size: 30.4px; }
+.single .wrapper .entry h2 {
+  font-variant: normal;
+  text-transform: lowercase;
+  font-size: 28.8px; }
+.single .wrapper .entry h3 {
+  font-variant: normal;
+  text-transform: lowercase;
+  font-size: 24px; }
 
 .wrapper blockquote {
-  font-family: 'aller_lightitalic', arial, sans-serif;
+  font-family: 'verblight_italic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .wrapper cite {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   margin-left: 24px; }
 
+.wrapper table {
+  font-size: 16px; }
+
 .wrapper table thead th {
-  font-family: 'aller_lightitalic', arial, sans-serif;
+  font-family: 'verbcondregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   text-align: left; }
 
 .wrapper table th {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verbcondregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .wrapper dt {
-  font-family: 'aller_lightitalic', arial, sans-serif;
+  font-family: 'verbcondregular_italic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 input[type=submit] {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
   font-size: 19.2px; }
 
 .read-more {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 #commentform label {
-  font-family: 'aller_lightitalic', arial, sans-serif;
+  font-family: 'verblight_italic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 input[type=text],
 input[type=email],
 input[type=url],
 input[type=search],
 input[type=password] {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 textarea {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 #site-header h1, .fp-section__header h1 {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 #site-header h2, .fp-section__header h2 {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .post-pages {
-  font-family: 'allerbold', arial, sans-serif;
+  font-family: 'verbcondregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .post-navigation {
   font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .author-name strong {
   font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
   font-size: 24px; }
 
 #comments h3 {
-  font-family: 'aller_lightitalic', arial, sans-serif;
+  font-family: 'verblight_italic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   text-transform: uppercase; }
 
 #comments .vcard {
   font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
   font-size: 17.6px; }
@@ -4275,37 +4268,37 @@ textarea {
     font-weight: 400; }
 
 #comments .comment-meta {
-  font-family: 'allerregular', arial, sans-serif;
+  font-family: 'verbcondregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   color: #CBCBCB; }
 
 #comments .reply {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   text-align: right; }
 
 .posts-nav {
-  font-family: 'aller_lightregular', arial, sans-serif;
+  font-family: 'verblight_italic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 .widget-area h2 {
   font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 /* Post Formats */
 article.format-quote {
-  font-family: 'aller_lightitalic', arial, sans-serif;
+  font-family: 'verblight_italic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em; }
+  word-spacing: 0; }
 
 /** Actually starting original styling */
 /* Utility Classes */
@@ -4357,18 +4350,18 @@ article.format-quote {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
-  font-size: 16.8px; }
+  word-spacing: 0;
+  font-size: 18.4px; }
   .fancy-pants em, .fancy-pants .search-form .search-field em {
     font-family: 'libre_baskervilleitalic', times, serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em; }
+    word-spacing: 0; }
   .fancy-pants strong, .fancy-pants .search-form .search-field strong, .fancy-pants b, .fancy-pants .search-form .search-field b {
     font-family: 'libre_baskervillebold', times, serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em; }
+    word-spacing: 0; }
 
 .fancy-button {
   color: #FFFFFF;
@@ -4463,7 +4456,7 @@ article.format-quote {
     font-family: 'libre_baskervilleregular', times, serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em;
+    word-spacing: 0;
     font-variant: normal;
     text-transform: lowercase;
     font-size: 48px;
@@ -4496,7 +4489,7 @@ article.format-quote {
     font-family: 'libre_baskervilleregular', times, serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em;
+    word-spacing: 0;
     font-variant: normal;
     text-transform: lowercase;
     font-size: 48px;
@@ -4510,7 +4503,7 @@ article.format-quote {
     font-family: 'libre_baskervilleregular', times, serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em;
+    word-spacing: 0;
     font-variant: normal;
     text-transform: lowercase;
     font-size: 48px;
@@ -4527,7 +4520,7 @@ article.format-quote {
     font-family: 'libre_baskervilleitalic', times, serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em;
+    word-spacing: 0;
     color: #CBCBCB;
     text-transform: none;
     font-variant: normal;
@@ -4540,10 +4533,10 @@ article.format-quote {
   padding: 6px 24px;
   /** @TODO: Fix this **/ }
   .frame div[id^="attachment"].wp-caption .wp-caption-text {
-    font-family: 'aller_lightitalic', arial, sans-serif;
+    font-family: 'verbcondregular_italic', arial, sans-serif;
     font-weight: 400;
     font-style: normal;
-    word-spacing: 0em;
+    word-spacing: 0;
     position: relative;
     text-transform: none;
     font-variant: normal; }
@@ -4552,8 +4545,11 @@ article.format-quote {
     /*margin-top: $inuit-base-spacing-unit * 2;*/ }
   .frame.frame--single {
     background: #f9f9f9; }
-    .frame.frame--single article ol li, .frame.frame--single article ul li {
-      padding-bottom: 12px; }
+    .frame.frame--single article {
+      border-bottom: #CBCBCB 1px dotted;
+      margin-bottom: 24px; }
+      .frame.frame--single article ol li, .frame.frame--single article ul li {
+        padding-bottom: 12px; }
   .frame.frame--splash {
     padding-left: 0; }
   .frame.frame--archive {
@@ -4609,8 +4605,15 @@ textarea {
 .post-navigation {
   font-size: 20px;
   word-break: break-word; }
+  .post-navigation .alignleft, .post-navigation .alignright {
+    padding-bottom: 24px; }
+  .post-navigation .alignright {
+    text-align: right; }
 
 /* Author Box */
+.author-box {
+  display: none; }
+
 /* Comments */
 #comments .comment-body, #comments .comment {
   margin-bottom: 48px; }
@@ -4747,7 +4750,7 @@ textarea {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
-  word-spacing: 0em;
+  word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
   font-size: 48px; }
@@ -4842,10 +4845,10 @@ textarea {
     .frame div[id^="attachment"].wp-caption--shortcode {
       position: relative; }
       .frame div[id^="attachment"].wp-caption--shortcode .wp-caption-text--shortcode {
-        font-family: 'aller_lightitalic', arial, sans-serif;
+        font-family: 'verblight_italic', arial, sans-serif;
         font-weight: 400;
         font-style: normal;
-        word-spacing: 0em;
+        word-spacing: 0;
         position: absolute;
         top: 0;
         left: -192px;
@@ -4857,9 +4860,9 @@ textarea {
     display: none; }
 
   .fancy-pants, .fancy-pants .search-form .search-field {
-    font-size: 16px; }
+    font-size: 17.6px; }
     .fancy-pants .whisper, .fancy-pants .search-form .search-field .whisper {
-      font-size: 14.4px; }
+      font-size: 16px; }
 
   .frame {
     padding-bottom: 12px;
@@ -4944,10 +4947,6 @@ textarea {
     font-size: 1.7em !important; }
 
   .single .wrapper .entry h1, .single .wrapper .entry h2, .single .wrapper .entry h3 {
-    font-family: 'libre_baskervilleitalic', times, serif;
-    font-weight: 400;
-    font-style: normal;
-    word-spacing: 0em;
     font-variant: normal;
     text-transform: lowercase;
     font-size: 22.4px;
