@@ -2,6 +2,13 @@
 
 @TODO: Grunt compile SASS.
 
+### 1.2.4
+* Layout changes.
+ * Removed Aller font.  Added Verb.
+ * Bumped default font size.  
+ * Removed author-box
+ * Added spacing to the post-nav thing.
+
 ### 1.2.3
 * Revamped `.back-to-top` button.
  * Removed janky JS calculating fixed positions
