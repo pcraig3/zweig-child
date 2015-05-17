@@ -41,6 +41,15 @@
     }
   }
 
+  .fancy-button {
+
+    &.fancy-button--row-of-1,
+    &.fancy-button--row-of-2 {
+
+      width: 100%;
+    }
+  }
+
   .frame {
 
     padding-bottom: $inuit-base-spacing-unit * .5;

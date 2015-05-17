@@ -4055,6 +4055,10 @@ html {
   font-size: 17.6px;
   line-height: 24px; }
 
+/* Stupid preset in original theme. */
+article img, article iframe, article div {
+  max-width: 100% !important; }
+
 .wrapper .post-title {
   padding-bottom: 9.6px;
   font-size: 40px;
@@ -4368,7 +4372,14 @@ article.format-quote {
   background: #d43b1d;
   padding: 6px;
   font-size: 20px;
-  cursor: pointer; }
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 12px; }
+  .fancy-button.fancy-button--row-of-1 {
+    width: 100%; }
+  .fancy-button.fancy-button--row-of-2 {
+    width: 49%; }
   .fancy-button.fancy-button--offsite:after, .fancy-button.fancy-button--download:after, .fancy-button.fancy-button--github:after {
     padding-left: 8px;
     font-family: FontAwesome;
@@ -4863,6 +4874,9 @@ textarea {
     font-size: 17.6px; }
     .fancy-pants .whisper, .fancy-pants .search-form .search-field .whisper {
       font-size: 16px; }
+
+  .fancy-button.fancy-button--row-of-1, .fancy-button.fancy-button--row-of-2 {
+    width: 100%; }
 
   .frame {
     padding-bottom: 12px;
