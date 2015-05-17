@@ -1,26 +1,35 @@
 ## Changelog
 
-@TODO: Grunt compile SASS.
+### 1.2.5
+* More layout changes.
+    * Removed square background on buttons.  Went even <em>minimaler</em>. 
+        * Affects `.back-to-top` button and search magnifying glass.
+    * Articles now touch walls of your mobile.  Claw back some space.
+    * Header no longer takes up ~approximately~ 47% of available screen space on mobile.
+        * Needed a bit of JS magic so that our overlay still worked. 
+    * Lists on mobile are less indented.
+* Also removed day from dates.
+    * Changing the 'published' date to the era when each project was completed makes more sense.
 
 ### 1.2.4
 * Layout changes.
- * Removed Aller font.  Added Verb.
- * Bumped default font size.  
- * Removed author-box
- * Added spacing to the post-nav thing.
+    * Removed Aller font.  Added Verb.
+    * Bumped default font size.  
+    * Removed author-box
+    * Added spacing to the post-nav thing.
 
 ### 1.2.3
 * Revamped `.back-to-top` button.
- * Removed janky JS calculating fixed positions
- * Removed super-finicky `vh` CSS settings  
- * Using jQuery animations instead.
+    * Removed janky JS calculating fixed positions
+    * Removed super-finicky `vh` CSS settings  
+    * Using jQuery animations instead.
 * Added links to header (oops.) 
 
 ### 1.2.2
 * Always-at-the-top header removed
- * It wasn't working, though I didn't manage to isolate the header content.
- * New dependency: [chardin.js](https://github.com/heelhook/chardin.js) for a dead-easy full-screen overlay.
- * After that, it was only ~269 lines to make it do what I wanted. 
+    * It wasn't working, though I didn't manage to isolate the header content.
+    * New dependency: [chardin.js](https://github.com/heelhook/chardin.js) for a dead-easy full-screen overlay.
+    * After that, it was only ~269 lines to make it do what I wanted. 
  
 ### 1.2.1
 * Hacky CSS and JS to accommodate for the always-at-the-top header.
