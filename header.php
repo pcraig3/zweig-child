@@ -55,7 +55,7 @@
 
     <?php
     $html_string = ob_get_clean();
-    echo do_shortcode( "[section_skeleton section_header_classes='full-width not-displayed' layout_classes='layout--flush p0 palm-pb not-height'] " . $html_string . '[/section_skeleton]');
+    echo do_shortcode( "[section_skeleton section_header_classes='full-width not-displayed' layout_classes='layout--flush p0 not-height'] " . $html_string . '[/section_skeleton]');
     ?>
 
     <div class="clearer"></div>

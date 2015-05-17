@@ -11,7 +11,7 @@
 		?></a></h1>
 
 		 <h2 class="post-date">
-		 	<?php the_time('jS F, Y'); ?>
+		 	<?php the_time('F Y'); ?>
 		 </h2>
 
 		 <!-- Display the Post's Content in a div box. -->

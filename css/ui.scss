@@ -87,8 +87,8 @@ $big-ass-desk-padding: 25%;
   height: $base-spacing;
   width: $base-spacing;
   display: inline-block;
-  background: $color__red;
-  color: $color__white;
+  color: $color__red;
+  background: transparent;
   border: 0;
 
   text-align: center;
@@ -433,7 +433,7 @@ article.format-quote {
     margin-top: $inuit-base-spacing-unit * .75;
     width: auto;
     position: fixed;
-    z-index: 101;
+    z-index: 98;
   }
 
   h1, h2 {

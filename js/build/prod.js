@@ -1469,5 +1469,14 @@ jQuery(function( $ ){
             }
 
         };
+
+        //bring the site-logo to the front when chardin.js activated
+        $body.on('chardinJs:start', function() {
+
+            $(this).find('#site-header .site-meta').css( "z-index", "+=10");
+        }).on('chardinJs:stop', function() {
+
+            $(this).find('#site-header .site-meta').css( "z-index", "-=10");
+        });
     });
 });

@@ -4447,7 +4447,7 @@ article.format-quote {
     margin-top: 18px;
     width: auto;
     position: fixed;
-    z-index: 101; }
+    z-index: 98; }
   #site-header h1, .fp-section__header h1, #site-header h2, .fp-section__header h2 {
     display: inline; }
   #site-header h1, .fp-section__header h1 {
@@ -4733,8 +4733,8 @@ textarea {
     height: 48px;
     width: 48px;
     display: inline-block;
-    background: #d43b1d;
-    color: #FFFFFF;
+    color: #d43b1d;
+    background: transparent;
     border: 0;
     text-align: center;
     line-height: 48px; }
@@ -4770,8 +4770,8 @@ textarea {
     height: 48px;
     width: 48px;
     display: inline-block;
-    background: #d43b1d;
-    color: #FFFFFF;
+    color: #d43b1d;
+    background: transparent;
     border: 0;
     text-align: center;
     line-height: 48px;
@@ -4866,11 +4866,12 @@ textarea {
 
   .frame {
     padding-bottom: 12px;
-    position: relative;
-    /* z-index: 100;*/
-    /*
-    &.frame--single {}
-    */ }
+    position: relative; }
+    .frame.frame--single {
+      z-index: 99;
+      /* :/ */
+      margin-left: -24px;
+      margin-right: -24px; }
     .frame.frame--splash .search-form .search-field {
       width: 100%; }
     .frame.frame--archive, .frame.frame--404 {
@@ -4898,7 +4899,7 @@ textarea {
 
 @media screen and (max-width: 619px) {
   ul, ol, dd {
-    margin-left: 1rem; }
+    margin-left: 0; }
 
   .back-to-top {
     margin-right: 24px; }

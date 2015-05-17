@@ -5,7 +5,7 @@
 		<h1 itemprop="headline" class="post-title"><?php the_title(); ?></h1>
 
 		 <h2 class="post-date">
-		 	<?php the_time('jS F, Y'); ?>
+		 	<?php the_time('F Y'); ?>
 		 </h2>
 
 	 </article></a>
