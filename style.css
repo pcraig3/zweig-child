@@ -4551,6 +4551,12 @@ article.format-quote {
     position: relative;
     text-transform: none;
     font-variant: normal; }
+  .frame .img-container {
+    position: relative;
+    display: block; }
+    .frame .img-container.no-padding {
+      margin-left: -24px;
+      margin-right: -24px; }
   .frame div[id^="attachment"].wp-caption--shortcode .wp-caption-text--shortcode {
     margin-bottom: 24px;
     /*margin-top: $inuit-base-spacing-unit * 2;*/ }
@@ -4883,6 +4889,7 @@ textarea {
     position: relative; }
     .frame.frame--single {
       z-index: 99;
+      overflow: hidden;
       /* :/ */
       margin-left: -24px;
       margin-right: -24px; }

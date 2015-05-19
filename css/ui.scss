@@ -95,6 +95,12 @@ $big-ass-desk-padding: 25%;
   line-height: $base-spacing;
 }
 
+@mixin zw-no-padding-hack($base-spacing) {
+
+  margin-left: -($base-spacing);
+  margin-right: -($base-spacing);
+}
+
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: $color__yellow; color: $color__white; text-shadow: none;}
 ::selection {background: $color__yellow; color: $color__white; text-shadow: none;}
@@ -567,6 +573,17 @@ article.format-quote {
       position: relative;
       text-transform: none;
       font-variant: normal;
+    }
+  }
+
+  .img-container {
+
+    position: relative;
+    display: block;
+
+    &.no-padding{
+
+      @include zw-no-padding-hack($inuit-base-spacing-unit);
     }
   }
 

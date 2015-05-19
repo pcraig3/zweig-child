@@ -58,10 +58,10 @@
     &.frame--single {
 
       z-index: 99;
+      overflow: hidden;
 
       /* :/ */
-      margin-left: -($inuit-base-spacing-unit);
-      margin-right: -($inuit-base-spacing-unit);
+      @include zw-no-padding-hack($inuit-base-spacing-unit);
     }
 
     &.frame--splash {
