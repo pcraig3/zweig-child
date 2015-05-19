@@ -1,5 +1,13 @@
 ## Changelog
 
+### 1.2.6
+* Even more layout changes.
+    * Fixed 'go to site' buttons so they don't look horrible.
+        * Because they looked horrible.
+    * No-padding hack on images in projects.
+    * Removed custom caption stuff because who cares(?)
+    * Overrode some zwieg-theme defaults.
+
 ### 1.2.5
 * More layout changes.
     * Removed square background on buttons.  Went even <em>minimaler</em>. 
