@@ -587,15 +587,6 @@ article.format-quote {
     }
   }
 
-  div[id^="attachment"].wp-caption--shortcode {
-
-    .wp-caption-text--shortcode {
-
-      margin-bottom: $inuit-base-spacing-unit;
-      /*margin-top: $inuit-base-spacing-unit * 2;*/
-    }
-  }
-
   &.frame--single {
 
     background: $color__grey--light;

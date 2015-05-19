@@ -289,31 +289,3 @@ function zw_ch_if_post_type_archive( $post_type ) {
 
   return get_post_type_archive_link( $post_type );
 }
-
-
-function zw_ch_caption_without_image( $atts, $content = null ) {
-
-    /*
-    $atts = shortcode_atts( array(
-
-        'strip_tags' => 'default value',
-    ), $atts );
-    */
-  
-   $content = strip_tags ( $content );
-
-  if( zw_ch_return_if_empty( $content ) )
-    return false;
-
-  ob_start();
-  ?>
-
-  <div id="attachment__<?php echo rand( 10000 , 20000 ); ?>" style="width: auto" class="wp-caption wp-caption--shortcode"><p class="wp-caption-text wp-caption-text--shortcode">
-  <?php echo esc_html( trim( $content ) ); ?>
-  </p></div>
-  <?php
-
-  return ob_get_clean();
-}
-
-add_shortcode( 'caption_without_image', 'zw_ch_caption_without_image' );

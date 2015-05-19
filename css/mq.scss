@@ -2,25 +2,6 @@
 @include media-query("lap-and-up") {
   //@media screen and (min-width: 620px) {
 
-  .frame {
-    /* Make it so that image captions hover to the left on large screens */
-    div[id^="attachment"].wp-caption--shortcode {
-
-      position: relative;
-
-      .wp-caption-text--shortcode {
-
-        @include Verb-Light-Italic;
-
-        position: absolute;
-        top: 0;
-        left: - ( $default-padding-horizontal * 4 );
-        width: $default-padding-horizontal * 3.25;
-        text-transform: none;
-        font-variant: normal;
-      }
-    }
-  }
 }
 
 @include media-query("palm") {
