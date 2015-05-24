@@ -4519,8 +4519,6 @@ article.format-quote {
     text-transform: lowercase;
     font-size: 48px;
     display: inline-block;
-    margin-top: -2px;
-    /* This sucks, but it works :) */
     visibility: hidden;
     width: 0;
     /* can't believe it took me so long to think of this. */ }
@@ -4724,7 +4722,7 @@ textarea {
 /* Post / Page Formats */
 .error404 #site-header .site-meta, .error404 .fp-section__header .site-meta {
   visibility: hidden; }
-  .error404 #site-header .site-meta .chardinjs-show-element, .error404 .fp-section__header .site-meta .chardinjs-show-element {
+  .error404 #site-header .site-meta.chardinjs-show-element, .error404 .fp-section__header .site-meta.chardinjs-show-element {
     visibility: visible; }
 .error404 .back-to-top {
   display: none; }

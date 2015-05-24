@@ -534,7 +534,6 @@ article.format-quote {
     @include Baskerville-Regular;
     @include zw-lowercase( $inuit-base-font-size * 3 );
     display: inline-block;
-    margin-top: -2px; /* This sucks, but it works :) */
     visibility: hidden;
     width: 0; /* can't believe it took me so long to think of this. */
   }
@@ -796,7 +795,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
     visibility: hidden;
 
-    .chardinjs-show-element {
+    &.chardinjs-show-element {
 
       visibility: visible;
     }
