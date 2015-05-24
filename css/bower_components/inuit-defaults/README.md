@@ -6,7 +6,3 @@ The inuitcss `defaults` module contains a few variables and settings that are
 Install using Bower:
 
     $ bower install --save inuit-defaults
-
-Install using npm:
-
-    $ npm install --save inuit-defaults
