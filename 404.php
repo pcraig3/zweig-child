@@ -2,7 +2,7 @@
 
 ob_start();
 
-//@TODO: remove the logo?
+//TODO: remove the logo?
 ?>
 	
 	<div class="layout__item one-third palm-one-whole"></div><!--end of .layout__item.one-third

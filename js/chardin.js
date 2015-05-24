@@ -9,7 +9,7 @@ jQuery(function( $ ){
         var header_title = {
 
             class: "chardinjs-site-meta",
-            style__desk: [ "left:100%" ],
+            style__desk: [ "left:100%", "top:8px" ],
             style__mobile: [ "left:36px", "top:" + get_site_logo_height() + "px" ],
             style: function() {
 

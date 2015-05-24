@@ -28,8 +28,8 @@
 		</div>
 
     <div class="post-navigation">
-    	<div class="alignleft"><?php previous_post_link(); ?> </div>
-			<div class="alignright"><?php next_post_link(); ?> </div>
+        <div class="alignright"><?php next_post_link(); ?> </div>
+        <div class="alignleft"><?php previous_post_link(); ?> </div>
     	<div class="clearer"></div>
     </div>
 

@@ -127,7 +127,7 @@ function zw_ch_return_if_empty( $string ) {
 function zw_ch_bad_practice_post_listing( $atts, $content = null ) {
 
     $atts = shortcode_atts( array(
-      //get the default numbe of posts per page for the blog.  Overwrite them if you want though
+      //get the default number of posts per page for the blog.  Overwrite them if you want though
         'posts_per_page' => get_option( 'posts_per_page', 10 ),
         'post_type' => 'post',
     ), $atts );
@@ -138,7 +138,7 @@ function zw_ch_bad_practice_post_listing( $atts, $content = null ) {
 
     global $wp_query;
 
-    /* @TODO: I understand that this is bad practice, but it's super helpful to reuse an existing template */
+    /* TODO: I understand that this is bad practice, but it's super helpful to reuse an existing template */
     //http://www.poststat.us/properly-reset-wordpress-query/
     $this_is_bad = $wp_query;
 
@@ -283,7 +283,7 @@ function zw_ch_search_in_title( $s ) {
  */
 function zw_ch_if_post_type_archive( $post_type ) {
 
-  //@TODO: make sure this still works if the main page is the home page.
+  //TODO: make sure this still works if the main page is the home page.
   if( $post_type === 'post' )
     return get_permalink( get_option( 'page_for_posts' ) );
 

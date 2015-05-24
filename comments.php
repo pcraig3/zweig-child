@@ -21,8 +21,8 @@
 	<h3 id="comments" class="pt pb-"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
 	<div class="navigation">
+        <div class="alignright"><?php next_comments_link() ?></div>
 		<div class="alignleft"><?php previous_comments_link() ?></div>
-		<div class="alignright"><?php next_comments_link() ?></div>
 	</div>
 
 	<ol class="commentlist">
@@ -41,8 +41,8 @@
 	<?php endif; // Check for comment navigation ?>
 
 	<div class="navigation">
+        <div class="alignright"><?php next_comments_link() ?></div>
 		<div class="alignleft"><?php previous_comments_link() ?></div>
-		<div class="alignright"><?php next_comments_link() ?></div>
 	</div>
  <?php else : // this is displayed if there are no comments so far ?>
 
