@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.2.7
+* CSS tweak so that logo shows up on 404 page contact overlay.
+* Added in some list-shuffling JavaScript as a dependency to eventually get rid of.
+* Put 'next' links on top of 'previous' links
+* Bower update vendors (basically did nothing).
+
 ### 1.2.6
 * Even more layout changes.
     * Fixed 'go to site' buttons so they don't look horrible.

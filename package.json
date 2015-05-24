@@ -1,7 +1,8 @@
 {
   "name": "zwieg-child",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "new theme from zweig theme",
+  "private": true,
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-concat": "^0.5.0",
