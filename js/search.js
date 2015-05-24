@@ -59,7 +59,7 @@ jQuery(function( $ ){
 
 	  	return {
 
-			search_init: search_init,
+			search_init: search_init
 	  	};
 
 	})();

@@ -13,7 +13,8 @@ module.exports = function(grunt) {
                     'js/bower_components/chardin.js/chardinjs.js',  // This specific file
 		            'js/back_to_top.js',
 		            'js/scroll.js',
-                    'js/chardin.js'
+                    'js/chardin.js',
+                    'js/shuffle.js'
 		        ],
 		        dest: 'js/build/prod.js'
 		    }
