@@ -117,6 +117,14 @@ article img, article iframe, article div {
   max-width: 100% !important;
 }
 
+/* remove some padding from nested lists. */
+ul, ol, dd {
+  ul, ol, dd {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
 .wrapper .post-title {
 
   padding-bottom: $inuit-base-spacing-unit * .4;

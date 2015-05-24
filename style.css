@@ -10,7 +10,6 @@
  GitHub Theme URI: 	https://github.com/pcraig3/zweig-child
  GitHub Branch:    	master
  /*
-
 	
 /* If we want a namespace, do that here */
 /*!
@@ -4059,6 +4058,11 @@ html {
 /* Stupid preset in original theme. */
 article img, article iframe, article div {
   max-width: 100% !important; }
+
+/* remove some padding from nested lists. */
+ul ul, ul ol, ul dd, ol ul, ol ol, ol dd, dd ul, dd ol, dd dd {
+  margin-left: 0;
+  margin-bottom: 0; }
 
 .wrapper .post-title {
   padding-bottom: 9.6px;

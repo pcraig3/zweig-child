@@ -2,6 +2,7 @@
 
 ### 1.2.7
 * CSS tweak so that logo shows up on 404 page contact overlay.
+* Remove some padding from nested lists.
 * Added in some list-shuffling JavaScript as a dependency to eventually get rid of.
 * Put 'next' links on top of 'previous' links
 * Bower update vendors (basically did nothing).
