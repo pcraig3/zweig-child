@@ -5,6 +5,10 @@ jQuery(function( $ ){
         //grab the body for slight performance improvements
         var $body = $('body');
 
+        var shuffle_success_class = 'pc3-shuffle-shuffled';
+        var shuffle_error_class = 'pc3-shuffle-error';
+        var shuffle_not_displayed_class = 'pc3-shuffle-not-displayed';
+
         /**
          * Take a list (presumed to contain 'li' elements), detach
          * them all, and then reattach them in a random order.
@@ -66,17 +70,33 @@ jQuery(function( $ ){
 
             if( _is_list_contains_only_list_items($list) ) {
                 _shuffle_list_items($list);
-                $list.addClass('pc3-shuffle-shuffled');
+                $list.addClass(shuffle_success_class);
             }
 
             //sort of a hokey idea to a class
             else
-                $list.addClass('pc3-shuffle-incompatible');
+                $list.addClass(shuffle_error_class);
+        };
+
+        /**
+         * Pretty specific method looks for the 'shuffle_success_class', and
+         * if found, removes the 'not_displayed' class.
+         * Theoretically, this reveals some content.
+         */
+        var show_after_successful_shuffle = function() {
+
+            var $shuffled = $body.find('.' + shuffle_success_class);
+
+            if( ! $shuffled.length )
+                return;
+
+            $body.find('.' + shuffle_not_displayed_class).removeClass(shuffle_not_displayed_class);
         };
 
         return {
 
-            shuffle: shuffle
+            shuffle: shuffle,
+            show_after_successful_shuffle: show_after_successful_shuffle
         };
 
     })();
@@ -85,5 +105,6 @@ jQuery(function( $ ){
 
         //look for a class, and if its immediate children are list items shuffle them
         Shuffle.shuffle('.pc3-shuffle');
+        Shuffle.show_after_successful_shuffle();
     });
 });
