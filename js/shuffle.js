@@ -7,6 +7,7 @@ jQuery(function( $ ){
 
         var shuffle_success_class = 'pc3-shuffle-shuffled';
         var shuffle_error_class = 'pc3-shuffle-error';
+        var shuffle_onclick_class = 'pc3-shuffle-onclick';
         var shuffle_not_displayed_class = 'pc3-shuffle-not-displayed';
 
         /**
@@ -92,6 +93,12 @@ jQuery(function( $ ){
 
             $body.find('.' + shuffle_not_displayed_class).removeClass(shuffle_not_displayed_class);
         };
+
+        $body.find('.' + shuffle_onclick_class).on('click', function() {
+
+            shuffle('.pc3-shuffle');
+            return false;
+        });
 
         return {
 
