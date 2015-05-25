@@ -1483,7 +1483,9 @@ jQuery(function( $ ){
 
 jQuery(function( $ ){
 
-    var Shuffle = (function () {
+    var Shuffle = (function ( list_class ) {
+        //set to true the first time we shuffle a list
+        var shuffled = false;
 
         //grab the body for slight performance improvements
         var $body = $('body');
@@ -1492,6 +1494,43 @@ jQuery(function( $ ){
         var shuffle_error_class = 'pc3-shuffle-error';
         var shuffle_onclick_class = 'pc3-shuffle-onclick';
         var shuffle_not_displayed_class = 'pc3-shuffle-not-displayed';
+
+        /**
+         * return true if all children of input element are 'li' elements.
+         * else false.
+         *
+         * @param $list         element with 'li' elements as children
+         * @returns {boolean}   true if all children of $list are 'li' elements
+         * @private
+         */
+        var _is_list_contains_only_list_items = function( $list ) {
+
+            return $list.children().length === $list.children('li').length
+        };
+
+        /**
+         * function returns either a valid list element or a null value
+         *
+         * @param list_class    class of the element we hope is a valid list
+         * @returns obj | null
+         * @private
+         */
+        var _return_valid_list_element_or_null = function( list_class ) {
+
+            var $list = $body.find( list_class );
+
+            if( $list.length > 0 ) {
+                if (_is_list_contains_only_list_items($list))
+                    return $list;
+                else
+                    //sort of a hokey idea to add a class on failure
+                    $list.addClass(shuffle_error_class);
+            }
+
+            return null;
+        };
+
+        var $list = _return_valid_list_element_or_null( list_class );
 
         /**
          * Take a list (presumed to contain 'li' elements), detach
@@ -1519,55 +1558,31 @@ jQuery(function( $ ){
             }
         };
 
-        //make sure all children are list items
-
         /**
-         * return true if all children of input element are 'li' elements.
-         * else false.
-         *
-         * @param $list         element with 'li' elements as children
-         * @returns {boolean}   true if all children of $list are 'li' elements
-         * @private
+         * i.   if list is valid, list items are shuffled.
+         * ii.   add either 'shuffled' or 'incompatible' class to element in question
          */
-        var _is_list_contains_only_list_items = function($list) {
+        var shuffle = function () {
 
-            return $list.children().length === $list.children('li').length
-        };
+            if( ! $list )
+                return false;
 
-        /**
-         * driver for module.
-         * i.   accepts a classname
-         * ii.  searches the DOM for it
-         * iii. confirm non-empty element whose children are all list items
-         * iv.  shuffle those list items
-         * v.   add either 'shuffled' or 'incompatible' class to element in question
-         *
-         * @param list_class    classname to search for
-         */
-        var shuffle = function (list_class) {
+            _shuffle_list_items($list);
+            $list.addClass(shuffle_success_class);
 
-            var $list = $body.find(list_class);
+            if( ! shuffled )
+                _show_after_successful_shuffle();
 
-            //if the element with this class doesn't exist, exit function
-            if(! $list.length )
-                return;
-
-            if( _is_list_contains_only_list_items($list) ) {
-                _shuffle_list_items($list);
-                $list.addClass(shuffle_success_class);
-            }
-
-            //sort of a hokey idea to a class
-            else
-                $list.addClass(shuffle_error_class);
+            return (shuffled = true);
         };
 
         /**
          * Pretty specific method looks for the 'shuffle_success_class', and
          * if found, removes the 'not_displayed' class.
          * Theoretically, this reveals some content.
+         * @private
          */
-        var show_after_successful_shuffle = function() {
+        var _show_after_successful_shuffle = function() {
 
             var $shuffled = $body.find('.' + shuffle_success_class);
 
@@ -1577,24 +1592,28 @@ jQuery(function( $ ){
             $body.find('.' + shuffle_not_displayed_class).removeClass(shuffle_not_displayed_class);
         };
 
-        $body.find('.' + shuffle_onclick_class).on('click', function() {
+        var activate_onclick = function() {
 
-            shuffle('.pc3-shuffle');
-            return false;
-        });
+            $body.find('.' + shuffle_onclick_class).on('click', function() {
+
+                shuffle();
+                return false;
+            });
+        };
+
 
         return {
 
             shuffle: shuffle,
-            show_after_successful_shuffle: show_after_successful_shuffle
+            activate_onclick: activate_onclick
         };
 
-    })();
+    })('.pc3-shuffle');
 
     $( document ).ready( function() {
 
         //look for a class, and if its immediate children are list items shuffle them
-        Shuffle.shuffle('.pc3-shuffle');
-        Shuffle.show_after_successful_shuffle();
+        Shuffle.shuffle();
+        Shuffle.activate_onclick();
     });
 });
