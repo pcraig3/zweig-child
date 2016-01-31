@@ -4621,8 +4621,7 @@ textarea {
 /* Post metas */
 /* Post navigation */
 .post-navigation {
-  font-size: 20px;
-  word-break: break-word; }
+  font-size: 20px; }
   .post-navigation .alignleft, .post-navigation .alignright {
     padding-bottom: 24px; }
   .post-navigation .alignright {
