@@ -413,7 +413,7 @@ article.format-quote {
     &:after {
 
       padding-left: $inuit-base-spacing-unit / 3;
-      font-family: FontAwesome;
+      font-family: FontAwesome, Wingdings, fantasy;
       content: "\f101";
     }
   }
@@ -700,16 +700,11 @@ textarea {
 
 
 /* Header */
-.intimate-details {
-
-}
 
 /* Single */
 //.sticky {
 
-
 /* Post metas */
-
 
 /* Post navigation */
 .post-navigation {
