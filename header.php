@@ -19,11 +19,9 @@
 <body <?php body_class();?> >
 
 <header id="site-header">
-
-    <div class="site-meta"
+    <div class="site-meta" id="chardinjs--contact"
          data-intro="::contact"
-         data-position="right"
-        >
+         data-position="right">
         <h1 id="site-logo">
             <a
                 href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -38,19 +36,16 @@
     ob_start();
     ?>
 
-    <div class="layout__item one-whole"
-         data-chardinjs-label="site-logo-description fancy-pants intimate-details"
-
+    <div id="chardinjs--description"
+         class="layout__item one-whole"
          data-intro="Get @ me, yo.
-        <br><br>I'm
-        <a target='_blank' href='mailto:paul@pcraig3.ca'>mailable</a>,
-        <a target='_blank' href='https://twitter.com/pcraig3'>tweetable</a>,
-        <a target='_blank' href='https://github.com/pcraig3'>forkable</a>, and
-        <a target='_blank' href='https://www.facebook.com/PaulMCraig'>facebookable</a>.
-        <br>There're a few others as well, but let's not get ahead of ourselves."
-         data-position="bottom"
-        >
-
+            <br><br>I'm
+            <a target='_blank' href='mailto:paul@pcraig3.ca'>mailable</a>,
+            <a target='_blank' href='https://twitter.com/pcraig3'>tweetable</a>,
+            <a target='_blank' href='https://github.com/pcraig3'>forkable</a>, and
+            <a target='_blank' href='https://www.facebook.com/PaulMCraig'>facebookable</a>.
+            <br>There're a few others as well, but let's not get ahead of ourselves."
+         data-position="bottom">
     </div><!--end of .layout__item.one-whole -->
 
     <?php

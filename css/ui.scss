@@ -503,34 +503,56 @@ article.format-quote {
 }
 
 
-.chardinjs-helper-layer.chardinjs-bottom, .chardinjs-helper-layer.chardinjs-top,
-.chardinjs-helper-layer.chardinjs-left, .chardinjs-helper-layer.chardinjs-right {
+.chardinjs-helper-layer {
+  &.chardinjs-bottom,
+  &.chardinjs-top,
+  &.chardinjs-left,
+  &.chardinjs-right {
 
-  position: fixed;
-  border:   none;
-  z-index: 99;
+    position: fixed;
+    border: none;
+    z-index: 99;
+    font-style: italic;
 
-  .chardinjs-tooltip {
+    .chardinjs-tooltip {
 
-    max-width: none;
-    padding: 0;
+      max-width: none;
+      padding: 0;
 
-    &.chardinjs-right:before,
-    &.chardinjs-left:after,
-    &.chardinjs-bottom:before,
-    &.chardinjs-top:after {
-      content: none;
+      &.chardinjs-right:before,
+      &.chardinjs-left:after,
+      &.chardinjs-bottom:before,
+      &.chardinjs-top:after {
+        content: none;
+      }
     }
-  }
 
-  &.chardinjs-site-meta {
+    &[data-id="chardinjs--contact"] .chardinjs-tooltip {
 
-    @include Baskerville-Regular;
-    @include zw-lowercase( $inuit-base-font-size * 3 );
-    margin-top: -2px; /* This sucks, but it works :) */
+      @include Baskerville-Regular;
+      @include zw-lowercase($inuit-base-font-size * 3);
+      left: 100%;
+    }
+
   }
 }
 
+.is-mobile {
+  .chardinjs-helper-layer {
+    &.chardinjs-bottom,
+    &.chardinjs-top,
+    &.chardinjs-left,
+    &.chardinjs-right {
+
+      &[data-id="chardinjs--contact"] .chardinjs-tooltip {
+
+        left: 37px !important;
+        top: 59px !important;
+      }
+
+    }
+  }
+}
 
 .fp-section__header {
 
