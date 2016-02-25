@@ -4388,7 +4388,7 @@ article.format-quote {
     width: 49%; }
   .fancy-button.fancy-button--offsite:after, .fancy-button.fancy-button--download:after, .fancy-button.fancy-button--github:after {
     padding-left: 8px;
-    font-family: FontAwesome;
+    font-family: FontAwesome, Wingdings, fantasy;
     content: "\f101"; }
   .fancy-button.fancy-button--download:after {
     content: "\f019"; }
