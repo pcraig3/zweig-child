@@ -4332,17 +4332,25 @@ article.format-quote {
 .relative {
   position: relative !important; }
 
-.fade-to-solid, .fancy-pants .chardinjs-tooltiptext a, .fancy-pants .search-form .search-field .chardinjs-tooltiptext a {
+.fade-to-solid, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a {
   transition: opacity 0.15s ease-in;
-  opacity: .65; }
-  .fade-to-solid:hover, .fancy-pants .chardinjs-tooltiptext a:hover {
-    opacity: 1; }
+  opacity: 0.65;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.65)";
+  filter: alpha(opacity=0.65); }
+  .fade-to-solid:hover, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a:hover {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    filter: alpha(opacity=1); }
 
 .solid-to-fade {
   transition: opacity 0.15s ease-in;
-  opacity: 1; }
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+  filter: alpha(opacity=1); }
   .solid-to-fade:hover {
-    opacity: .65; }
+    opacity: 0.65;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.65)";
+    filter: alpha(opacity=0.65); }
 
 .cursor-default {
   cursor: default !important; }
@@ -4353,21 +4361,23 @@ article.format-quote {
     color: #333; }
 
 .whisper {
-  font-size: .95em;
-  opacity: .33; }
+  opacity: 0.33;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.33)";
+  filter: alpha(opacity=0.33);
+  font-size: .95em; }
 
-.fancy-pants, .fancy-pants .search-form .search-field {
+.fancy-pants, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip, .fancy-pants .search-form .search-field {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
   font-size: 18.4px; }
-  .fancy-pants em, .fancy-pants .search-form .search-field em {
+  .fancy-pants em, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip em, .fancy-pants .search-form .search-field em {
     font-family: 'libre_baskervilleitalic', times, serif;
     font-weight: 400;
     font-style: normal;
     word-spacing: 0; }
-  .fancy-pants strong, .fancy-pants .search-form .search-field strong, .fancy-pants b, .fancy-pants .search-form .search-field b {
+  .fancy-pants strong, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip strong, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip strong, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip strong, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip strong, .fancy-pants .search-form .search-field strong, .fancy-pants b, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip b, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip b, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip b, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip b, .fancy-pants .search-form .search-field b {
     font-family: 'libre_baskervillebold', times, serif;
     font-weight: 400;
     font-style: normal;
@@ -4465,6 +4475,8 @@ article.format-quote {
     width: auto;
     position: fixed;
     z-index: 98; }
+    #site-header .site-meta.chardinjs-show-element, .fp-section__header .site-meta.chardinjs-show-element {
+      z-index: 100; }
   #site-header h1, .fp-section__header h1, #site-header h2, .fp-section__header h2 {
     display: inline; }
   #site-header h1, .fp-section__header h1 {
@@ -4481,28 +4493,22 @@ article.format-quote {
     /* this value will be overwritten */ }
 
 .chardinjs-overlay {
+  opacity: 0.95 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.95)" !important;
+  filter: alpha(opacity=0.95) !important;
   z-index: 99; }
 
-.fancy-pants .chardinjs-tooltiptext a, .fancy-pants .search-form .search-field .chardinjs-tooltiptext a {
-  color: #FFFFFF; }
-
-.chardinjs-helper-layer.chardinjs-bottom, .chardinjs-helper-layer.chardinjs-top,
-.chardinjs-helper-layer.chardinjs-left, .chardinjs-helper-layer.chardinjs-right {
+.chardinjs-helper-layer.chardinjs-bottom, .chardinjs-helper-layer.chardinjs-top, .chardinjs-helper-layer.chardinjs-left, .chardinjs-helper-layer.chardinjs-right {
   position: fixed;
   border: none;
-  z-index: 99; }
-  .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip,
-  .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip {
+  z-index: 99;
+  font-style: italic; }
+  .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip {
     max-width: none;
     padding: 0; }
-    .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-top:after, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-top:after,
-    .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-right:before,
-    .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-left:after,
-    .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-bottom:before,
-    .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-top:after, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-top:after {
+    .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-bottom .chardinjs-tooltip.chardinjs-top:after, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-top .chardinjs-tooltip.chardinjs-top:after, .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-left .chardinjs-tooltip.chardinjs-top:after, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-right:before, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-left:after, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-helper-layer.chardinjs-right .chardinjs-tooltip.chardinjs-top:after {
       content: none; }
-  .chardinjs-helper-layer.chardinjs-bottom.chardinjs-site-meta, .chardinjs-helper-layer.chardinjs-top.chardinjs-site-meta,
-  .chardinjs-helper-layer.chardinjs-left.chardinjs-site-meta, .chardinjs-helper-layer.chardinjs-right.chardinjs-site-meta {
+  .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--contact"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--contact"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--contact"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--contact"] .chardinjs-tooltip {
     font-family: 'libre_baskervilleregular', times, serif;
     font-weight: 400;
     font-style: normal;
@@ -4510,8 +4516,18 @@ article.format-quote {
     font-variant: normal;
     text-transform: lowercase;
     font-size: 48px;
-    margin-top: -2px;
-    /* This sucks, but it works :) */ }
+    left: 100%; }
+  .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip {
+    left: 0 !important;
+    top: 168px; }
+    .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a {
+      color: #FFFFFF; }
+
+.is-mobile .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--contact"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--contact"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--contact"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--contact"] .chardinjs-tooltip {
+  left: 37px !important;
+  top: 59px !important; }
+.is-mobile .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip {
+  top: 209px !important; }
 
 .fp-section__header {
   padding: 24px 0 0 0;
@@ -4742,8 +4758,10 @@ textarea {
   z-index: 99;
   /* um. */ }
   .back-to-top.invisible a {
-    cursor: default;
-    opacity: 0; }
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    cursor: default; }
   .back-to-top .back-to-top__link {
     font-size: 48px;
     position: relative;
@@ -4834,18 +4852,17 @@ textarea {
   #footer .search-form .search-submit {
     display: none; }
 
-.fancy-pants .search-form, .fancy-pants .search-form .search-field .search-form {
+.fancy-pants .search-form, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .fancy-pants .search-form .search-field .search-form {
   display: inline;
   /* let's just hide it */ }
-  .fancy-pants .search-form .search-field {
+  .fancy-pants .search-form .search-field, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field {
     width: 50%;
     border-bottom: transparent 1px solid !important; }
-    .fancy-pants .search-form .search-field:active, .fancy-pants .search-form .search-field:focus {
+    .fancy-pants .search-form .search-field:active, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:active, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:active, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:active, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:active, .fancy-pants .search-form .search-field:focus, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:focus, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:focus, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:focus, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:focus {
       border-bottom: #FFFFFF 1px solid !important; }
-  .fancy-pants .search-form .search-submit {
+  .fancy-pants .search-form .search-submit, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-submit, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-submit, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-submit, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-submit {
     display: none; }
 
-/* Media Queries */
 .sandbox {
   border: 1px yellow solid; }
   .sandbox * {
@@ -4860,9 +4877,9 @@ textarea {
   .not_on_mobile {
     display: none; }
 
-  .fancy-pants, .fancy-pants .search-form .search-field {
+  .fancy-pants, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip, .fancy-pants .search-form .search-field {
     font-size: 17.6px; }
-    .fancy-pants .whisper, .fancy-pants .search-form .search-field .whisper {
+    .fancy-pants .whisper, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .whisper, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .whisper, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .whisper, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .whisper, .fancy-pants .search-form .search-field .whisper {
       font-size: 16px; }
 
   .fancy-button.fancy-button--row-of-1, .fancy-button.fancy-button--row-of-2 {
@@ -4883,8 +4900,7 @@ textarea {
       padding-left: 48px;
       padding-right: 0px;
       /* Desktops and laptops ----------- */
-      /* Large screens ----------- */
-      /*padding-left: $default-padding-horizontal;*/ } }
+      /* Large screens ----------- */ } }
     @media screen and (max-width: 619px) and (max-width: 419px) {
       .frame.frame--archive, .frame.frame--404 {
         padding-left: 15.84px;
@@ -4917,9 +4933,6 @@ textarea {
   #site-header .fp-section__header__spacer, .fp-section__header .fp-section__header__spacer,
   .fp-section__header .fp-section__header__spacer {
     display: block; }
-  #site-header .intimate-details, .fp-section__header .intimate-details,
-  .fp-section__header .intimate-details {
-    padding-top: 24px; }
 
   .frame__title {
     padding-top: 24px; }
