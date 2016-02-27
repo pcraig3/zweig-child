@@ -101,4 +101,3 @@ jQuery(function( $ ){
         window.addEventListener('resize', check_for_resizing());
     });
 });
-
