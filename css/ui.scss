@@ -534,6 +534,17 @@ article.format-quote {
       left: 100%;
     }
 
+    &[data-id="chardinjs--description"] .chardinjs-tooltip {
+
+      @extend .fancy-pants;
+      left: 0 !important;
+      top: 168px;
+
+        a {
+          color: $color__white;
+          @extend .fade-to-solid;
+      }
+    }
   }
 }
 
@@ -550,6 +561,10 @@ article.format-quote {
         top: 59px !important;
       }
 
+      &[data-id="chardinjs--description"] .chardinjs-tooltip {
+
+        top: 209px !important;
+      }
     }
   }
 }
