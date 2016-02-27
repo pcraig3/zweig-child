@@ -476,6 +476,10 @@ article.format-quote {
     width: auto;
     position: fixed;
     z-index: 98;
+
+    &.chardinjs-show-element {
+      z-index: 100;
+    }
   }
 
   h1, h2 {
@@ -498,6 +502,8 @@ article.format-quote {
 
 .chardinjs-overlay {
   @include zw-opacity(.95, "important");
+
+  z-index: 99;
 }
 
 .chardinjs-helper-layer {
