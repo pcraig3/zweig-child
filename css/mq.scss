@@ -55,10 +55,7 @@
 
     &.frame--archive,
     &.frame--404 {
-
       @include zw-padding-horizontal(1, 0);
-
-      /*padding-left: $default-padding-horizontal;*/
     }
 
   }
@@ -152,8 +149,8 @@
     .wrapper .entry {
 
       h1, h2, h3 {
-
         @include zw-lowercase( $inuit-base-font-size * 1.4 );
+
         margin-bottom: 12px;
       }
 

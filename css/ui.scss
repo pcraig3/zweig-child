@@ -26,6 +26,20 @@ $color__placeholder: #B4B4B4;
   font-size: $font-size;
 }
 
+@mixin zw-opacity($opacity, $is_important: false) {
+  $IEValue: $opacity*100;
+
+  @if $is_important == "important" {
+    opacity: $opacity !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity+")" !important;
+    filter: alpha(opacity=$opacity) !important;
+  } @else {
+    opacity: $opacity;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity+")";
+    filter: alpha(opacity=$opacity);
+  }
+}
+
 /* horizontal padding */
 $default-padding-horizontal: $inuit-base-spacing-unit * 2;
 $big-desk-padding: 15%;
@@ -90,7 +104,6 @@ $big-ass-desk-padding: 25%;
   color: $color__red;
   background: transparent;
   border: 0;
-
   text-align: center;
   line-height: $base-spacing;
 }
@@ -114,12 +127,14 @@ html {
 
 /* Stupid preset in original theme. */
 article img, article iframe, article div {
+
   max-width: 100% !important;
 }
 
 /* remove some padding from nested lists. */
 ul, ol, dd {
   ul, ol, dd {
+
     margin-left: 0;
     margin-bottom: 0;
   }
@@ -177,28 +192,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
   @include Verb-Light-Italic;
+
   text-transform: uppercase;
 }
 .single {
   .wrapper .entry {
 
     h1, h2, h3 {
-
       @include Baskerville-Regular;
     }
 
     h1 {
-
       @include zw-lowercase( $inuit-base-font-size * 1.9 );
     }
 
     h2 {
-
       @include zw-lowercase( $inuit-base-font-size * 1.8 );
     }
 
     h3 {
-
       @include zw-lowercase( $inuit-base-font-size * 1.5 );
     }
   }
@@ -209,13 +221,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wrapper cite {
   @include Verb-Light;
+
   margin-left: $inuit-base-spacing-unit;
 }
 .wrapper table {
+
   font-size: $inuit-base-font-size;
 }
 .wrapper table thead th {
   @include Verb-Condensed;
+
   text-align: left;
 }
 .wrapper table th {
@@ -262,6 +277,7 @@ textarea {
 }
 #comments h3 {
   @include Verb-Light-Italic;
+
   text-transform: uppercase;
 }
 #comments .vcard {
@@ -274,10 +290,12 @@ textarea {
 }
 #comments .comment-meta {
   @include Verb-Condensed;
+
   color: $color__grey;
 }
 #comments .reply {
   @include Verb-Light;
+
   text-align: right;
 }
 .posts-nav {
@@ -328,26 +346,20 @@ article.format-quote {
 }
 
 .fade-to-solid {
-
   @include zw-transition(opacity);
-
-  opacity: .65;
+  @include zw-opacity(.65);
 
   &:hover {
-
-    opacity: 1;
+    @include zw-opacity(1);
   }
 }
 
 .solid-to-fade {
-
   @include zw-transition(opacity);
-
-  opacity: 1;
+  @include zw-opacity(1);
 
   &:hover {
-
-    opacity: .65;
+    @include zw-opacity(.65);
   }
 }
 
@@ -367,14 +379,14 @@ article.format-quote {
 }
 
 .whisper {
+  @include zw-opacity(.33);
 
   font-size: .95em;
-  opacity: .33;
 }
 
 .fancy-pants {
-
   @include Baskerville-Regular;
+
   font-size: $inuit-base-font-size * 1.15;
 
   em {
@@ -419,7 +431,6 @@ article.format-quote {
   }
 
   &.fancy-button--download {
-
     @extend .fancy-button--offsite;
 
     &:after {
@@ -429,7 +440,6 @@ article.format-quote {
   }
 
   &.fancy-button--github {
-
     @extend .fancy-button--offsite;
 
     &:after {
@@ -441,8 +451,8 @@ article.format-quote {
 }
 
 .wrapper {
-
   @include zw-site-container;
+
   padding-top: 0;
 
   .post-meta p,
@@ -455,7 +465,6 @@ article.format-quote {
 
 /* Elements */
 #site-header {
-
   @include zw-site-container;
 
   padding-top: 0;
@@ -488,20 +497,8 @@ article.format-quote {
 }
 
 .chardinjs-overlay {
-
-  z-index: 99;
+  @include zw-opacity(.95, "important");
 }
-
-.fancy-pants .chardinjs-tooltiptext {
-
-  a {
-
-    @extend .fade-to-solid;
-
-    color: $color__white;
-  }
-}
-
 
 .chardinjs-helper-layer {
   &.chardinjs-bottom,
@@ -590,8 +587,8 @@ article.format-quote {
   padding: ($inuit-base-spacing-unit * .25 ) 0;
 
   .subhead {
-
     @include Baskerville-Italic;
+
     color: $color__grey;
     text-transform: none;
     font-variant: normal;
@@ -612,7 +609,6 @@ article.format-quote {
   div[id^="attachment"].wp-caption {
 
     .wp-caption-text {
-
       @include Verb-Condensed-Italic;
 
       position: relative;
@@ -627,7 +623,6 @@ article.format-quote {
     display: block;
 
     &.no-padding{
-
       @include zw-no-padding-hack($inuit-base-spacing-unit);
     }
   }
@@ -661,12 +656,9 @@ article.format-quote {
 
     article {
 
-      &:hover {
+      &:hover .post-date {
 
-        .post-date {
-
-          color: $color__grey--still-pretty-light !important;
-        }
+        color: $color__grey--still-pretty-light !important;
       }
 
       .post-title {
@@ -677,7 +669,6 @@ article.format-quote {
       }
 
       .post-date {
-
         @include zw-transition(color);
 
         color: $color__grey !important;
@@ -754,8 +745,8 @@ textarea {
   }
 
   .alignright {
-
     @extend .alignleft;
+
     text-align: right;
   }
 }
@@ -776,6 +767,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
   }
 
   .vcard .avatar {
+
     margin: $padding-base ($padding-base *2) $padding-base $padding-base;
   }
 
@@ -786,11 +778,11 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 
   #commentform label {
+
     padding-bottom: $padding-base;
   }
 
   input[type=submit] {
-
     @include zw-transition(background-color, .1s);
 
     padding:	($padding-base / 1.5) ($padding-base / .75) $padding-base ($padding-base / .75);
@@ -799,8 +791,8 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
 /* Footer */
 #footer {
-
   @include zw-site-container;
+
   border-bottom: $inuit-base-spacing-unit solid #F3F3F3;
 }
 
@@ -863,14 +855,13 @@ $padding-base: $inuit-base-spacing-unit / 4;
   &.invisible {
 
     a {
+      @include zw-opacity(0);
 
       cursor: default;
-      opacity: 0;
     }
   }
 
   .back-to-top__link {
-
     @include zw-button( $back_to_top_size );
   }
 
@@ -888,7 +879,6 @@ $padding-base: $inuit-base-spacing-unit / 4;
 .search-form {
 
   .search-field, .placeholder {
-
     @include Baskerville-Regular;
     @include zw-lowercase( $inuit-base-font-size * 3 );
   }
@@ -913,7 +903,6 @@ $padding-base: $inuit-base-spacing-unit / 4;
   }
 
   .search-submit {
-
     @include zw-button( $default-padding-horizontal, .5 );
 
     position: absolute;
@@ -931,7 +920,6 @@ $padding-base: $inuit-base-spacing-unit / 4;
   @include zw-padding-horizontal(1, 2);
 
   .search-field {
-
     @include zw-lowercase( $inuit-base-font-size * 2 );
 
     line-height: $inuit-base-line-height * 2;
@@ -976,6 +964,3 @@ $padding-base: $inuit-base-spacing-unit / 4;
     display: none;
   }
 }
-
-
-/* Media Queries */
