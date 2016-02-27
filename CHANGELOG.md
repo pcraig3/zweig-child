@@ -1,5 +1,16 @@
 ## Changelog
 
+### 1.2.8
+* Removed padding from nested lists.
+* Add some list shuffling just for a larf.
+* New screenshot.
+* Newer screenshot.
+* Update some npm stuff.
+* Remove CV css files which really should have been gone long ago.
+* REMOVE NEARLY ALL OF MY SHITTY CHARDIN-JS JAVASCRIPT OVERRIDES!!
+    * <del>289</del> 23 lines of custom JS.
+    * Most custom stuff can be solved with CSS rules.
+
 ### 1.2.7
 * CSS tweak so that logo shows up on 404 page contact overlay.
 * Remove some padding from nested lists.
