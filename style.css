@@ -4474,7 +4474,7 @@ article.format-quote {
     margin-top: 18px;
     width: auto;
     position: fixed;
-    z-index: 98; }
+    z-index: 97; }
     #site-header .site-meta.chardinjs-show-element, .fp-section__header .site-meta.chardinjs-show-element {
       z-index: 100; }
   #site-header h1, .fp-section__header h1, #site-header h2, .fp-section__header h2 {
@@ -4493,9 +4493,7 @@ article.format-quote {
     /* this value will be overwritten */ }
 
 .chardinjs-overlay {
-  opacity: 0.95 !important;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.95)" !important;
-  filter: alpha(opacity=0.95) !important;
+  transition: opacity 0.15s ease-in;
   z-index: 99; }
 
 .chardinjs-helper-layer.chardinjs-bottom, .chardinjs-helper-layer.chardinjs-top, .chardinjs-helper-layer.chardinjs-left, .chardinjs-helper-layer.chardinjs-right {
@@ -4755,7 +4753,7 @@ textarea {
   bottom: 24px;
   right: 0;
   margin-right: 48px;
-  z-index: 99; }
+  z-index: 98; }
   .back-to-top .back-to-top__link {
     font-size: 48px;
     position: relative;
@@ -4883,7 +4881,7 @@ textarea {
     padding-bottom: 12px;
     position: relative; }
     .frame.frame--single {
-      z-index: 99;
+      z-index: 98;
       overflow: hidden;
       /* :/ */
       margin-left: -24px;

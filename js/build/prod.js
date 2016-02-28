@@ -998,7 +998,7 @@ jQuery(function( $ ){
         var $back_to_top = $(document).find(".back-to-top");
 
         $(window).scroll(function () {
-            // if $back_to_top button doesn't have the 'clicked' class AND
+            // if back_to_top button doesn't have the 'clicked' class AND
             // if we have scrolled past the offset OR if the browser hits the bottom of the page
             ( ! $back_to_top.hasClass('clicked') &&
                 ( $(this).scrollTop() > offset ||  $(window).scrollTop() + $(window).height() === $(document).height() )
@@ -1031,9 +1031,9 @@ jQuery(function( $ ){
     		pageEndSmoothScroll: true,
     		offset: offset,
 			onStart:function() {
-				// trigger the 'back_to_top_clicked' event if back to top button clicked
+				// add a 'clicked' class to the back_to_top button for the duration of the animation
 				if(mPS2id.clicked.attr("href") === '#back_to_top') {
-					mPS2id.clicked.parent().fadeOut(50);
+					mPS2id.clicked.parent().fadeOut(30);
 					mPS2id.clicked.parent().addClass('clicked');
 				}
 			},
@@ -1078,6 +1078,7 @@ jQuery(function( $ ){
     $body.find('.chardinjs').on('click', function(e){
 
         $body.chardinJs('start');
+        setTimeout(function() { $('.chardinjs-overlay').css('opacity', .95); }, 30);
         e.preventDefault();
     });
 });
