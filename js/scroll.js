@@ -19,13 +19,22 @@ jQuery(function( $ ){
     		scrollEasing: "easeInOutQuad",
     		pageEndSmoothScroll: true,
     		offset: offset,
-    		
-    		onComplete:function(){
-
+			onStart:function() {
+				// add a 'clicked' class to the back_to_top button for the duration of the animation
+				if(mPS2id.clicked.attr("href") === '#back_to_top') {
+					mPS2id.clicked.parent().fadeOut(30);
+					mPS2id.clicked.parent().addClass('clicked');
+				}
+			},
+    		onComplete:function() {
     			//if we've clicked the 'search again?' link, clear the search bar and add focus
     			if ( mPS2id.target.attr("id") === "footer" )
         			clear_add_focus_footer_search();
-    		},
+
+				if(mPS2id.clicked.attr("href") === '#back_to_top') {
+					mPS2id.clicked.parent().removeClass('clicked');
+				}
+    		}
 		});
 
 		/**

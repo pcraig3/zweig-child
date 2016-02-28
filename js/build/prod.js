@@ -998,9 +998,11 @@ jQuery(function( $ ){
         var $back_to_top = $(document).find(".back-to-top");
 
         $(window).scroll(function () {
-            //if we have scrolled past the offset || if the browser hits the bottom of the page
-            ( $(this).scrollTop() > offset ||
-            $(window).scrollTop() + $(window).height() === $(document).height() ) ?
+            // if $back_to_top button doesn't have the 'clicked' class AND
+            // if we have scrolled past the offset OR if the browser hits the bottom of the page
+            ( ! $back_to_top.hasClass('clicked') &&
+                ( $(this).scrollTop() > offset ||  $(window).scrollTop() + $(window).height() === $(document).height() )
+            ) ?
                 $back_to_top.fadeIn(300) :
                 $back_to_top.fadeOut(300);
         });
@@ -1028,13 +1030,22 @@ jQuery(function( $ ){
     		scrollEasing: "easeInOutQuad",
     		pageEndSmoothScroll: true,
     		offset: offset,
-    		
-    		onComplete:function(){
-
+			onStart:function() {
+				// trigger the 'back_to_top_clicked' event if back to top button clicked
+				if(mPS2id.clicked.attr("href") === '#back_to_top') {
+					mPS2id.clicked.parent().fadeOut(50);
+					mPS2id.clicked.parent().addClass('clicked');
+				}
+			},
+    		onComplete:function() {
     			//if we've clicked the 'search again?' link, clear the search bar and add focus
     			if ( mPS2id.target.attr("id") === "footer" )
         			clear_add_focus_footer_search();
-    		},
+
+				if(mPS2id.clicked.attr("href") === '#back_to_top') {
+					mPS2id.clicked.parent().removeClass('clicked');
+				}
+    		}
 		});
 
 		/**
