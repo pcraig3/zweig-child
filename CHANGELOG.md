@@ -1,5 +1,12 @@
 ## Changelog
 
+### 1.2.9
+* Minify CSS.
+* Remove a lot of unneeded JavaScript.
+* Fix chardinjs overlay transition. (JQuery :/)
+* `back_to_top` button disappears a lot quicker when clicked.
+    * less janky animations on phones.
+
 ### 1.2.8
 * Removed padding from nested lists.
 * Add some list shuffling just for a larf.
