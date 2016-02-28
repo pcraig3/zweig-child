@@ -2,10 +2,20 @@
 
 /*
  * @see : http://codex.wordpress.org/Child_Themes#How_to_Create_a_Child_Theme
+ * We can make the site faster by not including the parent css file
+ * (It's already included in our minified file)
+ * This way, we don't have to load google fonts or normalize.css
  */
-add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_parent_theme_style' );
+add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_parent_theme_style', 20 );
 function zw_ch_enqueue_parent_theme_style() {
-    wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+    if ( if_debug() ) {
+
+        wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+    }
+    else {
+        // we're already including normalize as part of our inuit framework
+        wp_dequeue_style( 'normalize' );
+    }
 }
 
 /**
@@ -13,7 +23,7 @@ function zw_ch_enqueue_parent_theme_style() {
  */
 add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_child_theme_style', 20 );
 function zw_ch_enqueue_child_theme_style() {
-    $ext = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min';
+    $ext = if_debug() ? '' : '.min';
 
     wp_dequeue_style( 'zweig-styles' );
     // deregister so that we can re-use the handle
@@ -29,7 +39,7 @@ function zw_ch_enqueue_child_theme_style() {
 add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_grunt_scripts' );
 function zw_ch_enqueue_grunt_scripts() {
 
-    $ext = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min';
+    $ext = if_debug() ? '' : '.min';
 
     //vendor scripts and my scripts concatenated by grunt
     wp_enqueue_script( 'zw_ch_utilsjs', get_stylesheet_directory_uri() . '/js/utils.js', array( 'jquery' ), false, true );
@@ -37,6 +47,10 @@ function zw_ch_enqueue_grunt_scripts() {
 
   if( is_search() )
       wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/build/search' . $ext . '.js', array( 'jquery' ), false, true );
+}
+
+function if_debug() {
+    return defined( 'WP_DEBUG' ) && WP_DEBUG;
 }
 
 /**

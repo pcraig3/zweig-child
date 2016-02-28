@@ -8,7 +8,9 @@
  Text Domain:  		zw-ch
  GitHub Theme URI: 	https://github.com/pcraig3/zweig-child
  GitHub Branch:    	master
- /*
+ */
+/* import CSS from the parent theme */
+@import "css/zweig/style.scss";
 
 /* If we want a namespace, do that here */
 @import "css/bower_components/inuit-defaults/settings.defaults";
