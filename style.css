@@ -4755,13 +4755,7 @@ textarea {
   bottom: 24px;
   right: 0;
   margin-right: 48px;
-  z-index: 99;
-  /* um. */ }
-  .back-to-top.invisible a {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    cursor: default; }
+  z-index: 99; }
   .back-to-top .back-to-top__link {
     font-size: 48px;
     position: relative;

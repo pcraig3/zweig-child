@@ -35,7 +35,5 @@ jQuery(function( $ ){
 
     		mPS2id.target.find('.search-field').val("").focus();
 		}
-
-
 	});
 });

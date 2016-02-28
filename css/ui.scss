@@ -857,16 +857,6 @@ $padding-base: $inuit-base-spacing-unit / 4;
   margin-right: $back_to_top_size;
   z-index: 99;
 
-  /* um. */
-  &.invisible {
-
-    a {
-      @include zw-opacity(0);
-
-      cursor: default;
-    }
-  }
-
   .back-to-top__link {
     @include zw-button( $back_to_top_size );
   }
