@@ -18,6 +18,7 @@ jQuery(function( $ ){
     $body.find('.chardinjs').on('click', function(e){
 
         $body.chardinJs('start');
+        setTimeout(function() { $('.chardinjs-overlay').css('opacity', .95); }, 30);
         e.preventDefault();
     });
 });

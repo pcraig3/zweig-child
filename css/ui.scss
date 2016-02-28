@@ -475,7 +475,7 @@ article.format-quote {
     margin-top: $inuit-base-spacing-unit * .75;
     width: auto;
     position: fixed;
-    z-index: 98;
+    z-index: 97;
 
     &.chardinjs-show-element {
       z-index: 100;
@@ -501,7 +501,7 @@ article.format-quote {
 }
 
 .chardinjs-overlay {
-  @include zw-opacity(.95, "important");
+  @include zw-transition(opacity, .15s);
 
   z-index: 99;
 }
@@ -855,7 +855,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
   bottom: $inuit-base-spacing-unit;
   right: 0;
   margin-right: $back_to_top_size;
-  z-index: 99;
+  z-index: 98;
 
   .back-to-top__link {
     @include zw-button( $back_to_top_size );
