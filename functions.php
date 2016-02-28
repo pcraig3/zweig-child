@@ -32,11 +32,11 @@ function zw_ch_enqueue_grunt_scripts() {
     $ext = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min';
 
     //vendor scripts and my scripts concatenated by grunt
-    wp_enqueue_script( 'zw_ch_utilsjs', get_stylesheet_directory_uri() . '/js/utils.js', array( 'jquery' ) );
-    wp_enqueue_script( 'zw_ch_prodjs', get_stylesheet_directory_uri() . '/js/build/prod' . $ext . '.js', array( 'zw_ch_utilsjs', 'jquery' ) );
+    wp_enqueue_script( 'zw_ch_utilsjs', get_stylesheet_directory_uri() . '/js/utils.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'zw_ch_prodjs', get_stylesheet_directory_uri() . '/js/build/prod' . $ext . '.js', array( 'zw_ch_utilsjs', 'jquery' ), false, true );
 
   if( is_search() )
-      wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/build/search' . $ext . '.js', array( 'jquery' ) );
+      wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/build/search' . $ext . '.js', array( 'jquery' ), false, true );
 }
 
 /**
