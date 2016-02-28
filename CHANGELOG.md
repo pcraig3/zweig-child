@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.2.10
+* Include a modified version of the parent theme's `style.css` file
+    * Save us from loading an extra file with custom fonts
+* Dequeue parent theme's `normalize.css`
+    * Inuit already comes with a normalize, so I never needed it
+
 ### 1.2.9
 * Minify CSS.
 * Remove a lot of unneeded JavaScript.
