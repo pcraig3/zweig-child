@@ -9,17 +9,34 @@ function zw_ch_enqueue_parent_theme_style() {
 }
 
 /**
+ * Dequeue default style.css script for our minified one (unless we're in debug mode)
+ */
+add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_child_theme_style', 20 );
+function zw_ch_enqueue_child_theme_style() {
+    $ext = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min';
+
+    wp_dequeue_style( 'zweig-styles' );
+    // deregister so that we can re-use the handle
+    wp_deregister_style( 'zweig-styles' );
+
+    wp_register_style( 'zweig-styles', get_stylesheet_directory_uri() . '/style' . $ext . '.css', false );
+    wp_enqueue_style( 'zweig-styles' );
+}
+
+/**
  * Proper way to enqueue scripts and styles
  */
 add_action( 'wp_enqueue_scripts', 'zw_ch_enqueue_grunt_scripts' );
 function zw_ch_enqueue_grunt_scripts() {
 
-  //vendor scripts and my scripts concatenated by grunt
+    $ext = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min';
+
+    //vendor scripts and my scripts concatenated by grunt
     wp_enqueue_script( 'zw_ch_utilsjs', get_stylesheet_directory_uri() . '/js/utils.js', array( 'jquery' ) );
-    wp_enqueue_script( 'zw_ch_prodjs', get_stylesheet_directory_uri() . '/js/build/prod.min.js', array( 'zw_ch_utilsjs', 'jquery' ) );
+    wp_enqueue_script( 'zw_ch_prodjs', get_stylesheet_directory_uri() . '/js/build/prod' . $ext . '.js', array( 'zw_ch_utilsjs', 'jquery' ) );
 
   if( is_search() )
-      wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/build/search.min.js', array( 'jquery' ) );
+      wp_enqueue_script( 'zw_ch_searchjs', get_stylesheet_directory_uri() . '/js/build/search' . $ext . '.js', array( 'jquery' ) );
 }
 
 /**

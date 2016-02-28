@@ -17,16 +17,33 @@ module.exports = function(grunt) {
                     'js/shuffle.js'
 		        ],
 		        dest: 'js/build/prod.js'
-		    }
+			},
+			search: {
+				src: [
+					'js/search.js'
+				],
+				dest: 'js/build/search.js'
+			}
 		},
 
 		uglify: {
 		    build: {
 		    	  files: {
         			'js/build/prod.min.js': ['js/build/prod.js'],
-        			'js/build/search.min.js': ['js/search.js']
+        			'js/build/search.min.js': ['js/build/search.js']
       			}
 		    }
+		},
+
+		sass: {
+			dist: {
+				options: {
+					style: 'compressed'
+				},
+				files: {
+					'style.min.css': 'style.scss' // 'destination': 'source'
+				}
+			}
 		},
 
 		watch: {
@@ -44,9 +61,9 @@ module.exports = function(grunt) {
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify']);
-
+    grunt.registerTask('default', ['concat', 'uglify', 'sass']);
 };
