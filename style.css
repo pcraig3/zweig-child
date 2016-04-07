@@ -34,6 +34,8 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #d43b1d;
   text-decoration: none;
+  -webkit-transition: color .15s ease-in;
+  -o-transition: color .15s ease-in;
   transition: color .15s ease-in; }
 
 a:hover, a:active, a:focus {
@@ -152,6 +154,8 @@ input[type=submit] {
   font-family: sans-serif;
   font-variant: small-caps;
   font-size: 0.8em;
+  -webkit-transition: background-color .15s ease-in;
+  -o-transition: background-color .15s ease-in;
   transition: background-color .15s ease-in; }
 
 input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
@@ -659,7 +663,8 @@ figure {
  */
 hr {
   -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0; }
 
 /**
@@ -765,7 +770,9 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -4357,8 +4364,6 @@ html {
   background-color: #000;
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
 
@@ -4367,8 +4372,6 @@ html {
   z-index: 9999998;
   color: white;
   -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
   .chardinjs-helper-layer.chardinjs-left {
@@ -4387,8 +4390,6 @@ html {
 .chardinjs-tooltip {
   position: absolute;
   -webkit-transition: opacity 0.1s ease-out;
-  -moz-transition: opacity 0.1s ease-out;
-  -ms-transition: opacity 0.1s ease-out;
   -o-transition: opacity 0.1s ease-out;
   transition: opacity 0.1s ease-out;
   max-width: 200px; }
@@ -4802,6 +4803,8 @@ article.format-quote {
   position: relative !important; }
 
 .fade-to-solid, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a {
+  -webkit-transition: opacity 0.15s ease-in;
+  -o-transition: opacity 0.15s ease-in;
   transition: opacity 0.15s ease-in;
   opacity: 0.65;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.65)";
@@ -4812,6 +4815,8 @@ article.format-quote {
     filter: alpha(opacity=1); }
 
 .solid-to-fade {
+  -webkit-transition: opacity 0.15s ease-in;
+  -o-transition: opacity 0.15s ease-in;
   transition: opacity 0.15s ease-in;
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
@@ -4962,6 +4967,8 @@ article.format-quote {
     /* this value will be overwritten */ }
 
 .chardinjs-overlay {
+  -webkit-transition: opacity 0.15s ease-in;
+  -o-transition: opacity 0.15s ease-in;
   transition: opacity 0.15s ease-in;
   z-index: 99; }
 
@@ -5062,6 +5069,8 @@ article.format-quote {
       font-size: 28.8px;
       line-height: 30px; }
     .frame.frame--archive article .post-date {
+      -webkit-transition: color 0.15s ease-in;
+      -o-transition: color 0.15s ease-in;
       transition: color 0.15s ease-in;
       color: #CBCBCB !important;
       margin-bottom: 48px; }
@@ -5124,6 +5133,8 @@ textarea {
 #comments #commentform label {
   padding-bottom: 6px; }
 #comments input[type=submit] {
+  -webkit-transition: background-color 0.1s ease-in;
+  -o-transition: background-color 0.1s ease-in;
   transition: background-color 0.1s ease-in;
   padding: 4px 8px 6px 8px; }
 
@@ -5431,5 +5442,4 @@ textarea {
     text-transform: lowercase;
     font-size: 22.4px;
     margin-bottom: 12px; } }
-
 /*# sourceMappingURL=style.css.map */
