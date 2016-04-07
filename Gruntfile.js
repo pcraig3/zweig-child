@@ -7,7 +7,6 @@ module.exports = function(grunt) {
         concat: {   
 		    dist: {
 		        src: [
-                    'js/bower_components/page-scroll-to-id/*.js',
                     'js/bower_components/chardin.js/chardinjs.js',
 					'node_modules/sweet-scroll/sweet-scroll.js',
 		            'js/back_to_top.js',

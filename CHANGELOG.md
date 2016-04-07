@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.2.11
+* Swap in (sweet-scroll)[https://www.npmjs.com/package/sweet-scroll] instead of (page-scroll-to-id)[https://github.com/malihu/page-scroll-to-id].
+    * Easing effects are more fun
+* Add autoprefixer as a [postcss](https://github.com/nDmitry/grunt-postcss) task
+
 ### 1.2.10
 * Include a modified version of the parent theme's `style.css` file
     * Save us from loading an extra file with custom fonts
