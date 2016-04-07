@@ -2,47 +2,38 @@ jQuery(function( $ ){
 
 	$(document).ready(function() {
 
-		var offset = 0;
+		const sweetScroll = new SweetScroll({
+			trigger: 'a[href^="#"]',       		// Selector for trigger (must be a valid css selector)
+			header: "#wpadminbar", 				// Selector for fixed header (must be a valid css selector)
+			duration: 650,                 		// Specifies animation duration in integer
+			// delay: 0,                       // Specifies timer for delaying the execution of the scroll in milliseconds
+			easing: "easeOutExpo",         		// Specifies the pattern of easing
+			// offset: 0,                      // Specifies the value to offset the scroll position in pixels
+			// verticalScroll: true,           // Enable the vertical scroll
+			// horizontalScroll: false,        // Enable the horizontal scroll
+			// stopScroll: true,               // When fired wheel or touchstart events to stop scrolling
+			// updateURL: false,               // Update the URL hash on after scroll
+			// preventDefault: true,           // Cancels the container element click event
+			// stopPropagation: true,          // Prevents further propagation of the container element click event in the bubbling phase
+            //
+			// // Callbacks
+			// initialized: null,
+			beforeScroll: function(toScroll, trigger) {
+				if (trigger && trigger.classList.contains("back-to-top__link")) {
+					$(trigger).parent().fadeOut(30);
+					$(trigger).parent().addClass('clicked');
+				}
 
-		var $admin_bar = $('#wpadminbar');
-
-		if ( $admin_bar )
-			offset = $admin_bar.height();
-			
-		/**
-		 * using mahlihu's scroll-to-id plugin
-		 *
-		 * @see  http://manos.malihu.gr/page-scroll-to-id
-		 */
-		$("a[href^='#']").mPageScroll2id({
-    		scrollSpeed: 300,
-    		scrollEasing: "easeInOutQuad",
-    		pageEndSmoothScroll: true,
-    		offset: offset,
-			onStart:function() {
-				// add a 'clicked' class to the back_to_top button for the duration of the animation
-				if(mPS2id.clicked.attr("href") === '#back_to_top') {
-					mPS2id.clicked.parent().fadeOut(30);
-					mPS2id.clicked.parent().addClass('clicked');
+				//if we've clicked the 'search again?' link, clear the search bar and add focus
+				if (trigger && trigger.getAttribute('href') == '#footer') {
+					$('.search-field').val("").focus();
 				}
 			},
-    		onComplete:function() {
-    			//if we've clicked the 'search again?' link, clear the search bar and add focus
-    			if ( mPS2id.target.attr("id") === "footer" )
-        			clear_add_focus_footer_search();
-
-				if(mPS2id.clicked.attr("href") === '#back_to_top') {
-					mPS2id.clicked.parent().removeClass('clicked');
-				}
-    		}
+			// afterScroll: null,
+			// cancelScroll: null,
+			completeScroll: function() {
+				$(".back-to-top__link").parent().removeClass('clicked');
+			}
 		});
-
-		/**
-		 * pretty simple function clears value in footer search bar and adds focus.
-		 */
-		function clear_add_focus_footer_search(){
-
-    		mPS2id.target.find('.search-field').val("").focus();
-		}
 	});
 });
