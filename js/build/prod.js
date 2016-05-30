@@ -230,32 +230,41 @@
 /*!
  * sweet-scroll
  * Modern and the sweet smooth scroll library.
- * 
  * @author tsuyoshiwada
- * @homepage https://github.com/tsuyoshiwada/sweet-scroll
  * @license MIT
- * @version 0.6.0
+ * @version 1.0.2
  */
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global.SweetScroll = factory());
 }(this, function () { 'use strict';
 
-  var babelHelpers = {};
-  babelHelpers.typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+  var cos = Math.cos;
+  var sin = Math.sin;
+  var pow = Math.pow;
+  var abs = Math.abs;
+  var sqrt = Math.sqrt;
+  var asin = Math.asin;
+  var PI = Math.PI;
+  var max = Math.max;
+  var min = Math.min;
+  var round = Math.round;
+
+  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
     return typeof obj;
   } : function (obj) {
     return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj;
   };
 
-  babelHelpers.classCallCheck = function (instance, Constructor) {
+  var classCallCheck = function (instance, Constructor) {
     if (!(instance instanceof Constructor)) {
       throw new TypeError("Cannot call a class as a function");
     }
   };
 
-  babelHelpers.createClass = function () {
+  var createClass = function () {
     function defineProperties(target, props) {
       for (var i = 0; i < props.length; i++) {
         var descriptor = props[i];
@@ -273,9 +282,7 @@
     };
   }();
 
-  babelHelpers;
-
-  var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
+  var MAX_ARRAY_INDEX = pow(2, 53) - 1;
   var classTypeList = ["Boolean", "Number", "String", "Function", "Array", "Object"];
   var classTypes = {};
 
@@ -285,22 +292,10 @@
 
   function getType(obj) {
     if (obj == null) {
-      return obj + "";
+      return "";
     }
-    return (typeof obj === "undefined" ? "undefined" : babelHelpers.typeof(obj)) === "object" || typeof obj === "function" ? classTypes[Object.prototype.toString.call(obj)] || "object" : typeof obj === "undefined" ? "undefined" : babelHelpers.typeof(obj);
-  }
 
-  function isArray(obj) {
-    return Array.isArray(obj);
-  }
-
-  function isArrayLike(obj) {
-    var length = obj == null ? null : obj.length;
-    return isNumber(length) && length >= 0 && length <= MAX_ARRAY_INDEX;
-  }
-
-  function isObject(obj) {
-    return !isArray(obj) && getType(obj) === "object";
+    return (typeof obj === "undefined" ? "undefined" : _typeof(obj)) === "object" || typeof obj === "function" ? classTypes[Object.prototype.toString.call(obj)] || "object" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
   }
 
   function isNumber(obj) {
@@ -315,12 +310,45 @@
     return getType(obj) === "function";
   }
 
+  function isArray(obj) {
+    return Array.isArray(obj);
+  }
+
+  function isArrayLike(obj) {
+    var length = obj == null ? null : obj.length;
+
+    return isNumber(length) && length >= 0 && length <= MAX_ARRAY_INDEX;
+  }
+
   function isNumeric(obj) {
     return !isArray(obj) && obj - parseFloat(obj) + 1 >= 0;
   }
 
+  function isObject(obj) {
+    return !isArray(obj) && getType(obj) === "object";
+  }
+
   function hasProp(obj, key) {
     return obj && obj.hasOwnProperty(key);
+  }
+
+  function each(obj, iterate, context) {
+    if (obj == null) return obj;
+
+    var ctx = context || obj;
+
+    if (isObject(obj)) {
+      for (var key in obj) {
+        if (!hasProp(obj, key)) continue;
+        if (iterate.call(ctx, obj[key], key) === false) break;
+      }
+    } else if (isArrayLike(obj)) {
+      for (var i = 0; i < obj.length; i++) {
+        if (iterate.call(ctx, obj[i], i) === false) break;
+      }
+    }
+
+    return obj;
   }
 
   function merge(obj) {
@@ -333,26 +361,6 @@
         obj[key] = value;
       });
     });
-    return obj;
-  }
-
-  function each(obj, iterate, context) {
-    if (obj == null) return obj;
-
-    context = context || obj;
-
-    if (isObject(obj)) {
-      for (var key in obj) {
-        if (!hasProp(obj, key)) continue;
-        if (iterate.call(context, obj[key], key) === false) break;
-      }
-    } else if (isArrayLike(obj)) {
-      var i = void 0,
-          length = obj.length;
-      for (i = 0; i < length; i++) {
-        if (iterate.call(context, obj[i], i) === false) break;
-      }
-    }
 
     return obj;
   }
@@ -361,24 +369,30 @@
     return str.replace(/\s*/g, "") || "";
   }
 
+  var win = window;
+  var doc = document;
+
   function $(selector) {
     var context = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
 
     if (!selector) return;
-    return (context == null ? document : context).querySelector(selector);
+
+    return (context == null ? doc : context).querySelector(selector);
   }
 
   function $$(selector) {
     var context = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
 
     if (!selector) return;
-    return (context == null ? document : context).querySelectorAll(selector);
+
+    return (context == null ? doc : context).querySelectorAll(selector);
   }
 
   function matches(el, selector) {
-    var matches = (el.document || el.ownerDocument).querySelectorAll(selector);
-    var i = matches.length;
-    while (--i >= 0 && matches.item(i) !== el) {}
+    var results = (el.document || el.ownerDocument).querySelectorAll(selector);
+    var i = results.length;
+    while (--i >= 0 && results.item(i) !== el) {}
+
     return i > -1;
   }
 
@@ -393,7 +407,6 @@
   };
 
   function isRootContainer(el) {
-    var doc = document;
     return el === doc.documentElement || el === doc.body;
   }
 
@@ -404,7 +417,7 @@
     var method = directionMethodMap[direction];
     var elements = selectors instanceof Element ? [selectors] : $$(selectors);
     var scrollables = [];
-    var $div = document.createElement("div");
+    var $div = doc.createElement("div");
 
     for (var i = 0; i < elements.length; i++) {
       var el = elements[i];
@@ -433,32 +446,73 @@
 
   function scrollableFind(selectors, direction) {
     var scrollables = getScrollable(selectors, direction, false);
-    return scrollables.length >= 1 ? scrollables[0] : undefined;
+
+    return scrollables.length >= 1 ? scrollables[0] : null;
   }
 
   function getWindow(el) {
     return el != null && el === el.window ? el : el.nodeType === 9 && el.defaultView;
   }
 
+  function getHeight(el) {
+    return max(el.scrollHeight, el.clientHeight, el.offsetHeight);
+  }
+
+  function getWidth(el) {
+    return max(el.scrollWidth, el.clientWidth, el.offsetWidth);
+  }
+
+  function getSize(el) {
+    return {
+      width: getWidth(el),
+      height: getHeight(el)
+    };
+  }
+
+  function getDocumentSize() {
+    return {
+      width: max(getWidth(doc.body), getWidth(doc.documentElement)),
+      height: max(getHeight(doc.body), getHeight(doc.documentElement))
+    };
+  }
+
+  function getViewportAndElementSizes(el) {
+    if (isRootContainer(el)) {
+      return {
+        viewport: {
+          width: min(win.innerWidth, doc.documentElement.clientWidth),
+          height: win.innerHeight
+        },
+        size: getDocumentSize()
+      };
+    }
+
+    return {
+      viewport: {
+        width: el.clientWidth,
+        height: el.clientHeight
+      },
+      size: getSize(el)
+    };
+  }
+
   function getScroll(el) {
     var direction = arguments.length <= 1 || arguments[1] === undefined ? "y" : arguments[1];
 
-    var method = directionMethodMap[direction];
-    var prop = directionPropMap[direction];
-    var win = getWindow(el);
-    return win ? win[prop] : el[method];
+    var currentWindow = getWindow(el);
+
+    return currentWindow ? currentWindow[directionPropMap[direction]] : el[directionMethodMap[direction]];
   }
 
   function setScroll(el, offset) {
     var direction = arguments.length <= 2 || arguments[2] === undefined ? "y" : arguments[2];
 
-    var method = directionMethodMap[direction];
-    var win = getWindow(el);
+    var currentWindow = getWindow(el);
     var top = direction === "y";
-    if (win) {
-      win.scrollTo(!top ? offset : win.pageXOffset, top ? offset : win.pageYOffset);
+    if (currentWindow) {
+      currentWindow.scrollTo(!top ? offset : currentWindow[directionPropMap.x], top ? offset : currentWindow[directionPropMap.y]);
     } else {
-      el[method] = offset;
+      el[directionMethodMap[direction]] = offset;
     }
   }
 
@@ -468,27 +522,41 @@
     if (!el || el && !el.getClientRects().length) {
       return { top: 0, left: 0 };
     }
+
     var rect = el.getBoundingClientRect();
+
     if (rect.width || rect.height) {
       var scroll = {};
-      var ctx = void 0;
+      var ctx = null;
       if (context == null || isRootContainer(context)) {
         ctx = el.ownerDocument.documentElement;
-        scroll.top = window.pageYOffset;
-        scroll.left = window.pageXOffset;
+        scroll.top = win.pageYOffset;
+        scroll.left = win.pageXOffset;
       } else {
         ctx = context;
         var ctxRect = ctx.getBoundingClientRect();
         scroll.top = ctxRect.top * -1 + ctx.scrollTop;
         scroll.left = ctxRect.left * -1 + ctx.scrollLeft;
       }
+
       return {
         top: rect.top + scroll.top - ctx.clientTop,
         left: rect.left + scroll.left - ctx.clientLeft
       };
     }
+
     return rect;
   }
+
+  // @link https://github.com/Modernizr/Modernizr
+  var history = function () {
+    var ua = navigator.userAgent;
+    if ((ua.indexOf("Android 2.") !== -1 || ua.indexOf("Android 4.0") !== -1) && ua.indexOf("Mobile Safari") !== -1 && ua.indexOf("Chrome") === -1 && ua.indexOf("Windows Phone") === -1) {
+      return false;
+    }
+
+    return window.history && "pushState" in window.history && window.location.protocol !== "file:";
+  }();
 
   function addEvent(el, event, listener) {
     var events = event.split(",");
@@ -503,15 +571,6 @@
       el.removeEventListener(eventName.trim(), listener, false);
     });
   }
-
-  var math = Math;
-  var mathCos = math.cos;
-  var mathSin = math.sin;
-  var mathPow = math.pow;
-  var mathAbs = math.abs;
-  var mathSqrt = math.sqrt;
-  var mathAsin = math.asin;
-  var PI = math.PI;
 
   function linear(p) {
     return p;
@@ -578,96 +637,96 @@
   }
 
   function InSine(x, t, b, c, d) {
-    return -c * mathCos(t / d * (PI / 2)) + c + b;
+    return -c * cos(t / d * (PI / 2)) + c + b;
   }
 
   function OutSine(x, t, b, c, d) {
-    return c * mathSin(t / d * (PI / 2)) + b;
+    return c * sin(t / d * (PI / 2)) + b;
   }
 
   function InOutSine(x, t, b, c, d) {
-    return -c / 2 * (mathCos(PI * t / d) - 1) + b;
+    return -c / 2 * (cos(PI * t / d) - 1) + b;
   }
 
   function InExpo(x, t, b, c, d) {
-    return t === 0 ? b : c * mathPow(2, 10 * (t / d - 1)) + b;
+    return t === 0 ? b : c * pow(2, 10 * (t / d - 1)) + b;
   }
 
   function OutExpo(x, t, b, c, d) {
-    return t === d ? b + c : c * (-mathPow(2, -10 * t / d) + 1) + b;
+    return t === d ? b + c : c * (-pow(2, -10 * t / d) + 1) + b;
   }
 
   function InOutExpo(x, t, b, c, d) {
     if (t === 0) return b;
     if (t === d) return b + c;
-    if ((t /= d / 2) < 1) return c / 2 * mathPow(2, 10 * (t - 1)) + b;
-    return c / 2 * (-mathPow(2, -10 * --t) + 2) + b;
+    if ((t /= d / 2) < 1) return c / 2 * pow(2, 10 * (t - 1)) + b;
+    return c / 2 * (-pow(2, -10 * --t) + 2) + b;
   }
 
   function InCirc(x, t, b, c, d) {
-    return -c * (mathSqrt(1 - (t /= d) * t) - 1) + b;
+    return -c * (sqrt(1 - (t /= d) * t) - 1) + b;
   }
 
   function OutCirc(x, t, b, c, d) {
-    return c * mathSqrt(1 - (t = t / d - 1) * t) + b;
+    return c * sqrt(1 - (t = t / d - 1) * t) + b;
   }
 
   function InOutCirc(x, t, b, c, d) {
     if ((t /= d / 2) < 1) {
-      return -c / 2 * (mathSqrt(1 - t * t) - 1) + b;
+      return -c / 2 * (sqrt(1 - t * t) - 1) + b;
     }
-    return c / 2 * (mathSqrt(1 - (t -= 2) * t) + 1) + b;
+    return c / 2 * (sqrt(1 - (t -= 2) * t) + 1) + b;
   }
 
   function InElastic(x, t, b, c, d) {
-    var s = 1.70158,
-        p = 0,
-        a = c;
+    var s = 1.70158;
+    var p = 0;
+    var a = c;
     if (t === 0) return b;
     if ((t /= d) === 1) return b + c;
     if (!p) p = d * .3;
-    if (a < mathAbs(c)) {
+    if (a < abs(c)) {
       a = c;
       s = p / 4;
     } else {
-      s = p / (2 * PI) * mathAsin(c / a);
+      s = p / (2 * PI) * asin(c / a);
     }
-    return -(a * mathPow(2, 10 * (t -= 1)) * mathSin((t * d - s) * (2 * PI) / p)) + b;
+    return -(a * pow(2, 10 * (t -= 1)) * sin((t * d - s) * (2 * PI) / p)) + b;
   }
 
   function OutElastic(x, t, b, c, d) {
-    var s = 1.70158,
-        p = 0,
-        a = c;
+    var s = 1.70158;
+    var p = 0;
+    var a = c;
     if (t === 0) return b;
     if ((t /= d) === 1) return b + c;
     if (!p) p = d * .3;
-    if (a < mathAbs(c)) {
+    if (a < abs(c)) {
       a = c;
       s = p / 4;
     } else {
-      s = p / (2 * PI) * mathAsin(c / a);
+      s = p / (2 * PI) * asin(c / a);
     }
-    return a * mathPow(2, -10 * t) * mathSin((t * d - s) * (2 * PI) / p) + c + b;
+    return a * pow(2, -10 * t) * sin((t * d - s) * (2 * PI) / p) + c + b;
   }
 
   function InOutElastic(x, t, b, c, d) {
-    var s = 1.70158,
-        p = 0,
-        a = c;
+    var s = 1.70158;
+    var p = 0;
+    var a = c;
     if (t === 0) return b;
     if ((t /= d / 2) === 2) return b + c;
     if (!p) p = d * (.3 * 1.5);
-    if (a < mathAbs(c)) {
+    if (a < abs(c)) {
       a = c;
       s = p / 4;
     } else {
-      s = p / (2 * PI) * mathAsin(c / a);
+      s = p / (2 * PI) * asin(c / a);
     }
     if (t < 1) {
-      return -.5 * (a * mathPow(2, 10 * (t -= 1)) * mathSin((t * d - s) * (2 * PI) / p)) + b;
+      return -.5 * (a * pow(2, 10 * (t -= 1)) * sin((t * d - s) * (2 * PI) / p)) + b;
     }
-    return a * mathPow(2, -10 * (t -= 1)) * mathSin((t * d - s) * (2 * PI) / p) * .5 + c + b;
+    return a * pow(2, -10 * (t -= 1)) * sin((t * d - s) * (2 * PI) / p) * .5 + c + b;
   }
 
   function InBack(x, t, b, c, d) {
@@ -691,10 +750,6 @@
     return c / 2 * ((t -= 2) * t * (((s *= 1.525) + 1) * t + s) + 2) + b;
   }
 
-  function InBounce(x, t, b, c, d) {
-    return c - OutBounce(x, d - t, 0, c, d) + b;
-  }
-
   function OutBounce(x, t, b, c, d) {
     if ((t /= d) < 1 / 2.75) {
       return c * (7.5625 * t * t) + b;
@@ -705,6 +760,10 @@
     } else {
       return c * (7.5625 * (t -= 2.625 / 2.75) * t + .984375) + b;
     }
+  }
+
+  function InBounce(x, t, b, c, d) {
+    return c - OutBounce(x, d - t, 0, c, d) + b;
   }
 
   function InOutBounce(x, t, b, c, d) {
@@ -743,46 +802,64 @@ var Easing = Object.freeze({
     InBack: InBack,
     OutBack: OutBack,
     InOutBack: InOutBack,
-    InBounce: InBounce,
     OutBounce: OutBounce,
+    InBounce: InBounce,
     InOutBounce: InOutBounce
   });
 
+  var vendors = ["ms", "moz", "webkit"];
   var lastTime = 0;
 
-  var raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
-    var currentTime = Date.now();
-    var timeToCall = Math.max(0, 16 - (currentTime - lastTime));
-    var id = window.setTimeout(function () {
-      callback(currentTime + timeToCall);
-    }, timeToCall);
-    lastTime = currentTime + timeToCall;
-    return id;
-  };
+  var raf = win.requestAnimationFrame;
+  var caf = win.cancelAnimationFrame;
+
+  for (var x = 0; x < vendors.length && !raf; ++x) {
+    raf = win[vendors[x] + "RequestAnimationFrame"];
+    caf = win[vendors[x] + "CancelAnimationFrame"] || win[vendors[x] + "CancelRequestAnimationFrame"];
+  }
+
+  if (!raf) {
+    raf = function raf(callback) {
+      var currentTime = Date.now();
+      var timeToCall = max(0, 16 - (currentTime - lastTime));
+      var id = setTimeout(function () {
+        callback(currentTime + timeToCall);
+      }, timeToCall);
+
+      lastTime = currentTime + timeToCall;
+
+      return id;
+    };
+  }
+
+  if (!caf) {
+    caf = function caf(id) {
+      clearTimeout(id);
+    };
+  }
 
   var ScrollTween = function () {
     function ScrollTween(el) {
-      babelHelpers.classCallCheck(this, ScrollTween);
+      classCallCheck(this, ScrollTween);
 
       this.el = el;
       this.props = {};
+      this.options = {};
       this.progress = false;
+      this.easing = null;
       this.startTime = null;
+      this.rafId = null;
     }
 
-    babelHelpers.createClass(ScrollTween, [{
+    createClass(ScrollTween, [{
       key: "run",
-      value: function run(x, y, duration, delay, easing) {
+      value: function run(x, y, options) {
         var _this = this;
-
-        var callback = arguments.length <= 5 || arguments[5] === undefined ? function () {} : arguments[5];
 
         if (this.progress) return;
         this.props = { x: x, y: y };
-        this.duration = duration;
-        this.delay = delay;
-        this.easing = easing.replace("ease", "");
-        this.callback = callback;
+        this.options = options;
+        this.easing = isFunction(options.easing) ? options.easing : Easing[options.easing.replace("ease", "")];
         this.progress = true;
 
         setTimeout(function () {
@@ -790,27 +867,29 @@ var Easing = Object.freeze({
             x: getScroll(_this.el, "x"),
             y: getScroll(_this.el, "y")
           };
-          raf(function (time) {
+          _this.rafId = raf(function (time) {
             return _this._loop(time);
           });
-        }, delay);
+        }, this.options.delay);
       }
     }, {
       key: "stop",
       value: function stop() {
         var gotoEnd = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
+        var complete = this.options.complete;
 
         this.startTime = null;
         this.progress = false;
+        caf(this.rafId);
 
         if (gotoEnd) {
           setScroll(this.el, this.props.x, "x");
           setScroll(this.el, this.props.y, "y");
         }
 
-        if (isFunction(this.callback)) {
-          this.callback();
-          this.callback = null;
+        if (isFunction(complete)) {
+          complete.call(this);
+          this.options.complete = null;
         }
       }
     }, {
@@ -824,19 +903,22 @@ var Easing = Object.freeze({
 
         if (!this.progress) {
           this.stop(false);
+
           return;
         }
 
         var el = this.el;
         var props = this.props;
-        var duration = this.duration;
+        var options = this.options;
         var startTime = this.startTime;
         var startProps = this.startProps;
+        var easing = this.easing;
+        var duration = options.duration;
+        var step = options.step;
 
         var toProps = {};
-        var easing = Easing[this.easing];
         var timeElapsed = time - startTime;
-        var t = Math.min(1, Math.max(timeElapsed / duration, 0));
+        var t = min(1, max(timeElapsed / duration, 0));
 
         each(props, function (value, key) {
           var initialValue = startProps[key];
@@ -844,24 +926,36 @@ var Easing = Object.freeze({
           if (delta === 0) return true;
 
           var val = easing(t, duration * t, 0, 1, duration);
-          toProps[key] = Math.round(initialValue + delta * val);
+          toProps[key] = round(initialValue + delta * val);
         });
 
         each(toProps, function (value, key) {
           setScroll(el, value, key);
         });
 
-        timeElapsed <= duration ? raf(function (time) {
-          return _this2._loop(time);
-        }) : this.stop(true);
+        if (timeElapsed <= duration) {
+          step.call(this, t, toProps);
+          this.rafId = raf(function (currentTime) {
+            return _this2._loop(currentTime);
+          });
+        } else {
+          this.stop(true);
+        }
       }
     }]);
     return ScrollTween;
   }();
 
-  var win = window;
-  var doc = document;
-  var WHEEL_EVENT = "onwheel" in doc ? "wheel" : "onmousewheel" in doc ? "mousewheel" : "DOMMouseScroll";
+  var WHEEL_EVENT = function () {
+    if ("onwheel" in doc) {
+      return "wheel";
+    } else if ("onmousewheel" in doc) {
+      return "mousewheel";
+    } else {
+      return "DOMMouseScroll";
+    }
+  }();
+
   var CONTAINER_STOP_EVENTS = WHEEL_EVENT + ", touchstart, touchmove";
   var DOM_CONTENT_LOADED = "DOMContentLoaded";
   var isDomContentLoaded = false;
@@ -870,21 +964,15 @@ var Easing = Object.freeze({
     isDomContentLoaded = true;
   });
 
-  // @link https://github.com/Modernizr/Modernizr
-  var enablePushState = function () {
-    var ua = navigator.userAgent;
-    if ((ua.indexOf("Android 2.") !== -1 || ua.indexOf("Android 4.0") !== -1) && ua.indexOf("Mobile Safari") !== -1 && ua.indexOf("Chrome") === -1 && ua.indexOf("Windows Phone") === -1) {
-      return false;
-    }
-    return window.history && "pushState" in window.history && window.location.protocol !== "file:";
-  }();
-
   var SweetScroll = function () {
+
+    /* eslint-enable max-len */
 
     /**
      * SweetScroll constructor
-     * @param {Object}
-     * @param {String} | {Element}
+     * @constructor
+     * @param {Object} options
+     * @param {String | Element} container
      */
 
     function SweetScroll() {
@@ -892,9 +980,10 @@ var Easing = Object.freeze({
 
       var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
       var container = arguments.length <= 1 || arguments[1] === undefined ? "body, html" : arguments[1];
-      babelHelpers.classCallCheck(this, SweetScroll);
+      classCallCheck(this, SweetScroll);
 
       var params = merge({}, SweetScroll.defaults, options);
+
       this.options = params;
       this.getContainer(container, function (target) {
         _this.container = target;
@@ -903,23 +992,23 @@ var Easing = Object.freeze({
         _this._trigger = null;
         _this._shouldCallCancelScroll = false;
         _this.bindContainerClick();
-        _this.initialized();
-        _this.hook(params.initialized);
+        _this.hook(params, "initialized");
       });
     }
 
     /**
      * Scroll animation to the specified position
-     * @param {Any}
-     * @param {Object}
-     * @return {Void}
+     * @param {*} distance
+     * @param {Object} options
+     * @return {void}
      */
 
 
     // Default options
+    /* eslint-disable max-len */
 
 
-    babelHelpers.createClass(SweetScroll, [{
+    createClass(SweetScroll, [{
       key: "to",
       value: function to(distance) {
         var _this2 = this;
@@ -929,6 +1018,10 @@ var Easing = Object.freeze({
         var header = this.header;
 
         var params = merge({}, this.options, options);
+
+        // Temporary options
+        this._options = params;
+
         var offset = this.parseCoodinate(params.offset);
         var trigger = this._trigger;
         var scroll = this.parseCoodinate(distance);
@@ -951,7 +1044,10 @@ var Easing = Object.freeze({
           hash = /^#/.test(distance) ? distance : null;
 
           if (distance === "#") {
-            scroll = { top: 0, left: 0 };
+            scroll = {
+              top: 0,
+              left: 0
+            };
           } else {
             var target = $(distance);
             var targetOffset = getOffset(target, container);
@@ -970,62 +1066,57 @@ var Easing = Object.freeze({
 
         // If the header is present apply the height
         if (header) {
-          scroll.top = Math.max(0, scroll.top - this.header.clientHeight);
+          scroll.top = max(0, scroll.top - getSize(header).height);
         }
 
         // Determine the final scroll coordinates
-        var frameSize = void 0;
-        var size = void 0;
-        if (isRootContainer(container)) {
-          frameSize = { width: win.innerWidth, height: win.innerHeight };
-          size = { width: doc.body.scrollWidth, height: doc.body.scrollHeight };
-        } else {
-          frameSize = { width: container.clientWidth, height: container.clientHeight };
-          size = { width: container.scrollWidth, height: container.scrollHeight };
-        }
+
+        var _Dom$getViewportAndEl = getViewportAndElementSizes(container);
+
+        var viewport = _Dom$getViewportAndEl.viewport;
+        var size = _Dom$getViewportAndEl.size;
 
         // Call `beforeScroll`
         // Stop scrolling when it returns false
-        if (this.hook(params.beforeScroll, scroll, trigger) === false || this.beforeScroll(scroll, trigger) === false) {
+
+        if (this.hook(params, "beforeScroll", scroll, trigger) === false) {
           return;
         }
 
         // Adjustment of the maximum value
-        // vertical
-        if (params.verticalScroll) {
-          scroll.top = Math.max(0, Math.min(size.height - frameSize.height, scroll.top));
-        } else {
-          scroll.top = getScroll(container, "y");
-        }
-
-        // horizontal
-        if (params.horizontalScroll) {
-          scroll.left = Math.max(0, Math.min(size.width - frameSize.width, scroll.left));
-        } else {
-          scroll.left = getScroll(container, "x");
-        }
+        scroll.top = params.verticalScroll ? max(0, min(size.height - viewport.height, scroll.top)) : getScroll(container, "y");
+        scroll.left = params.horizontalScroll ? max(0, min(size.width - viewport.width, scroll.left)) : getScroll(container, "x");
 
         // Run the animation!!
-        this.tween.run(scroll.left, scroll.top, params.duration, params.delay, params.easing, function () {
-          // Update URL
-          if (hash != null && hash !== window.location.hash && params.updateURL) {
-            _this2.updateURLHash(hash);
+        this.tween.run(scroll.left, scroll.top, {
+          duration: params.duration,
+          delay: params.delay,
+          easing: params.easing,
+          complete: function complete() {
+            // Update URL
+            if (hash != null && hash !== window.location.hash) {
+              _this2.updateURLHash(hash, params.updateURL);
+            }
+
+            // Unbind the scroll stop events, And call `afterScroll` or `cancelScroll`
+            _this2.unbindContainerStop();
+
+            // Remove the temporary options
+            _this2._options = null;
+
+            // Call `cancelScroll` or `afterScroll`
+            if (_this2._shouldCallCancelScroll) {
+              _this2.hook(params, "cancelScroll");
+            } else {
+              _this2.hook(params, "afterScroll", scroll, trigger);
+            }
+
+            // Call `completeScroll`
+            _this2.hook(params, "completeScroll", _this2._shouldCallCancelScroll);
+          },
+          step: function step(currentTime, props) {
+            _this2.hook(params, "stepScroll", currentTime, props);
           }
-
-          // Unbind the scroll stop events, And call `afterScroll` or `cancelScroll`
-          _this2.unbindContainerStop();
-
-          if (_this2._shouldCallCancelScroll) {
-            _this2.hook(params.cancelScroll);
-            _this2.cancelScroll();
-          } else {
-            _this2.hook(params.afterScroll, scroll, trigger);
-            _this2.afterScroll(scroll, trigger);
-          }
-
-          // Call `completeScroll`
-          _this2.hook(params.completeScroll, _this2._shouldCallCancelScroll);
-          _this2.completeScroll(_this2._shouldCallCancelScroll);
         });
 
         // Bind the scroll stop events
@@ -1034,9 +1125,9 @@ var Easing = Object.freeze({
 
       /**
        * Scroll animation to the specified top position
-       * @param {Any}
-       * @param {Object}
-       * @return {Void}
+       * @param {*} distance
+       * @param {Object} options
+       * @return {void}
        */
 
     }, {
@@ -1052,9 +1143,9 @@ var Easing = Object.freeze({
 
       /**
        * Scroll animation to the specified left position
-       * @param {Any}
-       * @param {Object}
-       * @return {Void}
+       * @param {*} distance
+       * @param {Object} options
+       * @return {void}
        */
 
     }, {
@@ -1070,26 +1161,26 @@ var Easing = Object.freeze({
 
       /**
        * Scroll animation to the specified element
-       * @param {Element}
-       * @param {Object}
-       * @return {Void}
+       * @param {Element} el
+       * @param {Object} options
+       * @return {void}
        */
 
     }, {
       key: "toElement",
-      value: function toElement($el) {
+      value: function toElement(el) {
         var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
-        if ($el instanceof Element) {
-          var offset = getOffset($el, this.container);
+        if (el instanceof Element) {
+          var offset = getOffset(el, this.container);
           this.to(offset, merge({}, options));
         }
       }
 
       /**
        * Stop the current animation
-       * @param {Boolean}
-       * @return {Void}
+       * @param {Boolean} gotoEnd
+       * @return {void}
        */
 
     }, {
@@ -1105,8 +1196,8 @@ var Easing = Object.freeze({
 
       /**
        * Update the instance
-       * @param {Object}
-       * @return {Void}
+       * @param {Object} options
+       * @return {void}
        */
 
     }, {
@@ -1124,8 +1215,7 @@ var Easing = Object.freeze({
 
       /**
        * Destroy SweetScroll instance
-       * @param {Boolean}
-       * @return {Void}
+       * @return {void}
        */
 
     }, {
@@ -1141,7 +1231,7 @@ var Easing = Object.freeze({
 
       /**
        * Called at after of the initialize.
-       * @return {Void}
+       * @return {void}
        */
 
     }, {
@@ -1150,10 +1240,11 @@ var Easing = Object.freeze({
 
       /**
        * Called at before of the scroll.
-       * @param {Object}
-       * @param {Element}
+       * @param {Object} toScroll
+       * @param {Element} trigger
        * @return {Boolean}
        */
+      /* eslint-disable no-unused-vars */
 
     }, {
       key: "beforeScroll",
@@ -1161,9 +1252,11 @@ var Easing = Object.freeze({
         return true;
       }
 
+      /* eslint-enable no-unused-vars */
+
       /**
        * Called at cancel of the scroll.
-       * @return {Void}
+       * @return {void}
        */
 
     }, {
@@ -1172,35 +1265,55 @@ var Easing = Object.freeze({
 
       /**
        * Called at after of the scroll.
-       * @param {Object}
-       * @param {Element}
-       * @return {Void}
+       * @param {Object} toScroll
+       * @param {Element} trigger
+       * @return {void}
        */
+      /* eslint-disable no-unused-vars */
 
     }, {
       key: "afterScroll",
       value: function afterScroll(toScroll, trigger) {}
 
+      /* eslint-enable no-unused-vars */
+
       /**
        * Called at complete of the scroll.
-       * @param {Boolean}
-       * @return {Void}
+       * @param {Boolean} isCancel
+       * @return {void}
        */
+      /* eslint-disable no-unused-vars */
 
     }, {
       key: "completeScroll",
       value: function completeScroll(isCancel) {}
 
+      /* eslint-enable no-unused-vars */
+
+      /**
+       * Called at each animation frame of the scroll.
+       * @param {Float} currentTime
+       * @param {Object} props
+       * @return {void}
+       */
+      /* eslint-disable no-unused-vars */
+
+    }, {
+      key: "stepScroll",
+      value: function stepScroll(currentTime, props) {}
+
+      /* eslint-enable no-unused-vars */
+
       /**
        * Parse the value of coordinate
-       * @param {Any}
+       * @param {*} coodinate
        * @return {Object}
        */
 
     }, {
       key: "parseCoodinate",
       value: function parseCoodinate(coodinate) {
-        var enableTop = this.options.verticalScroll;
+        var enableTop = this._options ? this._options.verticalScroll : this.options.verticalScroll;
         var scroll = { top: 0, left: 0 };
 
         // Object
@@ -1209,55 +1322,55 @@ var Easing = Object.freeze({
 
           // Array
         } else if (isArray(coodinate)) {
-            if (coodinate.length === 2) {
-              scroll.top = coodinate[0];
-              scroll.left = coodinate[1];
+          if (coodinate.length === 2) {
+            scroll.top = coodinate[0];
+            scroll.left = coodinate[1];
+          } else {
+            scroll.top = enableTop ? coodinate[0] : 0;
+            scroll.left = !enableTop ? coodinate[0] : 0;
+          }
+
+          // Number
+        } else if (isNumeric(coodinate)) {
+          scroll.top = enableTop ? coodinate : 0;
+          scroll.left = !enableTop ? coodinate : 0;
+
+          // String
+        } else if (isString(coodinate)) {
+          var trimedCoodinate = removeSpaces(coodinate);
+
+          // "{n},{n}" (Array like syntax)
+          if (/^\d+,\d+$/.test(trimedCoodinate)) {
+            trimedCoodinate = trimedCoodinate.split(",");
+            scroll.top = trimedCoodinate[0];
+            scroll.left = trimedCoodinate[1];
+
+            // "top:{n}, left:{n}" (Object like syntax)
+          } else if (/^(top|left):\d+,?(?:(top|left):\d+)?$/.test(trimedCoodinate)) {
+            var top = trimedCoodinate.match(/top:(\d+)/);
+            var left = trimedCoodinate.match(/left:(\d+)/);
+            scroll.top = top ? top[1] : 0;
+            scroll.left = left ? left[1] : 0;
+
+            // "+={n}", "-={n}" (Relative position)
+          } else if (this.container && /^(\+|-)=(\d+)$/.test(trimedCoodinate)) {
+            var current = getScroll(this.container, enableTop ? "y" : "x");
+            var results = trimedCoodinate.match(/^(\+|-)=(\d+)$/);
+            var op = results[1];
+            var value = parseInt(results[2], 10);
+            if (op === "+") {
+              scroll.top = enableTop ? current + value : 0;
+              scroll.left = !enableTop ? current + value : 0;
             } else {
-              scroll.top = enableTop ? coodinate[0] : 0;
-              scroll.left = !enableTop ? coodinate[0] : 0;
+              scroll.top = enableTop ? current - value : 0;
+              scroll.left = !enableTop ? current - value : 0;
             }
-
-            // Number
-          } else if (isNumeric(coodinate)) {
-              scroll.top = enableTop ? coodinate : 0;
-              scroll.left = !enableTop ? coodinate : 0;
-
-              // String
-            } else if (isString(coodinate)) {
-                coodinate = removeSpaces(coodinate);
-
-                // "{n},{n}" (Array like syntax)
-                if (/^\d+,\d+$/.test(coodinate)) {
-                  coodinate = coodinate.split(",");
-                  scroll.top = coodinate[0];
-                  scroll.left = coodinate[1];
-
-                  // "top:{n}, left:{n}" (Object like syntax)
-                } else if (/^(top|left):\d+,?(?:(top|left):\d+)?$/.test(coodinate)) {
-                    var top = coodinate.match(/top:(\d+)/);
-                    var left = coodinate.match(/left:(\d+)/);
-                    scroll.top = top ? top[1] : 0;
-                    scroll.left = left ? left[1] : 0;
-
-                    // "+={n}", "-={n}" (Relative position)
-                  } else if (this.container && /^(\+|-)=(\d+)$/.test(coodinate)) {
-                      var current = getScroll(this.container, enableTop ? "y" : "x");
-                      var _matches = coodinate.match(/^(\+|-)\=(\d+)$/);
-                      var op = _matches[1];
-                      var value = parseInt(_matches[2], 10);
-                      if (op === "+") {
-                        scroll.top = enableTop ? current + value : 0;
-                        scroll.left = !enableTop ? current + value : 0;
-                      } else {
-                        scroll.top = enableTop ? current - value : 0;
-                        scroll.left = !enableTop ? current - value : 0;
-                      }
-                    } else {
-                      return null;
-                    }
-              } else {
-                return null;
-              }
+          } else {
+            return null;
+          }
+        } else {
+          return null;
+        }
 
         scroll.top = parseInt(scroll.top, 10);
         scroll.left = parseInt(scroll.left, 10);
@@ -1267,23 +1380,23 @@ var Easing = Object.freeze({
 
       /**
        * Update the Hash of the URL.
-       * @param {String}
-       * @return {Void}
+       * @param {String} hash
+       * @param {Boolean | String} historyType
+       * @return {void}
        */
 
     }, {
       key: "updateURLHash",
-      value: function updateURLHash(hash) {
-        if (enablePushState) {
-          window.history.pushState(null, null, hash);
-        }
+      value: function updateURLHash(hash, historyType) {
+        if (!history || !historyType) return;
+        window.history[historyType === "replace" ? "replaceState" : "pushState"](null, null, hash);
       }
 
       /**
        * Get the container for the scroll, depending on the options.
-       * @param {String} | {Element}
-       * @param {Function}
-       * @return {Void}
+       * @param {String | Element} selector
+       * @param {Function} callback
+       * @return {void}
        * @private
        */
 
@@ -1296,7 +1409,7 @@ var Easing = Object.freeze({
         var verticalScroll = _options.verticalScroll;
         var horizontalScroll = _options.horizontalScroll;
 
-        var container = void 0;
+        var container = null;
 
         if (verticalScroll) {
           container = scrollableFind(selector, "y");
@@ -1307,9 +1420,21 @@ var Easing = Object.freeze({
         }
 
         if (!container && !isDomContentLoaded) {
-          addEvent(doc, DOM_CONTENT_LOADED, function () {
-            _this3.getContainer(selector, callback);
-          });
+          (function () {
+            var isCompleted = false;
+
+            addEvent(doc, DOM_CONTENT_LOADED, function () {
+              isCompleted = true;
+              _this3.getContainer(selector, callback);
+            });
+
+            // Fallback for DOMContentLoaded
+            addEvent(win, "load", function () {
+              if (!isCompleted) {
+                _this3.getContainer(selector, callback);
+              }
+            });
+          })();
         } else {
           callback.call(this, container);
         }
@@ -1317,7 +1442,7 @@ var Easing = Object.freeze({
 
       /**
        * Bind a click event to the container
-       * @return {Void}
+       * @return {void}
        * @private
        */
 
@@ -1333,7 +1458,7 @@ var Easing = Object.freeze({
 
       /**
        * Unbind a click event to the container
-       * @return {Void}
+       * @return {void}
        * @private
        */
 
@@ -1349,7 +1474,7 @@ var Easing = Object.freeze({
 
       /**
        * Bind the scroll stop of events
-       * @return {Void}
+       * @return {void}
        * @private
        */
 
@@ -1365,7 +1490,7 @@ var Easing = Object.freeze({
 
       /**
        * Unbind the scroll stop of events
-       * @return {Void}
+       * @return {void}
        * @private
        */
 
@@ -1381,35 +1506,45 @@ var Easing = Object.freeze({
 
       /**
        * Call the specified callback
-       * @param {Function}
-       * @param {...Any}
-       * @return {Void}
+       * @param {Object} options
+       * @param {String} type
+       * @param {...*} args
+       * @return {void}
        * @private
        */
 
     }, {
       key: "hook",
-      value: function hook(callback) {
-        if (isFunction(callback)) {
-          for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-            args[_key - 1] = arguments[_key];
-          }
+      value: function hook(options, type) {
+        var callback = options[type];
 
-          return callback.apply(this, args);
+        // callback
+
+        for (var _len = arguments.length, args = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+          args[_key - 2] = arguments[_key];
         }
+
+        if (isFunction(callback)) {
+          var result = callback.apply(this, args);
+          if (typeof result === "undefined") return result;
+        }
+
+        // method
+        return this[type].apply(this, args);
       }
 
       /**
        * Handling of scroll stop event
-       * @param {Event}
-       * @return {Void}
+       * @param {Event} e
+       * @return {void}
        * @private
        */
 
     }, {
       key: "handleStopScroll",
       value: function handleStopScroll(e) {
-        if (this.options.stopScroll) {
+        var stopScroll = this._options ? this._options.stopScroll : this.options.stopScroll;
+        if (stopScroll) {
           this.stop();
         } else {
           e.preventDefault();
@@ -1418,8 +1553,8 @@ var Easing = Object.freeze({
 
       /**
        * Handling of container click event
-       * @param {Event}
-       * @return {Void}
+       * @param {Event} e
+       * @return {void}
        * @private
        */
 
@@ -1457,7 +1592,7 @@ var Easing = Object.freeze({
 
       /**
        * Parse the data-scroll-options attribute
-       * @param {Element}
+       * @param {Element} el
        * @return {Object}
        * @private
        */
@@ -1466,6 +1601,7 @@ var Easing = Object.freeze({
       key: "parseDataOptions",
       value: function parseDataOptions(el) {
         var options = el.getAttribute("data-scroll-options");
+
         return options ? JSON.parse(options) : {};
       }
     }]);
@@ -1485,7 +1621,7 @@ var Easing = Object.freeze({
     verticalScroll: true, // Enable the vertical scroll
     horizontalScroll: false, // Enable the horizontal scroll
     stopScroll: true, // When fired wheel or touchstart events to stop scrolling
-    updateURL: false, // Update the URL hash on after scroll
+    updateURL: false, // Update the URL hash on after scroll (true | false | "push" | "replace")
     preventDefault: true, // Cancels the container element click event
     stopPropagation: true, // Prevents further propagation of the container element click event in the bubbling phase
 
@@ -1494,7 +1630,8 @@ var Easing = Object.freeze({
     beforeScroll: null,
     afterScroll: null,
     cancelScroll: null,
-    completeScroll: null
+    completeScroll: null,
+    stepScroll: null
   };
 
   return SweetScroll;
