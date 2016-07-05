@@ -1,6 +1,6 @@
 {
   "name": "zwieg-child",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "new theme from zweig theme",
   "private": true,
   "devDependencies": {

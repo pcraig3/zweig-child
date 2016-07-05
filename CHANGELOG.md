@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.2.12
+* Fix accidentally enormous CSS horizontal padding for bottom menu item links on zoomed-out screens (or large screens in general)
+* Update some npm dev dependencies.  Whipped through afterwards and it seems like everything's fine.
+
 ### 1.2.11
 * Swap in (sweet-scroll)[https://www.npmjs.com/package/sweet-scroll] instead of (page-scroll-to-id)[https://github.com/malihu/page-scroll-to-id].
     * Easing effects are more fun
