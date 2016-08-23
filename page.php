@@ -1,10 +1,4 @@
-<?php get_header(); 
-
-/* conditional switch based on whether or not this page is a multi-section page */
-if ( get_field( 'acf_checkboxes', get_the_ID() ) !== false )
-	get_template_part('loop','sections'); 
-
-else {
+<?php get_header();
 
 ob_start();
 
@@ -30,7 +24,5 @@ ob_start();
 $html_string = ob_get_clean();
 
 echo do_shortcode( "[section_skeleton section_header_classes='full-width' back_to_top='true' post_type='" . $post->post_type . "'] " . $html_string . '[/section_skeleton]');
-
-} //end of initial 'if' loop
 
 get_footer(); ?>
