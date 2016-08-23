@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.3.0
+* Removed the One Page Sections plugin, finally. [More here](https://github.com/pcraig3/zweig-child/commit/5da24f0a8e99ab111c741a31daa20579fa7a8bde)
+  * While there were a bunch of changes to do in the WordPress backend, this app didn't get so many.
+  * Main thing was creating a new template that works with the page whose slug is `home`.
+* This means no more zipping down on the homepage.  'Projects' is a pageload away.
+
 ### 1.2.12
 * Fix accidentally enormous CSS horizontal padding for bottom menu item links on zoomed-out screens (or large screens in general)
 * Update some npm dev dependencies.  Whipped through afterwards and it seems like everything's fine.
