@@ -44,18 +44,29 @@ module.exports = function(grunt) {
 					)
 				]
 			},
-			dist: {
+			style: {
 				src: 'style.css'
+			},
+			style_min: {
+				src: 'style.min.css'
 			}
 		},
 
 		sass: {
-			dist: {
+			style: {
+				options: {
+					style: 'expanded'
+				},
+				files: {
+					'style.css': 'style.scss' // 'destination': 'source'
+				}
+			},
+			style_min: {
 				options: {
 					style: 'compressed'
 				},
 				files: {
-					'style.min.css': 'style.scss' // 'destination': 'source'
+					'style.min.css': 'style.scss'
 				}
 			}
 		},
