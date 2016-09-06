@@ -5685,6 +5685,9 @@ body {
   word-spacing: 0;
   color: #333;
 }
+body :focus {
+  outline: 3px solid #fcd700;
+}
 body em {
   font-family: 'verblight_italic', arial, sans-serif;
   font-weight: 400;

@@ -165,6 +165,10 @@ body {
   @include Verb-Light;
   color: $color__grey--dark;
 
+  :focus {
+    outline: 3px solid $color__yellow;
+  }
+
   em {
     @include Verb-Light-Italic;
   }
