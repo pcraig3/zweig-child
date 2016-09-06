@@ -4,12 +4,21 @@ ob_start();
 
 ?>
 
+<div class="layout">
+
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <div class="layout__item one-whole ">
         <div class="frame frame--splash fancy-pants">
 
-            <?php the_content(); ?>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+                <!-- Display the Post's Content in a div box. -->
+                <div class="entry" itemprop="articleBody">
+                    <?php the_content(); ?>
+                </div>
+
+            </article>
 
         </div>
     </div>
@@ -23,6 +32,8 @@ ob_start();
         <!-- REALLY stop The Loop. -->
 
     <?php endif; ?>
+
+</div>
 
 <?php
 
