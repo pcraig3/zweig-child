@@ -6298,9 +6298,6 @@ article.format-quote {
 .frame.frame--splash {
   padding-left: 0;
 }
-.frame.frame--archive {
-  background: #FFFFFF;
-}
 .frame.frame--archive article:hover .post-date {
   color: #f3f3f3 !important;
 }
