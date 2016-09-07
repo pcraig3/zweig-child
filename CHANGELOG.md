@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.3.1
+* Added focus styles because this is the first step towards caring about this
+* Updated some of the HTML to be more consistent between pages (specifically on the home page)
+* Tiny CSS tweak fixed the alignment of navigation under projects/posts
+
 ### 1.3.0
 * Removed the One Page Sections plugin, finally. [More here](https://github.com/pcraig3/zweig-child/commit/5da24f0a8e99ab111c741a31daa20579fa7a8bde)
   * While there were a bunch of changes to do in the WordPress backend, this app didn't get so many.
