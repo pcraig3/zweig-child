@@ -33,6 +33,7 @@ jQuery(function( $ ){
 			// cancelScroll: null,
 			completeScroll: function() {
 				$(".back-to-top__link").parent().removeClass('clicked');
+				$("body").focus();
 			}
 		});
 	});

@@ -16,7 +16,7 @@
 
 </head>
 
-<body <?php body_class();?> >
+<body <?php body_class();?> tabindex="-1">
 
 <header id="site-header">
     <div class="site-meta" id="chardinjs--contact"

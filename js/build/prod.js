@@ -1639,6 +1639,11 @@ var Easing = Object.freeze({
 }));
 jQuery(function( $ ){
 
+    /**
+     * This function controls showing and fading the button itself when we are manually scrolling up and down
+     * the site.
+     * For the sweet-scroll setup and callbacks, look in `./scroll.js`
+     */
     $(document).ready(function() {
 
         var offset = 200;
@@ -1691,6 +1696,7 @@ jQuery(function( $ ){
 			// cancelScroll: null,
 			completeScroll: function() {
 				$(".back-to-top__link").parent().removeClass('clicked');
+				$("body").focus();
 			}
 		});
 	});
