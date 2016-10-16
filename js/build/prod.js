@@ -1725,6 +1725,16 @@ jQuery(function( $ ){
         setTimeout(function() { $('.chardinjs-overlay').css('opacity', .95); }, 30);
         e.preventDefault();
     });
+
+    function chardinjs_stop(e){
+        $body.chardinJs('stop');
+        e.preventDefault()
+    }
+
+    $body.on('chardinJs:start', function(){
+
+        $(this).find('.chardinjs--stop').one('click', chardinjs_stop);
+    });
 });
 
 jQuery(function( $ ){
