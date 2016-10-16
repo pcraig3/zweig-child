@@ -4,9 +4,6 @@
 
   <footer id="footer" class="p0">
 
-    <!-- back_to_top button is kept here in the footer -->
-    <span class="back-to-top" style="display: none;"><a class="back-to-top__link fade-to-solid" href="#back_to_top"><i class="icon-double-angle-up"></i></a></span>
-   
     <div class="layout layout--flush">
 
     <?php 
@@ -55,6 +52,8 @@
 
     <?php }  //end of the 'has_nav_menu' else check ?>
 
+    <!-- back_to_top button is kept here in the footer -->
+    <span class="back-to-top" style="display: none;"><a class="back-to-top__link fade-to-solid" href="#back_to_top"><i class="icon-double-angle-up"></i></a></span>
 
     </div><!--end of .layout -->
 
