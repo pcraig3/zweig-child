@@ -5665,6 +5665,8 @@ ul ul, ul ol, ul dd, ol ul, ol ol, ol dd, dd ul, dd ol, dd dd {
   padding-bottom: 9.6px;
   font-size: 40px;
   line-height: 36px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .wrapper .post-date,

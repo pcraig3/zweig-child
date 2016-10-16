@@ -145,6 +145,8 @@ ul, ol, dd {
   padding-bottom: $inuit-base-spacing-unit * .4;
   font-size: $inuit-base-font-size * 2.5;
   line-height: $inuit-base-line-height * 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .wrapper .post-date,
