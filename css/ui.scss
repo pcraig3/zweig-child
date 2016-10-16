@@ -554,6 +554,15 @@ article.format-quote {
           @extend .fade-to-solid;
       }
     }
+
+    &[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip {
+
+      position: fixed;
+      top: auto !important;
+      bottom: 12px !important;
+      right: 56px !important;
+      margin-right: 0 !important;
+    }
   }
 }
 
@@ -573,6 +582,12 @@ article.format-quote {
       &[data-id="chardinjs--description"] .chardinjs-tooltip {
 
         top: 209px !important;
+      }
+
+      &[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip {
+
+        /* 1. maybe pick standard padding sizes and 2. hide on mobile landscape */
+        right: 32px !important;
       }
     }
   }

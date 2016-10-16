@@ -48,6 +48,12 @@
          data-position="bottom">
     </div><!--end of .layout__item.one-whole -->
 
+    <div id="chardinjs--get-that-baby-outta-here"
+         data-intro="<a class='fade-to-solid' style='font-size: 48px;' href='' title='kill the overlay'><i class='icon-double-angle-left'></i></a>"
+         data-position="right">
+    </div><!--end of .layout__item.one-whole -->
+
+
     <?php
     $html_string = ob_get_clean();
     echo do_shortcode( "[section_skeleton section_header_classes='full-width not-displayed' layout_classes='layout--flush p0 not-height'] " . $html_string . '[/section_skeleton]');
