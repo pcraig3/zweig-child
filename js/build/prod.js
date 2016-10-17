@@ -1724,20 +1724,41 @@ jQuery(function( $ ){
 
         $body.chardinJs('start');
         $(this).addClass(focus_on_close_class);
-        setTimeout(function() { $('.chardinjs-overlay').css('opacity', .95); }, 30);
         e.preventDefault();
     });
 
     function chardinjs_stop(e){
         $body.chardinJs('stop');
         $body.find('.' + focus_on_close_class).removeClass(focus_on_close_class).focus();
-        e.preventDefault();
+        $(document).off('keydown');
+        if(e) {
+            e.preventDefault();
+        }
+    }
+
+    $(document).keydown(function(e) {
+        console.log('herE!');
+        console.log(e.keyCode);
+
+    });
+
+    function chardinjs_stop_keydown_event_handler(e){
+        if(
+            e.keyCode == 8      // backspace
+            || e.keyCode == 27  // esc
+            || e.keyCode == 88  // x
+        ) {
+            chardinjs_stop();
+        }
     }
 
     $body.on('chardinJs:start', function(){
 
         $(this).find('.chardinjs--stop').one('click', chardinjs_stop);
+        $(document).one('keydown', chardinjs_stop_keydown_event_handler);
         $(this).find('.chardinjs-overlay').attr('tabindex', -1).focus();
+        // override the default opacity
+        setTimeout(function() { $('.chardinjs-overlay').css('opacity', .95); }, 30);
     });
 });
 
