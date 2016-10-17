@@ -49,7 +49,7 @@
     </div><!--end of .layout__item.one-whole -->
 
     <div id="chardinjs--get-that-overlay-outta-here"
-         data-intro="<a class='fade-to-solid chardinjs--stop' href='#' title='back back back back back'><i class='icon-double-angle-left'></i></a>"
+         data-intro="<a type='button' class='fade-to-solid chardinjs--stop' href='#' title='back back back back back' aria-label='close'><i class='icon-double-angle-left'></i></a>"
          data-position="right">
     </div><!--end of .layout__item.one-whole -->
 
