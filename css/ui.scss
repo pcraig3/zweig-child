@@ -26,18 +26,17 @@ $color__placeholder: #B4B4B4;
   font-size: $font-size;
 }
 
-@mixin zw-opacity($opacity, $is_important: false) {
+@mixin zw-opacity($opacity) {
   $IEValue: $opacity*100;
 
-  @if $is_important == "important" {
-    opacity: $opacity !important;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity+")" !important;
-    filter: alpha(opacity=$opacity) !important;
-  } @else {
-    opacity: $opacity;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity+")";
-    filter: alpha(opacity=$opacity);
-  }
+  opacity: $opacity;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity+")";
+  filter: alpha(opacity=$opacity);
+}
+
+@mixin zw-visually-hidden($important: null) {
+  position: absolute $important;
+  left: -999em $important;
 }
 
 /* horizontal padding */
@@ -555,12 +554,13 @@ article.format-quote {
       }
     }
 
-    &[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip {
+    &[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
 
+      font-size: $inuit-base-font-size * 3;
       position: fixed;
       top: auto !important;
       bottom: 12px !important;
-      right: 56px !important;
+      right: 60px !important;
       margin-right: 0 !important;
     }
   }
@@ -584,10 +584,16 @@ article.format-quote {
         top: 209px !important;
       }
 
-      &[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip {
+      &[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
 
-        /* 1. maybe pick standard padding sizes and 2. hide on mobile landscape */
-        right: 32px !important;
+        /* 2. hide on mobile landscape */
+        right: 30px !important;
+
+        @at-root #{&} {
+          @media screen and (orientation: landscape) {
+            @include zw-visually-hidden(!important);
+          }
+        }
       }
     }
   }

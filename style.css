@@ -6221,11 +6221,12 @@ article.format-quote {
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a {
   color: #FFFFFF;
 }
-.chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip {
+.chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
+  font-size: 48px;
   position: fixed;
   top: auto !important;
   bottom: 12px !important;
-  right: 56px !important;
+  right: 60px !important;
   margin-right: 0 !important;
 }
 
@@ -6236,9 +6237,15 @@ article.format-quote {
 .is-mobile .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip {
   top: 209px !important;
 }
-.is-mobile .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--get-that-baby-outta-here"] .chardinjs-tooltip {
-  /* 1. maybe pick standard padding sizes and 2. hide on mobile landscape */
-  right: 32px !important;
+.is-mobile .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
+  /* 2. hide on mobile landscape */
+  right: 30px !important;
+}
+@media screen and (orientation: landscape) {
+  .is-mobile .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
+    position: absolute !important;
+    left: -999em !important;
+  }
 }
 
 .fp-section__header {

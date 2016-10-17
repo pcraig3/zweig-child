@@ -48,8 +48,8 @@
          data-position="bottom">
     </div><!--end of .layout__item.one-whole -->
 
-    <div id="chardinjs--get-that-baby-outta-here"
-         data-intro="<a class='fade-to-solid chardinjs--stop' style='font-size: 48px;' href='#' title='back to site'><i class='icon-double-angle-left'></i></a>"
+    <div id="chardinjs--get-that-overlay-outta-here"
+         data-intro="<a class='fade-to-solid chardinjs--stop' href='#' title='back back back back back'><i class='icon-double-angle-left'></i></a>"
          data-position="right">
     </div><!--end of .layout__item.one-whole -->
 
