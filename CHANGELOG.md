@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.3.2
+* Reset focus after scrolling  to the top
+* Make 'back-to-top' button the last thing on the page
+* Add `break-word` for long post titles
+* Add 'back' arrow for `#contact` overlay
+
 ### 1.3.1
 * Added focus styles because this is the first step towards caring about this
 * Updated some of the HTML to be more consistent between pages (specifically on the home page)
