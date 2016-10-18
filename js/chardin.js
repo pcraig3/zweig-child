@@ -25,13 +25,7 @@ jQuery(function( $ ){
 
     function chardinjs_stop(e) {
         $body.chardinJs('stop');
-        // return focus to element that triggered the overlay
-        // have to wait until the overlay is disappeared
-        setTimeout(function() {
-            $body.find('.' + focus_on_close_class).focus().removeClass(focus_on_close_class);
-        }, 450);
 
-        $(document).off('keydown');
         if (e) {
             e.preventDefault();
         }
@@ -49,6 +43,7 @@ jQuery(function( $ ){
 
     $body.on('chardinJs:start', function() {
 
+        $(this).closest('html').addClass('chardinjs--open');
         // add click event to 'back' arrow
         $(this).find('.chardinjs--stop').one('click', chardinjs_stop);
         // add keypress event to 'esc', 'x', and 'backspace' keys
@@ -57,6 +52,18 @@ jQuery(function( $ ){
         $(this).find('.chardinjs-overlay').attr('role', 'dialog').attr('tabindex', -1).focus();
         // override the default opacity
         setTimeout(function() { $('.chardinjs-overlay').css('opacity', .95); }, 30);
+    });
+
+    $body.on('chardinJs:stop', function() {
+
+        $(this).closest('html').removeClass('chardinjs--open');
+        // return focus to element that triggered the overlay
+        // have to wait until the overlay is disappeared
+        setTimeout(function() {
+            $body.find('.' + focus_on_close_class).focus().removeClass(focus_on_close_class);
+        }, 450);
+
+        $(document).off('keydown');
     });
 
     /*

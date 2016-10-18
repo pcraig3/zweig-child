@@ -5649,6 +5649,10 @@ html {
   font-size: 17.6px;
   line-height: 24px;
 }
+html.chardinjs--open {
+  overflow: hidden;
+  padding-right: 17px;
+}
 
 /* Stupid preset in original theme. */
 article img, article iframe, article div {

@@ -122,6 +122,11 @@ html {
 
   font-size: $inuit-base-font-size * 1.1;
   line-height: $inuit-base-line-height;
+
+  &.chardinjs--open {
+    overflow: hidden;
+    padding-right: 17px;
+  }
 }
 
 /* Stupid preset in original theme. */
