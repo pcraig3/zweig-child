@@ -1,5 +1,12 @@
 ## Changelog
 
+### 1.3.3
+* Hide 'back' arrow for `#contact` overlay on small screens held horizontally
+* Shift focus() onto `#contact` overlay and keep it there
+  * Added a few more ways to close the overlay
+  * [Mostly, just followed a lot of the stuff in this article](https://www.nczonline.net/blog/2013/02/12/making-an-accessible-dialog-box/)
+* updated a few npm dependencies
+
 ### 1.3.2
 * Reset focus after scrolling  to the top
 * Make 'back-to-top' button the last thing on the page
