@@ -16,7 +16,7 @@ jQuery(function( $ ){
     });
 
     // 'click' event handler on .chardinjs elements starts chardinjs
-    $body.find('.chardinjs').on('click', function(e){
+    $body.find('.chardinjs').on('click', function(e) {
 
         $body.chardinJs('start');
         $(this).addClass(focus_on_close_class);
@@ -25,6 +25,7 @@ jQuery(function( $ ){
 
     function chardinjs_stop(e) {
         $body.chardinJs('stop');
+        // return focus to element that triggered the overlay
         $body.find('.' + focus_on_close_class).removeClass(focus_on_close_class).focus();
         $(document).off('keydown');
         if (e) {
@@ -32,7 +33,7 @@ jQuery(function( $ ){
         }
     }
 
-    function chardinjs_stop_keydown_event_handler(e){
+    function chardinjs_stop_keydown_event_handler(e) {
         if (
             e.keyCode == 8      // backspace
             || e.keyCode == 27  // esc
@@ -42,10 +43,13 @@ jQuery(function( $ ){
         }
     }
 
-    $body.on('chardinJs:start', function(){
+    $body.on('chardinJs:start', function() {
 
+        // add click event to 'back' arrow
         $(this).find('.chardinjs--stop').one('click', chardinjs_stop);
+        // add keypress event to 'esc', 'x', and 'backspace' keys
         $(document).one('keydown', chardinjs_stop_keydown_event_handler);
+        // add focus to overlay
         $(this).find('.chardinjs-overlay').attr('role', 'dialog').attr('tabindex', -1).focus();
         // override the default opacity
         setTimeout(function() { $('.chardinjs-overlay').css('opacity', .95); }, 30);
