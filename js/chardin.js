@@ -26,7 +26,11 @@ jQuery(function( $ ){
     function chardinjs_stop(e) {
         $body.chardinJs('stop');
         // return focus to element that triggered the overlay
-        $body.find('.' + focus_on_close_class).removeClass(focus_on_close_class).focus();
+        // have to wait until the overlay is disappeared
+        setTimeout(function() {
+            $body.find('.' + focus_on_close_class).focus().removeClass(focus_on_close_class);
+        }, 450);
+
         $(document).off('keydown');
         if (e) {
             e.preventDefault();
