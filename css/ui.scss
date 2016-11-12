@@ -1,5 +1,6 @@
 /* Colours */
 $color__white: #FFFFFF;
+$color__black: #000000;
 
 $color__grey--light: #f9f9f9;
 $color__gray--light: $color__grey--light;
@@ -142,6 +143,13 @@ ul, ol, dd {
     margin-left: 0;
     margin-bottom: 0;
   }
+}
+
+/* add nice underlines to links */
+.frame--single .entry p a:not([class]),
+a.pc3-shuffle-onclick,
+.fancy-pants a {
+  @include link-underline($color__white, $color__red, $color__yellow);
 }
 
 .wrapper .post-title {
@@ -554,9 +562,9 @@ article.format-quote {
       top: 168px;
 
         a {
-          color: $color__white;
+          @include link-underline(#000, $color__white, $color__yellow);
           @extend .fade-to-solid;
-      }
+        }
     }
 
     &[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
