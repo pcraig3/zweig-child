@@ -35,6 +35,8 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #d43b1d;
   text-decoration: none;
+  -webkit-transition: color .15s ease-in;
+  -o-transition: color .15s ease-in;
   transition: color .15s ease-in;
 }
 
@@ -175,6 +177,8 @@ input[type=submit] {
   font-family: sans-serif;
   font-variant: small-caps;
   font-size: 0.8em;
+  -webkit-transition: background-color .15s ease-in;
+  -o-transition: background-color .15s ease-in;
   transition: background-color .15s ease-in;
 }
 
@@ -765,7 +769,8 @@ figure {
  */
 hr {
   -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 
@@ -881,7 +886,9 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -5438,8 +5445,6 @@ html {
   background-color: #000;
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -5449,8 +5454,6 @@ html {
   z-index: 9999998;
   color: white;
   -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -5474,8 +5477,6 @@ html {
 .chardinjs-tooltip {
   position: absolute;
   -webkit-transition: opacity 0.1s ease-out;
-  -moz-transition: opacity 0.1s ease-out;
-  -ms-transition: opacity 0.1s ease-out;
   -o-transition: opacity 0.1s ease-out;
   transition: opacity 0.1s ease-out;
   max-width: 200px;
@@ -5535,6 +5536,10 @@ html {
   position: relative;
 }
 
+/*
+inspired by: https://eager.io/blog/smarter-link-underlines/
+adapted by: https://gist.github.com/jimmynotjim/16290a7ed59b6f3bb28d
+*/
 /*  Mixin found here: codepen.io/javasteve99/pen/hDxpn */
 @font-face {
   font-family: libre_baskervilleitalic;
@@ -5666,6 +5671,7 @@ ul ul, ul ol, ul dd, ol ul, ol ol, ol dd, dd ul, dd ol, dd dd {
 
 /* add nice underlines to links */
 .frame--single .entry p a:not([class]),
+a.pc3-shuffle-onclick,
 .fancy-pants a,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a,
@@ -5673,14 +5679,30 @@ ul ul, ul ol, ul dd, ol ul, ol ol, ol dd, dd ul, dd ol, dd dd {
 .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a,
 .fancy-pants .search-form .search-field a {
   text-shadow: 0.03em 0 #FFFFFF, -0.03em 0 #FFFFFF, 0 0.03em #FFFFFF, 0 -0.03em #FFFFFF, 0.06em 0 #FFFFFF, -0.06em 0 #FFFFFF, 0.09em 0 #FFFFFF, -0.09em 0 #FFFFFF, 0.12em 0 #FFFFFF, -0.12em 0 #FFFFFF, 0.15em 0 #FFFFFF, -0.15em 0 #FFFFFF;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d43b1d), to(#d43b1d));
+  background-image: -webkit-linear-gradient(#d43b1d, #d43b1d);
+  background-image: -o-linear-gradient(#d43b1d, #d43b1d);
   background-image: linear-gradient(#d43b1d, #d43b1d);
-  background-size: 1px 1px;
+  -webkit-background-size: 1px 1px;
+          background-size: 1px 1px;
   background-repeat: repeat-x;
   background-position: 0% 92%;
   color: #d43b1d;
   text-decoration: none;
 }
+.frame--single .entry p a:not([class])::-moz-selection,
+a.pc3-shuffle-onclick::-moz-selection,
+.fancy-pants a::-moz-selection,
+.chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
+.chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
+.chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
+.chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
+.fancy-pants .search-form .search-field a::-moz-selection {
+  text-shadow: 0.03em 0 #fcd700, -0.03em 0 #fcd700, 0 0.03em #fcd700, 0 -0.03em #fcd700, 0.06em 0 #fcd700, -0.06em 0 #fcd700, 0.09em 0 #fcd700, -0.09em 0 #fcd700, 0.12em 0 #fcd700, -0.12em 0 #fcd700, 0.15em 0 #fcd700, -0.15em 0 #fcd700;
+  background: #fcd700;
+}
 .frame--single .entry p a:not([class])::selection,
+a.pc3-shuffle-onclick::selection,
 .fancy-pants a::selection,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a::selection,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a::selection,
@@ -5691,6 +5713,7 @@ ul ul, ul ol, ul dd, ol ul, ol ol, ol dd, dd ul, dd ol, dd dd {
   background: #fcd700;
 }
 .frame--single .entry p a:not([class])::-moz-selection,
+a.pc3-shuffle-onclick::-moz-selection,
 .fancy-pants a::-moz-selection,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
@@ -5703,6 +5726,11 @@ ul ul, ul ol, ul dd, ol ul, ol ol, ol dd, dd ul, dd ol, dd dd {
 .frame--single .entry p a:not([class]) *,
 .frame--single .entry p a:not([class]) *:after, .frame--single .entry p a:not([class]):after,
 .frame--single .entry p a:not([class]) *:before, .frame--single .entry p a:not([class]):before,
+a.pc3-shuffle-onclick *,
+a.pc3-shuffle-onclick *:after,
+a.pc3-shuffle-onclick:after,
+a.pc3-shuffle-onclick *:before,
+a.pc3-shuffle-onclick:before,
 .fancy-pants a *,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a *,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a *,
@@ -5736,6 +5764,7 @@ ul ul, ul ol, ul dd, ol ul, ol ol, ol dd, dd ul, dd ol, dd dd {
   text-shadow: none;
 }
 .frame--single .entry p a:not([class]):visited,
+a.pc3-shuffle-onclick:visited,
 .fancy-pants a:visited,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a:visited,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a:visited,
@@ -6064,6 +6093,8 @@ article.format-quote {
 }
 
 .fade-to-solid, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a {
+  -webkit-transition: opacity 0.15s ease-in;
+  -o-transition: opacity 0.15s ease-in;
   transition: opacity 0.15s ease-in;
   opacity: 0.65;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.65)";
@@ -6076,6 +6107,8 @@ article.format-quote {
 }
 
 .solid-to-fade {
+  -webkit-transition: opacity 0.15s ease-in;
+  -o-transition: opacity 0.15s ease-in;
   transition: opacity 0.15s ease-in;
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
@@ -6102,7 +6135,6 @@ article.format-quote {
   opacity: 0.33;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.33)";
   filter: alpha(opacity=0.33);
-  font-size: .95em;
 }
 
 .fancy-pants, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip, .fancy-pants .search-form .search-field {
@@ -6265,6 +6297,8 @@ article.format-quote {
 }
 
 .chardinjs-overlay {
+  -webkit-transition: opacity 0.15s ease-in;
+  -o-transition: opacity 0.15s ease-in;
   transition: opacity 0.15s ease-in;
   z-index: 99;
 }
@@ -6298,12 +6332,20 @@ article.format-quote {
 }
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a {
   text-shadow: 0.03em 0 #000, -0.03em 0 #000, 0 0.03em #000, 0 -0.03em #000, 0.06em 0 #000, -0.06em 0 #000, 0.09em 0 #000, -0.09em 0 #000, 0.12em 0 #000, -0.12em 0 #000, 0.15em 0 #000, -0.15em 0 #000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FFFFFF));
+  background-image: -webkit-linear-gradient(#FFFFFF, #FFFFFF);
+  background-image: -o-linear-gradient(#FFFFFF, #FFFFFF);
   background-image: linear-gradient(#FFFFFF, #FFFFFF);
-  background-size: 1px 1px;
+  -webkit-background-size: 1px 1px;
+          background-size: 1px 1px;
   background-repeat: repeat-x;
   background-position: 0% 92%;
   color: #FFFFFF;
   text-decoration: none;
+}
+.chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection {
+  text-shadow: 0.03em 0 #fcd700, -0.03em 0 #fcd700, 0 0.03em #fcd700, 0 -0.03em #fcd700, 0.06em 0 #fcd700, -0.06em 0 #fcd700, 0.09em 0 #fcd700, -0.09em 0 #fcd700, 0.12em 0 #fcd700, -0.12em 0 #fcd700, 0.15em 0 #fcd700, -0.15em 0 #fcd700;
+  background: #fcd700;
 }
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a::selection, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a::selection, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a::selection, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a::selection {
   text-shadow: 0.03em 0 #fcd700, -0.03em 0 #fcd700, 0 0.03em #fcd700, 0 -0.03em #fcd700, 0.06em 0 #fcd700, -0.06em 0 #fcd700, 0.09em 0 #fcd700, -0.09em 0 #fcd700, 0.12em 0 #fcd700, -0.12em 0 #fcd700, 0.15em 0 #fcd700, -0.15em 0 #fcd700;
@@ -6433,6 +6475,8 @@ article.format-quote {
   line-height: 30px;
 }
 .frame.frame--archive article .post-date {
+  -webkit-transition: color 0.15s ease-in;
+  -o-transition: color 0.15s ease-in;
   transition: color 0.15s ease-in;
   color: #CBCBCB !important;
   margin-bottom: 48px;
@@ -6511,6 +6555,8 @@ textarea {
   padding-bottom: 6px;
 }
 #comments input[type=submit] {
+  -webkit-transition: background-color 0.1s ease-in;
+  -o-transition: background-color 0.1s ease-in;
   transition: background-color 0.1s ease-in;
   padding: 4px 8px 6px 8px;
 }
