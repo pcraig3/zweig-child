@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.4.0
+* New dependency: baller underlines yo
+  * this is super cool, ps
+* Changed `.whisper` text size to be normal
+
 ### 1.3.3
 * Hide 'back' arrow for `#contact` overlay on small screens held horizontally
 * Shift focus() onto `#contact` overlay and keep it there
