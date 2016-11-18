@@ -121,7 +121,7 @@ $big-ass-desk-padding: 25%;
 /* Overwrite top-level spacing */
 html {
 
-  font-size: $inuit-base-font-size * 1.1;
+  font-size: $inuit-base-font-size;
   line-height: $inuit-base-line-height;
 
   &.chardinjs--open {
@@ -155,7 +155,7 @@ a.pc3-shuffle-onclick,
 .wrapper .post-title {
 
   padding-bottom: $inuit-base-spacing-unit * .4;
-  font-size: $inuit-base-font-size * 2.5;
+  font-size: $font-size--body-xlg;
   line-height: $inuit-base-line-height * 1.5;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -166,7 +166,7 @@ a.pc3-shuffle-onclick,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
 
-  font-size: $inuit-base-font-size * .85;
+  font-size: $font-size--body-sm;
   margin-bottom: $inuit-base-spacing-unit * 2;
   color: $color__grey--dark !important;
 }
@@ -243,7 +243,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: $inuit-base-spacing-unit;
 }
 .wrapper table {
-
   font-size: $inuit-base-font-size;
 }
 .wrapper table thead th {
@@ -258,8 +257,8 @@ h1, h2, h3, h4, h5, h6 {
   @include Verb-Condensed-Italic;
 }
 input[type=submit] {
-  @include Verb-Light;
-  @include zw-lowercase( $inuit-base-font-size * 1.2 );
+  @include Verb-Light-Italic;
+  @include zw-lowercase( $font-size--body-md );
 }
 .read-more {
   @include Verb-Light;
@@ -403,7 +402,7 @@ article.format-quote {
 .fancy-pants {
   @include Baskerville-Regular;
 
-  font-size: $inuit-base-font-size * 1.15;
+  font-size: $font-size--body-md;
 
   em {
     @include Baskerville-Italic;
@@ -420,7 +419,7 @@ article.format-quote {
   color: $color__white;
   background: $color__red;
   padding: $inuit-base-spacing-unit / 4;
-  font-size: $inuit-base-font-size * 1.25;
+  font-size: $font-size--body-md;
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -500,19 +499,21 @@ article.format-quote {
 
   h1, h2 {
 
-    display: inline;
+    display: inline-block;
   }
 
   h1 {
 
-    font-size: $inuit-base-font-size * 3.5;
+    font-size: $font-size--header-logo;
   }
 
   h2 {
     @include Baskerville-Regular;
-    @include zw-lowercase( $inuit-base-font-size * 3 );
+    @include zw-lowercase( $font-size--header-subheading );
 
-    margin-left: 213px;  /* this value will be overwritten */
+    margin-left: 241px;  /* this value will be overwritten */
+    margin-bottom: -4px;
+    vertical-align: bottom;
   }
 }
 
@@ -549,7 +550,7 @@ article.format-quote {
     &[data-id="chardinjs--contact"] .chardinjs-tooltip {
 
       @include Baskerville-Regular;
-      @include zw-lowercase($inuit-base-font-size * 3);
+      @include zw-lowercase($font-size--header-subheading);
       left: 100%;
     }
 
@@ -567,7 +568,7 @@ article.format-quote {
 
     &[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
 
-      font-size: $inuit-base-font-size * 3;
+      font-size: $font-size--header-subheading;
       position: fixed;
       top: auto !important;
       bottom: 12px !important;
@@ -619,7 +620,7 @@ article.format-quote {
 
   .fp-section__header__spacer {
     @include Baskerville-Regular;
-    @include zw-lowercase( $inuit-base-font-size * 3 );
+    @include zw-lowercase($font-size--header-subheading);
     display: inline-block;
     visibility: hidden;
     width: 0; /* can't believe it took me so long to think of this. */
@@ -706,7 +707,7 @@ article.format-quote {
       .post-title {
 
         padding-bottom: $inuit-base-spacing-unit * .25;
-        font-size: $inuit-base-font-size * 1.8;
+        font-size: $font-size--body-lg;
         line-height: $inuit-base-line-height * 1.25;
       }
 
@@ -779,12 +780,13 @@ textarea {
 /* Post navigation */
 .post-navigation {
 
-  font-size: $inuit-base-font-size * 1.25;
+  font-size: $font-size--body-md;
 
   .alignleft {
 
     width: 100%;
     padding-bottom: $inuit-base-spacing-unit;
+    color: $color__red;
   }
 
   .alignright {
@@ -858,6 +860,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
     display: inline-block;
     @include zw-padding-horizontal(0, 1);
+    font-size: $font-size--body-md;
   }
 }
 
@@ -913,7 +916,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
   .search-field, .placeholder {
     @include Baskerville-Regular;
-    @include zw-lowercase( $inuit-base-font-size * 3 );
+    @include zw-lowercase($font-size--header-subheading);
   }
 
   .screen-reader-text {
@@ -953,7 +956,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
   @include zw-padding-horizontal(1, 2);
 
   .search-field {
-    @include zw-lowercase( $inuit-base-font-size * 2 );
+    @include zw-lowercase( $font-size--body-lg );
 
     line-height: $inuit-base-line-height * 2;
 

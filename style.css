@@ -576,6 +576,7 @@ article.format-quote .post-title, article.format-quote .post-date {
  *
  * github.com/inuitcss | inuitcss.com
  */
+/* Font sizes */
 /* Define our initial breakpoint aliases and conditions. */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -1015,7 +1016,7 @@ table,
 fieldset, figure,
 pre {
   margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.26316rem;
 }
 
 /**
@@ -1024,7 +1025,7 @@ pre {
  */
 ul, ol, dd {
   margin-left: 48px;
-  margin-left: 3rem;
+  margin-left: 2.52632rem;
 }
 
 /* inuitcssÔÇÖ layout system is a powerful, flexible, highly advanced evolution of the traditional grid system. It is based on csswizardry-grids. */
@@ -5418,9 +5419,9 @@ ul, ol, dd {
  *    render text using sub-pixel anti-aliasing.
  */
 html {
-  font-size: 1em;
+  font-size: 1.1875em;
   /* [1] */
-  line-height: 1.5;
+  line-height: 1.39474;
   /* [1] */
   background-color: #fff;
   color: #333;
@@ -5650,8 +5651,8 @@ adapted by: https://gist.github.com/jimmynotjim/16290a7ed59b6f3bb28d
 
 /* Overwrite top-level spacing */
 html {
-  font-size: 17.6px;
-  line-height: 24px;
+  font-size: 19px;
+  line-height: 26.5px;
 }
 html.chardinjs--open {
   overflow: hidden;
@@ -5776,8 +5777,8 @@ a.pc3-shuffle-onclick:visited,
 
 .wrapper .post-title {
   padding-bottom: 9.6px;
-  font-size: 40px;
-  line-height: 36px;
+  font-size: 40.85px;
+  line-height: 39.75px;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -5786,7 +5787,7 @@ a.pc3-shuffle-onclick:visited,
 .wrapper .post-meta p,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
-  font-size: 13.6px;
+  font-size: 16.15px;
   margin-bottom: 48px;
   color: #333 !important;
 }
@@ -5861,26 +5862,20 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-.single .wrapper .entry h1, .single .wrapper .entry h2, .single .wrapper .entry h3 {
-  font-family: 'libre_baskervilleregular', times, serif;
-  font-weight: 400;
-  font-style: normal;
-  word-spacing: 0;
-}
 .single .wrapper .entry h1 {
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 30.4px;
+  font-size: 36.1px;
 }
 .single .wrapper .entry h2 {
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 28.8px;
+  font-size: 34.2px;
 }
 .single .wrapper .entry h3 {
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 24px;
+  font-size: 28.5px;
 }
 
 .wrapper blockquote {
@@ -5899,10 +5894,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper table {
-  font-size: 16px;
+  font-size: 19px;
+  text-align: left;
 }
 
-.wrapper table thead th {
+.wrapper table th {
   font-family: 'verbcondregular', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -5925,13 +5921,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 input[type=submit] {
-  font-family: 'verblight', arial, sans-serif;
+  font-family: 'verblight_italic', arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 19.2px;
+  font-size: 21.85px;
 }
 
 .read-more {
@@ -5966,14 +5962,7 @@ textarea {
   word-spacing: 0;
 }
 
-#site-header h1, .fp-section__header h1 {
-  font-family: 'libre_baskervilleregular', times, serif;
-  font-weight: 400;
-  font-style: normal;
-  word-spacing: 0;
-}
-
-#site-header h2, .fp-section__header h2 {
+#site-header #site-logo, .fp-section__header #site-logo {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
@@ -6001,7 +5990,7 @@ textarea {
   word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 24px;
+  font-size: 28.5px;
 }
 
 #comments h3 {
@@ -6019,7 +6008,7 @@ textarea {
   word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 17.6px;
+  font-size: 20.9px;
 }
 #comments .vcard b {
   font-weight: 400;
@@ -6142,7 +6131,7 @@ article.format-quote {
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
-  font-size: 18.4px;
+  font-size: 21.85px;
 }
 .fancy-pants em, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip em, .fancy-pants .search-form .search-field em {
   font-family: 'libre_baskervilleitalic', times, serif;
@@ -6161,7 +6150,7 @@ article.format-quote {
   color: #FFFFFF;
   background: #d43b1d;
   padding: 6px;
-  font-size: 20px;
+  font-size: 21.85px;
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -6226,7 +6215,7 @@ article.format-quote {
 .wrapper .post-meta p strong {
   text-transform: lowercase;
   font-variant: normal;
-  font-size: 16px;
+  font-size: 19px;
 }
 
 /* Elements */
@@ -6279,10 +6268,10 @@ article.format-quote {
   z-index: 100;
 }
 #site-header h1, .fp-section__header h1, #site-header h2, .fp-section__header h2 {
-  display: inline;
+  display: inline-block;
 }
 #site-header h1, .fp-section__header h1 {
-  font-size: 56px;
+  font-size: 63.65px;
 }
 #site-header h2, .fp-section__header h2 {
   font-family: 'libre_baskervilleregular', times, serif;
@@ -6291,9 +6280,11 @@ article.format-quote {
   word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 48px;
-  margin-left: 213px;
+  font-size: 53.2px;
+  margin-left: 241px;
   /* this value will be overwritten */
+  margin-bottom: -4px;
+  vertical-align: bottom;
 }
 
 .chardinjs-overlay {
@@ -6323,7 +6314,7 @@ article.format-quote {
   word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 48px;
+  font-size: 53.2px;
   left: 100%;
 }
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip {
@@ -6370,7 +6361,7 @@ article.format-quote {
   color: #FFFFFF;
 }
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
-  font-size: 48px;
+  font-size: 53.2px;
   position: fixed;
   top: auto !important;
   bottom: 12px !important;
@@ -6407,7 +6398,7 @@ article.format-quote {
   word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 48px;
+  font-size: 53.2px;
   display: inline-block;
   visibility: hidden;
   width: 0;
@@ -6471,8 +6462,8 @@ article.format-quote {
 }
 .frame.frame--archive article .post-title {
   padding-bottom: 6px;
-  font-size: 28.8px;
-  line-height: 30px;
+  font-size: 34.2px;
+  line-height: 33.125px;
 }
 .frame.frame--archive article .post-date {
   -webkit-transition: color 0.15s ease-in;
@@ -6526,11 +6517,12 @@ textarea {
 /* Post metas */
 /* Post navigation */
 .post-navigation {
-  font-size: 20px;
+  font-size: 21.85px;
 }
 .post-navigation .alignleft, .post-navigation .alignright {
   width: 100%;
   padding-bottom: 24px;
+  color: #d43b1d;
 }
 .post-navigation .alignright {
   text-align: right;
@@ -6643,6 +6635,7 @@ textarea {
   padding-right: 48px;
   /* Desktops and laptops ----------- */
   /* Large screens ----------- */
+  font-size: 21.85px;
 }
 @media screen and (max-width: 419px) {
   .menu-footer-menu-container li {
@@ -6720,7 +6713,7 @@ textarea {
   word-spacing: 0;
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 48px;
+  font-size: 53.2px;
 }
 .search-form .screen-reader-text {
   display: none;
@@ -6788,8 +6781,8 @@ textarea {
 #footer .search-form .search-field {
   font-variant: normal;
   text-transform: lowercase;
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 34.2px;
+  line-height: 53px;
   width: 100%;
   border-bottom: 1px solid #F9F9F9;
   padding: 0;
@@ -6842,10 +6835,10 @@ textarea {
   }
 
   .fancy-pants, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip, .fancy-pants .search-form .search-field {
-    font-size: 17.6px;
+    font-size: 20.9px;
   }
   .fancy-pants .whisper, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .whisper, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .whisper, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .whisper, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .whisper, .fancy-pants .search-form .search-field .whisper {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   .fancy-button.fancy-button--row-of-1, .fancy-button.fancy-button--row-of-2 {
@@ -6964,7 +6957,7 @@ textarea {
   .single .wrapper .entry h1, .single .wrapper .entry h2, .single .wrapper .entry h3 {
     font-variant: normal;
     text-transform: lowercase;
-    font-size: 22.4px;
+    font-size: 26.6px;
     margin-bottom: 12px;
   }
 }

@@ -26,7 +26,22 @@ $breakpoints: (
     "big-desk"      	"screen and (min-width: 1399px)",
     "big-ass-desk"  	"screen and (min-width: 1824px)",
     "retina"        	"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
-) !default;
+);
+
+/* Font sizes */
+
+$inuit-base-font-size:          19px;
+$inuit-base-line-height:        26.5px;
+
+$font-size--header-logo:        $inuit-base-font-size * 3.35;
+$font-size--header-subheading:  $inuit-base-font-size * 2.8;
+
+$font-size--body-sm:                $inuit-base-font-size * .85;
+$font-size--body-md:                $inuit-base-font-size * 1.15;
+$font-size--body-lg:                $inuit-base-font-size * 1.8;
+$font-size--body-xlg:               $inuit-base-font-size * 2.15;
+
+
 /* Define our initial breakpoint aliases and conditions. */
 @import "css/bower_components/inuit-responsive-settings/settings.responsive";
 
