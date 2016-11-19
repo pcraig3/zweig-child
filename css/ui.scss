@@ -241,14 +241,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wrapper table {
   font-size: $inuit-base-font-size;
-}
-.wrapper table thead th {
-  @include Verb-Condensed;
-
   text-align: left;
 }
 .wrapper table th {
   @include Verb-Condensed;
+  text-align: left;
+}
+.wrapper table tbody {
+  line-height: $inuit-base-line-height * .85;
+
+  th,
+  td {
+    padding: $inuit-base-spacing-unit / 2;
+    padding-left: 0;
+    vertical-align: top;
+  }
 }
 .wrapper dt {
   @include Verb-Condensed-Italic;
