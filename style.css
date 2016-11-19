@@ -5667,7 +5667,8 @@ article img, article iframe, article div {
 /* remove some padding from nested lists. */
 ul ul, ul ol, ul dd, ol ul, ol ol, ol dd, dd ul, dd ol, dd dd {
   margin-left: 0;
-  margin-bottom: 0;
+  margin-bottom: -12px;
+  margin-top: 12px;
 }
 
 /* add nice underlines to links */

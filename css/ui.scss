@@ -141,7 +141,8 @@ ul, ol, dd {
   ul, ol, dd {
 
     margin-left: 0;
-    margin-bottom: 0;
+    margin-bottom: -($inuit-base-spacing-unit / 2);
+    margin-top: $inuit-base-spacing-unit / 2;
   }
 }
 
