@@ -1,0 +1,117 @@
+html.chardinjs--open {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
+#site-header .site-meta.chardinjs-show-element {
+  z-index: 100;
+}
+
+.chardinjs-overlay {
+  @include zw-transition(opacity, .15s);
+
+  z-index: 99;
+}
+
+.chardinjs-helper-layer {
+  &.chardinjs-bottom,
+  &.chardinjs-top,
+  &.chardinjs-left,
+  &.chardinjs-right {
+
+    position: fixed;
+    border: none;
+    z-index: 99;
+    font-style: italic;
+
+    .chardinjs-tooltip {
+
+      max-width: none;
+      padding: 0;
+
+      &.chardinjs-right:before,
+      &.chardinjs-left:after,
+      &.chardinjs-bottom:before,
+      &.chardinjs-top:after {
+        content: none;
+      }
+    }
+
+    &[data-id="chardinjs--contact"] .chardinjs-tooltip {
+
+      @include Baskerville-Regular;
+      @include zw-lowercase($font-size--header-subheading);
+      left: 100%;
+    }
+
+    &[data-id="chardinjs--description"] .chardinjs-tooltip {
+
+      @extend .fancy-pants;
+      left: 0 !important;
+      top: 158px;
+
+      a {
+        @include link-underline(#000, $color__white, $color__yellow);
+        @extend .fade-to-solid;
+      }
+    }
+
+    &[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
+
+      font-size: $font-size--header-subheading;
+      position: fixed;
+      top: auto !important;
+      bottom: 12px !important;
+      right: 60px !important;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.is-mobile {
+  .chardinjs-helper-layer {
+    &.chardinjs-bottom,
+    &.chardinjs-top,
+    &.chardinjs-left,
+    &.chardinjs-right {
+
+      &[data-id="chardinjs--contact"] .chardinjs-tooltip {
+
+        left: 37px !important;
+        top: 59px !important;
+
+        @include media-query("lumia520") {
+          top: 51px !important;
+
+          font-size: $font-size--header-subheading * .85;
+        }
+      }
+
+      &[data-id="chardinjs--description"] .chardinjs-tooltip {
+
+        top: 209px !important;
+
+        @include media-query("lumia520") {
+          top: 184px !important;
+        }
+      }
+
+      &[data-id="chardinjs--get-that-overlay-outta-here"] .chardinjs-tooltip {
+
+        /* 2. hide on mobile landscape */
+        right: 30px !important;
+
+        @at-root #{&} {
+          @media screen and (orientation: landscape) {
+            @include zw-visually-hidden(!important);
+          }
+        }
+      }
+    }
+  }
+}
+
+.error404 #site-header .site-meta.chardinjs-show-element {
+
+  visibility: visible;
+}

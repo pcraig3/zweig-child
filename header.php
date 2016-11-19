@@ -38,13 +38,13 @@
 
     <div id="chardinjs--description"
          class="layout__item one-whole"
-         data-intro="Get @ me, yo.
-            <br><br>I'm
+         data-intro="<p>Get @ me, yo.</p>
+            <p>I'm
             <a target='_blank' href='mailto:paul@pcraig3.ca'>mailable</a>,
             <a target='_blank' href='https://twitter.com/pcraig3'>tweetable</a>,
             <a target='_blank' href='https://github.com/pcraig3'>forkable</a>, and
             <a target='_blank' href='https://www.facebook.com/PaulMCraig'>facebookable</a>.
-            <br>There're a few others as well, but let's not get ahead of ourselves."
+            <br>There're a few others as well, but let's not get ahead of ourselves.</p>"
          data-position="bottom">
     </div><!--end of .layout__item.one-whole -->
 

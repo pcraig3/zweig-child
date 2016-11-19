@@ -5654,10 +5654,6 @@ html {
   font-size: 19px;
   line-height: 26.5px;
 }
-html.chardinjs--open {
-  overflow: hidden;
-  padding-right: 17px;
-}
 
 /* Stupid preset in original theme. */
 article img, article iframe, article div {
@@ -6570,9 +6566,6 @@ textarea {
 .error404 #site-header .site-meta, .error404 .fp-section__header .site-meta {
   visibility: hidden;
 }
-.error404 #site-header .site-meta.chardinjs-show-element, .error404 .fp-section__header .site-meta.chardinjs-show-element {
-  visibility: visible;
-}
 .error404 .back-to-top {
   display: none;
 }
@@ -6698,7 +6691,7 @@ textarea {
   display: none;
 }
 
-.fancy-pants .search-form, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .fancy-pants .search-form .search-field .search-form {
+.fancy-pants .search-form, .fancy-pants .search-form .search-field .search-form, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form {
   display: inline;
   /* let's just hide it */
 }
