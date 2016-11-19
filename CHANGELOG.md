@@ -1,5 +1,14 @@
 ## Changelog
 
+### 1.5.0
+* Changed nearly all front-ends to make the text bigger.
+   * BIG TEXT IS THE FUTURE
+* Logo is no longer an `<h1>`
+  * (tons of other h1s floating aroung though)
+* fixed spacing for nested lists (of which there are very few)
+* fixed spacing for HTML tables (of which there are none)
+* removed dotted bottom-border that `aricles` have
+
 ### 1.4.0
 * New dependency: baller underlines yo
   * this is super cool, ps
