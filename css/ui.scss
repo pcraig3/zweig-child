@@ -217,10 +217,6 @@ h1, h2, h3, h4, h5, h6 {
 .single {
   .wrapper .entry {
 
-    h1, h2, h3 {
-      @include Baskerville-Regular;
-    }
-
     h1 {
       @include zw-lowercase( $inuit-base-font-size * 1.9 );
     }
@@ -277,10 +273,7 @@ input[type=password] {
 textarea {
   @include Verb-Light;
 }
-#site-header h1 {
-  @include Baskerville-Regular;
-}
-#site-header h2 {
+#site-header #site-logo {
   @include Baskerville-Regular;
 }
 .post-pages {
