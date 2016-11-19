@@ -5781,7 +5781,6 @@ a.pc3-shuffle-onclick:visited,
 }
 
 .wrapper .post-date,
-.wrapper .post-meta p,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
   font-size: 16.15px;
@@ -6346,10 +6345,6 @@ article.format-quote {
 }
 .frame.frame--single {
   background: #f9f9f9;
-}
-.frame.frame--single article {
-  border-bottom: #CBCBCB 1px dotted;
-  margin-bottom: 24px;
 }
 .frame.frame--single article ol li, .frame.frame--single article ul li {
   padding-bottom: 12px;
