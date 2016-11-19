@@ -629,19 +629,19 @@ article.format-quote {
 
 .frame__title  {
 
-  padding: ($inuit-base-spacing-unit * .25 ) 0;
+  padding: ($inuit-base-spacing-unit * .25) 0;
 
-  .subhead {
+  .search-count {
     @include Baskerville-Italic;
 
     color: $color__grey;
     text-transform: none;
     font-variant: normal;
-    font-size: $inuit-base-font-size * 2;
-    margin-top: $inuit-base-spacing-unit * .25;
+    font-size: $font-size--body-lg;
+    margin-top: 0.67em;
   }
 
-  .subhead__search_results, .subhead__search_again {
+  .search-count__search_results, .search-count__search_again {
 
     display: none;
   }

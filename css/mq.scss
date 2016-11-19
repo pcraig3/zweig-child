@@ -100,18 +100,18 @@
 
     padding-top: $inuit-base-spacing-unit;
 
-    .subhead {
+    .search-count {
 
       font-size: $inuit-base-font-size * 1.5;
       padding-left: $inuit-base-spacing-unit * 1.5;
     }
 
-    .subhead__search_results {
+    .search-count__search_results {
 
       display: inline;
     }
 
-    .subhead__search_again {
+    .search-count__search_again {
 
       padding-top: $inuit-base-spacing-unit * .5;
       display: block;

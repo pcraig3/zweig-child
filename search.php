@@ -1,4 +1,4 @@
-<?php get_header(); 
+<?php get_header();
 
 ob_start();
 
@@ -10,14 +10,14 @@ $search_query = $wp_query->query_vars['s'];
 $found_posts_string = ( intval( $found_posts ) === 0 ) ? 'no' : $found_posts;
 $found_posts_string .= ( intval( $found_posts ) === 1 ) ? ' result' : ' results';
 
-$found_posts_string .= '<span class="subhead__search_results"> for "' . $search_query . '"</span><div class="subhead__search_again"><a href="#footer">Search again?</a></div>';
+$found_posts_string .= '<span class="search-count__search_results"> for "' . $search_query . '"</span><div class="search-count__search_again"><a href="#footer">Search again?</a></div>';
 
 ?>
 
 	<div class="layout__item one-third palm-one-whole">
-		
+
 	<?php if( ! empty( $found_posts_string ) ) ?>
-		<div class="frame__title"><h3 class="subhead"><?php echo $found_posts_string; ?></h3></div>
+		<div class="frame__title"><h3 class="search-count"><?php echo $found_posts_string; ?></h3></div>
 
 	</div><!--end of .layout__item.one-third
 
@@ -33,7 +33,7 @@ $found_posts_string .= '<span class="subhead__search_results"> for "' . $search_
 		</div><!-- end of frame -->
 	</div><!-- end of .layout__item.two-thirds -->
 
-<?php 
+<?php
 
 $html_string = ob_get_clean();
 

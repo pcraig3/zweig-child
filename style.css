@@ -6408,7 +6408,7 @@ article.format-quote {
 .frame__title {
   padding: 6px 0;
 }
-.frame__title .subhead {
+.frame__title .search-count {
   font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
@@ -6416,10 +6416,10 @@ article.format-quote {
   color: #CBCBCB;
   text-transform: none;
   font-variant: normal;
-  font-size: 32px;
-  margin-top: 6px;
+  font-size: 34.2px;
+  margin-top: 0.67em;
 }
-.frame__title .subhead__search_results, .frame__title .subhead__search_again {
+.frame__title .search-count__search_results, .frame__title .search-count__search_again {
   display: none;
 }
 
@@ -6914,14 +6914,14 @@ textarea {
   .frame__title {
     padding-top: 24px;
   }
-  .frame__title .subhead {
-    font-size: 24px;
+  .frame__title .search-count {
+    font-size: 28.5px;
     padding-left: 36px;
   }
-  .frame__title .subhead__search_results {
+  .frame__title .search-count__search_results {
     display: inline;
   }
-  .frame__title .subhead__search_again {
+  .frame__title .search-count__search_again {
     padding-top: 12px;
     display: block;
   }
