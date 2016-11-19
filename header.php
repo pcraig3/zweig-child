@@ -22,12 +22,12 @@
     <div class="site-meta" id="chardinjs--contact"
          data-intro="::contact"
          data-position="right">
-        <h1 id="site-logo">
+        <div id="site-logo">
             <a
                 href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <?php echo $blog_title = get_bloginfo('name'); ?>
             </a>
-        </h1>
+        </div>
         <!--h2 id="site-description"><?php //echo $blog_title = get_bloginfo('description'); ?></h2-->
 
     </div><!-- end of .site-meta -->
