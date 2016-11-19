@@ -38,6 +38,7 @@ $font-size--header-subheading:  $inuit-base-font-size * 2.8;
 
 $font-size--body-sm:                $inuit-base-font-size * .85;
 $font-size--body-md:                $inuit-base-font-size * 1.15;
+$font-size--body-xmd:               $inuit-base-font-size * 1.65;
 $font-size--body-lg:                $inuit-base-font-size * 1.8;
 $font-size--body-xlg:               $inuit-base-font-size * 2.15;
 
@@ -101,5 +102,6 @@ $inuit-enable-responsive-paddings--none:            true !default;
 @import "css/_underline.scss";
 @import "css/fonts.scss";
 @import "css/ui.scss";
+@import "css/chardinjs.scss";
 @import "css/dev.scss";
 @import "css/mq.scss";

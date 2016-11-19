@@ -123,11 +123,6 @@ html {
 
   font-size: $inuit-base-font-size;
   line-height: $inuit-base-line-height;
-
-  &.chardinjs--open {
-    overflow: hidden;
-    padding-right: 17px;
-  }
 }
 
 /* Stupid preset in original theme. */
@@ -163,7 +158,6 @@ a.pc3-shuffle-onclick,
 }
 
 .wrapper .post-date,
-.wrapper .post-meta p,
 .wrapper .wp-caption-text,
 .wrapper .gallery-caption {
 
@@ -498,12 +492,12 @@ article.format-quote {
     }
   }
 
-  h1, h2 {
+  #site-logo, h2 {
 
     display: inline-block;
   }
 
-  h1 {
+  #site-logo {
 
     font-size: $font-size--header-logo;
   }
