@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
  * @see : http://codex.wordpress.org/Child_Themes#How_to_Create_a_Child_Theme
@@ -90,7 +90,7 @@ add_action( 'widgets_init', 'zw_ch_unregister_sidebars', 11 );
 
 /**
  * shortcode function generates columns based on the inuitcss framework
- * 
+ *
  * @param  array $atts    attributes included with this shortcode
  * @param  string $content  any content in the middle of the shortcode
  * @return array            return some generated HTML columns for inuit css
@@ -108,7 +108,7 @@ function zw_ch_inuitcss_column( $atts, $content = null ) {
 
     $no_content = zw_ch_return_if_empty( $content );
 
-    $classnames = esc_attr( trim( $atts['fraction'] ) . ' ' 
+    $classnames = esc_attr( trim( $atts['fraction'] ) . ' '
       . trim( $atts['additional_classes'] ) );
 
     /* Build the HTML string */
@@ -128,9 +128,9 @@ function zw_ch_inuitcss_column( $atts, $content = null ) {
 add_shortcode( 'inuitcss_column', 'zw_ch_inuitcss_column' );
 
 /**
- * simply utility function accepts a string, trims it, 
+ * simply utility function accepts a string, trims it,
  * and then returns whether the result is empty or not.
- * 
+ *
  * @param  string $string   an input string to test for content
  * @return boolean          true if trimmed string is empty, false otherwise
  */
@@ -138,7 +138,7 @@ function zw_ch_return_if_empty( $string ) {
 
   $trimmed_string = trim( $string );
 
-  if( empty( $trimmed_string  ) ) 
+  if( empty( $trimmed_string  ) )
     return true;
 
   return false;
@@ -146,11 +146,11 @@ function zw_ch_return_if_empty( $string ) {
 
 
 /**
- * shortcode function that returns a list of posts and then calls the excerpt 
- * template to display them on the screen.  
- * Needs to be refactored because we knowingly override the global wp_query variable in 
+ * shortcode function that returns a list of posts and then calls the excerpt
+ * template to display them on the screen.
+ * Needs to be refactored because we knowingly override the global wp_query variable in
  * order to reuse the template's code.
- * 
+ *
  * @param  array $atts    attributes included with this shortcode
  * @param  string $content  any content in the middle of the shortcode
  * @return array            return just what you get, for now.
@@ -176,7 +176,7 @@ function zw_ch_bad_practice_post_listing( $atts, $content = null ) {
     $wp_query = new WP_Query( $args );
 
     ob_start();
-  get_template_part('loop', 'excerpt');  
+  get_template_part('loop', 'excerpt');
   $post_listing = ob_get_clean();
 
   $wp_query = $this_is_bad;
@@ -187,8 +187,8 @@ function zw_ch_bad_practice_post_listing( $atts, $content = null ) {
 add_shortcode( 'post_listing', 'zw_ch_bad_practice_post_listing' );
 
 /**
- * shortcode function generates sections with respective headers 
- * 
+ * shortcode function generates sections with respective headers
+ *
  * @param  array $atts      attributes included with this shortcode
  * @param  string $content  any content in the middle of the shortcode
  * @return array            return some generated HTML columns for inuit css
@@ -218,9 +218,9 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
         $atts['section_name'] = strtolower( $obj->labels->name );
 
         //if there is also no part type archive
-        if( empty( $atts['section_header_link'] ) ) 
+        if( empty( $atts['section_header_link'] ) )
           $atts['section_header_classes'] .= ' hidden';
-        
+
       }
       //if there is a name, but no link
       else {
@@ -228,7 +228,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
           $atts['section_header_link'] = '/' . $atts['section_name'];
       }
     }
-    
+
 
     $no_content = zw_ch_return_if_empty( $content );
     $no_link = zw_ch_return_if_empty( $atts['section_header_link'] );
@@ -243,9 +243,9 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
     if( ! $no_link )
       $section_header_link = esc_url( $atts['section_header_link'] );
 
-    if ( $search ) 
+    if ( $search )
       $section_name = zw_ch_search_in_title( $section_name );
-    
+
 
     /* Build the HTML string */
 
@@ -259,14 +259,14 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
                 if( $back_to_top )
                   echo "back_to_top";
                 else
-                  echo $section_name; 
+                  echo $section_name;
 
                 ?>">
-                <div class="fp-section__header__spacer">h4ck</div><h2><a <?php 
+                <div class="fp-section__header__spacer">h4ck</div><h2><a <?php
 
                 echo 'class="subtle-link ';
 
-                echo ( ! $no_link ) ? 'solid-to-fade" ' : 'cursor-default" '; 
+                echo ( ! $no_link ) ? 'solid-to-fade" ' : 'cursor-default" ';
 
                 if( ! $no_link )
                   echo 'href="' . $section_header_link . '" ';
@@ -280,7 +280,7 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
         </div><!-- end of .layout-->
 
     </section><!-- end of .fp-section-->
-    <?php 
+    <?php
 
     return ob_get_clean();
 }
@@ -289,7 +289,7 @@ add_shortcode( 'section_skeleton', 'zw_ch_section_skeleton' );
 /**
  * Function that creates a search bar in the title if called upon.
  * (i.e., this happens on the 'Search' page in desktop mode)
- * 
+ *
  * @param  string $s  the last search query
  * @return string     the HTML code to generate the header search title
  */
@@ -301,14 +301,14 @@ function zw_ch_search_in_title( $s ) {
           <span class="screen-reader-text">Search for:</span>
           <input class="search-field" placeholder="search…" value="<?php echo $s; ?>" name="s" type="search" style="min-width:200px;width:200px;">
         </label><pre class="placeholder" style="display:none;"><?php echo $s; ?></pre>")<button type="submit" class="search-submit solid-to-fade"><i class="icon-search"></i></button>
-      </form></span><?php 
+      </form></span><?php
   return ob_get_clean();
 }
 
 /**
  * function takes a string and returns its post type archive, if possible.
  * 'Posts' don't have an archive page as such, so we return the 'page_for_posts' page
- * in that specific case 
+ * in that specific case
  * @param  string $post_type  a string, hopefully a post_type
  * @return string             url of the input post_type's archive, else an empty string
  */

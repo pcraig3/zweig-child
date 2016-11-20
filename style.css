@@ -5671,7 +5671,6 @@ ul ul, ul ol, ul dd, ol ul, ol ol, ol dd, dd ul, dd ol, dd dd {
 .frame--single .entry p a:not([class]),
 a.pc3-shuffle-onclick,
 .fancy-pants a,
-.fancy-pants .search-form .search-field a,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a,
@@ -5691,7 +5690,6 @@ a.pc3-shuffle-onclick,
 .frame--single .entry p a:not([class])::-moz-selection,
 a.pc3-shuffle-onclick::-moz-selection,
 .fancy-pants a::-moz-selection,
-.fancy-pants .search-form .search-field a::-moz-selection,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
@@ -5702,7 +5700,6 @@ a.pc3-shuffle-onclick::-moz-selection,
 .frame--single .entry p a:not([class])::selection,
 a.pc3-shuffle-onclick::selection,
 .fancy-pants a::selection,
-.fancy-pants .search-form .search-field a::selection,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a::selection,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a::selection,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a::selection,
@@ -5713,7 +5710,6 @@ a.pc3-shuffle-onclick::selection,
 .frame--single .entry p a:not([class])::-moz-selection,
 a.pc3-shuffle-onclick::-moz-selection,
 .fancy-pants a::-moz-selection,
-.fancy-pants .search-form .search-field a::-moz-selection,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a::-moz-selection,
@@ -5730,31 +5726,26 @@ a.pc3-shuffle-onclick:after,
 a.pc3-shuffle-onclick *:before,
 a.pc3-shuffle-onclick:before,
 .fancy-pants a *,
-.fancy-pants .search-form .search-field a *,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a *,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a *,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a *,
 .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a *,
 .fancy-pants a *:after,
-.fancy-pants .search-form .search-field a *:after,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a *:after,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a *:after,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a *:after,
 .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a *:after,
 .fancy-pants a:after,
-.fancy-pants .search-form .search-field a:after,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a:after,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a:after,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a:after,
 .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a:after,
 .fancy-pants a *:before,
-.fancy-pants .search-form .search-field a *:before,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a *:before,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a *:before,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a *:before,
 .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a *:before,
 .fancy-pants a:before,
-.fancy-pants .search-form .search-field a:before,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a:before,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a:before,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a:before,
@@ -5764,7 +5755,6 @@ a.pc3-shuffle-onclick:before,
 .frame--single .entry p a:not([class]):visited,
 a.pc3-shuffle-onclick:visited,
 .fancy-pants a:visited,
-.fancy-pants .search-form .search-field a:visited,
 .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip a:visited,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a:visited,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a:visited,
@@ -6125,20 +6115,20 @@ article.format-quote {
   filter: alpha(opacity=0.33);
 }
 
-.fancy-pants, .fancy-pants .search-form .search-field, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip {
+.fancy-pants, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip {
   font-family: 'libre_baskervilleregular', times, serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
   font-size: 21.85px;
 }
-.fancy-pants em, .fancy-pants .search-form .search-field em, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip em {
+.fancy-pants em, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip em, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip em {
   font-family: 'libre_baskervilleitalic', times, serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
 }
-.fancy-pants strong, .fancy-pants .search-form .search-field strong, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip strong, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip strong, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip strong, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip strong, .fancy-pants b, .fancy-pants .search-form .search-field b, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip b, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip b, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip b, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip b {
+.fancy-pants strong, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip strong, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip strong, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip strong, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip strong, .fancy-pants b, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip b, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip b, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip b, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip b {
   font-family: 'libre_baskervillebold', times, serif;
   font-weight: 400;
   font-style: normal;
@@ -6683,21 +6673,6 @@ textarea {
   display: none;
 }
 
-.fancy-pants .search-form, .fancy-pants .search-form .search-field .search-form, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form {
-  display: inline;
-  /* let's just hide it */
-}
-.fancy-pants .search-form .search-field, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field {
-  width: 50%;
-  border-bottom: transparent 1px solid !important;
-}
-.fancy-pants .search-form .search-field:active, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:active, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:active, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:active, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:active, .fancy-pants .search-form .search-field:focus, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:focus, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:focus, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:focus, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-field:focus {
-  border-bottom: #FFFFFF 1px solid !important;
-}
-.fancy-pants .search-form .search-submit, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-submit, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-submit, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-submit, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip .search-form .search-submit {
-  display: none;
-}
-
 html.chardinjs--open {
   overflow: hidden;
   padding-right: 17px;
@@ -6847,7 +6822,7 @@ html.chardinjs--open {
     display: none;
   }
 
-  .fancy-pants, .fancy-pants .search-form .search-field, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip {
+  .fancy-pants, .chardinjs-helper-layer.chardinjs-bottom[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip, .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip {
     font-size: 19.665px;
   }
 

@@ -866,27 +866,3 @@ $padding-base: $inuit-base-spacing-unit / 4;
     display: none;
   }
 }
-
-.fancy-pants .search-form {
-
-  display: inline;
-
-  .search-field {
-
-    @extend .fancy-pants;
-    width: 50%;
-
-    border-bottom: transparent 1px solid !important;
-
-    &:active, &:focus {
-
-      border-bottom: $color__white 1px solid !important;
-    }
-  }
-
-  /* let's just hide it */
-  .search-submit {
-
-    display: none;
-  }
-}
