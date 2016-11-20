@@ -858,6 +858,15 @@ $padding-base: $inuit-base-spacing-unit / 4;
 
       border-bottom: #B4B4B4 1px solid !important;
     }
+
+    /* Chrome/Opera/Safari */
+    &::-webkit-input-placeholder  { color: transparent; }
+    /* Firefox 19+ */
+    &::-moz-placeholder           { color: transparent; }
+    /* IE 10+ */
+    &:-ms-input-placeholder       { color: transparent; }
+    /* Firefox 18- */
+    &:-moz-placeholder            { color: transparent; }
   }
 
   /* let's just hide it */

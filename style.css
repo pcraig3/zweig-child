@@ -6665,9 +6665,25 @@ textarea {
   width: 100%;
   border-bottom: 1px solid #F9F9F9;
   padding: 0;
+  /* Chrome/Opera/Safari */
+  /* Firefox 19+ */
+  /* IE 10+ */
+  /* Firefox 18- */
 }
 #footer .search-form .search-field:active, #footer .search-form .search-field:focus {
   border-bottom: #B4B4B4 1px solid !important;
+}
+#footer .search-form .search-field::-webkit-input-placeholder {
+  color: transparent;
+}
+#footer .search-form .search-field::-moz-placeholder {
+  color: transparent;
+}
+#footer .search-form .search-field:-ms-input-placeholder {
+  color: transparent;
+}
+#footer .search-form .search-field:-moz-placeholder {
+  color: transparent;
 }
 #footer .search-form .search-submit {
   display: none;
