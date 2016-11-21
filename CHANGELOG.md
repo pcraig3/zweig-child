@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.5.1
+* Hide "search..." placeholder text in footer. (still a search bar though.)
+* Update landscape mobile chardinjs styling.
+
 ### 1.5.0
 * Changed nearly all front-ends to make the text bigger.
    * BIG TEXT IS THE FUTURE
