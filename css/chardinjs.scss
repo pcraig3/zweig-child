@@ -77,8 +77,10 @@ html.chardinjs--open {
 
       &[data-id="chardinjs--contact"] .chardinjs-tooltip {
 
-        left: 37px !important;
-        top: 59px !important;
+        @include media-query("portrait") {
+          left: 37px !important;
+          top: 59px !important;
+        }
 
         @include media-query("lumia520") {
           top: 51px !important;
@@ -89,7 +91,13 @@ html.chardinjs--open {
 
       &[data-id="chardinjs--description"] .chardinjs-tooltip {
 
-        top: 209px !important;
+        @include media-query("portrait") {
+          top: 209px !important;
+        }
+
+        @include media-query("landscape") {
+          top: 129px !important;
+        }
 
         @include media-query("lumia520") {
           top: 184px !important;
@@ -100,12 +108,6 @@ html.chardinjs--open {
 
         /* 2. hide on mobile landscape */
         right: 30px !important;
-
-        @at-root #{&} {
-          @media screen and (orientation: landscape) {
-            @include zw-visually-hidden(!important);
-          }
-        }
       }
     }
   }

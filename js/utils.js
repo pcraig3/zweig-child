@@ -4,7 +4,7 @@ jQuery(function( $ ) {
         Utils : (function () {
 
             //feels like this is bad practice :/
-            var mobile_breakpoint = 619;
+            var mobile_breakpoint = 649;
 
             var is_mobile = function () {
 
