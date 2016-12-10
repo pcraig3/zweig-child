@@ -145,7 +145,7 @@ ul, ol, dd {
 .frame--single .entry p a:not([class]),
 a.pc3-shuffle-onclick,
 .fancy-pants a {
-  @include link-underline($color__white, $color__red, $color__yellow);
+  @include link-underline(transparent, $color__red, $color__yellow);
 }
 
 .wrapper .post-title {

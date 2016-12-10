@@ -6515,7 +6515,7 @@ a.pc3-shuffle-onclick,
 .chardinjs-helper-layer.chardinjs-top[data-id="chardinjs--description"] .chardinjs-tooltip a,
 .chardinjs-helper-layer.chardinjs-left[data-id="chardinjs--description"] .chardinjs-tooltip a,
 .chardinjs-helper-layer.chardinjs-right[data-id="chardinjs--description"] .chardinjs-tooltip a {
-  text-shadow: 0.03em 0 #FFFFFF, -0.03em 0 #FFFFFF, 0 0.03em #FFFFFF, 0 -0.03em #FFFFFF, 0.06em 0 #FFFFFF, -0.06em 0 #FFFFFF, 0.09em 0 #FFFFFF, -0.09em 0 #FFFFFF, 0.12em 0 #FFFFFF, -0.12em 0 #FFFFFF, 0.15em 0 #FFFFFF, -0.15em 0 #FFFFFF;
+  text-shadow: 0.03em 0 transparent, -0.03em 0 transparent, 0 0.03em transparent, 0 -0.03em transparent, 0.06em 0 transparent, -0.06em 0 transparent, 0.09em 0 transparent, -0.09em 0 transparent, 0.12em 0 transparent, -0.12em 0 transparent, 0.15em 0 transparent, -0.15em 0 transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#d43b1d), to(#d43b1d));
   background-image: -webkit-linear-gradient(#d43b1d, #d43b1d);
   background-image: -o-linear-gradient(#d43b1d, #d43b1d);
