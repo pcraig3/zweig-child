@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.5.2
+* fix background colour for underline styles (ie, by removing it)
+
 ### 1.5.1
 * Hide "search..." placeholder text in footer. (still a search bar though.)
 * Update landscape mobile chardinjs styling.
