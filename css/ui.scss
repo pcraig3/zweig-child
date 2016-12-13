@@ -142,10 +142,13 @@ ul, ol, dd {
 }
 
 /* add nice underlines to links */
-.frame--single .entry p a:not([class]),
-a.pc3-shuffle-onclick,
 .fancy-pants a {
-  @include link-underline(transparent, $color__red, $color__yellow);
+  @include link-underline($color__white, $color__red, $color__yellow);
+}
+
+.frame--single .entry p a:not([class]),
+a.pc3-shuffle-onclick {
+  @include link-underline($color__grey--light, $color__red, $color__yellow);
 }
 
 .wrapper .post-title {
