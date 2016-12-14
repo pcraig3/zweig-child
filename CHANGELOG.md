@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.5.3
+* really fix background colour for underline styles
+
 ### 1.5.2
 * fix background colour for underline styles (ie, by removing it)
 
