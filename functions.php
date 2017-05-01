@@ -10,6 +10,29 @@ function remove_parent_filters(){
 add_action( 'after_setup_theme', 'remove_parent_filters' );
 
 
+function zw_ch_title ( $title ) {
+    $description = get_bloginfo( 'description' );
+
+    // make sure description is a non-empty string
+    if( !empty( $description ) ) {
+
+        // if there is no title, set the description as the title
+        if( empty( $title ) ) {
+            return $description;
+        }
+
+        // if the description isn't yet part of the title, append it
+        if( strpos( $title, $description ) == false ) {
+            return $title . ' — ' . $description;
+        }
+    }
+
+    return $title;
+}
+
+add_filter( 'wp_title', 'zw_ch_title' );
+
+
 /*
  * @see : http://codex.wordpress.org/Child_Themes#How_to_Create_a_Child_Theme
  * We can make the site faster by not including the parent css file
