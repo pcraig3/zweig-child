@@ -1,5 +1,15 @@
 <?php
 
+// Remove a function from the parent theme
+// http://brianjohnsondesign.com/how-to-remove-filters-using-child-theme/
+function remove_parent_filters(){
+    // Have to do it after theme setup, because child theme functions are loaded first
+    // this is insane
+    remove_filter('wp_title', 'zweig_title');
+}
+add_action( 'after_setup_theme', 'remove_parent_filters' );
+
+
 /*
  * @see : http://codex.wordpress.org/Child_Themes#How_to_Create_a_Child_Theme
  * We can make the site faster by not including the parent css file
