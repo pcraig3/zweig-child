@@ -1,17 +1,15 @@
 @charset 'UTF-8';
 /*!
-Theme Name: Zweig
-Theme URI: http://vandereecken.me/zweig/
-Description: Zweig is a theme optimized for readability, to support a comfortable reading and writing experience. It features a clean and minimalist one column design, a three widget area footer, a single-level menu header and full ligatures support. It's build on HTML5 and CSS3 and fully responsive.
-Author: Simon Vandereecken
-Author URI: http://www.vandereecken.me
-Version: 1.4.1
-Tags: white, black, orange, light, threaded-comments, one-column, sticky-post, responsive-layout
-
-License: GNU General Public License v2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-*/
+ Theme Name:   		Zweig Child
+ Description:  		Child Theme of the Zweig Theme
+ Author:       		Paul Craig
+ Author URI:   		http://pcraig3.ca
+ Template:     		zweig
+ Version:      		1.7.0
+ Text Domain:  		zw-ch
+ GitHub Theme URI: 	https://github.com/pcraig3/zweig-child
+ GitHub Branch:    	master
+ */
 h1,
 h2,
 h3,

@@ -1,5 +1,16 @@
 ## Changelog
 
+### 1.7.0
+* New feature: using `gulp` instead of `grunt` -- users are gonna go nuts for this one
+  * Benefits include:
+    * gulp is cooler
+    * gulp is newer
+    * gulp syntax is easier
+    * gulp is way faster (totally unexpected)
+    * "gulp" has one less character (better for command line)
+    * gulpfile.js < Gruntfile.js
+    * minor improvement to CSS output
+
 ### 1.6.0
 * New feature: `<title>` isn't weird and broken
 * Corresponding switch in SEO plugins behind the scenes
