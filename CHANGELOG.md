@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.6.0
+* New feature: `<title>` isn't weird and broken
+* Corresponding switch in SEO plugins behind the scenes
+
 ### 1.5.3
 * really fix background colour for underline styles
 
