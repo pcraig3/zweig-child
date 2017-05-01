@@ -99,7 +99,7 @@ $inuit-enable-responsive-paddings--none:            true !default;
 @import "css/bower_components/inuit-page/base.page";
 
 /* Import chardin.js overlay styling */
-@import "js/bower_components/chardin.js/chardinjs";
+@import "js/bower_components/chardin.js/chardinjs.scss";
 
 @import "css/_underline.scss";
 @import "css/fonts.scss";
