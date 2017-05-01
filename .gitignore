@@ -5,6 +5,8 @@ css/fonts/specimen_files
 *css.map
 .sass-cache
 
+*js.map
+
 # don't check in node_modules
 # http://stackoverflow.com/questions/11459475/should-i-check-in-node-modules-to-git-when-creating-a-node-js-app-on-heroku
 node_modules
