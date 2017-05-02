@@ -360,6 +360,10 @@ article.format-quote {
   position: relative !important;
 }
 
+.visually-hidden {
+  @include zw-visually-hidden();
+}
+
 .fade-to-solid {
   @include zw-transition(opacity);
   @include zw-opacity(.65);
@@ -492,7 +496,7 @@ article.format-quote {
     z-index: 97;
   }
 
-  #site-logo, h2 {
+  #site-logo, h1, h2 {
 
     display: inline-block;
   }
@@ -502,7 +506,7 @@ article.format-quote {
     font-size: $font-size--header-logo;
   }
 
-  h2 {
+  h1, h2 {
     @include Baskerville-Regular;
     @include zw-lowercase( $font-size--header-subheading );
 

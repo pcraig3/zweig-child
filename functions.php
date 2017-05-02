@@ -295,11 +295,14 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
                 <div class="fp-section__header__spacer">h4ck</div><?php
                     if ( !empty( $section_name ) ) {
 
+                        $heading = is_singular() ? 'h2' : 'h1';
+                        $heading_attrs = ($heading === 'h1') ? ' class="page-title"' : '';
+
                         if ( !$no_link ) {
-                            echo '<h2><a class="subtle-link solid-to-fade" href="' . $section_header_link . '">::' . $section_name . '</a></h2>';
+                            echo '<' . $heading . $heading_attrs . '><a class="subtle-link solid-to-fade" href="' . $section_header_link . '">::' . $section_name . '</a></' . $heading . '>';
                         }
                         else {
-                            echo '<h2>::' . $section_name . '</h2>';
+                            echo '<' . $heading . $heading_attrs . '>::' . $section_name . '</' . $heading . '>';
                         }
                     }
                 ?>

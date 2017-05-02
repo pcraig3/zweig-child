@@ -3407,6 +3407,9 @@ html {
   height: 0!important;
 }.relative {
   position: relative!important;
+}.visually-hidden {
+  position: absolute;
+  left: -999em;
 }.fade-to-solid, .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--description] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--description] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--description] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--description] .chardinjs-tooltip a {
   -webkit-transition: opacity 0.15s ease-in;
        -o-transition: opacity 0.15s ease-in;
@@ -3546,11 +3549,11 @@ html {
   width: auto;
   position: fixed;
   z-index: 97;
-}.site-header #site-logo, .fp-section__header #site-logo, .site-header h2, .fp-section__header h2 {
+}.site-header #site-logo, .fp-section__header #site-logo, .site-header h1, .fp-section__header h1, .site-header h2, .fp-section__header h2 {
   display: inline-block;
 }.site-header #site-logo, .fp-section__header #site-logo {
   font-size: 63.65px;
-}.site-header h2, .fp-section__header h2 {
+}.site-header h1, .fp-section__header h1, .site-header h2, .fp-section__header h2 {
   font-family: "libre_baskervilleregular",times,serif;
   font-weight: 400;
   font-style: normal;
@@ -4001,7 +4004,7 @@ html {
     margin-left: 0;
   }.back-to-top {
     margin-right: 24px;
-  }.site-header h2, .fp-section__header h2, .fp-section__header h2 {
+  }.site-header h1, .fp-section__header h1, .site-header h2, .fp-section__header h2, .fp-section__header h1, .fp-section__header h2 {
     margin: -18px 0;
     float: left;
     padding-left: 36px;
@@ -4043,9 +4046,9 @@ html {
 }@media screen and (max-width:419px) {
   .site-header #site-logo, .fp-section__header #site-logo {
     font-size: 54.1025px;
-  }.site-header h2, .fp-section__header h2 {
+  }.site-header h1, .fp-section__header h1, .site-header h2, .fp-section__header h2 {
     font-size: 45.22px;
-  }.site-header h2, .fp-section__header h2, .fp-section__header h2 {
+  }.site-header h1, .fp-section__header h1, .site-header h2, .fp-section__header h2, .fp-section__header h1, .fp-section__header h2 {
     margin-top: -30px;
   }.fancy-button {
     font-size: 19px;

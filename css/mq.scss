@@ -78,7 +78,7 @@
   .site-header,
   .fp-section__header {
 
-    h2 {
+    h1, h2 {
 
       margin: -($inuit-base-spacing-unit * .75) 0;
       float: left;
@@ -168,7 +168,7 @@
         font-size: $font-size--header-logo * .85;
       }
 
-    h2 {
+    h1, h2 {
       font-size: $font-size--header-subheading * .85;
     }
   }
@@ -176,7 +176,7 @@
   .site-header,
   .fp-section__header {
 
-    h2 {
+    h1, h2 {
 
       margin-top: -($inuit-base-spacing-unit * 1.25);
     }
