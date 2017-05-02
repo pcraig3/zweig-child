@@ -1,57 +1,40 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article itemtype="http://schema.org/BlogPosting"  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <header class="entry-header">
+            <h1 class="entry-title">
+                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Link to','zweig'); ?> <?php the_title_attribute(); ?>">
+                    <?php the_title();
 
-		 <h1 itemprop="headline" class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Link to','zweig'); ?> <?php the_title_attribute(); ?>" itemprop="url"><?php 
+                    /*if( has_excerpt( get_the_id() ) )
+                    echo ": " . get_the_excerpt();*/
+                    ?>
+                </a>
+            </h1>
 
-		the_title();
+            <div class="entry-meta">
+                <time class="entry-date" datetime="<?php the_time('Y-m'); ?>"><?php the_time('F Y'); ?></time>
+            </div>
+        </header>
 
-		/*if( has_excerpt( get_the_id() ) )
-			echo ": " . get_the_excerpt();*/
-		?></a></h1>
-
-		 <h2 class="post-date">
-		 	<?php the_time('F Y'); ?>
-		 </h2>
-
-		 <!-- Display the Post's Content in a div box. -->
-		 <div class="entry" itemprop="articleBody">
+        <!-- Display the Post's Content in a div box. -->
+		 <div class="entry-content">
 		   <?php the_content(); ?>
 		 </div>
 
-	 	<div class="post-pages">
-	 		<?php wp_link_pages(); ?>
-	 	</div>
+        <?php
+            if ( is_single() ) {
 
-		<div class="post-meta">
-			<?php echo get_the_tag_list('<p><strong>Tags</strong> : ',', ','</p>');?>
-		</div>
+        get_template_part('loop', 'accoutrements');
 
-    <div class="post-navigation">
-        <div class="alignright"><?php next_post_link(); ?> </div>
-        <div class="alignleft"><?php previous_post_link(); ?> </div>
-    	<div class="clearer"></div>
-    </div>
+            } else { ?>
 
-	 </article>
+        </article>
 
-
-  	<div class="author-box">
-
-  		<div class="author-avatar">
-  			<?php echo get_avatar( get_the_author_meta('email'), '800' ); ?>
-  		</div>
-
-  		<div class="author-description">
-  			<p class="author-name"><strong><?php echo $author = get_the_author(); ?></strong></p>
-  			<p><?php the_author_meta('description') ?></p>
-  		</div>
-
-  	</div>
-  	<div class="clearer"></div>
+        <?php } ?>
 
 	 <!-- CALL THE COMMENTS TEMPLATE -->
-	 <div id="comments">
+	 <div id="comments" class="comments-area">
 	 <?php
 				// If comments are open or we have at least one comment, load up the comment template
 				if ( comments_open() || '0' != get_comments_number() )

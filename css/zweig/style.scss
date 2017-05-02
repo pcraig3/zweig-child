@@ -184,7 +184,7 @@ textarea:active {
   .entry-title {
     font-size: 2em !important; }
 
-  .entry {
+  .entry-content{
     font-size: 0.9em; } }
 /* Elements */
 body {
@@ -261,7 +261,7 @@ article img, article iframe, article div {
 .post-meta {
   margin-top: 2em; }
 
-.post-pages {
+.entry-pages {
   clear: both;
   text-transform: uppercase;
   font-family: sans-serif;
@@ -271,7 +271,7 @@ article img, article iframe, article div {
   font-weight: bold; }
 
 /* Post navigation */
-.post-navigation {
+.entry-navigation {
   font-family: serif;
   text-transform: lowercase;
   font-style: italic;
@@ -412,12 +412,12 @@ article.format-quote {
     width: 100%;
     margin: 0 !important; }
 
-  .post-navigation .alignleft {
+  .entry-navigation .alignleft {
     display: block;
     float: none;
     text-align: left; }
 
-  .post-navigation .alignright {
+  .entry-navigation .alignright {
     padding-top: 1em;
     display: block;
     float: none;

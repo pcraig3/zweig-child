@@ -6,12 +6,12 @@ ob_start();
 
 	<div class="layout">
 
-		<div class="layout__item one-third palm-one-whole"><!-- empty column --></div><!--end of .layout__item.one-third 
+		<div class="layout__item one-third palm-one-whole"><!-- empty column --></div><!--end of .layout__item.one-third
 
 		--><div class="layout__item two-thirds palm-one-whole">
 			<div class="frame frame--single">
 
-				<?php get_template_part('loop','page'); ?>
+				<?php get_template_part('loop','single'); ?>
 
 			</div><!-- end of frame -->
 		</div><!-- end of .layout__item.two-thirds -->

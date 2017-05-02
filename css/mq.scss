@@ -135,7 +135,7 @@
     display: none;
   }
 
-  .post-navigation {
+  .entry-navigation {
 
     font-size: $inuit-base-font-size;
   }
@@ -148,7 +148,7 @@
 /* eyeroll */
 @media screen and (max-width: 42em) {
 
-  .entry {
+  .entry-content{
 
     font-size: 1em;
   }
@@ -192,7 +192,7 @@
   }
 
   .single {
-    .site-content .entry {
+    .site-content .entry-content{
 
       h1, h2, h3 {
         @include zw-lowercase( $inuit-base-font-size * 1.6 );

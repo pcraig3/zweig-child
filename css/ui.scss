@@ -146,7 +146,7 @@ ul, ol, dd {
   @include link-underline($color__white, $color__red, $color__yellow);
 }
 
-.frame--single .entry p a:not([class]),
+.frame--single .entry-content p a:not([class]),
 a.pc3-shuffle-onclick {
   @include link-underline($color__grey--light, $color__red, $color__yellow);
 }
@@ -213,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 .single {
-  .site-content .entry {
+  .site-content .entry-content{
 
     h1 {
       @include zw-lowercase( $inuit-base-font-size * 1.9 );
@@ -281,10 +281,10 @@ textarea {
 .site-header #site-logo {
   @include Baskerville-Regular;
 }
-.post-pages {
+.entry-pages {
   @include Verb-Condensed;
 }
-.post-navigation {
+.entry-navigation {
   @include Baskerville-Italic;
 }
 .author-name strong {
@@ -682,7 +682,7 @@ textarea {
 /* Post metas */
 
 /* Post navigation */
-.post-navigation {
+.entry-navigation {
 
   font-size: $font-size--body-md;
 
