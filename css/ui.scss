@@ -789,7 +789,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 /* Back to top button */
 .back-to-top {
 
-  $back_to_top_size: $default-padding-horizontal;
+  $back_to_top_size: $font-size--header-subheading;
 
   position: fixed;
   top: auto;

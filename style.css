@@ -3759,19 +3759,19 @@ html {
   top: auto;
   bottom: 24px;
   right: 0;
-  margin-right: 48px;
+  margin-right: 53.2px;
   z-index: 98;
 }.back-to-top .back-to-top__link {
-  font-size: 48px;
+  font-size: 53.2px;
   position: relative;
-  height: 48px;
-  width: 48px;
+  height: 53.2px;
+  width: 53.2px;
   display: inline-block;
   color: #d43b1d;
   background: 0 0;
   border: 0;
   text-align: center;
-  line-height: 48px;
+  line-height: 53.2px;
 }@media screen and (min-width:1399px) {
   .back-to-top {
     margin-right: 15%;
