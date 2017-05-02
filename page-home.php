@@ -8,13 +8,13 @@ ob_start();
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <div class="layout__item one-whole ">
+    <div class="layout__item one-whole">
         <div class="frame frame--splash fancy-pants">
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
                 <!-- Display the Post's Content in a div box. -->
-                <div class="entry" itemprop="articleBody">
+                <div class="entry-content">
                     <?php the_content(); ?>
                 </div>
 
