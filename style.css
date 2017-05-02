@@ -3133,11 +3133,11 @@ html {
   }
 }::-moz-selection {
   background: #fcd700;
-  color: #ffffff;
+  color: #000000;
   text-shadow: none;
 }::selection {
   background: #fcd700;
-  color: #ffffff;
+  color: #000000;
   text-shadow: none;
 }html {
   font-size: 19px;
@@ -3422,14 +3422,14 @@ html {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
       filter: alpha(opacity=1);
-}.solid-to-fade {
+}.solid-to-fade, .fancy-pants a, .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--description] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--description] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--description] .chardinjs-tooltip a, .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--description] .chardinjs-tooltip a, .frame--single .entry-content p a:not([class]), a.pc3-shuffle-onclick {
   -webkit-transition: opacity 0.15s ease-in;
        -o-transition: opacity 0.15s ease-in;
           transition: opacity 0.15s ease-in;
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
       filter: alpha(opacity=1);
-}.solid-to-fade:hover {
+}.solid-to-fade:hover, .fancy-pants a:hover, .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .frame--single .entry-content p a:hover:not([class]), a.pc3-shuffle-onclick:hover {
   opacity: 0.65;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.65)";
       filter: alpha(opacity=0.65);
