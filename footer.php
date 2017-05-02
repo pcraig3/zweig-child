@@ -1,36 +1,36 @@
 
-
-  </div> <!-- EOF WRAPPER -->
+</main>
+  </div> <!-- EOF #content -->
 
   <footer id="footer" class="p0">
 
     <div class="layout layout--flush">
 
-    <?php 
+    <?php
 
       //no widgets if a menu has been assigned
       //note that this means you can just use 'custom menu' widgets if'n you please
-      if ( has_nav_menu( 'footer' ) ) { 
+      if ( has_nav_menu( 'footer' ) ) {
 
         echo '<div class="layout__item one-whole">';
 
         echo '<nav>';
-        
-        wp_nav_menu( 
-            array( 
-              'theme_location' => 'footer', 
+
+        wp_nav_menu(
+            array(
+              'theme_location' => 'footer',
               'menu_class' => 'nav-menu',
-              'fallback_cb'     => '__return_false', 
-              ) 
-          ); 
-            
+              'fallback_cb'     => '__return_false',
+              )
+          );
+
         echo '</nav>';
 
         echo '</div><!--end of .layout__item-->';
 
       } //end of the 'has_nav_menu' if check
       else {
-  
+
       ?>
 
     <div class="layout__item one-whole">
@@ -41,7 +41,7 @@
   	</div>
 
 
-    </div><!-- end of .layout__item.one-third 
+    </div><!-- end of .layout__item.one-third
     --><div class="layout__item one-whole">
 
   	<div class="widget-area">

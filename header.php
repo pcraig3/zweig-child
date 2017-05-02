@@ -2,23 +2,19 @@
 
 <html <?php language_attributes(); ?>>
 
-<head profile="http://gmpg.org/xfn/11">
-
+<head>
     <meta charset="<?php bloginfo('charset'); ?>">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title><?php wp_title(''); ?></title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
 
     <?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class();?> tabindex="-1">
 
-<header id="site-header">
+<header id="masthead" class="site-header" role="banner">
     <div class="site-meta" id="chardinjs--contact"
          data-intro="::contact"
          data-position="right">
@@ -63,4 +59,5 @@
 
 </header>
 
-<div class="wrapper">
+<div id="content" class="site-content">
+    <main id="main" class="site-main" role="main">

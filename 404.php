@@ -1,10 +1,9 @@
-<?php get_header(); 
+<?php get_header();
 
 ob_start();
 
-//TODO: remove the logo?
 ?>
-	
+
 	<div class="layout__item one-third palm-one-whole"></div><!--end of .layout__item.one-third
 
 	--><div class="layout__item two-thirds palm-one-whole">
@@ -16,7 +15,7 @@ ob_start();
 		</div><!-- end of frame -->
 	</div><!-- end of .layout__item.two-thirds -->
 
-<?php 
+<?php
 
 $html_string = ob_get_clean();
 

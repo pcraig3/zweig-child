@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
 }strong {
   font-weight: 700;
-}.wrapper .post-title {
+}.site-content .post-title {
   text-transform: lowercase;
   font-family: serif;
   font-style: italic;
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
      -moz-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
-}.wrapper .post-date, .wrapper .post-meta p, .wrapper .wp-caption-text, .wrapper .gallery-caption {
+}.site-content .post-date, .site-content .post-meta p, .site-content .wp-caption-text, .site-content .gallery-caption {
   text-transform: uppercase;
   font-family: sans-serif;
   font-variant: small-caps;
@@ -55,53 +55,53 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2.5em;
   margin-top: 0;
   padding-top: 0;
-}.wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4 {
+}.site-content h1, .site-content h2, .site-content h3, .site-content h4 {
   text-transform: lowercase;
   font-family: serif;
   font-style: italic;
-}.wrapper h5, .wrapper h6 {
+}.site-content h5, .site-content h6 {
   text-transform: uppercase;
   font-family: sans-serif;
   font-variant: small-caps;
-}.wrapper blockquote {
+}.site-content blockquote {
   text-transform: lowercase;
   font-family: serif;
   font-style: italic;
   text-transform: none;
   line-height: 2em;
-}.wrapper blockquote cite {
+}.site-content blockquote cite {
   display: block;
-}.wrapper blockquote cite:before {
+}.site-content blockquote cite:before {
   content: "\2014 \0000a0";
-}.wrapper cite {
+}.site-content cite {
   text-transform: uppercase;
   font-family: sans-serif;
   font-variant: small-caps;
   font-style: normal;
   font-size: 0.8em;
-}.wrapper cite:before {
+}.site-content cite:before {
   content: "\2014 \0000a0";
-}.wrapper table {
+}.site-content table {
   width: 100%;
-}.wrapper table thead {
+}.site-content table thead {
   border-bottom: 1px #cbcbcb solid;
   text-transform: uppercase;
   font-family: sans-serif;
   font-variant: small-caps;
-}.wrapper table tbody {
+}.site-content table tbody {
   text-align: left;
   line-height: 2em;
-}.wrapper table tr {
+}.site-content table tr {
   border-bottom: 1px #cbcbcb solid;
-}.wrapper table tr:nth-child(even) {
+}.site-content table tr:nth-child(even) {
   background-color: #f9f8fa;
-}.wrapper dt {
+}.site-content dt {
   text-transform: uppercase;
   font-family: sans-serif;
   font-variant: small-caps;
-}.wrapper dd {
+}.site-content dd {
   padding-bottom: 1em;
-}.wrapper address {
+}.site-content address {
   font-style: normal;
 }input[type=submit] {
   background-color: #d43b1d;
@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   background-color: #ffffff;
   color: #2d2d2d;
-}.wrapper {
+}.site-content {
   width: 90%;
   max-width: 39em;
   margin: auto;
@@ -173,38 +173,38 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
 }.alignright {
   float: right;
-}#site-header, .fp-section__header {
+}.site-header, .fp-section__header {
   width: 95%;
   padding: 1em 0;
   margin: auto;
   border-bottom: #cbcbcb 1px solid;
-}#site-header .site-meta, .fp-section__header .site-meta {
+}.site-header .site-meta, .fp-section__header .site-meta {
   float: left;
   width: 30%;
-}#site-header h1, .fp-section__header h1, #site-header h2, .fp-section__header h2 {
+}.site-header h1, .fp-section__header h1, .site-header h2, .fp-section__header h2 {
   padding: 0;
   margin: 0;
-}#site-header h1, .fp-section__header h1 {
+}.site-header h1, .fp-section__header h1 {
   text-transform: lowercase;
   font-family: serif;
   font-style: italic;
   font-size: 1.5em;
-}#site-header h2, .fp-section__header h2 {
+}.site-header h2, .fp-section__header h2 {
   text-transform: uppercase;
   font-family: sans-serif;
   font-variant: small-caps;
   font-size: 0.8em;
-}#site-header nav, .fp-section__header nav {
+}.site-header nav, .fp-section__header nav {
   width: 70%;
   float: right;
   text-align: right;
   padding-top: 1em;
   padding-bottom: 0.5em;
   position: relative;
-}#site-header ul, .fp-section__header ul {
+}.site-header ul, .fp-section__header ul {
   margin: 0;
   padding: 0;
-}#site-header li, .fp-section__header li {
+}.site-header li, .fp-section__header li {
   display: inline;
   padding-left: 1em;
 }.sticky {
@@ -329,15 +329,15 @@ h1, h2, h3, h4, h5, h6 {
 }article.format-quote .post-title, article.format-quote .post-date {
   display: none;
 }@media screen and (max-width:70em) {
-  #site-header .site-meta, .fp-section__header .site-meta {
+  .site-header .site-meta, .fp-section__header .site-meta {
     float: none;
     text-align: center;
-  }#site-header nav, .fp-section__header nav {
+  }.site-header nav, .fp-section__header nav {
     text-align: center;
-  }#site-header li, .fp-section__header li {
+  }.site-header li, .fp-section__header li {
     padding-left: 0;
     padding-right: 1em;
-  }#site-header .site-meta, .fp-section__header .site-meta, #site-header nav, .fp-section__header nav {
+  }.site-header .site-meta, .fp-section__header .site-meta, .site-header nav, .fp-section__header nav {
     width: auto;
   }
 }@media screen and (max-width:56em) {
@@ -3198,13 +3198,13 @@ html {
   text-shadow: none;
 }.frame--single .entry p a:not([class]):visited, a.pc3-shuffle-onclick:visited {
   color: #d43b1d;
-}.wrapper .post-title {
+}.site-content .post-title {
   padding-bottom: 9.6px;
   font-size: 40.85px;
   line-height: 39.75px;
   overflow-wrap: break-word;
   word-wrap: break-word;
-}.wrapper .post-date, .wrapper .wp-caption-text, .wrapper .gallery-caption {
+}.site-content .post-date, .site-content .wp-caption-text, .site-content .gallery-caption {
   font-size: 16.15px;
   margin-bottom: 48px;
   color: #333333!important;
@@ -3236,66 +3236,66 @@ html {
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
-}.wrapper .post-meta p, .wrapper .post-meta p strong {
+}.site-content .post-meta p, .site-content .post-meta p strong {
   font-family: "libre_baskervilleitalic",times,serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
-}.wrapper .post-date, .wrapper .wp-caption-text, .wrapper .gallery-caption {
+}.site-content .post-date, .site-content .wp-caption-text, .site-content .gallery-caption {
   font-family: "verblight",arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
-}.wrapper .post-title {
+}.site-content .post-title {
   font-family: "libre_baskervilleregular",times,serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
-}.wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
+}.site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6 {
   font-family: "verblight_italic",arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
   text-transform: uppercase;
-}.single .wrapper .entry h1 {
+}.single .site-content .entry h1 {
   font-variant: normal;
   text-transform: lowercase;
   font-size: 36.1px;
-}.single .wrapper .entry h2 {
+}.single .site-content .entry h2 {
   font-variant: normal;
   text-transform: lowercase;
   font-size: 34.2px;
-}.single .wrapper .entry h3 {
+}.single .site-content .entry h3 {
   font-variant: normal;
   text-transform: lowercase;
   font-size: 28.5px;
-}.wrapper blockquote {
+}.site-content blockquote {
   font-family: "verblight_italic",arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
-}.wrapper cite {
+}.site-content cite {
   font-family: "verblight",arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
   margin-left: 24px;
-}.wrapper table {
+}.site-content table {
   font-size: 19px;
   text-align: left;
-}.wrapper table th {
+}.site-content table th {
   font-family: "verbcondregular",arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
   text-align: left;
-}.wrapper table tbody {
+}.site-content table tbody {
   line-height: 22.525px;
-}.wrapper table tbody th, .wrapper table tbody td {
+}.site-content table tbody th, .site-content table tbody td {
   padding: 12px;
   padding-left: 0;
   vertical-align: top;
-}.wrapper dt {
+}.site-content dt {
   font-family: "verbcondregular_italic",arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -3328,7 +3328,7 @@ html {
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
-}#site-header #site-logo, .fp-section__header #site-logo {
+}.site-header #site-logo, .fp-section__header #site-logo {
   font-family: "libre_baskervilleregular",times,serif;
   font-weight: 400;
   font-style: normal;
@@ -3476,7 +3476,7 @@ html {
   content: "\f019";
 }.fancy-button.fancy-button--github:after {
   content: "\f092";
-}.wrapper {
+}.site-content {
   width: 100%;
   padding-top: 24px;
   padding-bottom: 0;
@@ -3487,30 +3487,30 @@ html {
   padding-right: 48px;
   padding-top: 0;
 }@media screen and (max-width:419px) {
-  .wrapper {
+  .site-content {
     padding-left: 15.84px;
     padding-right: 15.84px;
   }
 }@media screen and (max-width:649px) {
-  .wrapper {
+  .site-content {
     padding-left: 24px;
     padding-right: 24px;
   }
 }@media screen and (min-width:1399px) {
-  .wrapper {
+  .site-content {
     padding-left: 15%;
     padding-right: 15%;
   }
 }@media screen and (min-width:1824px) {
-  .wrapper {
+  .site-content {
     padding-left: 25%;
     padding-right: 25%;
   }
-}.wrapper .post-meta p, .wrapper .post-meta p strong {
+}.site-content .post-meta p, .site-content .post-meta p strong {
   text-transform: lowercase;
   font-variant: normal;
   font-size: 19px;
-}#site-header, .fp-section__header {
+}.site-header, .fp-section__header {
   width: 100%;
   padding-top: 24px;
   padding-bottom: 0;
@@ -3522,35 +3522,35 @@ html {
   padding-top: 0;
   background: #f9f9f9;
 }@media screen and (max-width:419px) {
-  #site-header, .fp-section__header {
+  .site-header, .fp-section__header {
     padding-left: 15.84px;
     padding-right: 15.84px;
   }
 }@media screen and (max-width:649px) {
-  #site-header, .fp-section__header {
+  .site-header, .fp-section__header {
     padding-left: 24px;
     padding-right: 24px;
   }
 }@media screen and (min-width:1399px) {
-  #site-header, .fp-section__header {
+  .site-header, .fp-section__header {
     padding-left: 15%;
     padding-right: 15%;
   }
 }@media screen and (min-width:1824px) {
-  #site-header, .fp-section__header {
+  .site-header, .fp-section__header {
     padding-left: 25%;
     padding-right: 25%;
   }
-}#site-header .site-meta, .fp-section__header .site-meta {
+}.site-header .site-meta, .fp-section__header .site-meta {
   margin-top: 18px;
   width: auto;
   position: fixed;
   z-index: 97;
-}#site-header #site-logo, .fp-section__header #site-logo, #site-header h2, .fp-section__header h2 {
+}.site-header #site-logo, .fp-section__header #site-logo, .site-header h2, .fp-section__header h2 {
   display: inline-block;
-}#site-header #site-logo, .fp-section__header #site-logo {
+}.site-header #site-logo, .fp-section__header #site-logo {
   font-size: 63.65px;
-}#site-header h2, .fp-section__header h2 {
+}.site-header h2, .fp-section__header h2 {
   font-family: "libre_baskervilleregular",times,serif;
   font-weight: 400;
   font-style: normal;
@@ -3745,7 +3745,7 @@ html {
     padding-left: 25%;
     padding-right: 25%;
   }
-}.error404 #site-header .site-meta, .error404 .fp-section__header .site-meta {
+}.error404 .site-header .site-meta, .error404 .fp-section__header .site-meta {
   visibility: hidden;
 }.error404 .back-to-top {
   display: none;
@@ -3854,7 +3854,7 @@ html {
 }html.chardinjs--open {
   overflow: hidden;
   padding-right: 17px;
-}#site-header .site-meta.chardinjs-show-element, .fp-section__header .site-meta.chardinjs-show-element {
+}.site-header .site-meta.chardinjs-show-element, .fp-section__header .site-meta.chardinjs-show-element {
   z-index: 100;
 }.chardinjs-overlay {
   -webkit-transition: opacity 0.15s ease-in;
@@ -3939,7 +3939,7 @@ html {
   }
 }.is-mobile .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--get-that-overlay-outta-here] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--get-that-overlay-outta-here] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--get-that-overlay-outta-here] .chardinjs-tooltip, .is-mobile .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--get-that-overlay-outta-here] .chardinjs-tooltip {
   right: 30px!important;
-}.error404 #site-header .site-meta.chardinjs-show-element, .error404 .fp-section__header .site-meta.chardinjs-show-element {
+}.error404 .site-header .site-meta.chardinjs-show-element, .error404 .fp-section__header .site-meta.chardinjs-show-element {
   visibility: visible;
 }.sandbox {
   border: 1px #ffff00 solid;
@@ -4001,11 +4001,11 @@ html {
     margin-left: 0;
   }.back-to-top {
     margin-right: 24px;
-  }#site-header h2, .fp-section__header h2, .fp-section__header h2 {
+  }.site-header h2, .fp-section__header h2, .fp-section__header h2 {
     margin: -18px 0;
     float: left;
     padding-left: 36px;
-  }#site-header .fp-section__header__spacer, .fp-section__header .fp-section__header__spacer, .fp-section__header .fp-section__header__spacer {
+  }.site-header .fp-section__header__spacer, .fp-section__header .fp-section__header__spacer, .fp-section__header .fp-section__header__spacer {
     display: block;
   }.fancy-button {
     font-size: 19px;
@@ -4035,24 +4035,24 @@ html {
 }@media screen and (max-width:42em) {
   .entry {
     font-size: 1em;
-  }.wrapper .post-title {
+  }.site-content .post-title {
     font-size: 31.35px!important;
     line-height: 33.125px;
     margin-top: 24px;
   }
 }@media screen and (max-width:419px) {
-  #site-header #site-logo, .fp-section__header #site-logo {
+  .site-header #site-logo, .fp-section__header #site-logo {
     font-size: 54.1025px;
-  }#site-header h2, .fp-section__header h2 {
+  }.site-header h2, .fp-section__header h2 {
     font-size: 45.22px;
-  }#site-header h2, .fp-section__header h2, .fp-section__header h2 {
+  }.site-header h2, .fp-section__header h2, .fp-section__header h2 {
     margin-top: -30px;
   }.fancy-button {
     font-size: 19px;
-  }.wrapper .post-title {
+  }.site-content .post-title {
     font-size: 28.215px!important;
     line-height: 26.5px!important;
-  }.single .wrapper .entry h1, .single .wrapper .entry h2, .single .wrapper .entry h3 {
+  }.single .site-content .entry h1, .single .site-content .entry h2, .single .site-content .entry h3 {
     font-variant: normal;
     text-transform: lowercase;
     font-size: 30.4px;

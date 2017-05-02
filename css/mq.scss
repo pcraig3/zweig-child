@@ -75,7 +75,7 @@
     margin-right: $default-padding-horizontal * .5;
   }
 
-  #site-header,
+  .site-header,
   .fp-section__header {
 
     h2 {
@@ -153,7 +153,7 @@
     font-size: 1em;
   }
 
-  .wrapper .post-title {
+  .site-content .post-title {
     font-size: $font-size--body-xmd !important;
     line-height: $inuit-base-line-height * 1.25;
     margin-top: 24px;
@@ -162,7 +162,7 @@
 
 @include media-query("lumia520") {
 
-  #site-header {
+  .site-header {
 
     #site-logo {
         font-size: $font-size--header-logo * .85;
@@ -173,7 +173,7 @@
     }
   }
 
-  #site-header,
+  .site-header,
   .fp-section__header {
 
     h2 {
@@ -186,13 +186,13 @@
     font-size: $inuit-base-font-size;
   }
 
-  .wrapper .post-title {
+  .site-content .post-title {
     font-size: ($font-size--body-xmd * .9) !important;
     line-height: $inuit-base-line-height !important;
   }
 
   .single {
-    .wrapper .entry {
+    .site-content .entry {
 
       h1, h2, h3 {
         @include zw-lowercase( $inuit-base-font-size * 1.6 );

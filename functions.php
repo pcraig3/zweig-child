@@ -285,27 +285,24 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
     ob_start();
     ?>
 
-    <section class="fp-section <?php echo $section_classes; ?>">
-        <div class="layout <?php echo $layout_classes; ?>">
-          <div class="fp-section__header clearfix pb+ palm-pb0 <?php echo $section_header_classes; ?>" id="<?php
+    <section class="<?php echo( trim( 'fp-section ' . $section_classes ) ); ?>">
+        <div class="<?php echo( trim ( 'layout ' . $layout_classes ) ); ?>">
+          <div class="<?php echo( trim ( 'fp-section__header clearfix pb+ palm-pb0 ' . $section_header_classes ) ); ?>"
+               <?php $id = $back_to_top ? "back_to_top" : $section_name; ?>
+               <?php if( !empty($id) ) { ?>
+                   id="<?php echo( trim ($id ) ); ?>"
+               <?php } ?>>
+                <div class="fp-section__header__spacer">h4ck</div><?php
+                    if ( !empty( $section_name ) ) {
 
-                if( $back_to_top )
-                  echo "back_to_top";
-                else
-                  echo $section_name;
-
-                ?>">
-                <div class="fp-section__header__spacer">h4ck</div><h2><a <?php
-
-                echo 'class="subtle-link ';
-
-                echo ( ! $no_link ) ? 'solid-to-fade" ' : 'cursor-default" ';
-
-                if( ! $no_link )
-                  echo 'href="' . $section_header_link . '" ';
-
+                        if ( !$no_link ) {
+                            echo '<h2><a class="subtle-link solid-to-fade" href="' . $section_header_link . '">::' . $section_name . '</a></h2>';
+                        }
+                        else {
+                            echo '<h2>::' . $section_name . '</h2>';
+                        }
+                    }
                 ?>
-                >::<?php echo $section_name; ?></a></h2>
           </div><!-- end of .fp-section__header-->
 
           <?php echo do_shortcode( $content ); ?>
