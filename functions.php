@@ -296,13 +296,12 @@ function zw_ch_section_skeleton( $atts, $content = null ) {
                     if ( !empty( $section_name ) ) {
 
                         $heading = is_singular() ? 'h2' : 'h1';
-                        $heading_attrs = ($heading === 'h1') ? ' class="page-title"' : '';
 
                         if ( !$no_link ) {
-                            echo '<' . $heading . $heading_attrs . '><a class="subtle-link solid-to-fade" href="' . $section_header_link . '">::' . $section_name . '</a></' . $heading . '>';
+                            echo '<' . $heading . ' class="page-title"><a class="subtle-link solid-to-fade" href="' . $section_header_link . '">::' . $section_name . '</a></' . $heading . '>';
                         }
                         else {
-                            echo '<' . $heading . $heading_attrs . '>::' . $section_name . '</' . $heading . '>';
+                            echo '<' . $heading . ' class="page-title">::' . $section_name . '</' . $heading . '>';
                         }
                     }
                 ?>

@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
 }strong {
   font-weight: 700;
-}.site-content .post-title {
+}.site-content .entry-title {
   text-transform: lowercase;
   font-family: serif;
   font-style: italic;
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
      -moz-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
-}.site-content .post-date, .site-content .post-meta p, .site-content .wp-caption-text, .site-content .gallery-caption {
+}.site-content .entry-meta, .site-content .wp-caption-text, .site-content .gallery-caption {
   text-transform: uppercase;
   font-family: sans-serif;
   font-variant: small-caps;
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px #d43b1d solid;
   outline: 0;
 }@media screen and (max-width:42em) {
-  .post-title {
+  .entry-title {
     font-size: 2em!important;
   }.entry {
     font-size: 0.9em;
@@ -326,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
   line-height: 2em;
   text-align: left;
-}article.format-quote .post-title, article.format-quote .post-date {
+}article.format-quote .entry-title, article.format-quote .entry-meta {
   display: none;
 }@media screen and (max-width:70em) {
   .site-header .site-meta, .fp-section__header .site-meta {
@@ -3198,13 +3198,14 @@ html {
   text-shadow: none;
 }.frame--single .entry p a:not([class]):visited, a.pc3-shuffle-onclick:visited {
   color: #d43b1d;
-}.site-content .post-title {
+}.site-content .entry-title {
   padding-bottom: 9.6px;
+  margin-top: 36px;
   font-size: 40.85px;
   line-height: 39.75px;
   overflow-wrap: break-word;
   word-wrap: break-word;
-}.site-content .post-date, .site-content .wp-caption-text, .site-content .gallery-caption {
+}.site-content .entry-meta, .site-content .wp-caption-text, .site-content .gallery-caption {
   font-size: 16.15px;
   margin-bottom: 48px;
   color: #333333!important;
@@ -3241,12 +3242,12 @@ html {
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
-}.site-content .post-date, .site-content .wp-caption-text, .site-content .gallery-caption {
+}.site-content .entry-meta, .site-content .wp-caption-text, .site-content .gallery-caption {
   font-family: "verblight",arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   word-spacing: 0;
-}.site-content .post-title {
+}.site-content .entry-title {
   font-family: "libre_baskervilleregular",times,serif;
   font-weight: 400;
   font-style: normal;
@@ -3614,13 +3615,14 @@ html {
   padding-bottom: 12px;
 }.frame.frame--splash {
   padding-left: 0;
-}.frame.frame--archive article:hover .post-date {
+}.frame.frame--archive article:hover .entry-meta {
   color: #f3f3f3!important;
-}.frame.frame--archive article .post-title {
+}.frame.frame--archive article .entry-title {
   padding-bottom: 6px;
+  margin-top: 24px;
   font-size: 34.2px;
   line-height: 33.125px;
-}.frame.frame--archive article .post-date {
+}.frame.frame--archive article .entry-meta {
   -webkit-transition: color 0.15s ease-in;
        -o-transition: color 0.15s ease-in;
           transition: color 0.15s ease-in;
@@ -4038,7 +4040,7 @@ html {
 }@media screen and (max-width:42em) {
   .entry {
     font-size: 1em;
-  }.site-content .post-title {
+  }.site-content .entry-title {
     font-size: 31.35px!important;
     line-height: 33.125px;
     margin-top: 24px;
@@ -4052,7 +4054,7 @@ html {
     margin-top: -30px;
   }.fancy-button {
     font-size: 19px;
-  }.site-content .post-title {
+  }.site-content .entry-title {
     font-size: 28.215px!important;
     line-height: 26.5px!important;
   }.single .site-content .entry h1, .single .site-content .entry h2, .single .site-content .entry h3 {

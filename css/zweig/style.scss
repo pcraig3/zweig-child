@@ -35,7 +35,7 @@ em {
 strong {
   font-weight: bold; }
 
-.site-content .post-title {
+.site-content .entry-title {
   text-transform: lowercase;
   font-family: serif;
   font-style: italic;
@@ -55,8 +55,7 @@ strong {
   -ms-hyphens: auto;
   hyphens: auto; }
 
-.site-content .post-date,
-.site-content .post-meta p,
+.site-content .entry-meta,
 .site-content .wp-caption-text,
 .site-content .gallery-caption {
   text-transform: uppercase;
@@ -182,7 +181,7 @@ textarea:active {
   outline: 0px; }
 
 @media screen and (max-width: 42em) {
-  .post-title {
+  .entry-title {
     font-size: 2em !important; }
 
   .entry {
@@ -389,7 +388,7 @@ article.format-quote {
   font-size: 1.5em;
   line-height: 2em;
   text-align: left; }
-  article.format-quote .post-title, article.format-quote .post-date {
+  article.format-quote .entry-title, article.format-quote .entry-meta {
     display: none; }
 
 /* Media Queries */

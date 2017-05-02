@@ -1,12 +1,18 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article itemtype="http://schema.org/BlogPosting"  id="post-<?php the_ID(); ?>" <?php post_class('category'); ?>>
-		<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Link to','zweig'); ?> <?php the_title_attribute(); ?>" itemprop="url">
+	<article id="post-<?php the_ID(); ?>" <?php post_class('category'); ?>>
+        <header class="entry-header">
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Link to','zweig'); ?> <?php the_title_attribute(); ?>">
+                <h2 class="entry-title"><?php the_title(); ?></h2>
+                <div class="entry-meta">
+                    <time class="entry-date" datetime="<?php the_time('Y-m'); ?>"><?php the_time('F Y'); ?></time>
+                </div>
+            </a>
+        </header>
 
-			<h1 itemprop="headline" class="post-title"><?php the_title(); ?></h1>
-			<h2 class="post-date"><?php the_time('F Y'); ?></h2>
-
-		</a>
+        <!--div class="entry-summary">
+            < php the_excerpt(); ?>
+        </div><!-- .entry-summary -->
 	 </article>
 
 	 <!-- Stop The Loop (but note the "else:" - see next line). -->

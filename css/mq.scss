@@ -153,7 +153,7 @@
     font-size: 1em;
   }
 
-  .site-content .post-title {
+  .site-content .entry-title {
     font-size: $font-size--body-xmd !important;
     line-height: $inuit-base-line-height * 1.25;
     margin-top: 24px;
@@ -186,7 +186,7 @@
     font-size: $inuit-base-font-size;
   }
 
-  .site-content .post-title {
+  .site-content .entry-title {
     font-size: ($font-size--body-xmd * .9) !important;
     line-height: $inuit-base-line-height !important;
   }
