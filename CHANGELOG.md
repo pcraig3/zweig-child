@@ -1,5 +1,17 @@
 ## Changelog
 
+### 1.8.0
+* New feature: marginally better markup
+  * Remove all that `itemprop` stuff
+  * Add `<main>` and some extra headers like Twenty Seventeen uses
+  * Add `entry-title` and some extra classes like Twenty Seventeen uses
+  * Update code to remove trailing spaces in classname strings
+  * Choose between `<h1>`s and `<h2>`s depending on what is important on the page
+  * Put a sneaky site-description heading on the homepage
+  * Create another partial file that I think means I've basically outgrown Zweig
+* Increase contrast when highlighting text
+* Fancy underline links fade when you hover over them
+
 ### 1.7.1
 * CSS formatting rules
   * IDE was complaining otherwise
