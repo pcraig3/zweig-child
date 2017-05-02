@@ -24,7 +24,9 @@
                 <?php echo $blog_title = get_bloginfo('name'); ?>
             </a>
         </div>
-        <!--h2 id="site-description"><?php //echo $blog_title = get_bloginfo('description'); ?></h2-->
+        <?php if ( is_front_page() ) { ?>
+            <h1 class="page-title visually-hidden"><?php echo get_bloginfo('name') . ': ' . get_bloginfo('description'); ?></h1>
+        <?php } ?>
 
     </div><!-- end of .site-meta -->
 
