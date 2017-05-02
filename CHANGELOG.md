@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.8.1
+* Slightly bump up "back to top" button size
+
 ### 1.8.0
 * New feature: marginally better markup
   * Remove all that `itemprop` stuff
@@ -28,6 +31,7 @@
     * "gulp" has one less character (better for command line)
     * gulpfile.js < Gruntfile.js
     * minor improvement to CSS output
+* Updated npm dependencies (it all still works)
 
 ### 1.6.0
 * New feature: `<title>` isn't weird and broken
