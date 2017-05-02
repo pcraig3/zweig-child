@@ -25,7 +25,7 @@ function compileSass(gulp, outputStyle, filename) {
                 "Safari >= 6"
             ]
         }))
-        .pipe(csso())
+        .pipe(csso({restructure: false}))
         .pipe(gulpif((outputStyle === 'expanded'), csscomb()))
         .pipe(rename(filename))
         .pipe(sourcemaps.write('.'))
