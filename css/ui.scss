@@ -737,7 +737,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 }
 
 /* Footer */
-#footer {
+#colophon {
   @include zw-site-container;
 
   border-bottom: $inuit-base-spacing-unit solid #F3F3F3;
@@ -846,7 +846,7 @@ $padding-base: $inuit-base-spacing-unit / 4;
 }
 
 //search bar in the footer
-#footer .search-form {
+#colophon .search-form {
 
   display: block;
   background: none repeat scroll 0 0 #F9F9F9;

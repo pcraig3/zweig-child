@@ -2,7 +2,7 @@
 </main>
   </div> <!-- EOF #content -->
 
-  <footer id="footer" class="p0">
+  <footer id="colophon" class="p0 site-footer" role="contentinfo">
 
     <div class="layout layout--flush">
 
@@ -36,17 +36,17 @@
     <div class="layout__item one-whole">
 
 
-  	<div class="widget-area">
+  	<aside class="widget-area" role="complementary">
   	<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Area One')) : ?><?php endif; ?>
-  	</div>
+  	</aside>
 
 
     </div><!-- end of .layout__item.one-third
     --><div class="layout__item one-whole">
 
-  	<div class="widget-area">
+  	<aside class="widget-area" role="complementary">
 		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Area Two')) : ?><?php endif; ?>
-		</div>
+    </aside>
 
     </div><!-- end of .layout__item.two-thirds -->
 

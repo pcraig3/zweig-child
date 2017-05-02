@@ -25,7 +25,7 @@ jQuery(function( $ ){
 				}
 
 				//if we've clicked the 'search again?' link, clear the search bar and add focus
-				if (trigger && trigger.getAttribute('href') == '#footer') {
+				if (trigger && trigger.getAttribute('href') == '#colophon') {
 					$('.search-field').val("").focus();
 				}
 			},
