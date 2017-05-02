@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.7.1
+* CSS formatting rules
+  * IDE was complaining otherwise
+* Stop using the `restructure` option in CSSO
+  * Rearranging the rules was changing the precedence for some stuff
+
 ### 1.7.0
 * New feature: using `gulp` instead of `grunt` -- users are gonna go nuts for this one
   * Benefits include:
