@@ -9,7 +9,7 @@
 		die ('Please do not load this page directly. Thanks!');
 
 	if ( post_password_required() ) { ?>
-		<p class="nocomments">This post is password protected. Enter the password to view comments.</p>
+		<p class="no-comments">This post is password protected. Enter the password to view comments.</p>
 	<?php
 		return;
 	}
@@ -25,7 +25,7 @@
 		<div class="alignleft"><?php previous_comments_link() ?></div>
 	</div>
 
-	<ol class="commentlist">
+	<ol class="comment-list">
 	<?php wp_list_comments( array('avatar_size'       => 36 ) ); ?>
 	</ol>
 
@@ -34,7 +34,7 @@
 			if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 		?>
 		<nav class="navigation comment-navigation" role="navigation">
-			<h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'twentythirteen' ); ?></h1>
+			<div class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'twentythirteen' ); ?></div>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'twentythirteen' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentythirteen' ) ); ?></div>
 		</nav><!-- .comment-navigation -->
@@ -51,7 +51,7 @@
 
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="nocomments">Comments are closed.</p>
+		<p class="no-comments">Comments are closed.</p>
 
 	<?php endif; ?>
 <?php endif; ?>
