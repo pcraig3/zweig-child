@@ -38,10 +38,10 @@
          class="layout__item one-whole"
          data-intro="<p class='not_on_mobile--landscape'>Get @ me, yo.</p>
             <p>I'm
-            <a target='_blank' href='mailto:paul@pcraig3.ca'>mailable</a>,
-            <a target='_blank' href='https://twitter.com/pcraig3'>tweetable</a>,
-            <a target='_blank' href='https://github.com/pcraig3'>forkable</a>, and
-            <a target='_blank' href='https://www.facebook.com/PaulMCraig'>facebookable</a>.
+            <a target='_blank' rel='noopener noreferrer' href='mailto:paul@pcraig3.ca'>paul@pcraig3.ca</a>, and I'm also on
+            <a target='_blank' rel='noopener noreferrer' href='https://twitter.com/pcraig3'>twitter</a>,
+            <a target='_blank' rel='noopener noreferrer' href='https://github.com/pcraig3'>github</a>, and
+            <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/PaulMCraig'>facebook</a>.
             <br>There're a few others as well, but let's not get ahead of ourselves.</p>"
          data-position="bottom">
     </div><!--end of .layout__item.one-whole -->
