@@ -1,5 +1,17 @@
 ## Changelog
 
+### 1.8.2
+* Update contact information in header
+  * More readable on your phone screen when it's horizontal
+  * Rewrite so that email address is visible in the text
+  * Address some obscure vulnerability when using target="_blank"
+* Apply hover CSS rules to focus states
+  * Now when you tab over things, it should look the same as hovering with a mouse
+* Change meta text for projects
+  * Show excerpts instead of dates
+  * Make meta text more visible on archive listings
+  * Make meta text smaller on phone screens (because there's more of it now)
+
 ### 1.8.1
 * Slightly bump up "back to top" button size
 

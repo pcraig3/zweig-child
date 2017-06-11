@@ -1,6 +1,6 @@
 {
   "name": "zweig-child",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "new theme from zweig theme",
   "private": true,
   "dependencies": {
