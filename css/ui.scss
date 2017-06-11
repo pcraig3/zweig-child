@@ -153,10 +153,15 @@ a.pc3-shuffle-onclick {
   @extend .solid-to-fade;
 }
 
+.site-content .entry-header {
+
+  margin-top: $inuit-base-spacing-unit * 1.5;
+  margin-bottom: $inuit-base-spacing-unit * 2;
+}
+
 .site-content .entry-title {
 
   padding-bottom: $inuit-base-spacing-unit * .4;
-  margin-top: $inuit-base-spacing-unit * 1.5;
   font-size: $font-size--body-xlg;
   line-height: $inuit-base-line-height * 1.5;
   overflow-wrap: break-word;
@@ -168,8 +173,12 @@ a.pc3-shuffle-onclick {
 .site-content .gallery-caption {
 
   font-size: $font-size--body-sm;
-  margin-bottom: $inuit-base-spacing-unit * 2;
   color: $color__grey--dark !important;
+}
+
+.site-content .entry-meta p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
