@@ -618,7 +618,7 @@ article.format-quote {
 
       a:hover .entry-meta,
       a:focus .entry-meta {
-        color: $color__grey--still-pretty-light !important;
+        color: $color__grey !important;
       }
 
       .entry-title {
@@ -631,8 +631,6 @@ article.format-quote {
 
       .entry-meta {
         @include zw-transition(color);
-
-        color: $color__grey !important;
         margin-bottom: $inuit-base-spacing-unit * 2;
       }
 
