@@ -4,9 +4,11 @@
         <header class="entry-header">
             <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Link to','zweig'); ?> <?php the_title_attribute(); ?>">
                 <h2 class="entry-title"><?php the_title(); ?></h2>
-                <div class="entry-meta">
-                    <time class="entry-date" datetime="<?php the_time('Y-m'); ?>"><?php the_time('F Y'); ?></time>
-                </div>
+                <?php if ( has_excerpt( get_the_id() ) ) { ?>
+                    <div class="entry-meta">
+                        <?php the_excerpt(); ?>
+                    </div>
+                <?php } ?>
             </a>
         </header>
 

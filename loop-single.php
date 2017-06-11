@@ -12,9 +12,12 @@
                 </a>
             </h1>
 
-            <div class="entry-meta">
-                <time class="entry-date" datetime="<?php the_time('Y-m'); ?>"><?php the_time('F Y'); ?></time>
-            </div>
+            <?php if ( has_excerpt( get_the_id() ) ) { ?>
+                <div class="entry-meta">
+                    <?php the_excerpt(); ?>
+                </div>
+            <?php } ?>
+
         </header>
 
         <!-- Display the Post's Content in a div box. -->
