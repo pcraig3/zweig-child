@@ -3198,17 +3198,21 @@ html {
   text-shadow: none;
 }.frame--single .entry-content p a:not([class]):visited, a.pc3-shuffle-onclick:visited {
   color: #d43b1d;
+}.site-content .entry-header {
+  margin-top: 36px;
+  margin-bottom: 48px;
 }.site-content .entry-title {
   padding-bottom: 9.6px;
-  margin-top: 36px;
   font-size: 40.85px;
   line-height: 39.75px;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }.site-content .entry-meta, .site-content .wp-caption-text, .site-content .gallery-caption {
   font-size: 16.15px;
-  margin-bottom: 48px;
   color: #333333!important;
+}.site-content .entry-meta p {
+  margin-top: 0;
+  margin-bottom: 0;
 }body {
   font-family: "verblight",arial,sans-serif;
   font-weight: 400;
@@ -3418,7 +3422,7 @@ html {
   opacity: 0.65;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.65)";
       filter: alpha(opacity=0.65);
-}.fade-to-solid:hover, .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--description] .chardinjs-tooltip a:hover {
+}.fade-to-solid:hover, .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .fade-to-solid:focus, .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--description] .chardinjs-tooltip a:focus, .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--description] .chardinjs-tooltip a:focus, .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--description] .chardinjs-tooltip a:focus, .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--description] .chardinjs-tooltip a:focus {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
       filter: alpha(opacity=1);
@@ -3429,7 +3433,7 @@ html {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
       filter: alpha(opacity=1);
-}.solid-to-fade:hover, .fancy-pants a:hover, .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .frame--single .entry-content p a:hover:not([class]), a.pc3-shuffle-onclick:hover {
+}.solid-to-fade:hover, .fancy-pants a:hover, .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--description] .chardinjs-tooltip a:hover, .frame--single .entry-content p a:hover:not([class]), a.pc3-shuffle-onclick:hover, .solid-to-fade:focus, .fancy-pants a:focus, .chardinjs-helper-layer.chardinjs-bottom[data-id=chardinjs--description] .chardinjs-tooltip a:focus, .chardinjs-helper-layer.chardinjs-top[data-id=chardinjs--description] .chardinjs-tooltip a:focus, .chardinjs-helper-layer.chardinjs-left[data-id=chardinjs--description] .chardinjs-tooltip a:focus, .chardinjs-helper-layer.chardinjs-right[data-id=chardinjs--description] .chardinjs-tooltip a:focus, .frame--single .entry-content p a:focus:not([class]), a.pc3-shuffle-onclick:focus {
   opacity: 0.65;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.65)";
       filter: alpha(opacity=0.65);
@@ -3437,7 +3441,7 @@ html {
   cursor: default!important;
 }.subtle-link {
   color: #333333;
-}.subtle-link:hover {
+}.subtle-link:hover, .subtle-link:focus {
   color: #333333;
 }.whisper {
   opacity: 0.33;
@@ -3615,8 +3619,8 @@ html {
   padding-bottom: 12px;
 }.frame.frame--splash {
   padding-left: 0;
-}.frame.frame--archive article:hover .entry-meta {
-  color: #f3f3f3!important;
+}.frame.frame--archive article a:hover .entry-meta, .frame.frame--archive article a:focus .entry-meta {
+  color: #cbcbcb!important;
 }.frame.frame--archive article .entry-title {
   padding-bottom: 6px;
   margin-top: 24px;
@@ -3626,7 +3630,6 @@ html {
   -webkit-transition: color 0.15s ease-in;
        -o-transition: color 0.15s ease-in;
           transition: color 0.15s ease-in;
-  color: #cbcbcb!important;
   margin-bottom: 48px;
 }.frame.frame--archive article a {
   display: block;
@@ -4045,6 +4048,10 @@ html {
     line-height: 33.125px;
     margin-top: 24px;
   }
+}@media screen and (max-width:419px) and (orientation:landscape) {
+  .not_on_mobile--landscape {
+    display: none;
+  }
 }@media screen and (max-width:419px) {
   .site-header #site-logo, .fp-section__header #site-logo {
     font-size: 54.1025px;
@@ -4054,14 +4061,11 @@ html {
     margin-top: -30px;
   }.fancy-button {
     font-size: 19px;
-  }.site-content .entry-title {
+  }.frame.frame--archive article .entry-title, .single .site-content .entry-title {
     font-size: 28.215px!important;
     line-height: 26.5px!important;
-  }.single .site-content .entry-content h1, .single .site-content .entry-content h2, .single .site-content .entry-content h3 {
-    font-variant: normal;
-    text-transform: lowercase;
-    font-size: 30.4px;
-    margin-bottom: 12px;
+  }.frame.frame--archive article .entry-meta, .single .site-content .entry-meta {
+    font-size: 13.3px;
   }
 }
 
