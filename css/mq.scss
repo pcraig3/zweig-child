@@ -162,6 +162,14 @@
 
 @include media-query("lumia520") {
 
+  @media (orientation: landscape) {
+
+    .not_on_mobile--landscape {
+
+      display: none;
+    }
+  }
+
   .site-header {
 
     #site-logo {

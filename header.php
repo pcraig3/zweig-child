@@ -36,7 +36,7 @@
 
     <div id="chardinjs--description"
          class="layout__item one-whole"
-         data-intro="<p>Get @ me, yo.</p>
+         data-intro="<p class='not_on_mobile--landscape'>Get @ me, yo.</p>
             <p>I'm
             <a target='_blank' href='mailto:paul@pcraig3.ca'>mailable</a>,
             <a target='_blank' href='https://twitter.com/pcraig3'>tweetable</a>,
