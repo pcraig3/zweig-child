@@ -194,20 +194,18 @@
     font-size: $inuit-base-font-size;
   }
 
-  .site-content .entry-title {
-    font-size: ($font-size--body-xmd * .9) !important;
-    line-height: $inuit-base-line-height !important;
-  }
+  .frame.frame--archive article,
+  .single .site-content {
 
-  .single {
-    .site-content .entry-content{
+    .entry-title {
 
-      h1, h2, h3 {
-        @include zw-lowercase( $inuit-base-font-size * 1.6 );
+      font-size: ($font-size--body-xmd * .9) !important;
+      line-height: $inuit-base-line-height !important;
+    }
 
-        margin-bottom: 12px;
-      }
+    .entry-meta {
 
+      font-size: $inuit-base-font-size * .7;
     }
   }
 }
